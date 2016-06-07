@@ -8564,7 +8564,7 @@ body.md-skin {
     display: block;
   }
   .ibox-tools {
-    float: none;
+    float: right;
     text-align: right;
     display: block;
   }
