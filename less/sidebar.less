@@ -308,16 +308,25 @@
 }
 
 .nav-logo{
-  height: 130px;
-  line-height: 130px;
+  height: 127px;
+  line-height: 127px;
+  transition: all 0.3s ease;
   text-align: center;
   background: url(../img/nav-logo-bg.jpg) no-repeat left top #fef8e0;
+  .mini-navbar &{
+    height: 60px;
+    line-height: 60px;
+  }
 }
 
 .logo{
   display: inline-block!important;
   vertical-align: middle;
   padding: 0!important;
+  .mini-navbar &{
+    width: 43px;
+    overflow: hidden;
+  }
 
   img{
     display: block;
@@ -329,7 +338,7 @@
 }
 
 .nav-settings{
-  padding: 18px 25px 15px;
+  padding: 18px 25px 15px 22px;
 }
 
 .nav-settings__signal{
@@ -343,6 +352,9 @@
     text-transform: uppercase;
     line-height: 15px;
     vertical-align: middle;
+    .mini-navbar &{
+      display: none;
+    }
   }
 }
 
@@ -359,7 +371,23 @@
 
   &--online{
     background: #45ab34;
+  }
+  &--offline{
+    background: #ca3434;
+  }
 
+  .mini-navbar &{
+    text-indent: -9999px!important;
+    line-height: 0px!important;
+    padding: 0px!important;
+    height: 8px!important;
+    width: 8px!important;
+    line-height: 8px!important;
+    border-radius: 5px!important;
+    margin: 0!important;
+    right: 15px;
+    top: 12px;
+    position: absolute;
   }
 }
 
@@ -377,4 +405,9 @@
   .underline{
     border-color: transparent;
   }
+}
+
+ul.row{
+  list-style: none;
+  padding: 0;
 }

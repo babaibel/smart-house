@@ -9,7 +9,10 @@ body {
 
 html, body {
   height: 100%;
+}
 
+a:focus {
+  outline: none;
 }
 
 body.full-height-layout #wrapper,
@@ -513,6 +516,9 @@ code {
       .ibox-tools a{
         color: #fff!important;
       }
+      .dropdown-menu a{
+        color: #333!important;
+      }
     }
     .ibox-content{
       background-color: #ca3434;
@@ -530,6 +536,9 @@ code {
       color: #fff!important;
       .ibox-tools a{
         color: #fff!important;
+      }
+      .dropdown-menu a{
+        color: #333!important;
       }
     }
     .ibox-content{
@@ -1443,11 +1452,18 @@ body.mini-navbar.fixed-sidebar .logo-element {
   }
 }
 
+@media (max-width: 767px) {
+  .navbar-right{
+    float: right;
+  }
+}
+
 @media (max-width: 479px) {
   .ibox-content__indicator {
     font-size: 24px;
   }
 }
+
 
 
 .center-box{

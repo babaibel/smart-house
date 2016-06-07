@@ -1,6 +1,28 @@
 /* Only demo */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .welcome-message {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav.navbar-top-links li.dropdown {
+    display: inline-block;
+    position: static;
+
+    .dropdown-menu{
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .nav.navbar-top-links a .not-tab{
+    display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav.navbar-top-links a .not-mob{
     display: none;
   }
 }
