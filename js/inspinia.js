@@ -16,6 +16,21 @@ $(document).ready(function () {
         $('body').removeClass('body-small')
     }
 
+    // Draggable panels
+    jQuery(function($) {
+        var panelList = $('#draggablePanelList');
+
+        panelList.sortable({
+            handle: '.ibox-title', 
+            update: function() {
+                $('.ibox', panelList).each(function(index, elem) {
+                     var $listItem = $(elem),
+                         newIndex = $listItem.index();
+                });
+            }
+        });
+    });
+
     // MetsiMenu
     $('#side-menu').metisMenu();
 

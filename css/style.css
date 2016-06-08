@@ -4731,6 +4731,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 .center-box {
   text-align: center!important;
 }
+#draggablePanelList LI:nth-child(2n+1) {
+  clear: left;
+}
 /* SEARCH PAGE */
 .search-form {
   margin-top: 10px;
@@ -4867,13 +4870,29 @@ body.mini-navbar.fixed-sidebar .logo-element {
   padding-left: 0;
   padding-right: 0;
 }
+.dashboard-header .profile-element__info {
+  display: none;
+  margin-left: 0;
+  color: #3a3e42;
+}
+.dashboard-header .profile-element__info > DIV {
+  display: inline-block;
+  margin-right: 10px;
+}
+.dashboard-header .profile-element__info-phone,
+.dashboard-header .profile-element__info-system {
+  color: #676a6c;
+}
 .dashboard-header h2 {
   margin-top: 10px;
   font-size: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .dashboard-header h2 {
     font-size: 18px;
+  }
+  .dashboard-header .profile-element__info {
+    display: block;
   }
 }
 .fist-item {
