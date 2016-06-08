@@ -1408,6 +1408,30 @@ body.mini-navbar.fixed-sidebar .logo-element {
     }
   }
 
+  &__boiler-indicator{
+    float: right;
+
+    &--temp{
+      color: #ffae00;
+      text-align: center;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 600;
+      sup{
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+    &--status{
+      border: 1px solid #cccccc;
+      border-radius: 2px;
+      color: #4f4f4f;
+      display: inline-block;
+      font: 400 12px/25px "open sans",sans-serif;
+      padding: 0 5px;
+    }
+  }
+
   &__indicator{
     color: #10b410;
     font: 600 30px/32px 'open sans', sans-serif;
@@ -1449,12 +1473,44 @@ body.mini-navbar.fixed-sidebar .logo-element {
     button{
       margin: 8px 3px 0 0!important;
     }
+
+    &--boiler{
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .ibox-content__indicator{
+        float: left;
+        margin-top: 14px;
+      }
+      &__boiler-indicator{
+        float: right;
+      }
+    }
+  }
+}
+
+.buttons-panel{
+  padding: 0 10px;
+  margin-top: 20px;
+
+  .btn{
+    font-size: 14px;
+    font-weight: 600;
+    color: #676a6c;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
 @media (max-width: 767px) {
   .navbar-right{
     float: right;
+  }
+  .buttons-panel{
+    padding: 0;
   }
 }
 
@@ -1470,4 +1526,8 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
 #draggablePanelList LI:nth-child(2n+1){
   clear: left;
+}
+
+#draggablePanelList LI.col-lg-4:nth-child(2n+1){
+  clear: none!important;
 }

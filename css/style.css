@@ -3533,6 +3533,12 @@ input:checked:hover + .checkbox__view {
   height: 50px;
   margin: 0;
 }
+.iconbg--boiler {
+  background: url(../img/icons/iconbg-boiler.png) no-repeat left center;
+  width: 44px;
+  height: 59px;
+  margin: 0 -9px 0 0;
+}
 .nav-logo {
   height: 127px;
   line-height: 127px;
@@ -3621,6 +3627,9 @@ input:checked:hover + .checkbox__view {
 ul.row {
   list-style: none;
   padding: 0;
+}
+ul.row li {
+  min-height: auto;
 }
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -4768,6 +4777,28 @@ body.mini-navbar.fixed-sidebar .logo-element {
   font-size: 20px;
   line-height: 32px;
 }
+.ibox-content__boiler-indicator {
+  float: right;
+}
+.ibox-content__boiler-indicator--temp {
+  color: #ffae00;
+  text-align: center;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.ibox-content__boiler-indicator--temp sup {
+  font-size: 14px;
+  line-height: 28px;
+}
+.ibox-content__boiler-indicator--status {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  color: #4f4f4f;
+  display: inline-block;
+  font: 400 12px/25px "open sans", sans-serif;
+  padding: 0 5px;
+}
 .ibox-content__indicator {
   color: #10b410;
   font: 600 30px/32px 'open sans', sans-serif;
@@ -4805,9 +4836,35 @@ body.mini-navbar.fixed-sidebar .logo-element {
 .ibox-content__info button {
   margin: 8px 3px 0 0!important;
 }
+.ibox-content__info--boiler:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ibox-content__info--boiler .ibox-content__indicator {
+  float: left;
+  margin-top: 14px;
+}
+.ibox-content__info--boiler__boiler-indicator {
+  float: right;
+}
+.buttons-panel {
+  padding: 0 10px;
+  margin-top: 20px;
+}
+.buttons-panel .btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #676a6c;
+  padding-left: 35px;
+  padding-right: 35px;
+}
 @media (max-width: 767px) {
   .navbar-right {
     float: right;
+  }
+  .buttons-panel {
+    padding: 0;
   }
 }
 @media (max-width: 479px) {
@@ -4820,6 +4877,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 #draggablePanelList LI:nth-child(2n+1) {
   clear: left;
+}
+#draggablePanelList LI.col-lg-4:nth-child(2n+1) {
+  clear: none!important;
 }
 /* SEARCH PAGE */
 .search-form {
