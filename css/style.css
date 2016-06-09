@@ -3288,6 +3288,91 @@ input:checked:hover + .checkbox__view {
   background-color: #f0a400;
   border-color: #f0a400!important;
 }
+.tooltip-label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  background: url(../img/icons/iconbg-tooltip.png) no-repeat left top;
+}
+#editable_wrapper {
+  position: relative;
+}
+.tooltip-container {
+  display: inline-block;
+}
+.sensors-table {
+  text-align: center;
+  border-bottom: 1px solid #e7eaec;
+  margin-bottom: 0;
+}
+.sensors-table .iconbg {
+  display: block;
+  margin: 0 5px;
+}
+.sensors-table th,
+.sensors-table td {
+  text-align: center;
+  white-space: nowrap;
+}
+.sensors-table tr td:nth-child(2) {
+  white-space: normal;
+}
+.sensors-table tr th:first-child,
+.sensors-table tr th:nth-child(2),
+.sensors-table tr td:first-child,
+.sensors-table tr td:nth-child(2) {
+  text-align: left;
+}
+.sensors-table__data {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #000000;
+}
+.sensors-table__data--green {
+  color: #1ab148;
+}
+.sensors-table__data--red {
+  color: #ca3434;
+}
+.btn-delete {
+  font-size: 11px!important;
+  text-transform: uppercase;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.btn-delete .fa {
+  margin-right: 5px;
+  font-size: 14px!important;
+}
+.btn-red {
+  background-color: #ca3434;
+  color: #fff!important;
+}
+.btn-red:hover {
+  background-color: #be3131;
+}
+.list-view {
+  float: right;
+}
+.list-view__btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  margin-left: 5px;
+}
+.list-view__btn.active {
+  background-position: left bottom;
+}
+.list-view__btn--list {
+  background: url(../img/view-list-bg.png) no-repeat left top;
+}
+.list-view__btn--table {
+  background: url(../img/view-table-bg.png) no-repeat left top;
+}
 .sidebard-panel {
   width: 220px;
   background: #ebebed;
@@ -3475,15 +3560,38 @@ input:checked:hover + .checkbox__view {
   height: 12px;
 }
 .iconbg--signal {
-  background: url(../img/icons/iconbg-signal.png) no-repeat left center;
+  background: url(../img/mob-signal.png) no-repeat 0 0;
   width: 21px;
-  height: 14px;
+  height: 21px;
+}
+.iconbg--signal-000 {
+  background: url(../img/mob-signal.png) no-repeat 0 -105px;
+}
+.iconbg--signal-001 {
+  background: url(../img/mob-signal.png) no-repeat 0 -84px;
+}
+.iconbg--signal-010 {
+  background: url(../img/mob-signal.png) no-repeat 0 -63px;
+}
+.iconbg--signal-011 {
+  background: url(../img/mob-signal.png) no-repeat 0 -42px;
+}
+.iconbg--signal-100 {
+  background: url(../img/mob-signal.png) no-repeat 0 -21px;
+}
+.iconbg--signal-101 {
+  background: url(../img/mob-signal.png) no-repeat 0 0;
 }
 .iconbg--temp {
   background: url(../img/icons/iconbg-termometr.png) no-repeat left center;
   width: 27px;
   height: 43px;
   margin: 0;
+}
+.iconbg--temp-sm {
+  background-size: contain;
+  width: 16px;
+  height: 22px;
 }
 .iconbg--counter {
   background: url(../img/icons/iconbg-counter.png) no-repeat left center;
@@ -3496,6 +3604,11 @@ input:checked:hover + .checkbox__view {
   width: 34px;
   height: 37px;
   margin: 0;
+}
+.iconbg--move-sm {
+  background-size: contain;
+  width: 17px;
+  height: 19px;
 }
 .iconbg--battery {
   background: url(../img/icons/iconbg-battery.png) no-repeat left center;
@@ -4859,6 +4972,19 @@ body.mini-navbar.fixed-sidebar .logo-element {
   padding-left: 35px;
   padding-right: 35px;
 }
+.buttons-panel--bottom {
+  text-align: right;
+}
+.ibox .buttons-panel {
+  margin: 0;
+  padding: 0;
+}
+.ibox .buttons-panel--bottom {
+  margin-top: 20px;
+}
+.ibox-title .buttons-panel {
+  margin-bottom: 7px;
+}
 @media (max-width: 767px) {
   .navbar-right {
     float: right;
@@ -4880,6 +5006,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 #draggablePanelList LI.col-lg-4:nth-child(2n+1) {
   clear: none!important;
+}
+#draggablePanelList LI.col-lg-4:nth-child(3n+1) {
+  clear: left !important;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -8818,6 +8947,10 @@ body.md-skin {
   .nav.navbar-top-links a .not-mob {
     display: none;
   }
+}
+.icheckbox_square-green,
+.iradio_square-green {
+  background: url("plugins/iCheck/orange.png") no-repeat 0 0;
 }
 @media print {
   nav.navbar-static-side {

@@ -2527,3 +2527,104 @@ body.tour-open .animated {
     background-color: #f0a400;
     border-color: #f0a400!important;
 }
+
+.tooltip-label{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 12px;
+  height: 12px;
+  background: url(../img/icons/iconbg-tooltip.png) no-repeat left top;
+}
+
+#editable_wrapper{
+  position: relative;
+}
+
+.tooltip-container{
+  display: inline-block;
+}
+
+.sensors-table{
+  text-align: center;
+  border-bottom: 1px solid #e7eaec;
+  margin-bottom: 0;
+
+  .iconbg{
+    display: block;
+    margin: 0 5px;
+  }
+
+  th, td{
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  tr td:nth-child(2){
+    white-space: normal;
+  }
+
+  tr th:first-child,
+  tr th:nth-child(2),
+  tr td:first-child,
+  tr td:nth-child(2){
+    text-align: left;
+  }
+
+  &__data{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #000000;
+
+    &--green{
+      color: #1ab148;
+    }
+    &--red{
+      color: #ca3434;
+    }
+  }
+}
+
+.btn-delete{
+  font-size: 11px!important;
+  text-transform: uppercase;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .fa{
+    margin-right: 5px;
+    font-size: 14px!important;
+  }
+}
+
+.btn-red{
+  background-color: #ca3434;
+  color: #fff!important;
+  &:hover{
+    background-color: #be3131;
+  }
+}
+
+.list-view{
+  float: right;
+
+  &__btn{
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    
+    &.active{
+      background-position: left bottom;
+    }
+
+    &--list{
+      background: url(../img/view-list-bg.png) no-repeat left top;
+    }
+    &--table{
+      background: url(../img/view-table-bg.png) no-repeat left top;
+    }
+  }
+}

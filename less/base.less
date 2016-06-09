@@ -1503,6 +1503,23 @@ body.mini-navbar.fixed-sidebar .logo-element {
     padding-left: 35px;
     padding-right: 35px;
   }
+
+  &--bottom{
+    text-align: right;
+  }
+}
+
+.ibox .buttons-panel{
+  margin: 0;
+  padding: 0;
+
+  &--bottom{
+    margin-top: 20px;
+  }
+}
+
+.ibox-title .buttons-panel{
+  margin-bottom: 7px;
 }
 
 @media (max-width: 767px) {
@@ -1530,4 +1547,8 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
 #draggablePanelList LI.col-lg-4:nth-child(2n+1){
   clear: none!important;
+}
+
+#draggablePanelList LI.col-lg-4:nth-child(3n+1) {
+    clear: left !important;
 }

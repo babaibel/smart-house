@@ -245,15 +245,38 @@
     height: 12px;
   }
   &--signal{
-    background: url(../img/icons/iconbg-signal.png) no-repeat left center;
+    background: url(../img/mob-signal.png) no-repeat 0 0;
     width: 21px;
-    height: 14px;
+    height: 21px;
+    &-000{
+      background: url(../img/mob-signal.png) no-repeat 0 -105px;
+    }
+    &-001{
+      background: url(../img/mob-signal.png) no-repeat 0 -84px;
+    }
+    &-010{
+      background: url(../img/mob-signal.png) no-repeat 0 -63px;
+    }
+    &-011{
+      background: url(../img/mob-signal.png) no-repeat 0 -42px;
+    }
+    &-100{
+      background: url(../img/mob-signal.png) no-repeat 0 -21px;
+    }
+    &-101{
+      background: url(../img/mob-signal.png) no-repeat 0 0;
+    }
   }
   &--temp{
     background: url(../img/icons/iconbg-termometr.png) no-repeat left center;
     width: 27px;
     height: 43px;
     margin: 0;
+    &-sm{
+      background-size: contain;
+      width: 16px;
+      height: 22px;
+    }
   }
   &--counter{
     background: url(../img/icons/iconbg-counter.png) no-repeat left center;
@@ -266,6 +289,11 @@
     width: 34px;
     height: 37px;
     margin: 0;
+    &-sm{
+      background-size: contain;
+      width: 17px;
+      height: 19px;
+    }
   }
   &--battery{
     background: url(../img/icons/iconbg-battery.png) no-repeat left center;

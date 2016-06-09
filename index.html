@@ -33,7 +33,7 @@
                     </li>
                     <li class="nav-settings clearfix">
                         <div class="nav-settings__signal">
-                            <i class="iconbg iconbg--signal"></i>
+                            <i class="iconbg iconbg--signal iconbg--signal-101"></i>
                             <span>MEGAFON</span>
                         </div>
                         <span class="nav-settings__status nav-settings__status--online">на связи</span>
@@ -744,6 +744,23 @@
 
     <!-- jQuery UI -->
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <script>
+        // Draggable panels
+        jQuery(function($) {
+            var panelList = $('#draggablePanelList');
+
+            panelList.sortable({
+                handle: '.ibox-title', 
+                update: function() {
+                    $('.col-lg-6', panelList).each(function(index, elem) {
+                         var $listItem = $(elem),
+                             newIndex = $listItem.index();
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
