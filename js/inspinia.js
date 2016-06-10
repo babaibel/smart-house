@@ -9,6 +9,7 @@
 $(document).ready(function () {
 
 
+
     // Add body-small class if window less than 768px
     if ($(this).width() < 769) {
         $('body').addClass('body-small')
@@ -110,7 +111,7 @@ $(document).ready(function () {
 
     });
 
-    // Tooltips demo
+    // Tooltips
     $('.tooltip-container').tooltip({
         selector: "[data-toggle=tooltip]",
         container: "body"
@@ -180,6 +181,8 @@ $(document).ready(function () {
     $('.full-height-scroll').slimscroll({
         height: '100%'
     })
+
+    $.widget.bridge('uitooltip', $.ui.tooltip);
 });
 
 
