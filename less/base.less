@@ -610,6 +610,20 @@ code {
   & > div + div{
     margin-top: 15px;
   }
+
+  &--pd15{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.ibox-footer{
+  padding: 9px 15px;
+  text-align: left;
+
+  .checkbox label, .radio label{
+    padding-left: 0;
+  }
 }
 
 .ibox-footer {
@@ -1512,6 +1526,11 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
   &--bottom{
     text-align: right;
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }
 

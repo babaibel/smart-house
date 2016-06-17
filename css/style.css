@@ -3338,6 +3338,7 @@ input:checked:hover + .checkbox__view {
   color: #ca3434;
 }
 .btn-delete {
+  float: right;
   font-size: 11px!important;
   text-transform: uppercase;
   padding-top: 6px;
@@ -3346,6 +3347,16 @@ input:checked:hover + .checkbox__view {
 .btn-delete .fa {
   margin-right: 5px;
   font-size: 14px!important;
+}
+.btn-add {
+  float: left;
+  font-size: 11px!important;
+  text-transform: uppercase;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.btn-add .fa {
+  margin-right: 5px;
 }
 .btn-red {
   background-color: #ca3434;
@@ -3372,6 +3383,18 @@ input:checked:hover + .checkbox__view {
 }
 .list-view__btn--table {
   background: url(../img/view-table-bg.png) no-repeat left top;
+}
+.scroll_content {
+  text-align: left!important;
+  padding-right: 15px;
+}
+.slimScrollBar {
+  width: 7px!important;
+  right: 0!important;
+  cursor: pointer!important;
+}
+.fa--grey {
+  color: #c4c4c4!important;
 }
 .sidebard-panel {
   width: 220px;
@@ -4197,6 +4220,9 @@ code {
   background-color: #ca3434;
   color: #fff;
 }
+.ibox--red .ibox-content__right-small {
+  color: #fff;
+}
 .ibox--red .ibox-content__indicator {
   color: #fff;
 }
@@ -4216,6 +4242,9 @@ code {
 }
 .ibox--orange .ibox-content {
   background-color: #f3b338;
+  color: #fff;
+}
+.ibox--orange .ibox-content__right-small {
   color: #fff;
 }
 .ibox--orange .ibox-content__indicator {
@@ -4267,6 +4296,18 @@ code {
 }
 .ibox-content > div + div {
   margin-top: 15px;
+}
+.ibox-content--pd15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ibox-footer {
+  padding: 9px 15px;
+  text-align: left;
+}
+.ibox-footer .checkbox label,
+.ibox-footer .radio label {
+  padding-left: 0;
 }
 .ibox-footer {
   color: inherit;
@@ -4974,6 +5015,11 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .buttons-panel--bottom {
   text-align: right;
+}
+.buttons-panel--bottom:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .ibox .buttons-panel {
   margin: 0;
@@ -6172,6 +6218,29 @@ body.body-small .vote-icon {
 .login-form__gray-link:hover {
   color: #696969;
   border-bottom-color: transparent;
+}
+.login-form .ibox {
+  margin-bottom: 15px;
+}
+.imei-start {
+  position: relative;
+}
+.imei-start:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: -140px;
+  display: block;
+  background: url(../img/imei-arr.png) no-repeat left top;
+  width: 131px;
+  height: 585px;
+}
+.imei-img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 3px;
+  margin-bottom: 90px;
 }
 #small-chat {
   position: fixed;

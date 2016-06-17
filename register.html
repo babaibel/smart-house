@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Register</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div class="login-form">
+            <div>
+
+                <h1 class="logo-name"><a href="#"><img src="img/logo-big.png" alt=""></a></h1>
+
+            </div>
+            <h3 class="login-form__title m-t">Регистрация</h3>
+
+            <form class="m-t" role="form" action="login.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Имя" required="">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Пароль" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Пароль еще раз" required="">
+                </div>
+                <div class="form-group imei-start">
+                    <input type="text" class="form-control" placeholder="IMEI устройства" required="">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ваше имя" required="">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Ваш телефон" required="">
+                </div>
+                <div class="form-group">
+                        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Запомнить меня</label></div>
+                </div>
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5><i class="fa fa-exclamation-triangle fa--grey"></i> Предупреждения!</h5>
+                    </div>
+                    <div class="ibox-content ibox-content--pd15">
+                        <div class="scroll_content">
+                            <p>
+                                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                                dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                            </p>
+                            <p>
+                                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                                rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
+                                pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ibox-footer">
+                        <div class="checkbox i-checks"><label> <input checked type="checkbox"><i></i> Согласен</label></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Зарегистрироваться</button>
+                <img src="img/imei.jpg" alt="" class="imei-img">
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            // Add slimscroll to element
+            $('.scroll_content').slimscroll({
+                height: '130px',
+                alwaysVisible: true,
+                color: '#ffae00',
+                railVisible: true,
+                railColor: '#e7eaec',
+                railOpacity: 0.9,
+                size: '5px'
+            })
+        });
+    </script>
+
+</body>
+
+</html>
