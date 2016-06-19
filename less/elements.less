@@ -2531,10 +2531,10 @@ body.tour-open .animated {
 .tooltip-label{
   position: relative;
   display: inline-block;
-  vertical-align: top;
-  width: 12px;
-  height: 12px;
-  background: url(../img/icons/iconbg-tooltip.png) no-repeat left top;
+  vertical-align: middle;
+  width: 13px;
+  height: 14px;
+  background: url(../img/icons/iconbg-tooltip.png) no-repeat left center;
 }
 
 #editable_wrapper{
@@ -2553,11 +2553,16 @@ body.tour-open .animated {
   .iconbg{
     display: block;
     margin: 0 5px;
+
+    width: 25px;
+    height: 25px;
+    background-size: cover;
   }
 
   th, td{
     text-align: center;
     white-space: nowrap;
+    vertical-align: middle!important;
   }
 
   tr td:nth-child(2){
@@ -2569,6 +2574,11 @@ body.tour-open .animated {
   tr td:first-child,
   tr td:nth-child(2){
     text-align: left;
+  }
+
+  tr th:first-child,
+  tr td:first-child{
+    width: 110px;
   }
 
   &__data{
@@ -2584,6 +2594,10 @@ body.tour-open .animated {
       color: #ca3434;
     }
   }
+}
+
+.checkbox-col{
+  width: 100px;
 }
 
 .btn-delete{

@@ -188,7 +188,7 @@ video {
 @media (max-width: 767px) {
 
   .wrapper-content{
-    padding: 20px 0 40px;
+    padding: 20px 0 60px;
   }
 }
 
@@ -523,13 +523,18 @@ code {
     .ibox-content{
       background-color: #ca3434;
       color: #fff;
-      &__right-small{
+      &__right-small,
+      &__boiler-indicator--status{
         color: #fff;
       }
     }
     .ibox-content__indicator{
       color: #fff;
     }
+    .iconbg{
+      background-position: left bottom;
+    }
+
   }
   &--orange{
     background-color: #f3b338;
@@ -547,7 +552,8 @@ code {
     .ibox-content{
       background-color: #f3b338;
       color: #fff;
-      &__right-small{
+      &__right-small,
+      &__boiler-indicator--status{
         color: #fff;
       }
     }
@@ -556,6 +562,95 @@ code {
     }
     .ibox-content__small-text{
       color: #fff;
+    }
+    .sensor-box .iconbg{
+      background-position: left bottom;
+    }
+  }
+  &--nobg{
+    background: transparent;
+    .ibox-title{
+      border: 0;
+      background-color: transparent;
+      padding: 0 0 10px;
+      min-height: auto;
+    }
+  }
+  &--green{
+    .ibox-title{
+      border-color: #10b410;
+      color: #10b410!important;
+      .dashed-title{
+        // border-bottom: 1px dashed #10b410;
+        padding-bottom: 2px;
+      }
+      .ibox-tools a{
+        color: #10b410!important;
+      }
+      .dropdown-menu a{
+        color: #333!important;
+      }
+    }
+    .ibox-content{
+      color: #10b410;
+      border-color: #10b410;
+    }
+    .ibox-content__indicator{
+      color: #10b410;
+    }
+    .ibox-content__small-text{
+      color: #10b410;
+    }
+    .btn{
+      color: #fff;
+      border-color: #10b410;
+      background-color: #10b410;
+      font-weight: 700;
+      &:hover{
+        background-color: #0a9d0a;
+        border-color: #0a9d0a;
+      }
+    }
+  }
+  &--full-green{
+    background-color: #10b410;
+    .ibox-title{
+      border-color: #0a9d0a;
+      background-color: #10b410;
+      color: #fff!important;
+      .dashed-title{
+        // border-bottom: 1px dashed #fff;
+        padding-bottom: 2px;
+      }
+      .ibox-tools a{
+        color: #fff!important;
+      }
+      .dropdown-menu a{
+        color: #333!important;
+      }
+    }
+    .ibox-content{
+      color: #fff;
+      background-color: #10b410!important;
+      border-color: #fff;
+    }
+    .ibox-content__indicator{
+      color: #fff;
+    }
+    .ibox-content__small-text{
+      color: #fff;
+    }
+    .btn{
+      color: #10b410;
+      border-color: #fff;
+      background-color: #fff;
+      font-weight: 700;
+      &:hover{
+        color: #0a9d0a;
+      }
+    }
+    .sensor-box .iconbg{
+      background-position: left bottom;
     }
   }
 }
@@ -593,10 +688,10 @@ code {
 }
 
 .ibox-content {
+  position: relative;
   background-color: @ibox-content-bg;
   color: inherit;
   padding: 20px 20px 20px 20px;
-
   border-color: @border-color;
   border-image: none;
   border-style: solid solid none;
@@ -1414,12 +1509,13 @@ body.mini-navbar.fixed-sidebar .logo-element {
   &__temp-info{
     position: relative;
     text-align: center;
-    margin-right: 45px;
-    min-height: 48px;
+    // margin-right: 45px;
+    // min-height: 48px;
     padding: 0 45px;
 
     .ibox-content__indicator{
-      padding-top: 6px;
+      // padding-top: 6px;
+      //line-height: 50px;
 
       sup{
         font-size: 20px;
@@ -1455,17 +1551,24 @@ body.mini-navbar.fixed-sidebar .logo-element {
   &__indicator{
     color: #10b410;
     font: 600 30px/32px 'open sans', sans-serif;
+    display: inline-block;
+      vertical-align: middle;
+    &--left{
+      line-height: 55px;
+
+    }
   }
 
   &__temp-box{
     display: inline-block;
     border: 1px solid #cccccc;
     color: #4f4f4f;
-    font: 700 15px/24px 'open sans', sans-serif;
+    font: 700 15px/22px 'open sans', sans-serif;
     padding: 0 5px;
     border-radius: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: 50%;
+    margin-bottom: -12px;
     &--left{
       left: 0;
     }
@@ -1479,19 +1582,30 @@ body.mini-navbar.fixed-sidebar .logo-element {
     color: #8c8c8c;
     display: block;
     text-align: right;
-    margin-top: 15px;
+    // margin-top: 15px;
+
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
   }
 
   &__info{
     margin-right: 45px;
+    line-height: 50px;
 
     h4{
       display: inline-block;
-      margin: 0 0 4px;
+      margin: 0;
+      vertical-align: middle;
     }
 
     button{
-      margin: 8px 3px 0 0!important;
+      // margin: 8px 3px 0 0!important;
+      margin: 0 3px 0 0!important;
+    }
+
+    .btn{
+      vertical-align: inherit;
     }
 
     &--boiler{
@@ -1502,14 +1616,19 @@ body.mini-navbar.fixed-sidebar .logo-element {
       }
 
       .ibox-content__indicator{
-        float: left;
-        margin-top: 14px;
+        display: inline-block;
+        vertical-align: middle;
       }
       &__boiler-indicator{
         float: right;
       }
     }
   }
+}
+
+h4.ibox-content__indicator{
+  margin: 0;
+  display: inline-block;
 }
 
 .buttons-panel{
@@ -1526,12 +1645,30 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
   &--bottom{
     text-align: right;
+    margin: 0 0 25px;
     &:after{
       content: "";
       display: table;
       clear: both;
     }
+    .main-2col &{
+      margin: 0 0 25px;
+    }
   }
+  &--mgb{
+    margin-bottom: 25px;
+  }
+  &--center{
+    text-align: center;
+  }
+}
+
+.security-title{
+  display: block;
+  float: left;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0!important;
 }
 
 .ibox .buttons-panel{
@@ -1547,6 +1684,38 @@ body.mini-navbar.fixed-sidebar .logo-element {
   margin-bottom: 7px;
 }
 
+.sensor-box{
+  width: 100%;
+  height: 55px;
+  tr{
+
+    td{
+      vertical-align: middle;
+
+      &:first-child{
+        .btn{
+          margin-right: 5px;
+        }
+      }
+
+      &:last-child{
+        text-align: right;
+        width: 1px;
+        white-space: nowrap;
+        padding-left: 15px;
+      }
+
+      .iconbg {
+        margin-left: 3px;
+      }
+      .btn{
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .navbar-right{
     float: right;
@@ -1554,11 +1723,48 @@ body.mini-navbar.fixed-sidebar .logo-element {
   .buttons-panel{
     padding: 0;
   }
+  
 }
 
 @media (max-width: 479px) {
   .ibox-content__indicator {
     font-size: 24px;
+  }
+  .sensor-box{
+    display: block;
+    width: 100%;
+    height: auto;
+    tbody, tr, td{
+      display: block;
+      width: 100%;
+    }
+    tr{
+
+      td{
+        vertical-align: middle;
+
+        &:first-child{
+          .btn{
+            margin-right: 5px;
+          }
+        }
+
+        &:last-child{
+          text-align: center;
+          margin-top: 15px;
+          padding-left: 0;
+          width: auto;
+        }
+
+        .iconbg {
+          margin-left: 3px;
+        }
+        .btn{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
 
@@ -1566,14 +1772,6 @@ body.mini-navbar.fixed-sidebar .logo-element {
   text-align: center!important;
 }
 
-#draggablePanelList LI:nth-child(2n+1){
+.sensors-2col LI:nth-child(2n+1){
   clear: left;
-}
-
-#draggablePanelList LI.col-lg-4:nth-child(2n+1){
-  clear: none!important;
-}
-
-#draggablePanelList LI.col-lg-4:nth-child(3n+1) {
-    clear: left !important;
 }

@@ -29,7 +29,10 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-logo">
-                        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                        <a href="#" class="logo">
+                            <img class="logo__img" src="img/logo.png" alt="">
+                            <img class="logo__img--mob" src="img/logo-mob.png" alt="">
+                        </a>
                     </li>
                     <li class="nav-settings clearfix">
                         <div class="nav-settings__signal">
@@ -225,10 +228,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="wrapper wrapper-content">
-                        <div class="row">
+                        <div class="row main-2col">
                             <div class="col-lg-8">
-                                <ul class="row" id="draggablePanelList">
-                                    <li class="col-lg-6">
+                                <ul class="row sensors-2col" id="draggablePanelList">
+                                    <li class="col-lg-12 col-xlg-6">
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-title">
                                                 <div class="ibox-tools ibox-tools--left">
@@ -251,24 +254,33 @@
                                             </div>
                                             <div class="ibox-content">
                                                 <div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__temp-info">
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                                    <div class="ibox-content__indicator">
+                                                                        29,5
+                                                                        <sup>&deg;C</sup>
+                                                                    </div>
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--temp"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
 
-                                                    <div class="pull-right text-right">
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
 
-                                                         <i class="iconbg iconbg--temp"></i>
-                                                    </div>
-                                                    <div class="ibox-content__temp-info">
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                        <div class="ibox-content__indicator">
-                                                            29,5
-                                                            <sup>&deg;C</sup>
-                                                        </div>
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-title">
                                                 <div class="ibox-tools ibox-tools--left">
@@ -292,22 +304,26 @@
                                             <div class="ibox-content">
                                                 <div>
 
-                                                    <div class="pull-right text-right">
-                                                         <i class="iconbg iconbg--move"></i>
-                                                    </div>
-                                                    <div class="ibox-content__info">
-                                                        <h4 class="ibox-content__indicator">Норма</h4>
-                                                        <div class="pull-right text-right">
-                                                            <i class="iconbg iconbg--wifi"></i>
-                                                            <i class="iconbg iconbg--battery"></i>
-                                                        </div>
-                                                    </div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <h4 class="ibox-content__indicator">Норма</h4>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--move"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
                                                     
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
                                         <div class="ibox float-e-margins ibox--red">
                                             <div class="ibox-title">
                                                 <div class="ibox-tools ibox-tools--left">
@@ -331,23 +347,26 @@
                                             <div class="ibox-content">
                                                 <div>
 
-                                                    <div class="pull-right text-right">
-                                                         <i class="iconbg iconbg--drib"></i>
-                                                    </div>
-                                                    <div class="ibox-content__info">
-                                                        <h4 class="ibox-content__indicator">ТРЕВОГА!</h4>
-                                                        <div class="pull-right text-right">
-                                                            
-                                                            <i class="iconbg iconbg--wifi-w"></i>
-                                                            <i class="iconbg iconbg--battery-w"></i>
-                                                        </div>
-                                                    </div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <h4 class="ibox-content__indicator">ТРЕВОГА</h4>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--drib"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
                                                     
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
 
                                         <div class="ibox float-e-margins ibox--orange">
                                             <div class="ibox-title">
@@ -371,21 +390,27 @@
                                             </div>
                                             <div class="ibox-content">
                                                 <div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn-border-w"><i class="fa fa-unlock"></i> снять</button>
+                                                                 <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить</button>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--security"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
 
-                                                    <div class="pull-right text-right">
-                                                         <i class="iconbg iconbg--security"></i>
-                                                    </div>
-                                                    <div class="ibox-content__info">
-                                                        <button class="btn btn-border-w"><i class="fa fa-unlock"></i> снять</button>
-
-                                                        <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить</button>
-                                                    </div>
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
                                                     
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-title">
                                                 <div class="ibox-tools ibox-tools--left">
@@ -408,24 +433,32 @@
                                             </div>
                                             <div class="ibox-content">
                                                 <div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__temp-info">
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                                    <div class="ibox-content__indicator">
+                                                                        29,5
+                                                                        <sup>&deg;C</sup>
+                                                                    </div>
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--temp"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
 
-                                                    <div class="pull-right text-right">
-
-                                                         <i class="iconbg iconbg--temp"></i>
-                                                    </div>
-                                                    <div class="ibox-content__temp-info">
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                        <div class="ibox-content__indicator">
-                                                            29,5
-                                                            <sup>&deg;C</sup>
-                                                        </div>
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                    </div>
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
 
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-title">
@@ -450,64 +483,33 @@
                                             <div class="ibox-content">
                                                 <div>
 
-                                                    <div class="pull-right text-right">
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__temp-info">
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                                    <div class="ibox-content__indicator">
+                                                                        29,5
+                                                                        <sup>&deg;C</sup>
+                                                                    </div>
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--temp"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
 
-                                                         <i class="iconbg iconbg--temp"></i>
-                                                    </div>
-                                                    <div class="ibox-content__temp-info">
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                        <div class="ibox-content__indicator">
-                                                            29,5
-                                                            <sup>&deg;C</sup>
-                                                        </div>
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                    </div>
+                                                    <small class="ibox-content__right-small">id порт: 1234567</small>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col-lg-6">
-
-                                        <div class="ibox float-e-margins">
-                                            <div class="ibox-title">
-                                                <div class="ibox-tools ibox-tools--left">
-                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                        <i class="fa fa-wrench"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-user">
-                                                        <li><a href="#">Config option 1</a>
-                                                        </li>
-                                                        <li><a href="#">Config option 2</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Детская</h5>
-                                                <div class="ibox-tools">
-                                                    <a class="close-link">
-                                                        <i class="fa fa-times"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="ibox-content">
-                                                <div>
-
-                                                    <div class="pull-right text-right">
-
-                                                         <i class="iconbg iconbg--temp"></i>
-                                                    </div>
-                                                    <div class="ibox-content__temp-info">
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                        <div class="ibox-content__indicator">
-                                                            29,5
-                                                            <sup>&deg;C</sup>
-                                                        </div>
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="col-lg-6">
+                                    <li class="col-lg-12 col-xlg-6">
 
                                         <div class="ibox float-e-margins">
                                             <div class="ibox-title">
@@ -532,25 +534,75 @@
                                             <div class="ibox-content">
                                                 <div>
 
-                                                    <div class="pull-right text-right">
-
-                                                         <i class="iconbg iconbg--counter"></i>
-                                                    </div>
-                                                    <div class="ibox-content__temp-info">
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                        <div class="ibox-content__indicator">
-                                                            29,5
-                                                            <sup>&deg;C</sup>
-                                                        </div>
-                                                        <span class="ibox-content__temp-box ibox-content__temp-box--right">+25</span>
-                                                    </div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__temp-info">
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                                    <div class="ibox-content__indicator">
+                                                                        29,5
+                                                                        <sup>&deg;C</sup>
+                                                                    </div>
+                                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--counter"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
 
                                                     <small class="ibox-content__right-small">id порт: 1234567</small>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                               </ul>
+                                    <li class="col-lg-12 col-xlg-6">
+                                        <div class="ibox float-e-margins ibox--green">
+                                            <div class="ibox-title">
+                                                <div class="ibox-tools ibox-tools--left">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <h5 class="dashed-title">Движение коридор (Зона 1)</h5>
+                                                <div class="ibox-tools">
+                                                    <a class="close-link">
+                                                        <i class="fa fa-times"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div>
+                                                    <table class="sensor-box">
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить на охрану</button>
+                                                            </td>
+                                                            <td>
+                                                                <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i>
+                                                                <i class="iconbg iconbg--security-green"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="buttons-panel buttons-panel--bottom buttons-panel--center">
+                                    <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-plus"></i> ДОБАВИТЬ ДАТЧИКИ НА ГЛАВНУЮ</a>
+                                </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="ibox float-e-margins ibox--orange">
@@ -720,7 +772,14 @@
                             </div>
                         </div>
                 </div>
-
+                <div class="footer">
+                    <div class="pull-right">
+                        <strong>8 (800) 200-00-00</strong>
+                    </div>
+                    <div>
+                        Copyright Example Company &copy; 2014-2015
+                    </div>
+                </div>
             </div>
         </div>
 

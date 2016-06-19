@@ -29,7 +29,10 @@
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-logo">
-                        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                        <a href="#" class="logo">
+                            <img class="logo__img" src="img/logo.png" alt="">
+                            <img class="logo__img--mob" src="img/logo-mob.png" alt="">
+                        </a>
                     </li>
                     <li class="nav-settings clearfix">
                         <div class="nav-settings__signal">
@@ -233,19 +236,19 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-            <div class="buttons-panel">
-                <a href="#" class="btn btn-sm btn-white">Добавить</a>
+                <div class="buttons-panel">
+                    <a href="#" class="btn btn-sm btn-white">Добавить</a>
 
-                <div class="list-view">
-                    Вид: 
-                    <a href="#" class="list-view__btn list-view__btn--table active"></a>
-                    <a href="#" class="list-view__btn list-view__btn--list"></a>
+                    <div class="list-view">
+                        Вид: 
+                        <a href="#" class="list-view__btn list-view__btn--table active"></a>
+                        <a href="#" class="list-view__btn list-view__btn--list"></a>
+                    </div>
                 </div>
-            </div>
 
                 <div class="wrapper wrapper-content">
-                    <ul class="row animated fadeIn" id="draggablePanelList">
-                        <li class="col-lg-4">
+                    <ul class="row animated fadeIn sensors-3col" id="draggablePanelList">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -268,24 +271,32 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">нагревается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--calendar"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -308,24 +319,32 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">нагревается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--radiator"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -348,61 +367,164 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools ibox-tools--left">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5>Гостиная</h5>
+                                    <div class="ibox-tools">
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                    29,5
+                                                    <sup>&deg;C</sup>
+                                                </div>
+                                                <div class="ibox-content__boiler-indicator">
+                                                    <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                    <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery"></i>
+                                                <i class="iconbg iconbg--boiler"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xlg-4 col-lg-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools ibox-tools--left">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5>Гостиная</h5>
+                                    <div class="ibox-tools">
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div>
+                                       <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins ibox--orange">
-                                            <div class="ibox-title">
-                                                <div class="ibox-tools ibox-tools--left">
-                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                        <i class="fa fa-wrench"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-user">
-                                                        <li><a href="#">Config option 1</a>
-                                                        </li>
-                                                        <li><a href="#">Config option 2</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <h5>Охрана не активна</h5>
-                                                <div class="ibox-tools">
-                                                    <a class="close-link">
-                                                        <i class="fa fa-times"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="ibox-content">
-                                                <div>
+                                <div class="ibox-title">
+                                    <div class="ibox-tools ibox-tools--left">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5>Охрана не активна</h5>
+                                    <div class="ibox-tools">
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div>
 
-                                                    <div class="pull-right text-right">
-                                                         <i class="iconbg iconbg--security"></i>
-                                                    </div>
-                                                    <div class="ibox-content__info">
-                                                        <button class="btn btn-border-w"><i class="fa fa-unlock"></i> снять</button>
-
-                                                        <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить</button>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <button class="btn btn-border-w"><i class="fa fa-unlock"></i> снять</button>
+                                                    <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить</button>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--security"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -425,24 +547,30 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins ibox--red">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -464,24 +592,26 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                            <i class="iconbg iconbg--move"></i>
-                                        </div>
-                                        <div class="ibox-content__info">
-                                            <h4 class="ibox-content__indicator">Тревога</h4>
-                                            <div class="pull-right text-right">
-                                                <!--template bindings={}-->
-                                                <!--template bindings={}--><i class="iconbg iconbg--battery-w"></i>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <h4 class="ibox-content__indicator">Тревога</h4>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         <small class="ibox-content__right-small">
-                                            РАДИО (ID=67FE0D)
+                                                РАДИО (ID=67FE0D)
                                         </small>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -504,24 +634,30 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -544,24 +680,30 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="col-lg-4">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
@@ -584,26 +726,39 @@
                                 </div>
                                 <div class="ibox-content">
                                     <div>
-                                        <div class="pull-right text-right">
-                                             <i class="iconbg iconbg--boiler"></i>
-                                        </div>
-                                        <div class="ibox-content__info ibox-content__info--boiler">
-                                            <div class="ibox-content__indicator">
-                                                29,5
-                                                <sup>&deg;C</sup>
-                                            </div>
-                                            <div class="ibox-content__boiler-indicator">
-                                                <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
-                                                <div class="ibox-content__boiler-indicator--status">поддерживается</div>
-                                            </div>
-                                        </div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--left">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="ibox-content__boiler-indicator">
+                                                        <div class="ibox-content__boiler-indicator--temp">29,5 <sup>&deg;C</sup></div>
+                                                        <div class="ibox-content__boiler-indicator--status">поддерживается</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--boiler"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </li>
                    </ul>
                 </div>
-
+                <div class="footer">
+                    <div class="pull-right">
+                        <strong>8 (800) 200-00-00</strong>
+                    </div>
+                    <div>
+                        Copyright Example Company &copy; 2014-2015
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -627,7 +782,22 @@
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 
+    <script>
+        // Draggable panels
+        jQuery(function($) {
+            var panelList = $('#draggablePanelList');
 
+            panelList.sortable({
+                handle: '.ibox-title', 
+                update: function() {
+                    $('.col-lg-4', panelList).each(function(index, elem) {
+                         var $listItem = $(elem),
+                             newIndex = $listItem.index();
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
