@@ -5357,6 +5357,9 @@ h4.ibox-content__indicator {
 .sensors-2col LI:nth-child(2n+1) {
   clear: left;
 }
+.sortableList li .ibox {
+  cursor: move!important;
+}
 /* SEARCH PAGE */
 .search-form {
   margin-top: 10px;
