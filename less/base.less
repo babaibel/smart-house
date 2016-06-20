@@ -1552,10 +1552,12 @@ body.mini-navbar.fixed-sidebar .logo-element {
     color: #10b410;
     font: 600 30px/32px 'open sans', sans-serif;
     display: inline-block;
-      vertical-align: middle;
+    vertical-align: middle;
     &--left{
       line-height: 55px;
-
+    }
+    &--blue{
+      color: #0000ff;
     }
   }
 
@@ -1655,9 +1657,14 @@ h4.ibox-content__indicator{
       margin: 0 0 25px;
     }
   }
+  &--bottom-left{
+    text-align: left;
+    margin-top: 20px!important;
+  }
   &--mgb{
     margin-bottom: 25px;
   }
+
   &--center{
     text-align: center;
   }
@@ -1716,57 +1723,6 @@ h4.ibox-content__indicator{
   }
 }
 
-@media (max-width: 767px) {
-  .navbar-right{
-    float: right;
-  }
-  .buttons-panel{
-    padding: 0;
-  }
-  
-}
-
-@media (max-width: 479px) {
-  .ibox-content__indicator {
-    font-size: 24px;
-  }
-  .sensor-box{
-    display: block;
-    width: 100%;
-    height: auto;
-    tbody, tr, td{
-      display: block;
-      width: 100%;
-    }
-    tr{
-
-      td{
-        vertical-align: middle;
-
-        &:first-child{
-          .btn{
-            margin-right: 5px;
-          }
-        }
-
-        &:last-child{
-          text-align: center;
-          margin-top: 15px;
-          padding-left: 0;
-          width: auto;
-        }
-
-        .iconbg {
-          margin-left: 3px;
-        }
-        .btn{
-          margin-bottom: 0;
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
 
 .center-box{
   text-align: center!important;
@@ -1778,4 +1734,117 @@ h4.ibox-content__indicator{
 
 .sortableList li .ibox{
   cursor: move!important;
+}
+
+.sensor-settings{
+  &__title{
+    font-weight: 600;
+    display: inline-block;
+  }
+  &__h3-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0!important;
+  }
+  &__box{
+    width: auto;
+    margin: 0 auto 50px;
+    background: #f3f3f4;
+    padding: 15px;
+    border-radius: 5px;
+    tr{
+
+      td{
+        vertical-align: middle;
+        padding: 15px;
+
+        &:first-child{
+          .btn{
+            margin-right: 5px;
+          }
+        }
+
+        &:last-child{
+          text-align: right;
+          width: 1px;
+          white-space: nowrap;
+        }
+
+        .iconbg {
+          margin-left: 3px;
+        }
+        .btn{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .ibox-content__indicator{
+      font-size: 48px;
+      text-transform: uppercase;
+      line-height: 50px;
+    }
+  }
+  &__indicator-title{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  &__sensor-title{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  &__port{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  &__controls-info{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+    text-align: right;
+  }
+  &__unit{
+    text-align: center;
+    margin: 10px 0;
+  }
+  &__unit-title{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    display: block;
+  }
+  &__topline{
+    text-align: center;
+    position: relative;
+    margin-bottom: 25px;
+    &--left{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &--right{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.i-checks__label{
+  display: inline-block;
+  line-height: 24px;
+  margin-left: 3px;
+}
+
+.calendar-box{
+  
 }

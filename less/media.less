@@ -46,6 +46,14 @@
 
 @media (max-width: 768px) {
 
+  .navbar-right{
+    float: right;
+  }
+
+  .buttons-panel{
+    padding: 0;
+  }
+
   #page-wrapper {
     position: inherit;
     margin: 0 0 0 0;
@@ -127,6 +135,136 @@
     }
     .ibox-tools{
       float: right;
+    }
+  }
+
+  .sensor-settings__topline{
+    text-align: left;
+    &-center{
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    &--left,
+    &--right{
+      display: block!important;
+      position: relative;
+      top: auto;
+      transform: none;
+      left: auto;
+      right: auto;
+      margin-bottom: 5px;
+      .btn{
+        float: none;
+      }
+    }
+  }
+
+  .sensor-settings__box{
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+}
+
+@media (max-width: 479px) {
+  .ibox-content__indicator {
+    font-size: 24px;
+  }
+  .sensor-box{
+    display: block;
+    width: 100%;
+    height: auto;
+    tbody, tr, td{
+      display: block;
+      width: 100%;
+    }
+    tr{
+
+      td{
+        vertical-align: middle;
+
+        &:first-child{
+          .btn{
+            margin-right: 5px;
+          }
+        }
+
+        &:last-child{
+          text-align: center;
+          margin-top: 15px;
+          padding-left: 0;
+          width: auto;
+        }
+
+        .iconbg {
+          margin-left: 3px;
+        }
+        .btn{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .sensor-settings__box{
+    display: block;
+    width: 100%;
+    height: auto;
+    tbody, tr, td{
+      display: block;
+      width: 100%;
+    }
+    tr{
+
+      td{
+        vertical-align: middle;
+        padding: 0;
+
+        &:first-child{
+          .btn{
+            margin-right: 5px;
+          }
+        }
+
+        &:last-child{
+          text-align: center;
+          padding: 0;
+          width: auto;
+          margin-top: 15px;
+        }
+
+        .iconbg {
+          margin-left: 3px;
+        }
+        .btn{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .btn-group{
+    display: block;
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .btn{
+      width: 50%!important;
+      display: block;
+      float: left;
+    }
+  }
+
+  .calendar-box .fc-toolbar > div{
+    float: none!important;
+    margin-bottom: 10px;
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 
