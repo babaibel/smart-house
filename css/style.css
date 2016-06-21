@@ -1175,6 +1175,11 @@ button.dim:active:before {
   background-color: #3a3e42!important;
   border-color: #3a3e42!important;
 }
+.btn-abs-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .label {
   background-color: #d1dade;
   color: #5e5e5e;
@@ -4648,6 +4653,12 @@ table.table-mail tr td {
 .ibox-content {
   clear: both;
 }
+.ibox-content--full {
+  margin-left: -25px;
+  margin-right: -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 .ibox-heading {
   background-color: #f3f6fb;
   border-bottom: none;
@@ -5321,6 +5332,7 @@ h4.ibox-content__indicator {
   display: inline-block;
 }
 .buttons-panel {
+  position: relative;
   padding: 0 10px;
   margin-top: 20px;
 }
@@ -5358,6 +5370,9 @@ h4.ibox-content__indicator {
   float: left;
   font-size: 22px;
   line-height: 30px;
+  margin-bottom: 10px;
+}
+.ibox .security-title {
   margin: 0!important;
 }
 .ibox .buttons-panel {
@@ -5504,19 +5519,47 @@ h4.ibox-content__indicator {
   padding-top: 0;
   margin-bottom: 25px;
 }
-.other-sensors {
-  margin-bottom: 25px;
-}
-.other-sensors h3 {
-  font-size: 20px;
-  line-height: 22px;
-  margin: 0 0 10px;
-}
 .other-sensors .buttons-panel {
-  margin: 0!important;
+  margin: 0 0 25px!important;
   padding: 0;
 }
 .other-sensors .row {
+  margin-bottom: 0;
+}
+.other-sensors .ibox {
+  margin-bottom: 15px;
+}
+.track-panel {
+  width: 100%;
+  color: #414141;
+}
+.track-panel td {
+  vertical-align: middle;
+}
+.track-panel__title {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 7px;
+  color: #414141;
+  font-weight: 600;
+}
+.track-panel input[type="text"].form-control {
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 24px;
+  text-align: center;
+  margin-right: 5px;
+}
+.track-panel .form-group {
+  margin-bottom: 15px;
+}
+.track-panel .form-group:last-child {
   margin-bottom: 0;
 }
 /* SEARCH PAGE */
@@ -9396,6 +9439,32 @@ body.md-skin {
     margin-left: auto;
   }
 }
+@media (max-width: 1000px) {
+  .sensor-settings__topline:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .sensor-settings__topline-center {
+    margin-bottom: 15px;
+  }
+  .sensor-settings__topline--left,
+  .sensor-settings__topline--right {
+    display: block!important;
+    position: relative;
+    top: auto;
+    transform: none;
+    left: auto;
+    right: auto;
+    margin-bottom: 0;
+  }
+  .sensor-settings__topline--left {
+    float: left;
+  }
+  .sensor-settings__topline--right {
+    float: right;
+  }
+}
 @media (max-width: 768px) {
   .navbar-right {
     float: right;
@@ -9488,14 +9557,31 @@ body.md-skin {
     left: auto;
     right: auto;
     margin-bottom: 5px;
+    float: none!important;
   }
   .sensor-settings__topline--left .btn,
   .sensor-settings__topline--right .btn {
-    float: none;
+    float: none!important;
   }
   .sensor-settings__box {
     width: 100%;
     margin: 0 0 20px;
+  }
+  .track-panel {
+    display: block;
+    width: 100%;
+  }
+  .track-panel tbody,
+  .track-panel tr,
+  .track-panel td {
+    display: block;
+    width: 100%;
+  }
+  .track-panel td {
+    margin-bottom: 15px;
+  }
+  .track-panel td:last-child {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 479px) {

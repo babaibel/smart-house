@@ -765,6 +765,13 @@ table.table-mail tr td {
 
 .ibox-content {
   clear: both;
+
+  &--full{
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .ibox-heading {
@@ -1638,6 +1645,7 @@ h4.ibox-content__indicator{
 }
 
 .buttons-panel{
+  position: relative;
   padding: 0 10px;
   margin-top: 20px;
 
@@ -1679,7 +1687,10 @@ h4.ibox-content__indicator{
   float: left;
   font-size: 22px;
   line-height: 30px;
-  margin: 0!important;
+  margin-bottom: 10px;
+  .ibox &{
+    margin: 0!important;
+  }
 }
 
 .ibox .buttons-panel{
@@ -1726,7 +1737,6 @@ h4.ibox-content__indicator{
     }
   }
 }
-
 
 .center-box{
   text-align: center!important;
@@ -1857,17 +1867,54 @@ h4.ibox-content__indicator{
 }
 
 .other-sensors{
-  h3{
-    font-size: 20px;
-    line-height: 22px;
-    margin: 0 0 10px;
-  }
-  margin-bottom: 25px;
+
   .buttons-panel{
-    margin: 0!important;
+    margin: 0 0 25px!important;
     padding: 0;
   }
   .row{
     margin-bottom: 0;
+  }
+  .ibox{
+    margin-bottom: 15px;
+  }
+}
+
+.track-panel{
+  width: 100%;
+  color: #414141;
+
+  td{
+    vertical-align: middle;
+  }
+
+  &__title{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 7px;
+    color: #414141;
+    font-weight: 600;
+  }
+
+  input[type="text"].form-control{
+    width: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 17px;
+    
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 0 5px;
+    height: 24px;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .form-group{
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }

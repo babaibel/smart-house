@@ -44,6 +44,35 @@
   }
 }
 
+@media (max-width: 1000px) {
+.sensor-settings__topline{
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    &-center{
+      margin-bottom: 15px;
+    }
+    &--left,
+    &--right{
+      display: block!important;
+      position: relative;
+      top: auto;
+      transform: none;
+      left: auto;
+      right: auto;
+      margin-bottom: 0;
+    }
+    &--left{
+      float: left;
+    }
+    &--right{
+      float: right;
+    }
+  }
+}
+
 @media (max-width: 768px) {
 
   .navbar-right{
@@ -154,8 +183,9 @@
       left: auto;
       right: auto;
       margin-bottom: 5px;
+      float: none!important;
       .btn{
-        float: none;
+        float: none!important;
       }
     }
   }
@@ -163,6 +193,23 @@
   .sensor-settings__box{
     width: 100%;
     margin: 0 0 20px;
+  }
+
+  .track-panel{
+    display: block;
+    width: 100%;
+
+    tbody, tr, td{
+      display: block;
+      width: 100%;
+    }
+
+    td{
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 
 }
