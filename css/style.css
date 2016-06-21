@@ -3444,10 +3444,14 @@ input:checked:hover + .checkbox__view {
 .sensors-table--statistic td {
   font-weight: 600;
 }
+.sensors-table--statistic td:first-child,
+.sensors-table--statistic td:nth-child(2) {
+  width: 15%!important;
+}
 .sensors-table--statistic th,
 .sensors-table--statistic td {
-  width: 33.3333%;
-  text-align: left;
+  text-align: left!important;
+  white-space: nowrap!important;
 }
 .checkbox-col {
   width: 100px;
@@ -4586,8 +4590,11 @@ code {
   border-style: solid solid none;
   border-width: 1px 0;
 }
-.ibox-content .ibox-content__small-text {
+.ibox-content__small-text {
   font-size: 13px;
+  font-weight: 400;
+}
+.ibox-content__text {
   font-weight: 400;
 }
 .ibox-content > div + div {
@@ -5490,6 +5497,12 @@ h4.ibox-content__indicator {
   display: inline-block;
   line-height: 24px;
   margin-left: 3px;
+}
+.hidden-timeline {
+  display: none;
+  border-top: 0;
+  padding-top: 0;
+  margin-bottom: 25px;
 }
 /* SEARCH PAGE */
 .search-form {

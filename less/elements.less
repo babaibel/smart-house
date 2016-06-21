@@ -2597,10 +2597,15 @@ body.tour-open .animated {
   &--statistic{
     td{
       font-weight: 600;
+      &:first-child,
+      &:nth-child(2){
+        width: 15%!important;
+      }
     }
     th, td{
-      width: 33.3333%;
-      text-align: left;
+      text-align: left!important;
+
+        white-space: nowrap!important;
     }
   }
 }
