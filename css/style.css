@@ -5504,6 +5504,21 @@ h4.ibox-content__indicator {
   padding-top: 0;
   margin-bottom: 25px;
 }
+.other-sensors {
+  margin-bottom: 25px;
+}
+.other-sensors h3 {
+  font-size: 20px;
+  line-height: 22px;
+  margin: 0 0 10px;
+}
+.other-sensors .buttons-panel {
+  margin: 0!important;
+  padding: 0;
+}
+.other-sensors .row {
+  margin-bottom: 0;
+}
 /* SEARCH PAGE */
 .search-form {
   margin-top: 10px;
