@@ -5286,6 +5286,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 .ibox-content__indicator--blue {
   color: #0000ff;
 }
+.ibox-content__indicator--red {
+  color: #fd3026;
+}
 .ibox-content__temp-box {
   display: inline-block;
   border: 1px solid #cccccc;
@@ -5454,6 +5457,13 @@ h4.ibox-content__indicator {
   font-size: 22px;
   line-height: 24px;
   margin: 0!important;
+}
+.sensor-settings__h4-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 10px!important;
 }
 .sensor-settings__box {
   width: auto;
