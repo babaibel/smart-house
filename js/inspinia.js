@@ -8,6 +8,28 @@
 
 $(document).ready(function () {
 
+    // change sensor name
+    $('.js-change-name__btn').click(function () {
+
+        var oldName = $('.js-sensor-name').text();
+
+        $(this).fadeOut();
+        $('.js-change-name-form').fadeIn();
+        $('.js-change-name__input').val(oldName);
+    });
+
+    $('.js-change-name__ok').click(function () {
+
+        var newName = $('.js-change-name__input').val();
+
+        $('.js-sensor-name').text(newName);
+        setTimeout(function () {
+            $('.js-change-name__btn').fadeIn();
+            $('.js-change-name-form').fadeOut();
+        }, 100);
+    });
+
+
     // Add body-small class if window less than 768px
     if ($(this).width() < 769) {
         $('body').addClass('body-small')

@@ -1700,6 +1700,22 @@ h4.ibox-content__indicator{
   &--bottom{
     margin-top: 20px;
   }
+
+  .input-group{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
+    &-addon{
+      border: 0 none;
+      padding: 0;
+      .fa-calendar{
+        height: auto;
+        width: auto;
+        font-size: 24px;
+        margin-top: -2px;
+      }
+    }
+  }
 }
 
 .ibox-title .buttons-panel{
@@ -1764,7 +1780,7 @@ h4.ibox-content__indicator{
   }
   &__box{
     width: auto;
-    margin: 0 auto 50px;
+    margin: 0 auto 35px;
     background: #f3f3f4;
     padding: 15px;
     border-radius: 5px;
@@ -1850,6 +1866,55 @@ h4.ibox-content__indicator{
       right: 0;
       transform: translateY(-50%);
     }
+    &--limits{
+      margin-bottom: 50px;
+      .sensor-settings__topline-center{
+        line-height: 95px;
+        
+        text-align: center;
+      }
+    }
+    &__center-wraper{
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 16px;
+    }
+  }
+}
+
+.change-name{
+  margin: 7px 0 0;
+  position: relative;
+  height: 36px;
+  
+  &__form{
+    display: none;
+    max-width: 300px;
+    margin: 7px auto 0;
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &__input{
+    display: block;
+    border-radius: 4px;
+    float: left;
+    padding-right: 58px;
+  }
+  button{
+    display: block;
+    float: left;
+    margin-left: -46px;
+  }
+
+  .js-change-name__btn{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
   }
 }
 
@@ -1917,4 +1982,81 @@ h4.ibox-content__indicator{
       margin-bottom: 0;
     }
   }
+}
+
+.noUi-background{
+  background-color: #fd3026;
+  box-shadow: none!important;
+}
+
+.noUi-connect{
+  background-color: #10b410;
+}
+
+.range_slider{
+  margin: 40px 35px 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large,
+.noUi-marker-horizontal.noUi-marker{
+  display: none;
+}
+
+.noUi-pips-horizontal{
+  color: #000;
+  font-weight: 600;
+  height: 20px !important;
+  padding: 0 !important;
+  top: -40px;
+}
+
+.sensor-limit{
+  display: inline-block;
+  position: relative;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  text-align: center;
+  color: #3a3e42;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  padding: 5px;
+  z-index: 1;
+  &__indicator{
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+    sup{
+      font-size: 26px;
+      line-height: 28px;
+    }
+  }
+  .ibox-tools{
+    position: absolute;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 18px;
+    
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    z-index: 2;
+    .dropdown-toggle{
+      display: block;
+      text-align: center;
+      vertical-align: 20px;
+      margin: 0;
+      color: #c4c4c4;
+    }
+  }
+}
+
+.orange-text{
+  color: #ffae00;
 }

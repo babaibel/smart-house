@@ -14,6 +14,8 @@
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
 
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
     <!-- Toastr style -->
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
 
@@ -213,7 +215,7 @@
 
         </nav>
         </div>
-        <div class="row  border-bottom white-bg dashboard-header">
+        <div class="row border-bottom white-bg dashboard-header">
 
             <div class="col-sm-12">
                 <div class="profile-element__info">
@@ -235,8 +237,7 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-lg-12">
+
                 <div class="wrapper wrapper-content">
 
                     <div class="ibox sensor-settings">
@@ -252,8 +253,17 @@
                             
                             <div class="sensor-settings__topline">
                                 <div class="sensor-settings__topline-center">
-                                    <h3 class="sensor-settings__h3-title">Движение зал</h3>
-                                    <a class="btn btn-sm btn-white btn-white--nobrd" href="javascript:void(0)"><i class="fa fa-wrench"></i> изменить название</a>
+                                    <h3 class="sensor-settings__h3-title js-sensor-name">Движение зал</h3>
+                                    
+                                    <div class="change-name">
+                                        <a class="btn btn-sm btn-white btn-white--nobrd js-change-name__btn" href="javascript:void(0)">
+                                            <i class="fa fa-wrench"></i> изменить название
+                                        </a>
+                                        <div class="change-name__form js-change-name-form">
+                                            <input type="text" class="form-control change-name__input js-change-name__input">
+                                            <button type="button" class="btn btn-orange js-change-name__ok">ок</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="sensor-settings__topline--left">
                                     <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить ДАТЧИК</a>
@@ -318,8 +328,15 @@
                                     <button type="button" class="btn btn-white">за 2 дня</button>
                                     <button type="button" class="btn btn-white">за неделю</button>
                                     <button type="button" class="btn btn-white">за месяц</button>
-                                    <button type="button" class="btn btn-white">выбрать</button>
+                                    <button type="button" class="btn btn-white" id="reportrange">выбрать</button>
                                 </div>
+
+                                <input class="form-control" type="hidden" name="daterange" value="01/01/2015 - 01/31/2015" /><span></span>
+
+
+                                <!-- <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="hidden" class="form-control" value="" data-date-start-date="0d">
+                                </div> -->
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped sensors-table sensors-table--statistic">
@@ -397,9 +414,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-
         </div>
         
     </div>
@@ -423,15 +437,85 @@
     <!-- iCheck -->
     <script src="js/plugins/iCheck/icheck.min.js"></script>
 
-   
+
+<!-- Date range use moment.js same as full calendar plugin -->
+    <script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+   <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
 
     <script>
+
+        // (function($){
+        // $.fn.datepicker.dates['ru'] = {
+        //     days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+        //     daysShort: ["Вск", "Пнд", "Втр", "Срд", "Чтв", "Птн", "Суб"],
+        //     daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+        //     months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+        //     monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+        //     today: "Сегодня",
+        //     clear: "Очистить",
+        //     format: "dd.mm.yyyy",
+        //     weekStart: 1
+        // };
+        // }(jQuery));
+
+        
+            
+
         $(document).ready(function(){
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
             });
-        });
+
+            $('input[name="daterange"]').daterangepicker();
+
+            $('#reportrange + span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+            $('#reportrange').daterangepicker({
+                    format: 'MM/DD/YYYY',
+                    startDate: moment().subtract(29, 'days'),
+                    endDate: moment(),
+                    minDate: '01/01/2012',
+                    maxDate: '12/31/2015',
+                    dateLimit: { days: 60 },
+                    showDropdowns: true,
+                    showWeekNumbers: true,
+                    timePicker: false,
+                    timePickerIncrement: 1,
+                    timePicker12Hour: true,
+                    ranges: {
+                        'Сегодня': [moment(), moment()],
+                        'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                        'За последние 7 дней': [moment().subtract(6, 'days'), moment()],
+                        'Последние 30 дней': [moment().subtract(29, 'days'), moment()],
+                        'Этот месяц': [moment().startOf('month'), moment().endOf('month')],
+                        'Прошлый месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                    },
+                    opens: 'right',
+                    drops: 'down',
+                    buttonClasses: ['btn', 'btn-sm'],
+                    applyClass: 'btn-primary',
+                    cancelClass: 'btn-default',
+                    separator: ' to ',
+                    locale: {
+                        applyLabel: 'Выбрать',
+                        cancelLabel: 'Очистить',
+                        fromLabel: 'С',
+                        toLabel: 'По',
+                        customRangeLabel: 'Custom',
+                        daysOfWeek: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                        monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                        firstDay: 1
+                    }
+                }, function(start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                });
+                
+            });
+
     </script>
 
 </body>

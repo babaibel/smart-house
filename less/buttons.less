@@ -265,13 +265,26 @@
   float: right;
 }
 
+.btn--left{
+  float: left!important;
+}
+
 .btn-white{
   &--nobrd{
     border: none!important;
     padding: 0!important;
-    background: transparent;
+    background: transparent!important;
     &:hover{
       opacity: .8;
+    }
+    &:active{
+      background-color: transparent!important;
+      color: inherit!important;
+      box-shadow: none;
+    }
+    &:active:focus{
+      background-color: transparent!important;
+      box-shadow: none;
     }
   }
   
@@ -417,7 +430,7 @@ button.dim:active:before {
     color: #676a6c;
     font-size: 13px;
     height: 25px;
-    line-height: 25px;
+    line-height: 23px;
     padding: 0 10px!important;
     margin: 0;
     white-space: nowrap;
