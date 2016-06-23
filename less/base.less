@@ -653,6 +653,9 @@ code {
       background-position: left bottom;
     }
   }
+  &--auto-height{
+    min-height: auto!important;
+  }
 }
 
 .ibox.collapsed .ibox-content {
@@ -1660,6 +1663,10 @@ h4.ibox-content__indicator{
     padding-right: 35px;
   }
 
+  .inline{
+    vertical-align: middle;
+  }
+
   &--bottom{
     text-align: right;
     margin: 0 0 25px;
@@ -1690,7 +1697,7 @@ h4.ibox-content__indicator{
   float: left;
   font-size: 22px;
   line-height: 30px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   .ibox &{
     margin: 0!important;
   }
@@ -1912,11 +1919,12 @@ h4.ibox-content__indicator{
     border-radius: 4px;
     float: left;
     padding-right: 58px;
+    border-right: 0;
   }
   button{
     display: block;
     float: left;
-    margin-left: -46px;
+    margin-left: -47px;
   }
 
   .js-change-name__btn{
@@ -1925,6 +1933,23 @@ h4.ibox-content__indicator{
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
+  }
+
+  &--right{
+    margin: 0;
+    line-height: 36px;
+    float: right;
+    .js-change-name__btn{
+      transform: none;
+      position: absolute;
+      left: auto;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .change-name__form{
+      margin: 0;
+    }
   }
 }
 
@@ -1952,6 +1977,10 @@ h4.ibox-content__indicator{
   }
   .ibox{
     margin-bottom: 15px;
+  }
+
+  &__ibox-notitle{
+    margin-top: 40px;
   }
 }
 
@@ -1994,12 +2023,27 @@ h4.ibox-content__indicator{
   }
 }
 
-.noUi-background{
+.pie-box{
+  height: 145px;
+  border-top: 3px solid #e7eaec;
+  .ibox-content{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 140px;
+  }
+  .track-panel{
+    height: 130px;
+    td{
+      width: 50%!important;
+    }
+  }
+}
+.range_slider .noUi-background{
   background-color: #fd3026;
   box-shadow: none!important;
 }
 
-.noUi-connect{
+.range_slider .noUi-connect{
   background-color: #10b410;
 }
 
@@ -2007,8 +2051,14 @@ h4.ibox-content__indicator{
   margin: 40px 35px 10px;
 }
 
-.noUi-marker-horizontal.noUi-marker-large,
-.noUi-marker-horizontal.noUi-marker{
+.basic_slider{
+  margin: 40px 35px 15px;
+}
+
+.basic_slider .noUi-marker-horizontal.noUi-marker-large,
+.range_slider .noUi-marker-horizontal.noUi-marker-large,
+.basic_slider .noUi-marker-horizontal.noUi-marker,
+.range_slider .noUi-marker-horizontal.noUi-marker{
   display: none;
 }
 
@@ -2069,4 +2119,132 @@ h4.ibox-content__indicator{
 
 .orange-text{
   color: #ffae00;
+}
+
+.ibox-content.min-padding{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .sensor-settings__sensor-title,
+  .sensor-settings__indicator-title{
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0;
+  }
+}
+
+.notification-icons{
+  font-size: 22px;
+  &__item{
+    color: #1e2022;
+    margin-right: 20px;
+    opacity: .3;
+    &:last-child{
+      margin-right: 0;
+    }
+    &.active{
+      opacity: 1;
+    }
+  }
+}
+
+.del-line-btn{
+  background: url(../IMG/ICONS/del-btn.png) no-repeat left top;
+  display: block;
+  float: right;
+  border-radius: 3px;
+  border: 0;
+  width: 25px;
+  height: 24px;
+  &:hover{
+    background-position: left bottom;
+  }
+}
+
+.notification-desc{
+  float: left;
+  line-height: 33px;
+  &__item{
+    .fa{
+      font-size: 22px;
+      display: inline-block;
+      margin-right: 4px;
+    }
+    display: inline-block;
+    color: #1e2022;
+    margin-right: 20px;
+  }
+}
+
+.sistem-name-box{
+  span{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #404040;
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .form-control{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    display: inline-block!important;
+    width: auto!important;
+    border-radius: 3px;
+  }
+}
+
+.mgb{
+  margin-bottom: 30px;
+}
+.mgl{
+  margin-left: 30px;
+}
+
+.sensor-name{
+  &--big-height{
+    line-height: 34px;
+    margin: 0!important;
+  }
+}
+
+.hidden-cheks-panel{
+  position: relative;
+  height: 24px;
+  &__title{
+    line-height: 24px;
+    cursor: pointer;
+  }
+  &:hover{
+    .hidden-cheks-panel__box{
+      display: block;
+    }
+  }
+  &__box{
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 150%;
+    background: #f3f3f4;
+    padding: 10px;
+    z-index: 333;
+    display: none;
+
+    .form-group{
+      display: inline-block;
+      margin: 0 20px 0 0;
+      color: #6b6e70;
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    &:after {
+      content: ''; 
+      position: absolute;
+      left: 15px; top: -20px;
+      border: 10px solid transparent; 
+      border-bottom: 10px solid #f3f3f4; 
+     }
+  }
 }
