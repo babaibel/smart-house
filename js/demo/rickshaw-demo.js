@@ -78,7 +78,7 @@ $(function() {
     graph6.render();
 
     var graph7 = new Rickshaw.Graph( {
-        element: document.querySelector("#rickshaw_scatterplot"),
+        element: document.querySelector("rickshaw_scatterplot"),
         renderer: 'scatterplot',
         stroke: true,
         padding: { top: 0.05, left: 0.05, right: 0.05 },

@@ -3571,7 +3571,7 @@ input:checked:hover + .checkbox__view {
   color: #4f4f4f;
   font-weight: 600;
   font-size: 15px;
-  line-height: 33px;
+  line-height: 32px;
 }
 .select2-results__option {
   color: #4f4f4f;
@@ -3599,6 +3599,46 @@ input:checked:hover + .checkbox__view {
 label.font-noraml {
   margin: 0 5px 0 0;
   line-height: 34px;
+}
+.counter {
+  margin: 5px auto;
+}
+.counter-field {
+  background: #fff;
+  border: 1px solid #cccccc;
+  color: #4f4f4f;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  height: 26px;
+  padding: 0 5px;
+  text-align: center;
+  width: 38px;
+  margin: 0 5px;
+  border-radius: 3px;
+  box-shadow: 0;
+  vertical-align: middle;
+}
+.counter-minus,
+.counter-plus {
+  background: #ffaa00;
+  border: 0 none;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  height: 26px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  border-radius: 3px;
+}
+.counter-minus:hover,
+.counter-plus:hover {
+  opacity: .8;
 }
 .sidebard-panel {
   width: 220px;
@@ -4646,6 +4686,9 @@ code {
 .ibox--auto-height {
   min-height: auto!important;
 }
+.ibox--no-inner-title {
+  min-height: 144px;
+}
 .ibox.collapsed .ibox-content {
   display: none;
 }
@@ -5576,6 +5619,9 @@ h4.ibox-content__indicator {
   text-transform: uppercase;
   line-height: 50px;
 }
+.sensor-settings__box-center td {
+  text-align: center!important;
+}
 .sensor-settings__indicator-title {
   font-size: 12px;
   line-height: 14px;
@@ -5661,7 +5707,7 @@ h4.ibox-content__indicator {
 }
 .change-name button {
   display: block;
-  float: left;
+  float: left!important;
   margin-left: -47px;
 }
 .change-name .js-change-name__btn {
@@ -5688,7 +5734,7 @@ h4.ibox-content__indicator {
   margin: 0;
 }
 .i-checks__label {
-  display: inline-block;
+  display: inline;
   line-height: 24px;
   margin-left: 3px;
 }
@@ -5710,6 +5756,9 @@ h4.ibox-content__indicator {
 }
 .other-sensors__ibox-notitle {
   margin-top: 40px;
+}
+.other-sensors .security-title {
+  font-size: 20px;
 }
 .track-panel {
   width: 100%;
@@ -5743,6 +5792,17 @@ h4.ibox-content__indicator {
 }
 .track-panel .form-group:last-child {
   margin-bottom: 0;
+}
+.track-panel--calendar {
+  margin-bottom: 30px;
+}
+.track-panel--one-line-setting {
+  height: 100px;
+  font-weight: 600;
+  text-align: center;
+}
+.track-panel--one-line-setting .form-control {
+  margin: 0 30px!important;
 }
 .pie-box {
   height: 145px;
@@ -5833,6 +5893,9 @@ h4.ibox-content__indicator {
 .orange-text {
   color: #ffae00;
 }
+.orange-link {
+  color: #ffae00!important;
+}
 .ibox-content.min-padding {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -5911,24 +5974,36 @@ h4.ibox-content__indicator {
 }
 .hidden-cheks-panel {
   position: relative;
-  height: 24px;
 }
 .hidden-cheks-panel__title {
   line-height: 24px;
   cursor: pointer;
 }
-.hidden-cheks-panel:hover .hidden-cheks-panel__box {
+.hidden-cheks-panel:hover .hidden-cheks-panel__box-wr {
   display: block;
 }
 .hidden-cheks-panel__box {
+  background: #f3f3f4;
+  padding: 10px;
+  position: relative;
+  white-space: nowrap;
+}
+.hidden-cheks-panel__box:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: -20px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #f3f3f4;
+}
+.hidden-cheks-panel__box-wr {
+  padding-top: 10px;
+  display: none;
   position: absolute;
   left: 0;
   right: auto;
-  top: 150%;
-  background: #f3f3f4;
-  padding: 10px;
+  top: 100%;
   z-index: 333;
-  display: none;
 }
 .hidden-cheks-panel__box .form-group {
   display: inline-block;
@@ -5938,13 +6013,71 @@ h4.ibox-content__indicator {
 .hidden-cheks-panel__box .form-group:last-child {
   margin: 0;
 }
-.hidden-cheks-panel__box:after {
-  content: '';
-  position: absolute;
-  left: 15px;
-  top: -20px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid #f3f3f4;
+.calendar-foto-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.calendar-foto-buttons .btn {
+  margin: 0 15px 10px;
+}
+.calendar-foto-buttons .btn:last-child {
+  margin-right: 0;
+}
+.ibox-content__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0!important;
+  color: #414141;
+}
+.ibox-content__title span {
+  font-weight: 400;
+}
+.sensor-settings-table {
+  display: table;
+  width: 100%;
+}
+.sensor-settings-table__row {
+  display: table-row;
+}
+.sensor-settings-table__cell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 33.3333%;
+}
+.sensor-settings-table__cell:first-child {
+  text-align: right;
+  padding-right: 30px;
+}
+.sensor-settings-table__cell:last-child {
+  text-align: left;
+  padding-left: 30px;
+}
+.sensor-settings-table__buttons {
+  display: inline-block;
+}
+.sensor-settings-table__buttons .btn {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+.sensor-settings-table__right-col {
+  display: inline-block;
+}
+.sensor-settings-table__right-col > div {
+  margin-bottom: 25px;
+  text-align: center;
+}
+.sensor-settings-table .sensor-settings__box {
+  border-radius: 0;
+  border-top: 4px solid #e1e4e6;
+}
+.sensor-settings-table .sensor-settings__box td {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.sensor-settings-table .ibox-content__indicator {
+  text-transform: none;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -9826,6 +9959,26 @@ body.md-skin {
   .navbar-top-links .dropdown-alerts {
     margin-left: auto;
   }
+  .flot-chart {
+    width: 60%;
+  }
+}
+@media (max-width: 1200px) {
+  .track-panel--calendar {
+    display: block;
+  }
+  .track-panel--calendar tbody,
+  .track-panel--calendar td,
+  .track-panel--calendar tr {
+    display: block;
+    width: 100%;
+  }
+  .track-panel--calendar td {
+    margin-bottom: 15px;
+  }
+  .ibox--no-inner-title {
+    margin-top: 0;
+  }
 }
 @media (max-width: 1000px) {
   .sensor-settings__topline:after {
@@ -9852,8 +10005,46 @@ body.md-skin {
   .sensor-settings__topline--right {
     float: right;
   }
+  .sensor-settings-table {
+    display: block;
+  }
+  .sensor-settings-table__row,
+  .sensor-settings-table__cell {
+    display: block;
+    width: 100%;
+  }
+  .sensor-settings-table__cell {
+    padding: 0;
+    margin-bottom: 25px;
+    text-align: center!important;
+  }
+  .sensor-settings-table__cell:last-child {
+    margin-bottom: 0;
+  }
+  .sensor-settings-table__buttons {
+    display: block;
+  }
+  .sensor-settings-table__buttons .btn {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .sensor-settings-table__right-col {
+    display: block;
+  }
+  .sensor-settings-table__right-col > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 5px;
+  }
 }
 @media (max-width: 768px) {
+  .sensor-settings-table__buttons .btn {
+    display: block;
+    margin: 0 0 10px;
+  }
+  .sensor-settings-table .ibox-content__indicator {
+    font-size: 40px;
+  }
   .navbar-right {
     float: right;
   }
@@ -9984,6 +10175,26 @@ body.md-skin {
     margin-bottom: 5px;
     text-align: center;
   }
+  .basic_slider {
+    margin: 40px 0 15px;
+  }
+  .statistic-two-lines {
+    max-height: 300px;
+  }
+  .pie-box .track-panel td {
+    width: 100% !important;
+    text-align: center;
+  }
+  .ibox-title .change-name {
+    float: left;
+    width: 100%;
+  }
+  .sensor-name--big-height {
+    display: block;
+  }
+  .sistem-name-box span {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 500px) {
   .sensor-settings__box {
@@ -10016,6 +10227,20 @@ body.md-skin {
   .sensor-settings__box tr td .btn {
     margin-bottom: 0;
     margin-top: 0;
+  }
+  .calendar-foto-buttons {
+    text-align: left;
+  }
+  .calendar-foto-buttons:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .calendar-foto-buttons .btn {
+    margin: 0 10px 10px 0;
+    display: block;
+    float: left;
+    text-align: center;
   }
 }
 @media (max-width: 479px) {

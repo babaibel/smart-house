@@ -248,7 +248,7 @@
                 </div>
                 <div class="ibox-content">
 
-                    <form class="form-inline" role="form">
+                    <form class="form-inline">
                         <div class="form-group">
                             <label>Дата</label>
                             <input type="text" class="form-control" placeholder="11.01.2016">
@@ -258,6 +258,22 @@
                             <input type="text" class="form-control" placeholder="16:21">
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Сигнал сети GSM</h5>
+                    <div class="tooltip-container">
+                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="ibox-content__title mgb">78% – уверенный</div>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-bar-chart"></div>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -283,7 +299,7 @@
                             <a class="btn btn-sm btn-orange" href="javascript:void(0)">Обновить</a>
                         </div>
                         <div class="form-group mgt">
-                            <strong>ВАЖНО!</strong> ПЕРЕД ОБНОВЛЕНИЕМ<br>ОЗНАКОМЬТЕСЬ <a href="#" class="orange-text">С ОГРАНИЧЕНИЯМИ!</a>
+                            <strong>ВАЖНО!</strong> ПЕРЕД ОБНОВЛЕНИЕМ<br>ОЗНАКОМЬТЕСЬ <a href="#" class="orange-link">С ОГРАНИЧЕНИЯМИ!</a>
                         </div>
                     </form>
                 </div>
@@ -292,11 +308,14 @@
             <div class="ibox ibox--auto-height">
 
                 <div class="ibox-content ibox-content--full">
-                    <h5>Уникальный идентификатор системы (IMEI):</h5>
-                    <span>123456789012345</span>
-                    <div class="tooltip-container">
-                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                    <div class="ibox-content__title">Уникальный идентификатор системы (IMEI): 
+                        <span>123456789012345</span>
+                        <div class="tooltip-container">
+                            <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                        </div>
                     </div>
+                   
+                    
 
                 </div>
             </div>
@@ -309,7 +328,7 @@
                     </div>
                 </div>
                 <div class="ibox-content">
-                    <form class="form-inline" role="form">
+                    <form class="form-inline">
 
                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="2016.02.12">
@@ -322,7 +341,7 @@
             <div class="buttons-panel buttons-panel--bottom buttons-panel--mgb">
                 <a class="btn btn-sm btn-orange inline" href="javascript:void(0)">Перезагрузить</a>
                 <div class="inline text-left mgl">
-                    <strong>ВАЖНО!</strong> ПЕРЕД ОБНОВЛЕНИЕМ<br>ОЗНАКОМЬТЕСЬ <a href="#" class="orange-text">С ОГРАНИЧЕНИЯМИ!</a>
+                    <strong>ВАЖНО!</strong> ПЕРЕД ОБНОВЛЕНИЕМ<br>ОЗНАКОМЬТЕСЬ <a href="#" class="orange-link">С ОГРАНИЧЕНИЯМИ!</a>
                 </div>
             </div>
             
@@ -348,7 +367,6 @@
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -366,8 +384,83 @@
    <!-- Select2 -->
     <script src="js/plugins/select2/select2.full.min.js"></script>
 
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
     <script>
+        //Flot Bar Chart
+
+
+        $(function() {
+
+        data_signal = [
+            [new Date('06/02/2016 12:00').getTime(), 25], 
+            [new Date('06/02/2016 17:00').getTime(), 35], 
+            [new Date('06/02/2016 19:00').getTime(), 75], 
+            [new Date('06/02/2016 22:00').getTime(), 90],
+            [new Date('06/02/2016 12:30').getTime(), 25], 
+            [new Date('06/02/2016 10:00').getTime(), 35], 
+            [new Date('06/02/2016 14:00').getTime(), 75], 
+            [new Date('06/02/2016 05:00').getTime(), 90],
+            [new Date('06/02/2016 00:00').getTime(), 25], 
+        ];
+
+            var barOptions = {
+                series: {
+                    bars: {
+                        show: true,
+                        barWidth: 24 * 12 * 60 * 60,
+                        align: 'center',
+                        fill: true,
+                        lineWidth: 1,
+                        order: 1,
+                        fillColor: {
+                            colors: [{
+                                opacity: 0.8
+                            }, {
+                                opacity: 0.8
+                            }]
+                        }
+                    }
+                },
+                xaxis: {
+                    mode: "time",
+                    timeformat: "%I:%M %p",
+                    minTickSize: [1, "hour"],
+                    twelveHourClock: true,
+                    tickLength: 0
+                },
+                colors: ["#99cc00"],
+                grid: {
+                    color: "#c0c0c0",
+                    hoverable: false,
+                    clickable: false,
+                    tickColor: "#c0c0c0",
+                    borderWidth:0
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: false,
+            };
+            var barData = {
+                label: "bar",
+                data: data_signal
+            };
+            $.plot($("#flot-bar-chart"), [barData], barOptions);
+
+        });
+    </script>
+
+    <script>
+
         $(document).ready(function(){
+
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
@@ -380,6 +473,7 @@
             });
 
         });
+
     </script>
 
 </body>

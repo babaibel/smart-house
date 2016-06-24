@@ -656,6 +656,9 @@ code {
   &--auto-height{
     min-height: auto!important;
   }
+  &--no-inner-title{
+    min-height: 144px;
+  }
 }
 
 .ibox.collapsed .ibox-content {
@@ -1834,6 +1837,13 @@ h4.ibox-content__indicator{
       text-transform: uppercase;
       line-height: 50px;
     }
+
+    &-center{
+      td{
+        text-align: center!important;
+      }
+      
+    }
   }
   &__indicator-title{
     font-size: 12px;
@@ -1923,7 +1933,7 @@ h4.ibox-content__indicator{
   }
   button{
     display: block;
-    float: left;
+    float: left!important;
     margin-left: -47px;
   }
 
@@ -1954,7 +1964,7 @@ h4.ibox-content__indicator{
 }
 
 .i-checks__label{
-  display: inline-block;
+  display: inline;
   line-height: 24px;
   margin-left: 3px;
 }
@@ -1981,6 +1991,9 @@ h4.ibox-content__indicator{
 
   &__ibox-notitle{
     margin-top: 40px;
+  }
+  .security-title{
+    font-size: 20px;
   }
 }
 
@@ -2019,6 +2032,17 @@ h4.ibox-content__indicator{
     margin-bottom: 15px;
     &:last-child{
       margin-bottom: 0;
+    }
+  }
+  &--calendar{
+    margin-bottom: 30px;
+  }
+  &--one-line-setting{
+    height: 100px;
+    font-weight: 600;
+    text-align: center;
+    .form-control{
+      margin: 0 30px!important;
     }
   }
 }
@@ -2121,6 +2145,10 @@ h4.ibox-content__indicator{
   color: #ffae00;
 }
 
+.orange-link{
+  color: #ffae00!important;
+}
+
 .ibox-content.min-padding{
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2210,25 +2238,38 @@ h4.ibox-content__indicator{
 
 .hidden-cheks-panel{
   position: relative;
-  height: 24px;
   &__title{
     line-height: 24px;
     cursor: pointer;
   }
   &:hover{
-    .hidden-cheks-panel__box{
+    .hidden-cheks-panel__box-wr{
       display: block;
     }
   }
   &__box{
-    position: absolute;
-    left: 0;
-    right: auto;
-    top: 150%;
+    
     background: #f3f3f4;
     padding: 10px;
-    z-index: 333;
-    display: none;
+    position: relative;
+    white-space: nowrap;
+          &:after {
+        content: ''; 
+        position: absolute;
+        left: 15px; top: -20px;
+        border: 10px solid transparent; 
+        border-bottom: 10px solid #f3f3f4; 
+       }
+
+    &-wr{
+      padding-top: 10px;
+      display: none;
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 100%;
+      z-index: 333;
+    }
 
     .form-group{
       display: inline-block;
@@ -2239,12 +2280,76 @@ h4.ibox-content__indicator{
       }
     }
 
-    &:after {
-      content: ''; 
-      position: absolute;
-      left: 15px; top: -20px;
-      border: 10px solid transparent; 
-      border-bottom: 10px solid #f3f3f4; 
-     }
+    
+  }
+}
+
+.calendar-foto-buttons{
+  text-align: center;
+  margin-bottom: 20px;
+  .btn{
+    margin: 0 15px 10px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.ibox-content__title{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0!important;
+  color: #414141;
+  span{
+    font-weight: 400;
+  }
+}
+
+.sensor-settings-table{
+  display: table;
+  width: 100%;
+  &__row{
+    display: table-row;
+  }
+  &__cell{
+    display: table-cell;
+    vertical-align: middle;
+    width: 33.3333%;
+    &:first-child{
+      text-align: right;
+      padding-right: 30px;
+    }
+    &:last-child{
+      text-align: left;
+      padding-left: 30px;
+    }
+  }
+  &__buttons{
+    display: inline-block;
+    .btn{
+      display: block;
+      margin-bottom: 10px;
+      border-radius: 0;
+    }
+  }
+  &__right-col{
+    display: inline-block;
+    > div{
+      margin-bottom: 25px;
+      text-align: center;
+    }
+  }
+  .sensor-settings__box{
+    td{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    border-radius: 0;
+    border-top: 4px solid #e1e4e6;
+    
+  }
+  .ibox-content__indicator{
+    text-transform: none;
   }
 }
