@@ -252,9 +252,18 @@
                     <div class="ibox-content">
                         
                         <div class="sensor-settings__topline">
-                            <div class="sensor-settings__topline-center">
-                                <h3 class="sensor-settings__h3-title">Движение ворота</h3>
-                                <a class="btn btn-sm btn-white btn-white--nobrd" href="javascript:void(0)"><i class="fa fa-wrench"></i> изменить название</a>
+                            <div class="sensor-settings__topline-center js-change-name">
+                                <h3 class="sensor-settings__h3-title js-sensor-name">Движение ворота</h3>
+                                
+                                <div class="change-name">
+                                    <a class="btn btn-sm btn-white btn-white--nobrd js-change-name__btn" href="javascript:void(0)">
+                                        <i class="fa fa-wrench"></i> изменить название
+                                    </a>
+                                    <div class="change-name__form js-change-name-form">
+                                        <input type="text" class="form-control change-name__input js-change-name__input">
+                                        <button type="button" class="btn btn-orange js-change-name__ok">ок</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="sensor-settings__topline--left">
                                 <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить ДАТЧИК</a>

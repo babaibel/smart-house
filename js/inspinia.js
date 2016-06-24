@@ -47,28 +47,6 @@ $(document).ready(function () {
 
     // End - Плюс минус
 
-    // change sensor name
-    $('.js-change-name__btn').click(function () {
-
-        var oldName = $('.js-sensor-name').text();
-
-        $(this).fadeOut();
-        $('.js-change-name-form').fadeIn();
-        $('.js-change-name__input').val(oldName);
-    });
-
-    $('.js-change-name__ok').click(function () {
-
-        var newName = $('.js-change-name__input').val();
-
-        $('.js-sensor-name').text(newName);
-        setTimeout(function () {
-            $('.js-change-name__btn').fadeIn();
-            $('.js-change-name-form').fadeOut();
-        }, 100);
-    });
-
-
     // Add body-small class if window less than 768px
     if ($(this).width() < 769) {
         $('body').addClass('body-small')
@@ -242,6 +220,45 @@ $(document).ready(function () {
     })
 
     $.widget.bridge('uitooltip', $.ui.tooltip);
+});
+
+$(document).ready(function () {
+    // change sensor name
+
+    if(!$('.js-change-name').length) return;
+
+    var $changeNameWr = $('.js-change-name');
+
+    $changeNameWr.each(function(){
+
+        var $this = $(this),
+            $changeNameSensor = $this.find('.js-sensor-name'),
+            $changeNameForm = $this.find('.js-change-name-form'),
+            $changeNameInput = $this.find('.js-change-name__input'),
+            $changeNameBtn= $this.find('.js-change-name__btn'),
+            $changeNameOk = $this.find('.js-change-name__ok');
+
+        $changeNameBtn.click(function () {
+
+            var oldName = $changeNameSensor.text();
+
+            $(this).fadeOut();
+            $changeNameForm.fadeIn();
+            $changeNameInput.val(oldName);
+        });
+
+        $changeNameOk.click(function () {
+
+            var newName = $changeNameInput.val();
+
+            $changeNameSensor.text(newName);
+            setTimeout(function () {
+                $changeNameBtn.fadeIn();
+                $changeNameForm.fadeOut();
+            }, 100);
+        });
+
+    });
 });
 
 

@@ -2116,6 +2116,16 @@ h4.ibox-content__indicator{
       font-size: 26px;
       line-height: 28px;
     }
+    &-value{
+      display: inline-block;
+      width: 100px!important;
+      border: 1px solid transparent;
+      text-align: center;
+      border-radius: 5px;
+      &:focus{
+        border-color: #ffaa00;
+      }
+    }
   }
   .ibox-tools{
     position: absolute;
@@ -2125,19 +2135,12 @@ h4.ibox-content__indicator{
     height: 22px;
     text-align: center;
     line-height: 18px;
-    
+    color: #c4c4c4;
     top: -11px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
     z-index: 2;
-    .dropdown-toggle{
-      display: block;
-      text-align: center;
-      vertical-align: 20px;
-      margin: 0;
-      color: #c4c4c4;
-    }
   }
 }
 

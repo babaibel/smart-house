@@ -252,7 +252,7 @@
                     <div class="ibox-content">
                         
                         <div class="sensor-settings__topline">
-                            <div class="sensor-settings__topline-center">
+                            <div class="sensor-settings__topline-center js-change-name">
                                 <h3 class="sensor-settings__h3-title js-sensor-name">Температура коридор</h3>
                                 
                                 <div class="change-name">
@@ -295,50 +295,42 @@
                         </table>
 
                         <div class="sensor-settings__topline sensor-settings__topline--limits">
-                            <div class="sensor-settings__topline-center">
+                            <div class="sensor-settings__topline-center js-change-name">
                                 <div class="sensor-settings__topline__center-wraper">
-                                    <span class="sensor-settings__unit-title">Подключение: <span class="orange-text">Т1</span></span>
-                                    <a class="btn btn-sm btn-white btn-white--nobrd" href="javascript:void(0)"><i class="fa fa-wrench"></i> изменить</a>
+                                    <span class="sensor-settings__unit-title">Подключение: <span class="orange-text js-sensor-name">Т1</span></span>
+                                    <div class="change-name">
+                                        <a class="btn btn-sm btn-white btn-white--nobrd js-change-name__btn" href="javascript:void(0)">
+                                            <i class="fa fa-wrench"></i> изменить название
+                                        </a>
+                                        <div class="change-name__form js-change-name-form">
+                                            <input type="text" class="form-control change-name__input js-change-name__input">
+                                            <button type="button" class="btn btn-orange js-change-name__ok">ок</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                             </div>
                             <div class="sensor-settings__topline--left mob-left">
                                 <div class="sensor-limit">
                                    <div class="sensor-limit__indicator">
-                                       -10
+                                       <input type="text" id="valueMin" class="sensor-limit__indicator-value">
                                        <sup>&deg;C</sup>
                                    </div>
                                    MIN. предел
                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench sensor-limit__label"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
+                                        <i class="fa fa-wrench sensor-limit__label"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="sensor-settings__topline--right mob-right">
                                 <div class="sensor-limit">
                                    <div class="sensor-limit__indicator">
-                                       +30
+                                       <input type="text" id="valueМах" class="sensor-limit__indicator-value">
                                        <sup>&deg;C</sup>
                                    </div>
                                    MAX. предел
                                    <div class="ibox-tools">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench sensor-limit__label"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
+                                        <i class="fa fa-wrench sensor-limit__label"></i>
                                     </div>
                                 </div>
                             </div>
@@ -419,6 +411,7 @@
 
 <!-- NouSlider -->
     <script src="js/plugins/nouslider/nouislider.min.js"></script>
+    <script src="js/wNumb.js"></script>
 
     <!-- Morris -->
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
@@ -429,7 +422,7 @@
    <!-- Date range picker -->
     <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
 
-
+    
 
 
     <script>
@@ -466,47 +459,38 @@
             $('#reportrange + span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 
             $('#reportrange').daterangepicker({
-                    format: 'MM/DD/YYYY',
-                    startDate: moment().subtract(29, 'days'),
-                    endDate: moment(),
-                    minDate: '01/01/2012',
-                    maxDate: '12/31/2015',
-                    dateLimit: { days: 60 },
-                    showDropdowns: true,
-                    showWeekNumbers: true,
-                    timePicker: false,
-                    timePickerIncrement: 1,
-                    timePicker12Hour: true,
-                    ranges: {
-                        'Сегодня': [moment(), moment()],
-                        'Вчера': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                        'За последние 7 дней': [moment().subtract(6, 'days'), moment()],
-                        'Последние 30 дней': [moment().subtract(29, 'days'), moment()],
-                        'Этот месяц': [moment().startOf('month'), moment().endOf('month')],
-                        'Прошлый месяц': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                    },
-                    opens: 'right',
-                    drops: 'down',
-                    buttonClasses: ['btn', 'btn-sm'],
-                    applyClass: 'btn-primary',
-                    cancelClass: 'btn-default',
-                    separator: ' to ',
-                    locale: {
-                        applyLabel: 'Выбрать',
-                        cancelLabel: 'Очистить',
-                        fromLabel: 'С',
-                        toLabel: 'По',
-                        customRangeLabel: 'Custom',
-                        daysOfWeek: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-                        monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-                        firstDay: 1
-                    }
-                }, function(start, end, label) {
-                    console.log(start.toISOString(), end.toISOString(), label);
-                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                });
-                
+                format: 'MM/DD/YYYY',
+                startDate: moment().subtract(29, 'days'),
+                endDate: moment(),
+                minDate: '01/01/2012',
+                maxDate: moment(),
+                dateLimit: { days: 60 },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                opens: 'right',
+                drops: 'down',
+                buttonClasses: ['btn', 'btn-sm'],
+                applyClass: 'btn-primary',
+                cancelClass: 'btn-default',
+                separator: ' to ',
+                locale: {
+                    applyLabel: 'Выбрать',
+                    cancelLabel: 'Очистить',
+                    fromLabel: 'с',
+                    toLabel: 'по',
+                    daysOfWeek: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+                    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+                    firstDay: 1
+                }
+            }, function(start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             });
+                
+        });
     </script>
 
 
@@ -516,6 +500,7 @@
         noUiSlider.create(rangeSlider, {
             start: [ 0, 30],
             connect: true,
+            step: 1,
             range: {
                 'min': [ -40 ],
 
@@ -523,10 +508,43 @@
             },
             pips: {
                 mode: 'values',
-                values: [-40, -20, 0, 10, 30, 60, 99],
+                values: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 99],
                 density: 10
-            }
+            },
+            format: wNumb({
+                decimals: 0
+            })
         });
+
+        var valueInputMin = document.getElementById('valueMin'),
+            valueInputMax = document.getElementById('valueМах');
+
+        // When the slider value changes, update the input and span
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            if ( handle ) {
+                valueInputMax.value = values[handle];
+            } else {
+                
+                valueInputMin.value = values[handle];
+            }
+
+
+        });
+
+        // When the input changes, set the slider value
+        valueInputMax.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+        valueInputMin.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+
+
+        // $( "#valueМах" ).change(function() {
+        //     $( "#range_slider" ).slider( "value", $(this).val() );
+        // });
+
+
 
         $('.i-checks').iCheck({
             checkboxClass: 'icheckbox_square-green',

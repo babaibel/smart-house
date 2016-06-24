@@ -5869,6 +5869,16 @@ h4.ibox-content__indicator {
   font-size: 26px;
   line-height: 28px;
 }
+.sensor-limit__indicator-value {
+  display: inline-block;
+  width: 100px!important;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 5px;
+}
+.sensor-limit__indicator-value:focus {
+  border-color: #ffaa00;
+}
 .sensor-limit .ibox-tools {
   position: absolute;
   border: 1px solid #c4c4c4;
@@ -5877,18 +5887,12 @@ h4.ibox-content__indicator {
   height: 22px;
   text-align: center;
   line-height: 18px;
+  color: #c4c4c4;
   top: -11px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
   z-index: 2;
-}
-.sensor-limit .ibox-tools .dropdown-toggle {
-  display: block;
-  text-align: center;
-  vertical-align: 20px;
-  margin: 0;
-  color: #c4c4c4;
 }
 .orange-text {
   color: #ffae00;
