@@ -234,19 +234,15 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-            <div class="buttons-panel">
-                <a href="#" class="btn btn-sm btn-white">Добавить</a>
-
-                <div class="list-view">
-                    Вид: 
-                    <a href="#" class="list-view__btn list-view__btn--table active"></a>
-                    <a href="#" class="list-view__btn list-view__btn--list"></a>
-                </div>
-            </div>
 
                 <div class="wrapper wrapper-content">
+                    <div class="buttons-panel mgb clearfix">
+                        <div class="list-view">
+                            Вид: 
+                            <a href="#" class="list-view__btn list-view__btn--table active"></a>
+                            <a href="#" class="list-view__btn list-view__btn--list"></a>
+                        </div>
+                    </div>
                     <ul class="row animated fadeIn sensors-3col" id="draggablePanelList">
                     <!-- Датчик температуры -->
                         <li class="col-xlg-4 col-lg-6">
@@ -1587,49 +1583,7 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <h4 class="ibox-content__indicator">Замкнут/разомкнут</h4>
-                                                </td>
-                                                <td>
-                                                    <i class="iconbg iconbg--wifi"></i>
-                                                    <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--open"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <small class="ibox-content__right-small">id порт: 1234567</small>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
-                                <div class="ibox-title">
-                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5>Универсальный контактный датчик</h5>
-                                    <div class="ibox-tools">
-                                        <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ibox-content">
-                                    <div>
-
-                                        <table class="sensor-box">
-                                            <tr>
-                                                <td>
-                                                    <h4 class="ibox-content__indicator">Замкнут/разомкнут</h4>
+                                                    <h4 class="ibox-content__indicator">Замкнут</h4>
                                                 </td>
                                                 <td>
                                                     <i class="iconbg iconbg--wifi"></i>
@@ -1645,7 +1599,7 @@
                             </div>
                         </li>
                         <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
+                            <div class="ibox float-e-margins ibox--red">
                                 <div class="ibox-title">
                                     <div class="ibox-tools ibox-tools--left">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -1671,188 +1625,17 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <h4 class="ibox-content__indicator">Замкнут/разомкнут</h4>
+                                                    <h4 class="ibox-content__indicator">Разомкнут</h4>
                                                 </td>
                                                 <td>
                                                     <i class="iconbg iconbg--wifi"></i>
                                                     <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--contact"></i>
+                                                    <i class="iconbg iconbg--close"></i>
                                                 </td>
                                             </tr>
                                         </table>
                                         <small class="ibox-content__right-small">id порт: 1234567</small>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <!-- Иконки для ПАУ -->
-
-                        <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
-                                <div class="ibox-title">
-                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5>ПАУ</h5>
-                                    <div class="ibox-tools">
-                                        <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ibox-content">
-                                    <div>
-
-                                        <table class="sensor-box">
-                                            <tr>
-                                                <td>
-                                                    <h4 class="ibox-content__indicator">Норма</h4>
-                                                </td>
-                                                <td>
-                                                    <i class="iconbg iconbg--wifi"></i>
-                                                    <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--radiator"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <small class="ibox-content__right-small">id порт: 1234567</small>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
-                                <div class="ibox-title">
-                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5>ПАУ</h5>
-                                    <div class="ibox-tools">
-                                        <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ibox-content">
-                                    <div>
-
-                                        <table class="sensor-box">
-                                            <tr>
-                                                <td>
-                                                    <h4 class="ibox-content__indicator">Тревога</h4>
-                                                </td>
-                                                <td>
-                                                    <i class="iconbg iconbg--wifi"></i>
-                                                    <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--calendar"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <small class="ibox-content__right-small">id порт: 1234567</small>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
-                                <div class="ibox-title">
-                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5>ПАУ</h5>
-                                    <div class="ibox-tools">
-                                        <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ibox-content">
-                                    <div>
-                                        <table class="sensor-box">
-                                            <tr>
-                                                <td>
-                                                    <h4 class="ibox-content__indicator">Не активна</h4>
-                                                </td>
-                                                <td>
-                                                    <i class="iconbg iconbg--wifi"></i>
-                                                    <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--bell"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <small class="ibox-content__right-small">id порт: 1234567</small>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-xlg-4 col-lg-6">
-                            <div class="ibox float-e-margins">
-                                <div class="ibox-title">
-                                    <div class="ibox-tools ibox-tools--left">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            <i class="fa fa-wrench"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-user">
-                                            <li><a href="#">Config option 1</a>
-                                            </li>
-                                            <li><a href="#">Config option 2</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <h5>ПАУ</h5>
-                                    <div class="ibox-tools">
-                                        <a class="close-link">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ibox-content">
-                                    <div>
-                                        <table class="sensor-box">
-                                            <tr>
-                                                <td>
-                                                    <h4 class="ibox-content__indicator">Не активна</h4>
-                                                </td>
-                                                <td>
-                                                    <i class="iconbg iconbg--wifi"></i>
-                                                    <i class="iconbg iconbg--battery"></i>
-                                                    <i class="iconbg iconbg--boiler"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-
-                                        <small class="ibox-content__right-small">id порт: 1234567</small>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -1884,7 +1667,49 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <h4 class="ibox-content__indicator">Вкл/выкл</h4>
+                                                    <h4 class="ibox-content__indicator ibox-content__indicator--blue">Вкл</h4>
+                                                </td>
+                                                <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
+                                                    <i class="iconbg iconbg--onoff"></i>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <small class="ibox-content__right-small">id порт: 1234567</small>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-xlg-4 col-lg-6">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools ibox-tools--left">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h5>Датчик</h5>
+                                    <div class="ibox-tools">
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                    <div>
+                                        <table class="sensor-box">
+                                            <tr>
+                                                <td>
+                                                    <h4 class="ibox-content__indicator ibox-content__indicator--red">Выкл</h4>
                                                 </td>
                                                 <td>
                                                     <i class="iconbg iconbg--wifi"></i>
@@ -1902,6 +1727,9 @@
                         </li>
 
                    </ul>
+                   <div class="buttons-panel buttons-panel--bottom buttons-panel--mgb">
+                        <a class="btn btn-orange" href="javascript:void(0)">Добавить</a>
+                    </div>
                 </div>
                 <div class="footer">
                     <div class="pull-right">

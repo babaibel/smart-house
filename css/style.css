@@ -1192,6 +1192,63 @@ button.dim:active:before {
   right: 0;
   top: 0;
 }
+.btn-red {
+  color: #fff!important;
+  text-transform: uppercase;
+  font-weight: 400!important;
+  background: #e97459;
+  border: 1px solid #e97459;
+}
+.btn-blue {
+  color: #fff!important;
+  text-transform: uppercase;
+  font-weight: 400!important;
+  background: #59c2e9;
+  border: 1px solid #59c2e9;
+}
+.btn-light-orange {
+  color: #fff!important;
+  text-transform: uppercase;
+  font-weight: 400!important;
+  background: #eec139;
+  border: 1px solid #eec139;
+}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active,
+.btn-red:active:hover,
+.btn-red.active:hover,
+.btn-red.active:focus,
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active,
+.btn-blue.active,
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.btn-blue.active:focus,
+.btn-light-orange:hover,
+.btn-light-orange:focus,
+.btn-light-orange:active,
+.btn-light-orange.active,
+.btn-light-orange:active:hover,
+.btn-light-orange.active:hover,
+.btn-light-orange.active:focus {
+  opacity: .8;
+}
+.btn-red:active,
+.btn-red.active,
+.btn-blue:active,
+.btn-blue.active,
+.btn-light-orange:active,
+.btn-light-orange.active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+}
+.btn-red:active,
+.btn-blue:active,
+.btn-light-orange:active {
+  background-image: none;
+}
 .label {
   background-color: #d1dade;
   color: #5e5e5e;
@@ -3610,8 +3667,8 @@ label.font-noraml {
   display: inline-block;
   font-size: 15px;
   font-weight: 600;
-  line-height: 24px;
-  height: 26px;
+  line-height: 32px;
+  height: 34px;
   padding: 0 5px;
   text-align: center;
   width: 38px;
@@ -3630,7 +3687,7 @@ label.font-noraml {
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
-  height: 26px;
+  height: 34px;
   padding: 0;
   text-align: center;
   width: 34px;
@@ -4610,6 +4667,9 @@ code {
   padding: 0 0 10px;
   min-height: auto;
 }
+.ibox--green {
+  background: #9ce0a0;
+}
 .ibox--green .ibox-title {
   border-color: #10b410;
   color: #10b410!important;
@@ -5468,7 +5528,6 @@ h4.ibox-content__indicator {
 }
 .buttons-panel {
   position: relative;
-  padding: 0 10px;
   margin-top: 20px;
 }
 .buttons-panel .btn {
@@ -6082,6 +6141,125 @@ h4.ibox-content__indicator {
 }
 .sensor-settings-table .ibox-content__indicator {
   text-transform: none;
+}
+.gallery__title {
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.main-slider {
+  margin-bottom: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.main-slider__item {
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.main-slider__item .icheckbox_square-green {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffae00;
+  background-image: none;
+}
+.main-slider__item .icheckbox_square-green.checked {
+  background: url("plugins/iCheck/orange.png") no-repeat -48px 0 #ffffff;
+}
+.main-slider__item-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 7px 0;
+}
+.main-slider__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.main-slider__image-wr {
+  display: block;
+}
+.main-slider .slick-list {
+  padding: 0!important;
+}
+.nav-slider {
+  display: block;
+  margin: 30px 0;
+}
+.nav-slider ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-slider ul:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.nav-slider__item {
+  margin-right: 26px;
+  height: auto;
+  float: left;
+  display: block;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease-out;
+}
+.nav-slider__item._active {
+  border: 3px solid #f0a400;
+}
+.nav-slider__item:last-child {
+  margin-right: 0;
+}
+.nav-slider__image {
+  display: block;
+  width: 94px;
+}
+.schedule-temp {
+  border: 1px solid #ffffff;
+  background: #f3f3f4;
+  margin: 0 auto;
+}
+.schedule-temp--blue {
+  background: #59c2e9;
+}
+.schedule-temp--orange {
+  background: #eec139;
+}
+.schedule-temp--red {
+  background: #e97459;
+}
+.schedule-temp th,
+.schedule-temp td {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #3a3e42;
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid #ffffff;
+  width: 75px;
+}
+.schedule-temp-wr {
+  margin: 15px 0;
+}
+.schedule-temp-panel {
+  text-align: center;
+  margin: 15px 0 0;
+}
+.schedule-temp-panel > div {
+  display: inline-block;
+  margin-right: 20px;
+}
+.schedule-temp-panel > div:last-child {
+  margin-right: 0;
+  vertical-align: top;
+}
+.schedule-temp-panel .counter {
+  margin: 0;
 }
 /* SEARCH PAGE */
 .search-form {

@@ -262,7 +262,6 @@
                     </div>
                     <div class="ibox-content">
                         <div>
-
                             <div class="sensor-settings-table">
                                 <div class="sensor-settings-table__row">
                                     <div class="sensor-settings-table__cell">
@@ -271,7 +270,6 @@
                                             <a class="btn btn-orange" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
                                             <a class="btn btn-orange" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
                                         </div>
-                                        
                                     </div>
                                     <div class="sensor-settings-table__cell">
                                         <table class="sensor-settings__box sensor-settings__box-center">
@@ -372,6 +370,311 @@
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="ibox-content">
+                        <h4 class="sensor-settings__h4-title">Температура поддержания:</h4>
+                         <div class="schedule-temp-panel">
+                            <div>
+                                <a class="btn btn-blue" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
+                                <div>предустановка</div>
+                            </div>
+                            <div>
+                                <a class="btn btn-light-orange" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
+                                <div>предустановка</div>
+                            </div>
+                            <div>
+                                <a class="btn btn-red" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
+                                <div>предустановка</div>
+                            </div>
+                            <div>
+                                <div class="counter">
+                                    <input type="button" field="mens" class="counter-minus js-qtyminus" value="-">
+                                    <input type="text" class="counter-field" value="0" name="mens">
+                                    <input type="button" field="mens" class="counter-plus js-qtyplus" value="+">
+                                </div>
+                                <div>свое значение</div>
+                            </div>
+                            <div>
+                                <a class="btn btn-orange" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h4 class="sensor-settings__h4-title">График поддержания температуры:</h4>
+                        <div class="schedule-temp-wr table-responsive">
+                            <table class="schedule-temp">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Пн</th>
+                                    <th>Вт</th>
+                                    <th>Ср</th>
+                                    <th>Чт</th>
+                                    <th>Пт</th>
+                                    <th>Сб</th>
+                                    <th>Вс</th>
+                                </tr>
+                                <tr>
+                                    <td>0:00</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>2:00</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>4:00</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>6:00</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--blue"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>8:00</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>10:00</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>12:00</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>14:00</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--orange"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>16:00</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>18:00</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>20:00</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>22:00</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>24:00</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                    <td class="schedule-temp--red"></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
@@ -518,7 +821,7 @@
                     </div>
                 </div>
 
-                <div class="ibox float-e-margins  ibox--auto-height">
+                <div class="ibox float-e-margins ibox--auto-height">
                     <div class="ibox-content">
                         <div>
                             <div class="doughnutChart-wr">
@@ -538,7 +841,6 @@
                     Copyright Example Company &copy; 2014-2015
                 </div>
             </div>
-
 
         </div>
         

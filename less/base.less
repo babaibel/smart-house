@@ -577,6 +577,7 @@ code {
     }
   }
   &--green{
+    background: #9ce0a0;
     .ibox-title{
       border-color: #10b410;
       color: #10b410!important;
@@ -1655,7 +1656,7 @@ h4.ibox-content__indicator{
 
 .buttons-panel{
   position: relative;
-  padding: 0 10px;
+  // padding: 0 10px;
   margin-top: 20px;
 
   .btn{
@@ -2354,5 +2355,130 @@ h4.ibox-content__indicator{
   }
   .ibox-content__indicator{
     text-transform: none;
+  }
+}
+
+.gallery{
+  &__title{
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+}
+
+.main-slider{
+  margin-bottom: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+  &__item{
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+    .icheckbox_square-green{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ffae00;
+      background-image: none;
+      &.checked{
+        background: url("plugins/iCheck/orange.png") no-repeat -48px 0 #fff;
+      }
+    }
+    &-title{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 7px 0;
+    }
+  }
+  &__image{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    &-wr{
+      display: block;
+    }
+  }
+  .slick-list{
+    padding: 0!important;
+  }
+}
+
+.nav-slider{
+  display: block;
+  margin: 30px 0;
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &:after{
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+  &__item{
+    margin-right: 26px;
+    height: auto;
+    float: left;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease-out;
+    &._active{
+      border: 3px solid #f0a400;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__image{
+    display: block;
+    width: 94px;
+  }
+}
+
+.schedule-temp{
+  border: 1px solid #ffffff;
+  background: #f3f3f4;
+  margin: 0 auto;
+  &--blue{
+    background: #59c2e9;
+  }
+  &--orange{
+    background: #eec139;
+  }
+  &--red{
+    background: #e97459;
+  }
+  th,td{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #3a3e42;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #ffffff;
+    width: 75px;
+  }
+  &-wr{
+    margin: 15px 0;
+  }
+}
+
+.schedule-temp-panel{
+  text-align: center;
+  margin: 15px 0 0;
+  >div{
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child{
+      margin-right: 0;
+      vertical-align: top;
+    }
+  }
+  .counter{
+    margin: 0;
   }
 }
