@@ -399,22 +399,19 @@
         $(function() {
 
         data_signal = [
-            [new Date('06/02/2016 12:00').getTime(), 25], 
-            [new Date('06/02/2016 17:00').getTime(), 35], 
-            [new Date('06/02/2016 19:00').getTime(), 75], 
-            [new Date('06/02/2016 22:00').getTime(), 90],
-            [new Date('06/02/2016 12:30').getTime(), 25], 
-            [new Date('06/02/2016 10:00').getTime(), 35], 
-            [new Date('06/02/2016 14:00').getTime(), 75], 
-            [new Date('06/02/2016 05:00').getTime(), 90],
-            [new Date('06/02/2016 00:00').getTime(), 25], 
+            [new Date('06/02/2016 12:05').getTime(), 15], 
+            [new Date('06/02/2016 12:10').getTime(), 25], 
+            [new Date('06/02/2016 12:20').getTime(), 35], 
+            [new Date('06/02/2016 12:30').getTime(), 75], 
+            [new Date('06/02/2016 12:40').getTime(), 90],
+            [new Date('06/02/2016 12:50').getTime(), 25]
         ];
 
             var barOptions = {
                 series: {
                     bars: {
                         show: true,
-                        barWidth: 24 * 12 * 60 * 60,
+                        barWidth: 24 * 12 * 60 * 10,
                         align: 'center',
                         fill: true,
                         lineWidth: 1,
@@ -430,8 +427,9 @@
                 },
                 xaxis: {
                     mode: "time",
+                    timezone: "browser",
                     timeformat: "%I:%M %p",
-                    minTickSize: [1, "hour"],
+                    // minTickSize: [1, "hour"],
                     twelveHourClock: true,
                     tickLength: 0
                 },
