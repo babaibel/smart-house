@@ -1192,7 +1192,7 @@ button.dim:active:before {
   right: 0;
   top: 0;
 }
-.btn-red {
+.btn-light-red {
   color: #fff!important;
   text-transform: uppercase;
   font-weight: 400!important;
@@ -1213,13 +1213,13 @@ button.dim:active:before {
   background: #eec139;
   border: 1px solid #eec139;
 }
-.btn-red:hover,
-.btn-red:focus,
-.btn-red:active,
-.btn-red.active,
-.btn-red:active:hover,
-.btn-red.active:hover,
-.btn-red.active:focus,
+.btn-light-red:hover,
+.btn-light-red:focus,
+.btn-light-red:active,
+.btn-light-red.active,
+.btn-light-red:active:hover,
+.btn-light-red.active:hover,
+.btn-light-red.active:focus,
 .btn-blue:hover,
 .btn-blue:focus,
 .btn-blue:active,
@@ -1236,15 +1236,15 @@ button.dim:active:before {
 .btn-light-orange.active:focus {
   opacity: .8;
 }
-.btn-red:active,
-.btn-red.active,
+.btn-light-red:active,
+.btn-light-red.active,
 .btn-blue:active,
 .btn-blue.active,
 .btn-light-orange:active,
 .btn-light-orange.active {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
 }
-.btn-red:active,
+.btn-light-red:active,
 .btn-blue:active,
 .btn-light-orange:active {
   background-image: none;
@@ -4599,6 +4599,17 @@ code {
   min-height: 137px;
   background: #fff;
 }
+.ibox.active {
+  box-shadow: 0 0 0 3px #ffae00;
+}
+.ibox.active .ibox-title {
+  border-top-color: transparent;
+  background: transparent;
+  z-index: 1;
+}
+.ibox.active .ibox-content {
+  background: transparent;
+}
 .ibox--red {
   background-color: #ca3434;
 }
@@ -5562,6 +5573,11 @@ h4.ibox-content__indicator {
 .buttons-panel--center {
   text-align: center;
 }
+.buttons-panel--system {
+  text-align: left;
+  padding-left: 527px;
+  margin-bottom: 25px;
+}
 .security-title {
   display: block;
   float: left;
@@ -5730,6 +5746,10 @@ h4.ibox-content__indicator {
   right: 0;
   transform: translateY(-50%);
 }
+.sensor-settings__topline--right > div {
+  text-align: left!important;
+  margin: 5px 0;
+}
 .sensor-settings__topline--limits {
   margin-bottom: 50px;
 }
@@ -5791,6 +5811,40 @@ h4.ibox-content__indicator {
 }
 .change-name--right .change-name__form {
   margin: 0;
+}
+.change-temp {
+  margin: 10px 0 0;
+  position: relative;
+  height: 36px;
+}
+.change-temp__form {
+  display: none;
+  max-width: 100px;
+  margin: 10px auto 0;
+}
+.change-temp__form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.change-temp__input {
+  display: block;
+  border-radius: 4px;
+  float: left;
+  padding-right: 58px;
+  border-right: 0;
+}
+.change-temp button {
+  display: block;
+  float: left!important;
+  margin-left: -47px;
+}
+.change-temp .js-change-temp__btn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
 }
 .i-checks__label {
   display: inline;
@@ -5878,8 +5932,9 @@ h4.ibox-content__indicator {
 .pie-box .track-panel td {
   width: 50%!important;
 }
+.range_slider.noUi-background,
 .range_slider .noUi-background {
-  background-color: #fd3026;
+  background: #fd3026!important;
   box-shadow: none!important;
 }
 .range_slider .noUi-connect {
@@ -5984,7 +6039,7 @@ h4.ibox-content__indicator {
   opacity: 1;
 }
 .del-line-btn {
-  background: url(../IMG/ICONS/del-btn.png) no-repeat left top;
+  background: url(../img/icons/del-btn.png) no-repeat left top;
   display: block;
   float: right;
   border-radius: 3px;
@@ -6252,14 +6307,49 @@ h4.ibox-content__indicator {
 }
 .schedule-temp-panel > div {
   display: inline-block;
+  vertical-align: top;
   margin-right: 20px;
 }
 .schedule-temp-panel > div:last-child {
   margin-right: 0;
-  vertical-align: top;
 }
 .schedule-temp-panel .counter {
   margin: 0;
+}
+.schedule-temp-panel__label {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.press-btn {
+  position: relative;
+}
+.press-btn:hover {
+  opacity: 0.95;
+}
+.press-btn:active,
+.press-btn.active {
+  top: 3px;
+}
+.press-btn.btn-blue {
+  box-shadow: 0 0 0 #1783ac inset, 0 5px 0 0 #1783ac;
+}
+.press-btn.btn-blue:active,
+.press-btn.btn-blue.active {
+  box-shadow: 0 0 0 #1783ac inset, 0 2px 0 0 #1783ac;
+}
+.press-btn.btn-light-red {
+  box-shadow: 0 0 0 #ac3317 inset, 0 5px 0 0 #ac3317;
+}
+.press-btn.btn-light-red:active,
+.press-btn.btn-light-red.active {
+  box-shadow: 0 0 0 #ac3317 inset, 0 2px 0 0 #ac3317;
+}
+.press-btn.btn-light-orange {
+  box-shadow: 0 0 0 #c99b11 inset, 0 5px 0 0 #c99b11;
+}
+.press-btn.btn-light-orange:active,
+.press-btn.btn-light-orange.active {
+  box-shadow: 0 0 0 #c99b11 inset, 0 2px 0 0 #c99b11;
 }
 /* SEARCH PAGE */
 .search-form {

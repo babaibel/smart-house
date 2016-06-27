@@ -8,6 +8,16 @@
 
 $(document).ready(function () {
 
+    $('.js-camera-ibox').click(function () {
+        $(this).closest('.js-camera-wr').find('.js-camera-ibox').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.press-btn').click(function () {
+        $(this).closest('.schedule-temp-panel').find('.press-btn').removeClass('active');
+        $(this).addClass('active');
+    });
+
     // Плюс минус
 
     // This button will increment the value
@@ -260,6 +270,46 @@ $(document).ready(function () {
 
     });
 });
+
+$(document).ready(function () {
+    // change temp
+
+    if(!$('.js-change-temp').length) return;
+
+    var $changeNameWr = $('.js-change-temp');
+
+    $changeNameWr.each(function(){
+
+        var $this = $(this),
+            $changeNameSensor = $this.find('.js-sensor-temp'),
+            $changeNameForm = $this.find('.js-change-temp-form'),
+            $changeNameInput = $this.find('.js-change-temp__input'),
+            $changeNameBtn= $this.find('.js-change-temp__btn'),
+            $changeNameOk = $this.find('.js-change-temp__ok');
+
+        $changeNameBtn.click(function () {
+
+            var oldName = $changeNameSensor.text();
+
+            $(this).fadeOut();
+            $changeNameForm.fadeIn();
+            $changeNameInput.val(oldName);
+        });
+
+        $changeNameOk.click(function () {
+
+            var newName = $changeNameInput.val();
+
+            $changeNameSensor.text(newName);
+            setTimeout(function () {
+                $changeNameBtn.fadeIn();
+                $changeNameForm.fadeOut();
+            }, 100);
+        });
+
+    });
+});
+
 
 
 // Minimalize menu when screen is less than 768px

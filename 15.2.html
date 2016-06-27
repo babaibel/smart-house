@@ -374,17 +374,44 @@
                     <div class="ibox-content">
                         <h4 class="sensor-settings__h4-title">Температура поддержания:</h4>
                          <div class="schedule-temp-panel">
-                            <div>
-                                <a class="btn btn-blue" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
-                                <div>предустановка</div>
+                            <div class="js-change-temp">
+                                <a class="btn btn-blue press-btn" href="javascript:void(0)">Эконом <span class="js-sensor-temp">12</span> <sup>&deg;C</sup></a>
+                                
+                                <div class="change-temp">
+                                    <a class="btn btn-sm btn-white btn-white--nobrd js-change-temp__btn" href="javascript:void(0)">
+                                        <i class="fa fa-wrench"></i> предустановка
+                                    </a>
+                                    <div class="change-temp__form js-change-temp-form">
+                                        <input type="text" class="form-control change-temp__input js-change-temp__input">
+                                        <button type="button" class="btn btn-orange js-change-temp__ok">ок</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <a class="btn btn-light-orange" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
-                                <div>предустановка</div>
+                            <div class="js-change-temp">
+                                <a class="btn btn-light-orange press-btn" href="javascript:void(0)">Стандарт <span class="js-sensor-temp">20</span> <sup>&deg;C</sup></a>
+                                
+                                <div class="change-temp">
+                                    <a class="btn btn-sm btn-white btn-white--nobrd js-change-temp__btn" href="javascript:void(0)">
+                                        <i class="fa fa-wrench"></i> предустановка
+                                    </a>
+                                    <div class="change-temp__form js-change-temp-form">
+                                        <input type="text" class="form-control change-temp__input js-change-temp__input">
+                                        <button type="button" class="btn btn-orange js-change-temp__ok">ок</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <a class="btn btn-red" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
-                                <div>предустановка</div>
+                            <div class="js-change-temp">
+                                <a class="btn btn-light-red press-btn" href="javascript:void(0)">Комфорт <span class="js-sensor-temp">26</span> <sup>&deg;C</sup></a>
+                                
+                                <div class="change-temp">
+                                    <a class="btn btn-sm btn-white btn-white--nobrd js-change-temp__btn" href="javascript:void(0)">
+                                        <i class="fa fa-wrench"></i> предустановка
+                                    </a>
+                                    <div class="change-temp__form js-change-temp-form">
+                                        <input type="text" class="form-control change-temp__input js-change-temp__input">
+                                        <button type="button" class="btn btn-orange js-change-temp__ok">ок</button>
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <div class="counter">
@@ -392,7 +419,7 @@
                                     <input type="text" class="counter-field" value="0" name="mens">
                                     <input type="button" field="mens" class="counter-plus js-qtyplus" value="+">
                                 </div>
-                                <div>свое значение</div>
+                                <div class="schedule-temp-panel__label">свое значение</div>
                             </div>
                             <div>
                                 <a class="btn btn-orange" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>

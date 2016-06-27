@@ -506,6 +506,17 @@ code {
   padding: 0;
   min-height: 137px;
   background: #fff;
+  &.active{
+    box-shadow: 0 0 0 3px rgba(255, 174, 0, 1);
+    .ibox-title{
+      border-top-color: transparent;
+      background: transparent;
+      z-index: 1;
+    }
+    .ibox-content{
+      background: transparent;
+    }
+  }
 
   &--red{
     background-color: #ca3434;
@@ -1694,6 +1705,11 @@ h4.ibox-content__indicator{
   &--center{
     text-align: center;
   }
+  &--system{
+    text-align: left;
+    padding-left: 527px;
+    margin-bottom: 25px;
+  }
 }
 
 .security-title{
@@ -1893,6 +1909,10 @@ h4.ibox-content__indicator{
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+      > div{
+        text-align: left!important;
+        margin: 5px 0;
+      }
     }
     &--limits{
       margin-bottom: 50px;
@@ -1962,6 +1982,44 @@ h4.ibox-content__indicator{
       margin: 0;
     }
   }
+}
+
+.change-temp{
+  margin: 10px 0 0;
+  position: relative;
+  height: 36px;
+  
+  &__form{
+    display: none;
+    max-width: 100px;
+    margin: 10px auto 0;
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &__input{
+    display: block;
+    border-radius: 4px;
+    float: left;
+    padding-right: 58px;
+    border-right: 0;
+  }
+  button{
+    display: block;
+    float: left!important;
+    margin-left: -47px;
+  }
+
+  .js-change-temp__btn{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+  }
+
 }
 
 .i-checks__label{
@@ -2063,8 +2121,9 @@ h4.ibox-content__indicator{
     }
   }
 }
+.range_slider.noUi-background,
 .range_slider .noUi-background{
-  background-color: #fd3026;
+  background: #fd3026!important;
   box-shadow: none!important;
 }
 
@@ -2180,7 +2239,7 @@ h4.ibox-content__indicator{
 }
 
 .del-line-btn{
-  background: url(../IMG/ICONS/del-btn.png) no-repeat left top;
+  background: url(../img/icons/del-btn.png) no-repeat left top;
   display: block;
   float: right;
   border-radius: 3px;
@@ -2472,13 +2531,52 @@ h4.ibox-content__indicator{
   margin: 15px 0 0;
   >div{
     display: inline-block;
+    vertical-align: top;
     margin-right: 20px;
     &:last-child{
       margin-right: 0;
-      vertical-align: top;
+      
     }
   }
   .counter{
     margin: 0;
   }
+  &__label{
+    margin-top: 10px;
+    font-size: 12px;
+  }
 }
+
+.press-btn{
+  position: relative;
+  &:hover{
+    opacity: 0.95;
+  }
+  &:active,
+  &.active{
+    top: 3px;
+  }
+  &.btn-blue{
+    box-shadow: 0 0 0 darken(#59c2e9, 25%) inset, 0 5px 0 0 darken(#59c2e9, 25%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#59c2e9, 25%) inset, 0 2px 0 0 darken(#59c2e9, 25%);
+    }
+  }
+  &.btn-light-red{
+    box-shadow: 0 0 0 darken(#e97459, 25%) inset, 0 5px 0 0 darken(#e97459, 25%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#e97459, 25%) inset, 0 2px 0 0 darken(#e97459, 25%);
+    }
+  }
+  &.btn-light-orange{
+    box-shadow: 0 0 0 darken(#eec139, 15%) inset, 0 5px 0 0 darken(#eec139, 15%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#eec139, 15%) inset, 0 2px 0 0 darken(#eec139, 15%);
+    }
+  }
+}
+
+

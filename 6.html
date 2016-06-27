@@ -251,9 +251,9 @@
 
             <div class="other-sensors">
                 <h3 class="security-title">Все фотокамеры</h3>
-                <ul class="row sensors-3col">
+                <ul class="row sensors-3col js-camera-wr">
                     <li class="col-xlg-4 col-lg-6">
-                        <div class="ibox float-e-margins">
+                        <div class="ibox float-e-margins js-camera-ibox active">
                             <div class="ibox-title">
                                 <div class="ibox-tools ibox-tools--left">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -288,13 +288,13 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <small class="ibox-content__right-small">id порт: 1234567</small>
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="col-xlg-4 col-lg-6">
-                        <div class="ibox float-e-margins">
+                        <div class="ibox float-e-margins js-camera-ibox">
                             <div class="ibox-title">
                                 <div class="ibox-tools ibox-tools--left">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -329,13 +329,13 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <small class="ibox-content__right-small">id порт: 1234567</small>
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="col-xlg-4 col-lg-6">
-                        <div class="ibox float-e-margins">
+                        <div class="ibox float-e-margins js-camera-ibox">
                             <div class="ibox-title">
                                 <div class="ibox-tools ibox-tools--left">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -370,7 +370,7 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <small class="ibox-content__right-small">id порт: 1234567</small>
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
                                 </div>
                             </div>
                         </div>
@@ -1015,8 +1015,10 @@
                 $brandSliderMain = $this.find('.js-main-gallery'),
                 $brandSliderThumb = $this.find('.js-nav-gallery'),
                 $brandSliderThumbItems = $brandSliderThumb.find('.js-nav-slider-item'),
+                brandSliderThumbItemsLength = $brandSliderThumbItems.length,
                 brandSliderMainSpeed = 500,
-                animCheck = false;
+                animCheck = false,
+                ind = 0;
 
             $brandSliderThumbItems.eq(0).addClass('_active');
 
@@ -1030,7 +1032,7 @@
                 dots: false,
                 responsive: [
                     {
-                        breakpoint: 1200,
+                        breakpoint: 1180,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2,
@@ -1053,7 +1055,16 @@
                     if( animCheck === false){
                         animCheck = true;
                         $brandSliderThumbItems.removeClass('_active').eq(index).addClass('_active');
-                        $brandSliderMain.slick('slickGoTo', index + 1);
+
+                        if( $(window).innerWidth() >= 1180 && index === brandSliderThumbItemsLength-1 || $(window).innerWidth() >= 1180 && index === brandSliderThumbItemsLength-2){
+                            ind = 1;
+                        } else if( $(window).innerWidth() > 480 && $(window).innerWidth() < 1179 && index === brandSliderThumbItemsLength-1){
+                            ind = -1;
+                        } else{
+                            ind = 0;
+                        }
+                        console.log(index - ind);
+                        $brandSliderMain.slick('slickGoTo', index - ind);
                         setTimeout(function() {
                             animCheck = false;
                         }, brandSliderMainSpeed);
