@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic");
+@import url(https://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic");
 /*
  *
@@ -4679,7 +4680,7 @@ code {
   min-height: auto;
 }
 .ibox--green {
-  background: #9ce0a0;
+  background: #fff;
 }
 .ibox--green .ibox-title {
   border-color: #10b410;
@@ -4809,8 +4810,7 @@ code {
   margin-top: 15px;
 }
 .ibox-content--pd15 {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 5px 15px;
 }
 .ibox-footer {
   padding: 9px 15px;
@@ -7524,11 +7524,21 @@ body.body-small .vote-icon {
   content: "";
   position: absolute;
   top: 14px;
-  right: -140px;
+  left: -75px;
   display: block;
   background: url(../img/imei-arr.png) no-repeat left top;
-  width: 131px;
-  height: 585px;
+  width: 67px;
+  height: 561px;
+}
+.imei-start .register-tip-text {
+  top: 260px;
+  left: -325px;
+  position: absolute;
+  width: 270px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  font-family: 'Neucha', cursive;
 }
 .imei-img {
   display: block;
