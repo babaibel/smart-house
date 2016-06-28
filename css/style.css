@@ -4680,11 +4680,12 @@ code {
   min-height: auto;
 }
 .ibox--green {
-  background: #fff;
+  background: #eafdeb;
 }
 .ibox--green .ibox-title {
   border-color: #10b410;
   color: #10b410!important;
+  background: #eafdeb;
 }
 .ibox--green .ibox-title .dashed-title {
   padding-bottom: 2px;
@@ -4698,6 +4699,7 @@ code {
 .ibox--green .ibox-content {
   color: #10b410;
   border-color: #10b410;
+  background: #eafdeb;
 }
 .ibox--green .ibox-content__indicator {
   color: #10b410;
@@ -6217,11 +6219,7 @@ h4.ibox-content__indicator {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #ffae00;
-  background-image: none;
-}
-.main-slider__item .icheckbox_square-green.checked {
-  background: url("plugins/iCheck/orange.png") no-repeat -48px 0 #ffffff;
+  border-color: #fff;
 }
 .main-slider__item-title {
   font-weight: 600;
@@ -6239,6 +6237,14 @@ h4.ibox-content__indicator {
 }
 .main-slider .slick-list {
   padding: 0!important;
+}
+.main-slider .slick-prev {
+  left: 25px;
+  z-index: 3;
+}
+.main-slider .slick-next {
+  right: 25px;
+  z-index: 3;
 }
 .nav-slider {
   display: block;

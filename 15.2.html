@@ -711,7 +711,7 @@
                             <h3 class="security-title">Устройство управления отоплением</h3>
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>Реле ABC</h5>
+                                    <h5>Реле АВС</h5>
                                 </div>
                                 <div class="ibox-content">
                                     <div>
@@ -724,15 +724,18 @@
                                                     <div class="sensor-settings__indicator-title">текущее значение</div>
                                                 </td>
                                                 <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
                                                     <i class="iconbg iconbg--play"></i>
                                                 </td>
                                             </tr>
                                         </table>
+                                        <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="buttons-panel">
-                                <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другой</a>
+                                <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другое</a>
                             </div>
                         </li>
                         <li class="col-xlg-4 col-lg-6">
@@ -756,10 +759,13 @@
                                                     </div>
                                                 </td>
                                                 <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
                                                     <i class="iconbg iconbg--temp"></i>
                                                 </td>
                                             </tr>
                                         </table>
+                                        <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
 
                                     </div>
                                 </div>
@@ -774,10 +780,10 @@
                 <div class="other-sensors">
                     <ul class="row sensors-3col">
                         <li class="col-xlg-4 col-lg-6">
-                            <h3 class="security-title">Устройство управления отоплением</h3>
+                            <h3 class="security-title">Устройство управления циркуляционным насосом</h3>
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>Реле ABC</h5>
+                                    <h5>Реле АВС</h5>
                                 </div>
                                 <div class="ibox-content">
                                     <div>
@@ -790,15 +796,18 @@
                                                     <div class="sensor-settings__indicator-title">текущее значение</div>
                                                 </td>
                                                 <td>
+                                                    <i class="iconbg iconbg--wifi"></i>
+                                                    <i class="iconbg iconbg--battery"></i>
                                                     <i class="iconbg iconbg--play"></i>
                                                 </td>
                                             </tr>
                                         </table>
+                                        <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="buttons-panel">
-                                <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другой</a>
+                                <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другое</a>
                             </div>
                         </li>
                         <li class="col-xlg-8 col-lg-8 col-sm-12">
@@ -842,8 +851,9 @@
                         <div id="statistic-two-lines"></div>
                         
                         
-                        <div class="buttons-panel buttons-panel--bottom-left clearfix">
-                            <a class="btn btn-sm btn-white btn-delete btn--left" href="javascript:void(0)"><i class="fa fa-table"></i> сохранить в табличной форме</a>
+                        <div class="buttons-panel buttons-panel--bottom-left">
+                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--xls"></i> выгруЗить в xls</a>
+                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--pdf"></i> выгруЗить в PDF</a>
                         </div>
                     </div>
                 </div>
@@ -912,21 +922,21 @@
             new Morris.Line({
                 element: 'statistic-two-lines',
                 data: [
-                    { y: '2006', a: 5, b: 10 }, 
-                    { y: '2007', a: 10, b: 10 },
-                    { y: '2008', a: 22, b: 10 },
-                    { y: '2009', a: 8, b: 10 },
-                    { y: '2010', a: 22, b: 10 },
-                    { y: '2011', a: 8, b: 10 },
-                    { y: '2012', a: 10, b: null },
-                    { y: '2013', a: 5, b: null }
+                    { y: '2006', a: 5}, 
+                    { y: '2007', a: 10},
+                    { y: '2008', a: 22},
+                    { y: '2009', a: 8},
+                    { y: '2010', a: 22},
+                    { y: '2011', a: 8},
+                    { y: '2012', a: 10},
+                    { y: '2013', a: 5}
                 ],
                 xkey: 'y',
-                ykeys: ['a', 'b'],
-                labels: ['Температура', 'Котел включен'],
+                ykeys: ['a'],
+                labels: ['Температура'],
                 hideHover: 'auto',
                 resize: true,
-                lineColors: ['#1fb31a','#0000ff'],
+                lineColors: ['#1fb31a'],
                 eventLineColors: ['#ceceff'],
                 events: [
                     ['2006', '2007'],

@@ -588,10 +588,11 @@ code {
     }
   }
   &--green{
-    background: #fff;
+    background: lighten(#c9fbca, 7%);
     .ibox-title{
       border-color: #10b410;
       color: #10b410!important;
+      background: lighten(#c9fbca, 7%);
       .dashed-title{
         // border-bottom: 1px dashed #10b410;
         padding-bottom: 2px;
@@ -606,6 +607,7 @@ code {
     .ibox-content{
       color: #10b410;
       border-color: #10b410;
+      background: lighten(#c9fbca, 7%);
     }
     .ibox-content__indicator{
       color: #10b410;
@@ -2437,11 +2439,7 @@ h4.ibox-content__indicator{
       position: absolute;
       top: 20px;
       right: 20px;
-      background-color: #ffae00;
-      background-image: none;
-      &.checked{
-        background: url("plugins/iCheck/orange.png") no-repeat -48px 0 #fff;
-      }
+      border-color: #fff;
     }
     &-title{
       font-weight: 600;
@@ -2460,6 +2458,14 @@ h4.ibox-content__indicator{
   }
   .slick-list{
     padding: 0!important;
+  }
+  .slick-prev {
+    left: 25px;
+    z-index: 3;
+  }
+  .slick-next {
+    right: 25px;
+    z-index: 3;
   }
 }
 
