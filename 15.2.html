@@ -243,7 +243,7 @@
 
             <div class="wrapper wrapper-content">
 
-                <div class="ibox sensor-settings">
+                <!-- <div class="ibox sensor-settings">
                     <div class="ibox-title">
                         <div class="buttons-panel">
                             <div class="ibox-tools ibox-tools--left">
@@ -261,14 +261,14 @@
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <div>
+                        <div class="js-schedule-temp-panel">
                             <div class="sensor-settings-table">
                                 <div class="sensor-settings-table__row">
                                     <div class="sensor-settings-table__cell">
                                         <div class="sensor-settings-table__buttons">
-                                            <a class="btn btn-orange" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
-                                            <a class="btn btn-orange" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
-                                            <a class="btn btn-orange" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
                                         </div>
                                     </div>
                                     <div class="sensor-settings-table__cell">
@@ -307,15 +307,97 @@
                                                 <i class="iconbg iconbg--boiler"></i>
                                             </div>
                                             <div>
-                                                <span>свое значение</span>
-                                                <div class="counter">
-                                                    <input type="button" field="mens" class="counter-minus js-qtyminus" value="-">
-                                                    <input type="text" class="counter-field" value="0" name="mens">
-                                                    <input type="button" field="mens" class="counter-plus js-qtyplus" value="+">
+                                                <div>свое значение</div>
+                                                <div class="counter press-btn">
+                                                    <input type="button" field="temp" class="counter-minus js-qtyminus" value="-">
+                                                    <input type="text" class="counter-field" value="0" name="temp">
+                                                    <input type="button" field="temp" class="counter-plus js-qtyplus" value="+">
                                                 </div>
                                             </div>
                                             <div>
-                                                <a class="btn btn-orange" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                                                <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="ibox PAU-sensor sensor-settings">
+                    <div class="ibox-title">
+                        <div class="buttons-panel">
+                            <div class="ibox-tools ibox-tools--left">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="sensor-settings__title">Отопление спальня</span>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="js-temp-panel">
+                            <div class="sensor-settings-table">
+                                <div class="sensor-settings-table__row">
+                                    <div class="sensor-settings-table__cell">
+                                        <div class="sensor-settings-table__buttons">
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
+                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
+                                        </div>
+                                    </div>
+                                    <div class="sensor-settings-table__cell">
+                                        <table class="sensor-settings__box sensor-settings__box-center">
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator green-text">
+                                                         29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="sensor-settings__indicator-title">текущая температура</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator ibox-content__indicator--blue">
+                                                        Включено
+                                                    </div>
+                                                    <div class="sensor-settings__indicator-title">состояние</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ibox-content__indicator orange-text">
+                                                         29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <div class="sensor-settings__indicator-title">поддерживается</div>
+                                                </td>
+                                            </tr>
+                                        </table>                                
+                                    </div>
+                                    <div class="sensor-settings-table__cell">
+                                        <div class="sensor-settings-table__right-col">
+                                            <div>
+                                                <i class="iconbg iconbg--boiler"></i>
+                                            </div>
+                                            <div>
+                                                <div>свое значение</div>
+                                                <div class="counter press-btn">
+                                                    <input type="button" field="temp" class="counter-minus js-qtyminus" value="-">
+                                                    <input type="text" class="counter-field" value="0" name="temp">
+                                                    <input type="button" field="temp" class="counter-plus js-qtyplus" value="+">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
                                             </div>
                                         </div>
                                     </div>
@@ -373,7 +455,7 @@
                     </div>
                     <div class="ibox-content">
                         <h4 class="sensor-settings__h4-title">Температура поддержания:</h4>
-                         <div class="schedule-temp-panel">
+                         <div class="schedule-temp-panel js-temp-panel">
                             <div class="js-change-temp">
                                 <a class="btn btn-blue press-btn" href="javascript:void(0)">Эконом <span class="js-sensor-temp">12</span> <sup>&deg;C</sup></a>
                                 
@@ -414,15 +496,15 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="counter">
-                                    <input type="button" field="mens" class="counter-minus js-qtyminus" value="-">
-                                    <input type="text" class="counter-field" value="0" name="mens">
-                                    <input type="button" field="mens" class="counter-plus js-qtyplus" value="+">
+                                <div class="counter press-btn">
+                                    <input type="button" field="temp1" class="counter-minus js-qtyminus" value="-">
+                                    <input type="text" class="counter-field" value="0" name="temp1">
+                                    <input type="button" field="temp1" class="counter-plus js-qtyplus" value="+">
                                 </div>
                                 <div class="schedule-temp-panel__label">свое значение</div>
                             </div>
                             <div>
-                                <a class="btn btn-orange" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                                <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
                             </div>
                         </div>
                     </div>
@@ -718,7 +800,7 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <div class="ibox-content__indicator ibox-content__indicator--red">
+                                                    <div class="ibox-content__indicator ibox-content__indicator--black">
                                                         Откл
                                                     </div>
                                                     <div class="sensor-settings__indicator-title">текущее значение</div>
@@ -736,6 +818,23 @@
                             </div>
                             <div class="buttons-panel">
                                 <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другое</a>
+                            </div>
+                        </li>
+                        <li class="col-xlg-4 col-lg-6">
+                            <div class="ibox float-e-margins other-sensors__ibox-notitle">
+                                <div class="ibox-title">
+                                    <h5>Гистерезис</h5>
+                                </div>
+                                <div class="ibox-content min-padding">
+                                    <div>
+                                        <div class="sensor-settings__sensor-title">Внимание!</div>
+                                            <div class="sensor-settings__indicator-title">Не меняйте эту настройку без необходимости!</div>
+                                        <div class="hysteresis_slider" id="hysteresis_slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons-panel">
+                                <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другой</a>
                             </div>
                         </li>
                         <li class="col-xlg-4 col-lg-6">
@@ -916,6 +1015,9 @@
    <!-- Date range picker -->
     <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
 
+    <!-- IonRangeSlider -->
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
     <script>
         $(function() {
 
@@ -1034,6 +1136,19 @@
         $('.i-checks').iCheck({
             checkboxClass: 'icheckbox_square-green',
             radioClass: 'iradio_square-green',
+        });
+    </script>
+
+    <script>
+        $("#hysteresis_slider").ionRangeSlider({
+            min: 0.5,
+            max: 5,
+            type: 'single',
+            from: 0.5,
+            step: 0.5,
+            prettify: false,
+            hasGrid: true
+            
         });
     </script>
 

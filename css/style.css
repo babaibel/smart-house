@@ -3660,12 +3660,20 @@ label.font-noraml {
 }
 .counter {
   margin: 5px auto;
+  -border-radius: 3px;
+  overflow: hidden;
+}
+.counter:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .counter-field {
   background: #fff;
   border: 1px solid #cccccc;
   color: #4f4f4f;
-  display: inline-block;
+  display: block;
+  float: left;
   font-size: 15px;
   font-weight: 600;
   line-height: 32px;
@@ -3673,8 +3681,6 @@ label.font-noraml {
   padding: 0 5px;
   text-align: center;
   width: 38px;
-  margin: 0 5px;
-  border-radius: 3px;
   box-shadow: 0;
   vertical-align: middle;
 }
@@ -3683,8 +3689,8 @@ label.font-noraml {
   background: #ffaa00;
   border: 0 none;
   color: #fff;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  float: left;
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
@@ -3692,11 +3698,45 @@ label.font-noraml {
   padding: 0;
   text-align: center;
   width: 34px;
-  border-radius: 3px;
 }
 .counter-minus:hover,
 .counter-plus:hover {
   opacity: .8;
+}
+#editable_length,
+#editable_filter,
+#editable_info,
+#editable_paginate {
+  display: none!important;
+}
+th.sorting {
+  padding-right: 0;
+}
+table.dataTable thead .sorting::after,
+table.dataTable thead .sorting_asc::after,
+table.dataTable thead .sorting_desc::after {
+  content: ' ';
+  display: none!important;
+}
+.dataTables_wrapper {
+  padding-bottom: 0;
+}
+#editable input {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  box-shadow: 0;
+  line-height: 22px;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+#editable tr td:nth-child(2) input,
+#editable tr td:first-child input {
+  text-align: left;
+}
+.other-sensors .security-title {
+  float: none;
 }
 .sidebard-panel {
   width: 220px;
@@ -4597,7 +4637,7 @@ code {
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
-  min-height: 137px;
+  min-height: 148px;
   background: #fff;
 }
 .ibox.active {
@@ -5482,6 +5522,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 .ibox-content__indicator--red {
   color: #fd3026;
 }
+.ibox-content__indicator--black {
+  color: #000;
+}
 .ibox-content__temp-box {
   display: inline-block;
   border: 1px solid #cccccc;
@@ -6179,7 +6222,6 @@ h4.ibox-content__indicator {
 .sensor-settings-table__buttons .btn {
   display: block;
   margin-bottom: 10px;
-  border-radius: 0;
 }
 .sensor-settings-table__right-col {
   display: inline-block;
@@ -6190,7 +6232,6 @@ h4.ibox-content__indicator {
 }
 .sensor-settings-table .sensor-settings__box {
   border-radius: 0;
-  border-top: 4px solid #e1e4e6;
 }
 .sensor-settings-table .sensor-settings__box td {
   padding-left: 30px;
@@ -6198,6 +6239,9 @@ h4.ibox-content__indicator {
 }
 .sensor-settings-table .ibox-content__indicator {
   text-transform: none;
+}
+.sensor-settings-table .counter {
+  display: inline-block;
 }
 .gallery__title {
   font-size: 22px;
@@ -6356,6 +6400,38 @@ h4.ibox-content__indicator {
 .press-btn.btn-light-orange:active,
 .press-btn.btn-light-orange.active {
   box-shadow: 0 0 0 #c99b11 inset, 0 2px 0 0 #c99b11;
+}
+.press-btn.btn-orange {
+  box-shadow: 0 0 0 #bd8100 inset, 0 5px 0 0 #bd8100;
+}
+.press-btn.btn-orange:active,
+.press-btn.btn-orange.active {
+  box-shadow: 0 0 0 #bd8100 inset, 0 2px 0 0 #bd8100;
+}
+.press-btn.counter {
+  background: #f0a400;
+  border-radius: 3px;
+  box-shadow: 0 0 0 #bd8100 inset, 0 5px 0 0 #bd8100;
+}
+.press-btn.counter:active,
+.press-btn.counter.active {
+  box-shadow: 0 0 0 #bd8100 inset, 0 2px 0 0 #bd8100;
+}
+.PAU-sensor {
+  min-height: 321px;
+}
+.PAU-sensor .sensor-settings__box .ibox-content__indicator {
+  font-size: 42px;
+  line-height: 44px;
+}
+.PAU-sensor .sensor-settings__box {
+  margin-bottom: 0;
+}
+.PAU-sensor .sensor-settings__box td {
+  padding-bottom: 0;
+}
+.PAU-sensor .sensor-settings__box tr:last-child td {
+  padding-bottom: 12px;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -10209,14 +10285,11 @@ body.md-skin {
   .col-xlg-4 {
     width: 33.3333%!important;
   }
-  .sensors-3col LI.col-xlg-4:nth-child(3n+1) {
-    clear: left;
-  }
   .col-xlg-6 {
     width: 50%!important;
   }
-  .sensors-2col LI.col-xlg-4:nth-child(2n+1) {
-    clear: left;
+  .col-xlg-8 {
+    width: 66.6667%!important;
   }
   .calendar-container {
     width: 80%;
@@ -10224,9 +10297,6 @@ body.md-skin {
   }
 }
 @media (min-width: 1200px) and (max-width: 1559px) {
-  .sensors-3col LI.col-xlg-4:nth-child(2n+1) {
-    clear: left;
-  }
   .main-2col > div {
     width: 50%!important;
   }

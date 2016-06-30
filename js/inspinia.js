@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     $('.press-btn').click(function () {
-        $(this).closest('.schedule-temp-panel').find('.press-btn').removeClass('active');
+        $(this).closest('.js-temp-panel').find('.press-btn').removeClass('active');
         $(this).addClass('active');
     });
 

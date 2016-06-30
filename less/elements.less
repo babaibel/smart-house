@@ -2765,11 +2765,19 @@ label.font-noraml{
 
 .counter {
   margin: 5px auto;
+  -border-radius: 3px;
+  overflow: hidden;
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
   &-field {
     background: #fff;
     border: 1px solid #cccccc;
     color: #4f4f4f;
-    display: inline-block;
+    display: block;
+    float: left;
     font-size: 15px;
     font-weight: 600;
     line-height: 32px;
@@ -2777,8 +2785,8 @@ label.font-noraml{
     padding: 0 5px;
     text-align: center;
     width: 38px;
-    margin: 0 5px;
-    border-radius: 3px;
+    // margin: 0 5px;
+    // border-radius: 3px;
     box-shadow: 0;
     vertical-align: middle;
   }
@@ -2788,8 +2796,8 @@ label.font-noraml{
     background: #ffaa00;
     border: 0 none;
     color: #fff;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
+    float: left;
     font-size: 18px;
     font-weight: 600;
     line-height: 18px;
@@ -2797,7 +2805,7 @@ label.font-noraml{
     padding: 0;
     text-align: center;
     width: 34px;
-    border-radius: 3px;
+    // border-radius: 3px;
     &:hover{
       opacity: .8;
     }
@@ -2809,16 +2817,46 @@ label.font-noraml{
 }
 
 
-// .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{
-//   background-color: #c2c2c2;
-// }
+#editable_length,
+#editable_filter,
+#editable_info,
+#editable_paginate{
+  display: none!important;
+}
 
-// .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
-// .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-//   background-color: #ffae00;
-// }
+th.sorting{
+  padding-right: 0;
+}
 
-// .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
-//     background-color: #ffae00;
-//     width: 6px;
-// }
+table.dataTable thead .sorting::after,
+table.dataTable thead .sorting_asc::after,
+table.dataTable thead .sorting_desc::after{
+  content: ' ';
+  display: none!important;
+}
+
+.dataTables_wrapper{
+  padding-bottom: 0;
+}
+
+#editable input{
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  box-shadow: 0;
+  line-height: 22px;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#editable tr td:nth-child(2),
+#editable tr td:first-child{
+  input{
+    text-align: left;
+  }
+}
+
+.other-sensors .security-title{
+  float: none;
+}

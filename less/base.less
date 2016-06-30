@@ -504,7 +504,7 @@ code {
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
-  min-height: 137px;
+  min-height: 148px;
   background: #fff;
   &.active{
     box-shadow: 0 0 0 3px rgba(255, 174, 0, 1);
@@ -1592,6 +1592,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
     &--red{
       color: #fd3026;
     }
+    &--black{
+      color: #000;
+    }
   }
 
   &__temp-box{
@@ -2394,7 +2397,6 @@ h4.ibox-content__indicator{
     .btn{
       display: block;
       margin-bottom: 10px;
-      border-radius: 0;
     }
   }
   &__right-col{
@@ -2410,11 +2412,13 @@ h4.ibox-content__indicator{
       padding-right: 30px;
     }
     border-radius: 0;
-    border-top: 4px solid #e1e4e6;
-    
+    // border-top: 4px solid #e1e4e6;
   }
   .ibox-content__indicator{
     text-transform: none;
+  }
+  .counter{
+    display: inline-block;
   }
 }
 
@@ -2582,6 +2586,41 @@ h4.ibox-content__indicator{
       box-shadow: 0 0 0 darken(#eec139, 15%) inset, 0 2px 0 0 darken(#eec139, 15%);
     }
   }
+  &.btn-orange{
+    box-shadow: 0 0 0 darken(#f0a400, 10%) inset, 0 5px 0 0 darken(#f0a400, 10%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#f0a400, 10%) inset, 0 2px 0 0 darken(#f0a400, 10%);
+    }
+  }
+  &.counter{
+    background: #f0a400;
+    border-radius: 3px;
+    box-shadow: 0 0 0 darken(#f0a400, 10%) inset, 0 5px 0 0 darken(#f0a400, 10%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#f0a400, 10%) inset, 0 2px 0 0 darken(#f0a400, 10%);
+    }
+  }
 }
 
 
+.PAU-sensor{
+  min-height: 321px;
+  .sensor-settings__box {
+    .ibox-content__indicator{
+      font-size: 42px;
+      line-height: 44px;
+    }
+
+  }
+  .sensor-settings__box{
+    margin-bottom: 0;
+    td{
+      padding-bottom: 0;
+    }
+    tr:last-child td{
+      padding-bottom: 12px;
+    }
+  }
+}

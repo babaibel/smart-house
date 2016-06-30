@@ -309,7 +309,7 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <div class="ibox-content__indicator ibox-content__indicator--red">
+                                                    <div class="ibox-content__indicator ibox-content__indicator--black">
                                                         Откл
                                                     </div>
                                                     <div class="sensor-settings__indicator-title">текущее значение</div>
@@ -391,6 +391,29 @@
                 radioClass: 'iradio_square-green',
             });
 
+            // $('#calendar').fullCalendar({
+            //     firstDay: 1,
+            //     header: {
+            //         left: 'prev,next today',
+            //         center: 'title',
+            //         right: 'month,agendaWeek,agendaDay'
+            //     },
+            //     monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            //     monthNamesShort: ['Янв.','Фев.','Март','Апр.','Май','Июнь','Июль','Авг.','Сент.','Окт.','Ноя.','Дек.'],
+            //     dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+            //     dayNamesShort: ["ВС","ПН","ВТ","СР","ЧТ","ПТ","СБ"],
+            //     buttonText: {
+            //         prev: "Назад",
+            //         next: "Вперед",
+            //         prevYear: "&nbsp;&lt;&lt;&nbsp;",
+            //         nextYear: "&nbsp;&gt;&gt;&nbsp;",
+            //         today: "Сегодня",
+            //         month: "Месяц",
+            //         week: "Неделя",
+            //         day: "День"
+            //     }
+            // });
+
             /* --initialize the calendar---*/
             var date = new Date();
             var d = date.getDate();
@@ -398,11 +421,27 @@
             var y = date.getFullYear();
 
             $('#calendar').fullCalendar({
+                firstDay: 1,
                 header: {
                     left: 'prev,next today',
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay'
                 },
+                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                monthNamesShort: ['Янв.','Фев.','Март','Апр.','Май','Июнь','Июль','Авг.','Сент.','Окт.','Ноя.','Дек.'],
+                dayNames: ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+                dayNamesShort: ["ВС","ПН","ВТ","СР","ЧТ","ПТ","СБ"],
+                buttonText: {
+                    prev: "Назад",
+                    next: "Вперед",
+                    prevYear: "&nbsp;&lt;&lt;&nbsp;",
+                    nextYear: "&nbsp;&gt;&gt;&nbsp;",
+                    today: "Сегодня",
+                    month: "Месяц",
+                    week: "Неделя",
+                    day: "День"
+                },
+                timeFormat: 'H(:mm)',
                 editable: true,
                 droppable: true, // this allows things to be dropped onto the calendar
                 drop: function() {
@@ -414,48 +453,34 @@
                 },
                 events: [
                     {
-                        title: 'All Day Event',
-                        start: new Date(y, m, 1)
+                        title: 'Включен',
+                        start:  '2016-06-06T17:20:00',
+                        color: '#10b410'
                     },
                     {
-                        title: 'Long Event',
-                        start: new Date(y, m, d-5),
-                        end: new Date(y, m, d-2)
+                        title: 'Отключен',
+                        start:  '2016-06-06T17:30:00',
+                        color: '#999'
                     },
                     {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d-3, 16, 0),
-                        allDay: false
+                        title: 'Включен',
+                        start:  '2016-06-06T18:20:00',
+                        color: '#10b410'
                     },
                     {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: new Date(y, m, d+4, 16, 0),
-                        allDay: false
+                        title: 'Отключен',
+                        start:  '2016-06-06T18:30:00',
+                        color: '#999'
                     },
                     {
-                        title: 'Meeting',
-                        start: new Date(y, m, d, 10, 30),
-                        allDay: false
+                        title: 'Включен',
+                        start:  '2016-06-06T22:20:00',
+                        color: '#10b410'
                     },
                     {
-                        title: 'Lunch',
-                        start: new Date(y, m, d, 12, 0),
-                        end: new Date(y, m, d, 14, 0),
-                        allDay: false
-                    },
-                    {
-                        title: 'Birthday Party',
-                        start: new Date(y, m, d+1, 19, 0),
-                        end: new Date(y, m, d+1, 22, 30),
-                        allDay: false
-                    },
-                    {
-                        title: 'Click for Google',
-                        start: new Date(y, m, 28),
-                        end: new Date(y, m, 29),
-                        url: 'http://google.com/'
+                        title: 'Отключен',
+                        start:  '2016-06-06T22:30:00',
+                        color: '#999'
                     }
                 ]
             });

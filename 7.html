@@ -253,7 +253,7 @@
                 </div>
                 <div class="ibox-content">
                     <div class="table-responsive">
-                        <table class="table table-striped sensors-table">
+                        <table class="table table-striped sensors-table" id="editable">
                             <thead>
                             <tr>
                                 <th>
@@ -293,10 +293,10 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>0</td>
-                                    <td>Олег Медведович</td>
-                                    <td>+7 910 189 54 44</td>
-                                    <td>expert500@potolok.com</td>
+                                    <td class="edit-td">0</td>
+                                    <td class="edit-td">Олег Медведович</td>
+                                    <td class="edit-td">+7 910 189 54 44</td>
+                                    <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
                                             <span class="notification-icons__item active"><i class="fa fa-envelope"></i></span>
@@ -309,10 +309,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>0</td>
-                                    <td>Олег Медведович</td>
-                                    <td>+7 910 189 54 44</td>
-                                    <td>expert500@potolok.com</td>
+                                    <td class="edit-td">0</td>
+                                    <td class="edit-td">Олег Медведович</td>
+                                    <td class="edit-td">+7 910 189 54 44</td>
+                                    <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
                                             <span class="notification-icons__item "><i class="fa fa-envelope"></i></span>
@@ -325,10 +325,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>0</td>
-                                    <td>Олег Медведович</td>
-                                    <td>+7 910 189 54 44</td>
-                                    <td>expert500@potolok.com</td>
+                                    <td class="edit-td">0</td>
+                                    <td class="edit-td">Олег Медведович</td>
+                                    <td class="edit-td">+7 910 189 54 44</td>
+                                    <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
                                             <span class="notification-icons__item active"><i class="fa fa-envelope"></i></span>
@@ -341,10 +341,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>0</td>
-                                    <td>Олег Медведович</td>
-                                    <td>+7 910 189 54 44</td>
-                                    <td>expert500@potolok.com</td>
+                                    <td class="edit-td">0</td>
+                                    <td class="edit-td">Олег Медведович</td>
+                                    <td class="edit-td">+7 910 189 54 44</td>
+                                    <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
                                             <span class="notification-icons__item"><i class="fa fa-envelope"></i></span>
@@ -611,6 +611,9 @@
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
@@ -640,6 +643,27 @@
                 allowClear: true,
                 minimumResultsForSearch: -1
             });
+
+            /* Init DataTables */
+            var oTable = $('#editable').DataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td.edit-td').editable( '../example_ajax.php', {
+                "callback": function( sValue, y ) {
+                    var aPos = oTable.fnGetPosition( this );
+                    oTable.fnUpdate( sValue, aPos[0], aPos[1] );
+                },
+                "submitdata": function ( value, settings ) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition( this )[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            } );
+
 
         });
     </script>
