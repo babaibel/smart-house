@@ -3738,6 +3738,33 @@ table.dataTable thead .sorting_desc::after {
 .other-sensors .security-title {
   float: none;
 }
+.spy-select {
+  max-width: 400px;
+}
+.spy-select + .select2 {
+  max-width: 400px;
+}
+.spy-rele__block {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+  margin: 5px 0;
+}
+.spy-rele__block--hidden {
+  display: none;
+}
+.spy-rele__block--hidden._visible {
+  display: inline-block;
+}
+.spy-rele__block:first-child {
+  max-width: 400px;
+  width: 400px;
+}
+.spy-rele__block input.form-control[type="text"] {
+  height: 35px!important;
+  line-height: 33px!important;
+  border-color: #cccccc!important;
+}
 .sidebard-panel {
   width: 220px;
   background: #ebebed;
@@ -5549,7 +5576,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
   text-align: right;
   position: absolute;
   right: 15px;
-  bottom: 5px;
+  bottom: 3px;
 }
 .ibox-content__info {
   margin-right: 45px;
@@ -5954,6 +5981,12 @@ h4.ibox-content__indicator {
 .track-panel--calendar {
   margin-bottom: 30px;
 }
+.track-panel--calendar td {
+  vertical-align: top;
+}
+.track-panel--calendar td .i-checks__label {
+  line-height: 35px;
+}
 .track-panel--one-line-setting {
   height: 100px;
   font-weight: 600;
@@ -6139,11 +6172,8 @@ h4.ibox-content__indicator {
   position: relative;
 }
 .hidden-cheks-panel__title {
-  line-height: 24px;
+  line-height: 32px;
   cursor: pointer;
-}
-.hidden-cheks-panel:hover .hidden-cheks-panel__box-wr {
-  display: block;
 }
 .hidden-cheks-panel__box {
   background: #f3f3f4;
@@ -6161,12 +6191,7 @@ h4.ibox-content__indicator {
 }
 .hidden-cheks-panel__box-wr {
   padding-top: 10px;
-  display: none;
-  position: absolute;
-  left: 0;
-  right: auto;
-  top: 100%;
-  z-index: 333;
+  display: inline-block;
 }
 .hidden-cheks-panel__box .form-group {
   display: inline-block;
@@ -6432,6 +6457,79 @@ h4.ibox-content__indicator {
 }
 .PAU-sensor .sensor-settings__box tr:last-child td {
   padding-bottom: 12px;
+}
+.PAU-sensor__box {
+  width: 100%;
+  background: #f3f3f4;
+  padding: 15px;
+  border-radius: 3px;
+}
+.PAU-sensor__box tr td {
+  vertical-align: middle;
+  padding: 15px;
+}
+.PAU-sensor__box-center {
+  text-align: center!important;
+}
+.PAU-sensor__indicator-title {
+  font-size: 12px;
+  line-height: 14px;
+}
+.PAU-sensor__port {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 13px;
+}
+.PAU-sensor-table {
+  display: table;
+  width: 100%;
+}
+.PAU-sensor-table__row {
+  display: table-row;
+}
+.PAU-sensor-table__cell {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+}
+.PAU-sensor-table__cell:first-child {
+  width: 20%;
+  padding-right: 10px;
+}
+.PAU-sensor-table__cell:last-child {
+  text-align: center;
+  padding-left: 10px;
+  width: 10%;
+}
+.PAU-sensor-table__buttons {
+  display: inline-block;
+}
+.PAU-sensor-table__buttons .btn {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+.PAU-sensor-table__right-col {
+  display: inline-block;
+}
+.PAU-sensor-table .ibox-content__indicator {
+  text-transform: none;
+  font-size: 30px;
+  line-height: 32px;
+}
+.PAU-sensor-table .counter {
+  display: block;
+  margin: 0;
+}
+.PAU-sensor-table .counter .counter-minus,
+.PAU-sensor-table .counter .counter-plus {
+  width: 40px;
+}
+.PAU-sensor-table .counter__title {
+  font-size: 12px;
+  text-align: center;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -10296,11 +10394,6 @@ body.md-skin {
     margin: 0 auto;
   }
 }
-@media (min-width: 1200px) and (max-width: 1559px) {
-  .main-2col > div {
-    width: 50%!important;
-  }
-}
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
@@ -10393,6 +10486,13 @@ body.md-skin {
     display: inline-block;
     vertical-align: middle;
     margin: 0 10px 5px;
+  }
+  .spy-rele__block {
+    padding-right: 15px;
+  }
+  .spy-rele__block:first-child {
+    max-width: 330px;
+    width: 330px;
   }
 }
 @media (max-width: 768px) {
@@ -10656,6 +10756,13 @@ body.md-skin {
     content: "";
     display: table;
     clear: both;
+  }
+  .spy-rele__block {
+    padding-right: 0;
+  }
+  .spy-rele__block:first-child {
+    max-width: 290px;
+    width: 290px;
   }
 }
 @media (max-width: 350px) {

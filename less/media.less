@@ -25,11 +25,11 @@
   // .sensors-3col LI.col-xlg-4:nth-child(2n+1){
   //   clear: left;
   // }
-  .main-2col{
-    > div{
-      width: 50%!important;
-    }
-  }
+  // .main-2col{
+  //   > div{
+  //     width: 50%!important;
+  //   }
+  // }
 }
 
 @media (min-width: 768px) {
@@ -126,6 +126,15 @@
         display: inline-block;
         vertical-align: middle;
         margin: 0 10px 5px;
+      }
+    }
+  }
+  .spy-rele{
+    &__block{
+      padding-right: 15px;
+      &:first-child{
+        max-width: 330px;
+        width: 330px;
       }
     }
   }
@@ -326,6 +335,8 @@
     }
   }
 
+  
+
 }
 
 @media (max-width: 500px){
@@ -446,6 +457,16 @@
       content: "";
       display: table;
       clear: both;
+    }
+  }
+
+  .spy-rele{
+    &__block{
+      &:first-child{
+        max-width: 290px;
+        width: 290px;
+      }
+      padding-right: 0;
     }
   }
 

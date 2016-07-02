@@ -1624,7 +1624,7 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
     position: absolute;
     right: 15px;
-    bottom: 5px;
+    bottom: 3px;
   }
 
   &__info{
@@ -2099,6 +2099,12 @@ h4.ibox-content__indicator{
   }
   &--calendar{
     margin-bottom: 30px;
+    td{
+      vertical-align: top;
+      .i-checks__label{
+        line-height: 35px;
+      }
+    }
   }
   &--one-line-setting{
     height: 100px;
@@ -2306,14 +2312,14 @@ h4.ibox-content__indicator{
 .hidden-cheks-panel{
   position: relative;
   &__title{
-    line-height: 24px;
+    line-height: 32px;
     cursor: pointer;
   }
-  &:hover{
-    .hidden-cheks-panel__box-wr{
-      display: block;
-    }
-  }
+  // &:hover{
+  //   .hidden-cheks-panel__box-wr{
+  //     display: block;
+  //   }
+  // }
   &__box{
     
     background: #f3f3f4;
@@ -2330,12 +2336,7 @@ h4.ibox-content__indicator{
 
     &-wr{
       padding-top: 10px;
-      display: none;
-      position: absolute;
-      left: 0;
-      right: auto;
-      top: 100%;
-      z-index: 333;
+      display: inline-block;
     }
 
     .form-group{
@@ -2621,6 +2622,106 @@ h4.ibox-content__indicator{
     }
     tr:last-child td{
       padding-bottom: 12px;
+    }
+  }
+}
+
+.PAU-sensor{
+  &__box{
+    width: 100%;
+    background: #f3f3f4;
+    padding: 15px;
+    border-radius: 3px;
+    tr{
+      td{
+        vertical-align: middle;
+        padding: 15px;
+      }
+    }
+    &-center{
+      text-align: center!important;
+    }
+  }
+
+  &__indicator-title{
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__port{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
+.PAU-sensor-table{
+  display: table;
+  width: 100%;
+  &__row{
+    display: table-row;
+  }
+  &__cell{
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+    &:first-child{
+      width: 20%;
+      padding-right: 10px;
+    }
+    // &:last-child{
+    //   text-align: left;
+    //   padding-left: 10px;
+    //   width: 20%;
+    // }
+    &:last-child{
+      text-align: center;
+      padding-left: 10px;
+      width: 10%;
+    }
+  }
+  &__buttons{
+    display: inline-block;
+    // .btn{
+    //   display: block;
+    //   margin-bottom: 15px;
+    //   font-size: 12px;
+    // }
+    .btn{
+      display: block;
+      margin-bottom: 12px;
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  &__right-col{
+    display: inline-block;
+    // > div{
+    //   margin-bottom: 10px;
+    //   text-align: center;
+    // }
+  }
+  // .PAU-sensor__box{
+  //   td{
+  //     padding: 15px;
+  //   }
+  //   border-radius: 0;
+  // }
+  .ibox-content__indicator{
+    text-transform: none;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .counter{
+    display: block;
+    margin: 0;
+    .counter-minus, .counter-plus{
+      width: 40px;
+    }
+    &__title{
+      font-size: 12px;
+      text-align: center;
     }
   }
 }

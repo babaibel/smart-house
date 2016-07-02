@@ -2860,3 +2860,36 @@ table.dataTable thead .sorting_desc::after{
 .other-sensors .security-title{
   float: none;
 }
+
+.spy-select{
+  max-width: 400px;
+  & + .select2{
+    max-width: 400px;
+  }
+}
+
+.spy-rele{
+  &__block{
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 30px;
+    margin: 5px 0;
+
+    &--hidden{
+      display: none;
+      &._visible{
+        display: inline-block;
+      }
+    }
+    
+    &:first-child{
+      max-width: 400px;
+      width: 400px;
+    }
+    input.form-control[type="text"]{
+      height: 35px!important;
+      line-height: 33px!important;
+      border-color: #cccccc!important;
+    }
+  }
+}

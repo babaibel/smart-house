@@ -289,11 +289,11 @@
                     <form class="form-inline" role="form">
                         <div class="form-group">
                             <label>Система:</label>
-                            <input type="email" class="form-control" placeholder="Feb 22 2016 17:57:05">
+                            <input type="email" class="form-control" value="Feb 22 2016 17:57:05" disabled>
                         </div>
                         <div class="form-group">
                             <label>Радиосеть:</label>
-                            <input type="text" class="form-control" placeholder="2016.02.12">
+                            <input type="text" class="form-control" value="2016.02.12" disabled>
                         </div>
                         <div class="form-group mgt">
                             <a class="btn btn-sm btn-orange" href="javascript:void(0)">Обновить</a>
@@ -320,24 +320,21 @@
                 </div>
             </div>
 
-            <div class="ibox">
-                <div class="ibox-title">
-                    <h5>Последний сеанс связи с системой</h5>
-                    <div class="tooltip-container">
-                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                    </div>
-                </div>
-                <div class="ibox-content">
-                    <form class="form-inline">
+            <div class="ibox ibox--auto-height">
 
-                       <div class="form-group">
-                            <input type="text" class="form-control" placeholder="2016.02.12">
+                <div class="ibox-content ibox-content--full">
+                    <div class="ibox-content__title">Последний сеанс связи с системой: 
+                        <span>2016.02.12</span>
+                        <div class="tooltip-container">
+                            <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
                         </div>
+                    </div>
+                   
+                    
 
-                    </form>
                 </div>
             </div>
-            
+
             <div class="buttons-panel buttons-panel--system">
                 <a class="btn btn-sm btn-orange inline" href="javascript:void(0)">Перезагрузить</a>
                 <div class="inline text-left mgl">

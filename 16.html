@@ -20,6 +20,9 @@
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
 
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+    
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -344,21 +347,23 @@
                         <table class="track-panel">
                             <tr>
                                 <td>
-                                    <div class="track-panel__title">Время удержания реле:</div>
-                                    <div><input type="text" class="form-control"><span class="i-checks__label">секунд</span></div>
+                                    <div class="spy-rele">
+                                        <div class="spy-rele__block">
+                                            <div class="track-panel__title">Режим:</div>
+                                            <select class="js-spy-select spy-select" style="width:100%;">
+                                                <option value="1">Включать на время тревоги</option>
+                                                <option value="2">Включать при тревоге до сброса вручную</option>
+                                                <option value="3" id="spy-time">Включиться на заданное время</option>
+                                            </select>
+                                        </div>
+                                        <div class="spy-rele__block spy-rele__block--hidden js-hidden-rele">
+                                            <div class="track-panel__title">Время удержания реле:</div>
+                                            <div><input type="text" class="form-control"><span class="i-checks__label">секунд</span></div>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>
-                                    <div class="track-panel__title">Режим:</div>
-                                    <div class="form-group">
-                                        <input type="checkbox" checked class="i-checks" name="input[]">
-                                        <span class="i-checks__label">Включать на время тревоги</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" checked class="i-checks" name="input[]">
-                                        <span class="i-checks__label">Включать при тревоге до сброса вручную</span>
-                                    </div>
-                                </td>
-                                <td>
+                                <td width="25%">
                                     <a class="btn btn-orange" href="javascript:void(0)">РУЧНОЙ СБРОС РЕЛЕ</a>
                                 </td>
                             </tr>
@@ -606,7 +611,7 @@
                                         </tr>
                                     </table>
 
-                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+                                    <small class="ibox-content__right-small">fspyПорт: РАДИО 7F471A</small>
 
                                 </div>
                             </div>
@@ -698,9 +703,10 @@
 <script src="js/plugins/iCheck/icheck.min.js"></script>
 <script src="js/Sortable.min.js"></script>
 
-   
+<script src="js/plugins/select2/select2.full.min.js"></script>
 
-    <script>
+<script>
+    $(document).ready(function(){
 
         $('.i-checks').iCheck({
             checkboxClass: 'icheckbox_square-green',
@@ -711,8 +717,34 @@
         this._list = Sortable.create(panelList, { 
            
         });
+    });
 
-    </script>
+    $(document).ready(function(){
+
+        var $spySelect = $(".js-spy-select");
+
+        if(!$spySelect.length) return false;
+
+        var $spySelectRele = $(".js-hidden-rele");
+
+        $spySelect.select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        $spySelect.on('select2:select', function (e) {
+           var spyTime = e.params.data.element.id;
+
+           if( spyTime === 'spy-time'){
+            $spySelectRele.addClass('_visible');
+           } else{
+            $spySelectRele.removeClass('_visible');
+           }
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
