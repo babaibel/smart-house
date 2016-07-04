@@ -4667,6 +4667,17 @@ code {
   min-height: 148px;
   background: #fff;
 }
+.ibox.active {
+  box-shadow: 0 0 0 3px #ffae00;
+}
+.ibox.active .ibox-title {
+  border-top-color: transparent;
+  background: transparent;
+  z-index: 1;
+}
+.ibox.active .ibox-content {
+  background: transparent;
+}
 .ibox--red {
   background-color: #ca3434;
 }
@@ -4818,20 +4829,6 @@ code {
 }
 .ibox--no-inner-title {
   min-height: 144px;
-}
-.ibox-clickable {
-  cursor: pointer;
-}
-.ibox-clickable.active {
-  box-shadow: 0 0 0 3px #ffae00;
-}
-.ibox-clickable.active .ibox-title {
-  border-top-color: transparent;
-  background: transparent;
-  z-index: 1;
-}
-.ibox-clickable.active .ibox-content {
-  background: transparent;
 }
 .ibox.collapsed .ibox-content {
   display: none;
@@ -6533,6 +6530,9 @@ h4.ibox-content__indicator {
 .PAU-sensor-table .counter__title {
   font-size: 12px;
   text-align: center;
+}
+.clickable-sensors-wr .ibox {
+  cursor: pointer;
 }
 /* SEARCH PAGE */
 .search-form {

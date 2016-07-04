@@ -506,8 +506,17 @@ code {
   padding: 0;
   min-height: 148px;
   background: #fff;
-  
-
+  &.active{
+    box-shadow: 0 0 0 3px rgba(255, 174, 0, 1);
+    .ibox-title{
+      border-top-color: transparent;
+      background: transparent;
+      z-index: 1;
+    }
+    .ibox-content{
+      background: transparent;
+    }
+  }
   &--red{
     background-color: #ca3434;
     .ibox-title{
@@ -661,20 +670,6 @@ code {
   }
   &--no-inner-title{
     min-height: 144px;
-  }
-  &-clickable{
-    cursor: pointer;
-    &.active{
-      box-shadow: 0 0 0 3px rgba(255, 174, 0, 1);
-      .ibox-title{
-        border-top-color: transparent;
-        background: transparent;
-        z-index: 1;
-      }
-      .ibox-content{
-        background: transparent;
-      }
-    }
   }
 }
 
@@ -2726,5 +2721,11 @@ h4.ibox-content__indicator{
       font-size: 12px;
       text-align: center;
     }
+  }
+}
+
+.clickable-sensors-wr{
+  .ibox{
+    cursor: pointer;
   }
 }
