@@ -5800,6 +5800,7 @@ h4.ibox-content__indicator {
   line-height: 16px;
   font-weight: 600;
   display: block;
+  margin-left: 30px;
 }
 .sensor-settings__topline {
   text-align: center;
@@ -6163,10 +6164,6 @@ h4.ibox-content__indicator {
 }
 .mgl {
   margin-left: 30px;
-}
-.sensor-name--big-height {
-  line-height: 34px;
-  margin: 0!important;
 }
 .hidden-cheks-panel {
   position: relative;
@@ -6533,6 +6530,44 @@ h4.ibox-content__indicator {
 }
 .clickable-sensors-wr .ibox {
   cursor: pointer;
+}
+.sensor-name-field {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0!important;
+  border: 1px solid transparent;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+.sensor-name-field:focus {
+  border-color: #ffaa00;
+}
+.sensor-name-field--inline {
+  display: inline-block !important;
+  vertical-align: middle;
+  width: auto!important;
+  text-align: left;
+}
+.sensor-name-field--unit-title {
+  display: inline-block !important;
+  text-align: left;
+  color: #ffaa00;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 50px;
+}
+.sensor-name-field--unit-title:focus {
+  color: #676a6c;
+}
+.sensor-name-field--big-height {
+  line-height: 36px;
+  margin: 0!important;
+  font-size: 14px;
+  text-align: left;
+  min-width: 290px;
 }
 /* SEARCH PAGE */
 .search-form {

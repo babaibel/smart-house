@@ -235,6 +235,26 @@ $(document).ready(function () {
 $(document).ready(function () {
     // change sensor name
 
+    if(!$('.js-change-sensor-name').length) return;
+
+    var $changeNameWr = $('.js-change-sensor-name');
+
+    $changeNameWr.each(function(){
+
+        var $this = $(this),
+            $changeNameSensor = $this.find('.js-change-sensor-name__field'),
+            $changeNameBtn= $this.find('.js-change-sensor-name__btn');
+
+        $changeNameBtn.click(function () {
+            $changeNameSensor.focus();
+        });
+
+    });
+});
+
+$(document).ready(function () {
+    // change sensor name
+
     if(!$('.js-change-name').length) return;
 
     var $changeNameWr = $('.js-change-name');

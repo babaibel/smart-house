@@ -1895,6 +1895,7 @@ h4.ibox-content__indicator{
     line-height: 16px;
     font-weight: 600;
     display: block;
+    margin-left: 30px;
   }
   &__topline{
     text-align: center;
@@ -2298,13 +2299,6 @@ h4.ibox-content__indicator{
 }
 .mgl{
   margin-left: 30px;
-}
-
-.sensor-name{
-  &--big-height{
-    line-height: 34px;
-    margin: 0!important;
-  }
 }
 
 .hidden-cheks-panel{
@@ -2727,5 +2721,45 @@ h4.ibox-content__indicator{
 .clickable-sensors-wr{
   .ibox{
     cursor: pointer;
+  }
+}
+
+
+.sensor-name-field{
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 0!important;
+  border: 1px solid transparent;
+  padding: 0 5px;
+  border-radius: 3px;
+  &:focus{
+    border-color: #ffaa00;
+  }
+  &--inline{
+    display: inline-block!important;
+    vertical-align: middle;
+    width: auto!important;
+    text-align: left;
+  }
+  &--unit-title{
+    display: inline-block!important;
+    text-align: left;
+    color: #ffaa00;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    width: 50px;
+    &:focus{
+      color: #676a6c;
+    }
+  }
+  &--big-height{
+    line-height: 36px;
+    margin: 0!important;
+    font-size: 14px;
+    text-align: left;
+    min-width: 290px;
   }
 }
