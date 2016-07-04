@@ -8,8 +8,8 @@
 
 $(document).ready(function () {
 
-    $('.js-camera-ibox').click(function () {
-        $(this).closest('.js-camera-wr').find('.js-camera-ibox').removeClass('active');
+    $('.js-clickable-sensor').click(function () {
+        $(this).closest('.js-sensor-wr').find('.js-clickable-sensor').removeClass('active');
         $(this).addClass('active');
     });
 
