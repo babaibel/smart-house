@@ -3778,6 +3778,89 @@ table.dataTable thead .sorting {
   line-height: 33px!important;
   border-color: #cccccc!important;
 }
+.ct-chart {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+}
+.ct-legend {
+  position: relative;
+  z-index: 10;
+  list-style: none;
+}
+.ct-legend li {
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.ct-legend li:before {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  content: '';
+  border: 1px solid #fff!important;
+  border-radius: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+.ct-legend li.inactive:before {
+  background: transparent;
+}
+.ct-legend.ct-legend-inside {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.ct-legend .ct-series-0:before {
+  background-color: #10b410;
+  border-color: #10b410;
+}
+.ct-legend .ct-series-1:before {
+  background-color: #e7eaec;
+  border-color: #e7eaec;
+}
+.ct-legend .ct-series-2:before {
+  background-color: #f4c63d;
+  border-color: #f4c63d;
+}
+.ct-legend .ct-series-3:before {
+  background-color: #D3D3D3;
+  border-color: #D3D3D3;
+}
+.ct-legend .ct-series-4:before {
+  background-color: #BABABA;
+  border-color: #BABABA;
+}
+.ct-legend .ct-series-5:before {
+  background-color: #453d3f;
+  border-color: #453d3f;
+}
+.ct-legend .ct-series-6:before {
+  background-color: #59922b;
+  border-color: #59922b;
+}
+.ct-legend .ct-series-7:before {
+  background-color: #0544d3;
+  border-color: #0544d3;
+}
+.ct-legend .ct-series-8:before {
+  background-color: #6b0392;
+  border-color: #6b0392;
+}
+.ct-legend .ct-series-9:before {
+  background-color: #f05b4f;
+  border-color: #f05b4f;
+}
+.ct-legend .ct-series-10:before {
+  background-color: #dda458;
+  border-color: #dda458;
+}
 .sidebard-panel {
   width: 220px;
   background: #ebebed;
@@ -4145,6 +4228,36 @@ table.dataTable thead .sorting {
   background: url(../img/icons/iconbg-foto.png) no-repeat left top;
   width: 50px;
   height: 50px;
+  margin: 0;
+}
+.iconbg--users {
+  background: url(../img/icons/users-ico.png) no-repeat left top;
+  width: 20px;
+  height: 17px;
+  margin: 0;
+}
+.iconbg--users-online {
+  background: url(../img/icons/users-online-ico.png) no-repeat left top;
+  width: 19px;
+  height: 16px;
+  margin: 0;
+}
+.iconbg--users-average {
+  background: url(../img/icons/users-average-ico.png) no-repeat left top;
+  width: 20px;
+  height: 18px;
+  margin: 0;
+}
+.iconbg--devices {
+  background: url(../img/icons/devices-ico.png) no-repeat left top;
+  width: 15px;
+  height: 19px;
+  margin: 0;
+}
+.iconbg--questions {
+  background: url(../img/icons/questions-ico.png) no-repeat left top;
+  width: 19px;
+  height: 18px;
   margin: 0;
 }
 .nav-logo {
@@ -4677,7 +4790,7 @@ code {
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
-  min-height: 148px;
+  min-height: 149px;
   background: #fff;
 }
 .ibox.active {
@@ -4958,7 +5071,6 @@ table.table-mail tr td {
   margin: 3px 0;
   padding: 0;
   text-overflow: ellipsis;
-  float: left;
 }
 .ibox-title .label {
   float: left;
@@ -5732,9 +5844,6 @@ h4.ibox-content__indicator {
 .center-box {
   text-align: center!important;
 }
-.sensors-2col LI:nth-child(2n+1) {
-  clear: left;
-}
 .sortableList li .ibox {
   cursor: move!important;
 }
@@ -5953,6 +6062,7 @@ h4.ibox-content__indicator {
 .other-sensors .buttons-panel {
   margin: 0 0 25px!important;
   padding: 0;
+  height: 33px;
 }
 .other-sensors .row {
   margin-bottom: 0;
@@ -5964,7 +6074,7 @@ h4.ibox-content__indicator {
   margin-top: 40px;
 }
 .other-sensors .security-title {
-  font-size: 20px;
+  font-size: 16px;
 }
 .track-panel {
   width: 100%;
@@ -6015,6 +6125,9 @@ h4.ibox-content__indicator {
 }
 .track-panel--one-line-setting .form-control {
   margin: 0 30px!important;
+}
+.track-panel--text-panel td {
+  padding: 12px;
 }
 .pie-box {
   height: 145px;
@@ -6125,6 +6238,7 @@ h4.ibox-content__indicator {
 }
 .notification-icons {
   font-size: 22px;
+  cursor: pointer;
 }
 .notification-icons__item {
   color: #1e2022;
@@ -6460,7 +6574,7 @@ h4.ibox-content__indicator {
   box-shadow: 0 0 0 #bd8100 inset, 0 2px 0 0 #bd8100;
 }
 .PAU-sensor {
-  min-height: 321px;
+  min-height: 320px;
 }
 .PAU-sensor .sensor-settings__box .ibox-content__indicator {
   font-size: 42px;
@@ -6623,6 +6737,9 @@ h4.ibox-content__indicator {
   width: 22px;
   height: 22px;
   background: url(../img/icons/map-ico.png) no-repeat left top;
+}
+.dashboard-no-header {
+  margin-top: 45px;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -10505,6 +10622,7 @@ body.md-skin {
   }
   .flot-chart {
     width: 60%;
+    margin: 0 auto;
   }
 }
 @media (max-width: 1200px) {
@@ -10745,6 +10863,80 @@ body.md-skin {
   }
   .sistem-name-box span {
     margin-bottom: 15px;
+  }
+  .ibox-content--full {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .track-panel--text-panel td {
+    padding: 0;
+    margin-bottom: 10px!important;
+  }
+  .dashboard-no-header {
+    margin-top: 0;
+  }
+  #ct-chart6 .ct-legend {
+    display: none;
+  }
+  .PAU-sensor {
+    min-height: 320px;
+  }
+  .PAU-sensor .sensor-settings__box .ibox-content__indicator {
+    font-size: 42px;
+    line-height: 44px;
+  }
+  .PAU-sensor .sensor-settings__box {
+    margin-bottom: 0;
+  }
+  .PAU-sensor .sensor-settings__box td {
+    padding-bottom: 0;
+  }
+  .PAU-sensor .sensor-settings__box tr:last-child td {
+    padding-bottom: 12px;
+  }
+  .PAU-sensor__box {
+    margin-bottom: 15px;
+  }
+  .PAU-sensor-table {
+    display: block;
+    width: 100%;
+  }
+  .PAU-sensor-table__row {
+    display: block;
+    width: 100%;
+  }
+  .PAU-sensor-table__cell {
+    display: block;
+    width: 100%;
+  }
+  .PAU-sensor-table__cell:first-child {
+    width: 100%;
+    padding-right: 0;
+  }
+  .PAU-sensor-table__cell:last-child {
+    padding-left: 0;
+    width: 100%;
+  }
+  .PAU-sensor-table__buttons {
+    display: block;
+    text-align: center;
+    margin: 0 -1% 15px;
+  }
+  .PAU-sensor-table__buttons .btn {
+    display: block;
+    float: left;
+    width: 48%;
+    margin: 0 1% 12px;
+  }
+  .PAU-sensor-table .ibox-content__indicator {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .PAU-sensor-table .counter {
+    display: inline-block;
+    margin: 0;
   }
 }
 @media (max-width: 500px) {

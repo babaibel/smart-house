@@ -301,9 +301,9 @@
                                     <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
-                                            <span class="notification-icons__item active"><i class="fa fa-envelope"></i></span>
-                                            <span class="notification-icons__item"><i class="fa fa-microphone"></i></span>
-                                            <span class="notification-icons__item active"><i class="fa fa-calendar"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-envelope"></i></span>
+                                            <span class="notification-icons__item js-notification"><i class="fa fa-microphone"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-calendar"></i></span>
                                         </div>
                                     </td>
                                     <td>
@@ -317,9 +317,9 @@
                                     <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
-                                            <span class="notification-icons__item "><i class="fa fa-envelope"></i></span>
-                                            <span class="notification-icons__item active"><i class="fa fa-microphone"></i></span>
-                                            <span class="notification-icons__item active"><i class="fa fa-calendar"></i></span>
+                                            <span class="notification-icons__item js-notification"><i class="fa fa-envelope"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-microphone"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-calendar"></i></span>
                                         </div>
                                     </td>
                                     <td>
@@ -333,9 +333,9 @@
                                     <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
-                                            <span class="notification-icons__item active"><i class="fa fa-envelope"></i></span>
-                                            <span class="notification-icons__item active"><i class="fa fa-microphone"></i></span>
-                                            <span class="notification-icons__item active"><i class="fa fa-calendar"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-envelope"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-microphone"></i></span>
+                                            <span class="notification-icons__item js-notification active"><i class="fa fa-calendar"></i></span>
                                         </div>
                                     </td>
                                     <td>
@@ -349,9 +349,9 @@
                                     <td class="edit-td">expert500@potolok.com</td>
                                     <td>
                                         <div class="notification-icons">
-                                            <span class="notification-icons__item"><i class="fa fa-envelope"></i></span>
-                                            <span class="notification-icons__item"><i class="fa fa-microphone"></i></span>
-                                            <span class="notification-icons__item"><i class="fa fa-calendar"></i></span>
+                                            <span class="notification-icons__item js-notification"><i class="fa fa-envelope"></i></span>
+                                            <span class="notification-icons__item js-notification"><i class="fa fa-microphone"></i></span>
+                                            <span class="notification-icons__item js-notification"><i class="fa fa-calendar"></i></span>
                                         </div>
                                     </td>
                                     <td>
@@ -520,6 +520,9 @@
             <div class="ibox">
                 <div class="ibox-title">
                     <h5>Порт «ДОП»</h5>
+                    <div class="tooltip-container">
+                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                    </div>
                 </div>
                 <div class="ibox-content">
                     <form class="form-inline">
@@ -638,6 +641,11 @@
 
     <script>
         $(document).ready(function(){
+
+            $('.js-notification').click(function () {
+                $(this).toggleClass('active');
+            });
+
             $('.i-checks').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',

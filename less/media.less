@@ -21,6 +21,12 @@
 
 }
 
+// @media (min-width: 1280px) {
+//   .col-xlg-6{
+//     width: 50%!important;
+//   }
+// }
+
 @media (min-width: 1200px) and (max-width: 1559px) {
   // .sensors-3col LI.col-xlg-4:nth-child(2n+1){
   //   clear: left;
@@ -53,6 +59,7 @@
 
   .flot-chart{
     width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -335,7 +342,91 @@
     }
   }
 
-  
+  .ibox-content--full {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .track-panel--text-panel td{
+    padding: 0;
+    margin-bottom: 10px!important;
+  }
+
+  .dashboard-no-header{
+    margin-top: 0;
+  }
+
+  #ct-chart6 .ct-legend{
+    display: none;
+  }
+
+  .PAU-sensor{
+  min-height: 320px;
+  .sensor-settings__box {
+    .ibox-content__indicator{
+      font-size: 42px;
+      line-height: 44px;
+    }
+
+  }
+  .sensor-settings__box{
+    margin-bottom: 0;
+    td{
+      padding-bottom: 0;
+    }
+    tr:last-child td{
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.PAU-sensor{
+  &__box{
+    margin-bottom: 15px;
+  }
+}
+
+.PAU-sensor-table{
+  display: block;
+  width: 100%;
+  &__row{
+    display: block;
+  width: 100%;
+  }
+  &__cell{
+    display: block;
+    width: 100%;
+    &:first-child{
+      width: 100%;
+      padding-right: 0;
+    }
+    &:last-child{
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+  &__buttons{
+    display: block;
+    text-align: center;
+    margin: 0 -1% 15px;
+    .btn{
+      display: block;
+      float: left;
+      width: 48%;
+      margin: 0 1% 12px;
+    }
+  }
+  .ibox-content__indicator{
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .counter{
+    display: inline-block;
+    margin: 0;
+  }
+}
 
 }
 

@@ -504,7 +504,7 @@ code {
   margin-bottom: 25px;
   margin-top: 0;
   padding: 0;
-  min-height: 148px;
+  min-height: 149px;
   background: #fff;
   &.active{
     box-shadow: 0 0 0 3px rgba(255, 174, 0, 1);
@@ -807,7 +807,7 @@ table.table-mail tr td {
   margin: 3px 0;
   padding: 0;
   text-overflow: ellipsis;
-  float: left;
+  // float: left;
 }
 
 .ibox-title .label {
@@ -1799,9 +1799,9 @@ h4.ibox-content__indicator{
   text-align: center!important;
 }
 
-.sensors-2col LI:nth-child(2n+1){
-  clear: left;
-}
+// .sensors-2col LI:nth-child(2n+1){
+//   clear: left;
+// }
 
 .sortableList li .ibox{
   cursor: move!important;
@@ -2052,6 +2052,7 @@ h4.ibox-content__indicator{
   .buttons-panel{
     margin: 0 0 25px!important;
     padding: 0;
+    height: 33px;
   }
   .row{
     margin-bottom: 0;
@@ -2064,7 +2065,7 @@ h4.ibox-content__indicator{
     margin-top: 40px;
   }
   .security-title{
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -2120,6 +2121,11 @@ h4.ibox-content__indicator{
     text-align: center;
     .form-control{
       margin: 0 30px!important;
+    }
+  }
+  &--text-panel{
+    td{
+      padding: 12px;
     }
   }
 }
@@ -2243,6 +2249,7 @@ h4.ibox-content__indicator{
 
 .notification-icons{
   font-size: 22px;
+  cursor: pointer;
   &__item{
     color: #1e2022;
     margin-right: 20px;
@@ -2608,7 +2615,7 @@ h4.ibox-content__indicator{
 
 
 .PAU-sensor{
-  min-height: 321px;
+  min-height: 320px;
   .sensor-settings__box {
     .ibox-content__indicator{
       font-size: 42px;
@@ -2813,4 +2820,8 @@ h4.ibox-content__indicator{
   width: 22px;
   height: 22px;
   background: url(../img/icons/map-ico.png) no-repeat left top;
+}
+
+.dashboard-no-header{
+  margin-top: 45px;
 }
