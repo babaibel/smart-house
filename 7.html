@@ -236,13 +236,15 @@
 
         </div>
 
-        <div class="buttons-panel">
-            <div class="sistem-name-box">
-                <span>Имя системы:</span> <input type="text" class="form-control" placeholder="Дача в Барыбино">
-            </div>
-        </div>
+        
 
         <div class="wrapper wrapper-content">
+
+            <div class="buttons-panel buttons-panel--top">
+                <div class="sistem-name-box">
+                    <span>Имя системы:</span> <input type="text" class="form-control" placeholder="Дача в Барыбино">
+                </div>
+            </div>
 
             <div class="ibox">
                 <div class="ibox-title">
@@ -648,7 +650,12 @@
             });
 
             /* Init DataTables */
-            var oTable = $('#editable').DataTable();
+            var oTable = $('#editable').DataTable({
+                ordering:  false,
+                paging: false,
+                searching: false,
+                "info": false
+            });
 
             /* Apply the jEditable handlers to the table */
             oTable.$('td.edit-td').editable( '../example_ajax.php', {

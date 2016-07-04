@@ -2817,22 +2817,47 @@ label.font-noraml{
 }
 
 
-#editable_length,
-#editable_filter,
-#editable_info,
-#editable_paginate{
-  display: none!important;
+// .dataTables_length,
+// .dataTables_filter,
+// .dataTables_info,
+// .dataTables_paginate{
+//   display: none!important;
+// }
+
+// #editable th.sorting{
+//   padding-right: 0;
+// }
+
+// #editable table.dataTable thead .sorting::after,
+// #editable table.dataTable thead .sorting_asc::after,
+// #editable table.dataTable thead .sorting_desc::after{
+//   content: ' ';
+//   display: none!important;
+// }
+
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc {
+    cursor: pointer;
 }
 
-th.sorting{
-  padding-right: 0;
+table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc_disabled, table.dataTable thead .sorting_desc_disabled {
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+table.dataTable thead .sorting_asc {
+    background-image: url("../img/icons/sort_asc.png");
+}
+table.dataTable thead .sorting_desc {
+    background-image: url("../img/icons/sort_desc.png");
+}
+table.dataTable thead .sorting_asc_disabled {
+    background-image: url("../img/icons/sort_asc_disabled.png");
+}
+table.dataTable thead .sorting_desc_disabled {
+    background-image: url("../img/icons/sort_desc_disabled.png");
 }
 
-table.dataTable thead .sorting::after,
-table.dataTable thead .sorting_asc::after,
-table.dataTable thead .sorting_desc::after{
-  content: ' ';
-  display: none!important;
+table.dataTable thead .sorting {
+    background-image: url("../img/icons/sort_both.png");
 }
 
 .dataTables_wrapper{

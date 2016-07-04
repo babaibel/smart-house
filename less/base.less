@@ -1671,6 +1671,15 @@ h4.ibox-content__indicator{
   position: relative;
   // padding: 0 10px;
   margin-top: 20px;
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &--top{
+    margin: 0 0 20px;
+  }
 
   .btn{
     font-size: 14px;
@@ -1686,7 +1695,7 @@ h4.ibox-content__indicator{
 
   &--bottom{
     text-align: right;
-    margin: 0 0 25px;
+    margin: 0 0 20px;
     &:after{
       content: "";
       display: table;
@@ -2762,4 +2771,46 @@ h4.ibox-content__indicator{
     text-align: left;
     min-width: 290px;
   }
+}
+
+.table{
+  &--user{
+    font-weight: 600;
+    th{
+      font-weight: 700;
+    }
+    td,th{
+      &:nth-last-child(-n+4){
+        text-align: center;
+      }
+    }
+  }
+}
+
+.user-status{
+  display: inline-block;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  text-indent: -9999px;
+  &--online{
+    background-color: #10b410;
+  }
+  &--offline{
+    background-color: #ca3435;
+  }
+}
+
+.user-question{
+  display: inline-block;
+  width: 15px;
+  height: 18px;
+  background: url(../img/icons/flag-ico.png) no-repeat left top;
+}
+
+.user-map{
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icons/map-ico.png) no-repeat left top;
 }

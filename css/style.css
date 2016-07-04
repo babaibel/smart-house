@@ -3703,20 +3703,33 @@ label.font-noraml {
 .counter-plus:hover {
   opacity: .8;
 }
-#editable_length,
-#editable_filter,
-#editable_info,
-#editable_paginate {
-  display: none!important;
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+  cursor: pointer;
 }
-th.sorting {
-  padding-right: 0;
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  background-position: right center;
+  background-repeat: no-repeat;
 }
-table.dataTable thead .sorting::after,
-table.dataTable thead .sorting_asc::after,
-table.dataTable thead .sorting_desc::after {
-  content: ' ';
-  display: none!important;
+table.dataTable thead .sorting_asc {
+  background-image: url("../img/icons/sort_asc.png");
+}
+table.dataTable thead .sorting_desc {
+  background-image: url("../img/icons/sort_desc.png");
+}
+table.dataTable thead .sorting_asc_disabled {
+  background-image: url("../img/icons/sort_asc_disabled.png");
+}
+table.dataTable thead .sorting_desc_disabled {
+  background-image: url("../img/icons/sort_desc_disabled.png");
+}
+table.dataTable thead .sorting {
+  background-image: url("../img/icons/sort_both.png");
 }
 .dataTables_wrapper {
   padding-bottom: 0;
@@ -5613,6 +5626,14 @@ h4.ibox-content__indicator {
   position: relative;
   margin-top: 20px;
 }
+.buttons-panel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.buttons-panel--top {
+  margin: 0 0 20px;
+}
 .buttons-panel .btn {
   font-size: 14px;
   font-weight: 600;
@@ -5625,7 +5646,7 @@ h4.ibox-content__indicator {
 }
 .buttons-panel--bottom {
   text-align: right;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 .buttons-panel--bottom:after {
   content: "";
@@ -6567,6 +6588,41 @@ h4.ibox-content__indicator {
   font-size: 14px;
   text-align: left;
   min-width: 290px;
+}
+.table--user {
+  font-weight: 600;
+}
+.table--user th {
+  font-weight: 700;
+}
+.table--user td:nth-last-child(-n+4),
+.table--user th:nth-last-child(-n+4) {
+  text-align: center;
+}
+.user-status {
+  display: inline-block;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  text-indent: -9999px;
+}
+.user-status--online {
+  background-color: #10b410;
+}
+.user-status--offline {
+  background-color: #ca3435;
+}
+.user-question {
+  display: inline-block;
+  width: 15px;
+  height: 18px;
+  background: url(../img/icons/flag-ico.png) no-repeat left top;
+}
+.user-map {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icons/map-ico.png) no-repeat left top;
 }
 /* SEARCH PAGE */
 .search-form {
