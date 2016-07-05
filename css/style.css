@@ -4260,6 +4260,30 @@ table.dataTable thead .sorting {
   height: 18px;
   margin: 0;
 }
+.iconbg--user {
+  background: url(../img/icons/iconbg-user.png) no-repeat left top;
+  width: 16px;
+  height: 15px;
+  margin: 0;
+}
+.iconbg--statistic {
+  background: url(../img/icons/iconbg-statistic.png) no-repeat left top;
+  width: 16px;
+  height: 15px;
+  margin: 0;
+}
+.iconbg--help {
+  background: url(../img/icons/iconbg-help.png) no-repeat left top;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+.iconbg--access {
+  background: url(../img/icons/iconbg-access.png) no-repeat left top;
+  width: 16px;
+  height: 17px;
+  margin: 0;
+}
 .nav-logo {
   height: 127px;
   line-height: 127px;
@@ -4310,6 +4334,9 @@ table.dataTable thead .sorting {
 .mini-navbar .nav-settings__signal span {
   display: none;
 }
+.mini-navbar .nav-settings__signal {
+  float: none;
+}
 .nav-settings__status {
   display: inline-block;
   float: right;
@@ -4340,6 +4367,39 @@ table.dataTable thead .sorting {
   top: 12px;
   position: absolute;
 }
+.nav-settings__link {
+  display: inline-block;
+  float: right;
+  line-height: 18px!important;
+  padding: 0!important;
+  color: #cad1db!important;
+  font-size: 12px;
+  margin: 0;
+  background: none!important;
+}
+.nav-settings__link span {
+  text-decoration: underline;
+}
+.nav-settings__link .fa {
+  display: none;
+}
+.nav-settings__link:hover span {
+  text-decoration: none;
+}
+.mini-navbar .nav-settings__link {
+  padding: 0px!important;
+  margin: 15px 0 0!important;
+  display: block;
+  float: none;
+  text-align: center;
+}
+.mini-navbar .nav-settings__link .fa {
+  display: block;
+  margin-right: 0;
+}
+.mini-navbar .nav-settings__link span {
+  display: none;
+}
 .navbar-top-links .fa.fa-gear {
   font-size: 16px;
 }
@@ -4357,6 +4417,11 @@ ul.row {
 }
 ul.row li {
   min-height: auto;
+}
+.navbar-default .nav > li > a:hover .iconbg,
+.navbar-default .nav > li > a:focus .iconbg,
+.navbar-default .nav > li.active .iconbg {
+  background-position: left bottom;
 }
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6674,6 +6739,7 @@ h4.ibox-content__indicator {
   border: 1px solid transparent;
   padding: 0 5px;
   border-radius: 3px;
+  width: 50%;
 }
 .sensor-name-field:focus {
   border-color: #ffaa00;

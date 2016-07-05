@@ -291,24 +291,12 @@
     height: 24px;
     margin: 0 0 0 3px;
   }
-  // &--battery-w{
-  //   background: url(../img/icons/iconbg-battery-w.png) no-repeat left center;
-  //   width: 34px;
-  //   height: 24px;
-  //   margin: 0 0 0 3px;
-  // }
   &--wifi{
     background: url(../img/icons/iconbg-wifi.png) no-repeat left top;
     width: 34px;
     height: 24px;
     margin: 0 0 0 3px;
   }
-  // &--wifi-w{
-  //   width: 34px;
-  //   height: 24px;
-  //   margin: 0 0 0 3px;
-  //   background: url(../img/icons/iconbg-wifi-w.png) no-repeat left center;
-  // }
   &--drib{
     background: url(../img/icons/iconbg-drib.png) no-repeat left top;
     width: 50px;
@@ -469,6 +457,30 @@
     height: 18px;
     margin: 0;
   }
+  &--user{
+    background: url(../img/icons/iconbg-user.png) no-repeat left top;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+  }
+  &--statistic{
+    background: url(../img/icons/iconbg-statistic.png) no-repeat left top;
+    width: 16px;
+    height: 15px;
+    margin: 0;
+  }
+  &--help{
+    background: url(../img/icons/iconbg-help.png) no-repeat left top;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+  &--access{
+    background: url(../img/icons/iconbg-access.png) no-repeat left top;
+    width: 16px;
+    height: 17px;
+    margin: 0;
+  }
 }
 
 .nav-logo{
@@ -531,6 +543,10 @@
       display: none;
     }
   }
+
+  .mini-navbar &{
+    float: none;
+  }
 }
 
 .nav-settings__status{
@@ -566,6 +582,43 @@
   }
 }
 
+.nav-settings__link{
+  display: inline-block;
+  float: right;
+  line-height: 18px!important;
+  padding: 0!important;
+  color: #cad1db!important;
+  font-size: 12px;
+  margin: 0;
+  background: none!important;
+  span{
+    text-decoration: underline;
+  }
+  .fa{
+    display: none;
+  }
+  &:hover{
+    span{
+      text-decoration: none;
+    }
+  }
+
+  .mini-navbar &{
+    padding: 0px!important;
+    margin: 15px 0 0!important;
+    display: block;
+    float: none;
+    text-align: center;
+    .fa{
+      display: block;
+      margin-right: 0;
+    }
+    span{
+      display: none;
+    }
+  }
+}
+
 .navbar-top-links .fa.fa-gear{
   font-size: 16px;
 }
@@ -587,5 +640,12 @@ ul.row{
   padding: 0;
   li{
     min-height: auto;
+  }
+}
+
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus,
+.navbar-default .nav > li.active {
+  .iconbg{
+    background-position: left bottom;
   }
 }
