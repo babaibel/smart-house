@@ -4334,9 +4334,6 @@ table.dataTable thead .sorting {
 .mini-navbar .nav-settings__signal span {
   display: none;
 }
-.mini-navbar .nav-settings__signal {
-  float: none;
-}
 .nav-settings__status {
   display: inline-block;
   float: right;
@@ -4366,39 +4363,6 @@ table.dataTable thead .sorting {
   right: 15px;
   top: 12px;
   position: absolute;
-}
-.nav-settings__link {
-  display: inline-block;
-  float: right;
-  line-height: 18px!important;
-  padding: 0!important;
-  color: #cad1db!important;
-  font-size: 12px;
-  margin: 0;
-  background: none!important;
-}
-.nav-settings__link span {
-  text-decoration: underline;
-}
-.nav-settings__link .fa {
-  display: none;
-}
-.nav-settings__link:hover span {
-  text-decoration: none;
-}
-.mini-navbar .nav-settings__link {
-  padding: 0px!important;
-  margin: 15px 0 0!important;
-  display: block;
-  float: none;
-  text-align: center;
-}
-.mini-navbar .nav-settings__link .fa {
-  display: block;
-  margin-right: 0;
-}
-.mini-navbar .nav-settings__link span {
-  display: none;
 }
 .navbar-top-links .fa.fa-gear {
   font-size: 16px;
