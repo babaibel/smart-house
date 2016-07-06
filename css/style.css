@@ -6536,6 +6536,25 @@ h4.ibox-content__indicator {
 .schedule-temp-wr {
   margin: 15px 0;
 }
+.schedule-temp tr td:first-child {
+  cursor: default;
+}
+.schedule-temp td {
+  cursor: pointer;
+}
+.schedule-temp .tbl-active {
+  border: 2px solid #0d8ddb;
+}
+.schedule-temp .tbl-active--first {
+  border-bottom: 1px solid #fff;
+}
+.schedule-temp .tbl-active--middle {
+  border-top: 0;
+  border-bottom: 1px solid #fff;
+}
+.schedule-temp .tbl-active--last {
+  border-top: 0;
+}
 .schedule-temp-panel {
   text-align: center;
   margin: 15px 0 0;

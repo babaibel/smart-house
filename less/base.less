@@ -2542,6 +2542,26 @@ h4.ibox-content__indicator{
   &-wr{
     margin: 15px 0;
   }
+  tr td:first-child{
+    cursor: default;
+  }
+  td{
+    cursor: pointer;
+  }
+  .tbl-active{
+    border: 2px solid #0d8ddb;
+    &--first{
+      border-bottom: 1px solid #fff;
+    }
+    &--middle{
+      border-top: 0;
+      border-bottom: 1px solid #fff;
+    }
+    &--last{
+      border-top: 0;
+    }
+  }
+
 }
 
 .schedule-temp-panel{
