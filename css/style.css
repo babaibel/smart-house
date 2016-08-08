@@ -1740,6 +1740,9 @@ a.list-group-item.active:focus {
   height: 200px;
   margin: auto;
 }
+.tooltip {
+  z-index: 10000;
+}
 .jqstooltip {
   position: absolute;
   display: block;
@@ -5635,9 +5638,6 @@ body.fullscreen-ibox-mode {
 }
 .ibox.fullscreen .ibox-content {
   min-height: calc(100% - 48px);
-}
-body.modal-open {
-  padding-right: inherit !important;
 }
 body.modal-open .animated {
   animation-fill-mode: initial;

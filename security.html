@@ -451,11 +451,75 @@
                                         </table>
                                     </div>
                                     <div class="buttons-panel buttons-panel--bottom">
-                                        <a class="btn btn-sm btn-white btn-add" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить датчики</a>
+                                        <a class="btn btn-sm btn-white btn-add" data-toggle="modal" data-target="#myModal4" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить датчики</a>
                                         <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить отмеченные</a>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="modal inmodal fade" id="myModal4" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Добавить датчики в охрану</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped sensors-table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Тип
+                                                            <div class="tooltip-container">
+                                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                                                            </div>
+                                                        </th>
+                                                        <th>
+                                                            Имя
+                                                            <div class="tooltip-container">
+                                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                                                            </div>
+                                                        </th>
+                                                        
+                                                        <th>
+                                                            Порт
+                                                            <div class="tooltip-container">
+                                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                                                            </div>
+                                                        </th>
+                                                        <th class="checkbox-col">
+                                                            Отметить
+                                                            <div class="tooltip-container">
+                                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span class="iconbg iconbg--temp iconbg--move"></span></td>
+                                                            <td>Движение коридор</td>
+                                                            <td><span class="sensors-table__data">РАДИО</span></td>
+                                                            <td class="checkbox-col"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="iconbg iconbg--temp iconbg--move"></span></td>
+                                                            <td>Движение ворота</td>
+                                                            <td><span class="sensors-table__data">РАДИО</span></td>
+                                                            <td class="checkbox-col"><input type="checkbox"  checked class="i-checks" name="input[]"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Добавить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="ibox ibox--nobg">
                                 <div class="ibox-title clearfix">
                                     <h3 class="security-title">Ключи Touch-memory</h3>
