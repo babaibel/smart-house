@@ -6307,7 +6307,7 @@ h4.ibox-content__indicator {
   margin-right: 4px;
 }
 .sistem-name-box span {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   color: #404040;
@@ -6315,7 +6315,7 @@ h4.ibox-content__indicator {
   margin-right: 30px;
 }
 .sistem-name-box .form-control {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 24px;
   display: inline-block !important;
