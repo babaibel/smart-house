@@ -6722,7 +6722,6 @@ h4.ibox-content__indicator {
   border: 1px solid transparent;
   padding: 0 5px;
   border-radius: 3px;
-  width: 50%;
 }
 .sensor-name-field:focus {
   border-color: #ffaa00;
