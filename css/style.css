@@ -6321,7 +6321,7 @@ h4.ibox-content__indicator {
   margin-right: 30px;
 }
 .sistem-name-box .form-control {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 24px;
   display: inline-block !important;
@@ -6701,7 +6701,7 @@ h4.ibox-content__indicator {
 }
 .PAU-sensor-table .ibox-content__indicator {
   text-transform: none;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 32px;
 }
 .PAU-sensor-table .counter {
@@ -6795,35 +6795,25 @@ h4.ibox-content__indicator {
 .dashboard-no-header {
   margin-top: 45px;
 }
-.col-xlg-6 .ibox-title h5,
-.col-xlg-4 .ibox-title h5 {
+.sensors-2col .col-xlg-6 .ibox-title h5 {
   white-space: nowrap;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.col-xlg-6 .ibox-title,
-.col-xlg-4 .ibox-title {
+.sensors-2col .col-xlg-6 .ibox-title {
   position: relative;
 }
-.col-xlg-6 .ibox-title h5,
-.col-xlg-4 .ibox-title h5 {
+.sensors-2col .col-xlg-6 .ibox-title h5 {
   padding-right: 30px;
 }
-.col-xlg-6 .ibox-title h5 + .ibox-tools,
-.col-xlg-4 .ibox-title h5 + .ibox-tools {
+.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools {
   position: absolute;
   float: none;
   right: 15px;
   top: 50%;
   margin-top: 2px;
   transform: translateY(-50%);
-}
-.col-xlg-4 .sensor-box .iconbg {
-  background-size: cover;
-  height: 25px;
-  margin: 0 5px;
-  width: 25px;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -10689,15 +10679,20 @@ body.md-skin {
   }
 }
 @media (min-width: 768px) and (max-width: 1500px) {
-  .col-xlg-4 .ibox-content {
-    padding: 20px 15px;
+  .col-xlg-6 .ibox-content {
+    padding: 20px 10px;
   }
-  .sensor-box .ibox-content__temp-info .ibox-content__indicator {
+  .col-xlg-6 .sensor-box .ibox-content__temp-info .ibox-content__indicator {
     margin-top: -20px;
   }
-  .sensor-box .ibox-content__temp-box {
+  .col-xlg-6 .sensor-box .ibox-content__temp-box {
     margin-bottom: 0;
     bottom: -100%;
+  }
+  .sensors-2col .PAU-sensor-table .ibox-content__indicator {
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: none;
   }
 }
 @media (min-width: 768px) {
@@ -10719,6 +10714,18 @@ body.md-skin {
   .flot-chart {
     width: 60%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 1500px) {
+  .sensors-2col .PAU-sensor-table__cell:last-child {
+    display: none;
+  }
+  .sensors-2col .col-xlg-6 .PAU-sensor-table .iconbg,
+  .sensors-2col .col-xlg-6 .sensor-box .iconbg {
+    background-size: cover;
+    height: 25px;
+    margin: 0 0 0 5px;
+    width: 25px;
   }
 }
 @media (max-width: 1200px) {

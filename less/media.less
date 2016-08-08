@@ -18,7 +18,6 @@
     width: 60%;
     margin: 0 auto;
   }
-
 }
 
 // @media (min-width: 1280px) {
@@ -39,15 +38,20 @@
 }
 
 @media (min-width: 768px) and (max-width: 1500px){
-  .col-xlg-4 .ibox-content{
-    padding: 20px 15px;
+  .col-xlg-6 .ibox-content{
+    padding: 20px 10px;
   }
-  .sensor-box .ibox-content__temp-info .ibox-content__indicator{
+  .col-xlg-6 .sensor-box .ibox-content__temp-info .ibox-content__indicator{
     margin-top: -20px;
   }
-  .sensor-box .ibox-content__temp-box{
+  .col-xlg-6 .sensor-box .ibox-content__temp-box{
     margin-bottom: 0;
     bottom: -100%;
+  }
+  .sensors-2col .PAU-sensor-table .ibox-content__indicator{
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: none;
   }
 }
 
@@ -78,6 +82,15 @@
 
 @media (max-width: 1500px) {
   
+  .sensors-2col  .PAU-sensor-table__cell:last-child{
+    display: none;
+  }
+  .sensors-2col .col-xlg-6 .PAU-sensor-table .iconbg, .sensors-2col .col-xlg-6 .sensor-box .iconbg {
+    background-size: cover;
+    height: 25px;
+    margin: 0 0 0 5px;
+    width: 25px;
+  }
 }
 
 @media (max-width: 1200px) {
