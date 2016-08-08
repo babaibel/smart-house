@@ -806,7 +806,8 @@ table.table-mail tr td {
   font-size: 14px;
   margin: 3px 0;
   padding: 0;
-  text-overflow: ellipsis;
+  
+
   // float: left;
 }
 
@@ -1542,12 +1543,14 @@ body.mini-navbar.fixed-sidebar .logo-element {
     padding: 0 45px;
 
     .ibox-content__indicator{
+      position: relative;
       // padding-top: 6px;
       //line-height: 50px;
 
       sup{
-        font-size: 20px;
+        font-size: 16px;
         line-height: 32px;
+        position: absolute;
       }
     }
   }
@@ -1792,6 +1795,9 @@ h4.ibox-content__indicator{
         margin-top: 0;
       }
     }
+  }
+  .ibox-content__indicator {
+    font: 600 20px/32px "open sans",sans-serif;
   }
 }
 
@@ -2845,4 +2851,29 @@ h4.ibox-content__indicator{
 
 .dashboard-no-header{
   margin-top: 45px;
+}
+
+.col-xlg-6 .ibox-title h5, .col-xlg-4 .ibox-title h5{
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-xlg-6 .ibox-title, .col-xlg-4 .ibox-title{
+  position: relative;
+}
+
+.col-xlg-6 .ibox-title h5, .col-xlg-4 .ibox-title h5{
+  padding-right: 30px;
+}
+
+.col-xlg-6 .ibox-title h5 + .ibox-tools, .col-xlg-4 .ibox-title h5 + .ibox-tools{
+  position: absolute;
+  float: none;
+  right: 15px;
+  top: 50%;
+  margin-top: 2px;
+  transform: translateY(-50%);
+
 }
