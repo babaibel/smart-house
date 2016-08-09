@@ -10745,6 +10745,12 @@ body.md-skin {
     margin-top: 0;
   }
 }
+@media (max-width: 1024px) {
+  .main-2col .col-xlg-8,
+  .main-2col .col-xlg-4 {
+    width: 100%!important;
+  }
+}
 @media (max-width: 1000px) {
   .sensor-settings__topline:after {
     content: "";
@@ -11151,6 +11157,9 @@ body.md-skin {
   .spy-rele__block:first-child {
     max-width: 290px;
     width: 290px;
+  }
+  .sensors-2col .PAU-sensor-table__cell:last-child {
+    display: block;
   }
 }
 @media (max-width: 350px) {

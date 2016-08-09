@@ -110,6 +110,14 @@
   
 }
 
+@media (max-width: 1024px) {
+  .main-2col .col-xlg-8,
+  .main-2col .col-xlg-4 {
+
+    width: 100%!important;
+  }
+}
+
 @media (max-width: 1000px) {
 .sensor-settings__topline{
     &:after{
@@ -394,24 +402,23 @@
   }
 
   .PAU-sensor{
-  min-height: 320px;
-  .sensor-settings__box {
-    .ibox-content__indicator{
-      font-size: 42px;
-      line-height: 44px;
+    min-height: 320px;
+    .sensor-settings__box {
+      .ibox-content__indicator{
+        font-size: 42px;
+        line-height: 44px;
+      }
     }
-
+    .sensor-settings__box{
+      margin-bottom: 0;
+      td{
+        padding-bottom: 0;
+      }
+      tr:last-child td{
+        padding-bottom: 12px;
+      }
+    }
   }
-  .sensor-settings__box{
-    margin-bottom: 0;
-    td{
-      padding-bottom: 0;
-    }
-    tr:last-child td{
-      padding-bottom: 12px;
-    }
-  }
-}
 
 .PAU-sensor{
   &__box{
@@ -590,6 +597,9 @@
       }
       padding-right: 0;
     }
+  }
+  .sensors-2col  .PAU-sensor-table__cell:last-child{
+    display: block;
   }
 
 }
