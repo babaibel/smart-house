@@ -1588,13 +1588,13 @@ body.mini-navbar.fixed-sidebar .logo-element {
       line-height: 55px;
     }
     &--blue{
-      color: #0000ff;
+      color: #0000ff!important;
     }
     &--red{
-      color: #fd3026;
+      color: #fd3026!important;
     }
     &--black{
-      color: #000;
+      color: #000!important;
     }
   }
 
@@ -2599,23 +2599,27 @@ h4.ibox-content__indicator{
 .power-btn {
   display: inline-block;
   border-radius: 50%;
+  margin: 0 0 0 5px;
   position: relative;
-  background: #16987e;
-  border: 1px solid #16987e;
+  background: #676a6c;
+  border: none;
   color: #fff !important;
   font-weight: 400 !important;
   text-transform: uppercase;
-  box-shadow: 0 0 0 darken(#16987e, 10%) inset, 0 5px 0 0 darken(#16987e, 10%);
+  box-shadow: 0 0 0 #000 inset, 0 5px 0 0 #000;
   &:active,
   &.active{
     top: 3px;
-    background: #e97459;
-    border: 1px solid #e97459;
-    box-shadow: 0 0 0 darken(#e97459, 25%) inset, 0 2px 0 0 darken(#e97459, 25%);
+    background: lighten(#0000ff, 15%);
+    box-shadow: 0 0 0 #0000ff inset, 0 2px 0 0 #0000ff;
   }
   &:hover{
     opacity: 0.95;
   }
+}
+
+.js-power{
+  color: #000;
 }
 
 .press-btn{

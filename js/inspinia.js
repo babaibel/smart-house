@@ -19,7 +19,17 @@ $(document).ready(function () {
     });
 
     $('.js-power').click(function () {
-        $(this).toggleClass('active');
+
+        if( $(this).hasClass('active')){
+            $(this).removeClass('ibox-content__indicator--blue active');;
+            $(this).find('.power-btn').removeClass('active');
+            $(this).find('span').text('Откл');
+            
+        } else{
+            $(this).addClass('ibox-content__indicator--blue active');
+            $(this).find('.power-btn').addClass('active');
+            $(this).find('span').text('Вкл');
+        }
     });
 
     var $spySelect = $(".js-spy-select");
