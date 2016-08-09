@@ -18,6 +18,31 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    $('.js-power').click(function () {
+        $(this).toggleClass('active');
+    });
+
+    var $spySelect = $(".js-spy-select");
+
+        if(!$spySelect.length) return false;
+
+        var $spySelectRele = $(".js-hidden-rele");
+
+        $spySelect.select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        $spySelect.on('select2:select', function (e) {
+           var spyTime = e.params.data.element.id;
+
+           if( spyTime === 'spy-time'){
+            $spySelectRele.addClass('_visible');
+           } else{
+            $spySelectRele.removeClass('_visible');
+           }
+
+        });
+
     // Плюс минус
 
     // This button will increment the value

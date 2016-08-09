@@ -1720,6 +1720,7 @@ a.list-group-item.active:focus {
 .flot-chart {
   display: block;
   height: 200px;
+  width: 100%;
 }
 .widget .flot-chart.dashboard-chart {
   display: block;
@@ -6584,6 +6585,27 @@ h4.ibox-content__indicator {
   margin-top: 10px;
   font-size: 12px;
 }
+.power-btn {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  background: #16987e;
+  border: 1px solid #16987e;
+  color: #fff !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 #106b59 inset, 0 5px 0 0 #106b59;
+}
+.power-btn:active,
+.power-btn.active {
+  top: 3px;
+  background: #e97459;
+  border: 1px solid #e97459;
+  box-shadow: 0 0 0 #ac3317 inset, 0 2px 0 0 #ac3317;
+}
+.power-btn:hover {
+  opacity: 0.95;
+}
 .press-btn {
   position: relative;
 }
@@ -10681,6 +10703,10 @@ body.md-skin {
     width: 60%;
     margin: 0 auto;
   }
+  .flot-chart {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 768px) and (max-width: 1500px) {
   .col-xlg-6 .ibox-content {
@@ -10714,10 +10740,6 @@ body.md-skin {
   .navbar-top-links .dropdown-tasks,
   .navbar-top-links .dropdown-alerts {
     margin-left: auto;
-  }
-  .flot-chart {
-    width: 60%;
-    margin: 0 auto;
   }
 }
 @media (max-width: 1500px) {

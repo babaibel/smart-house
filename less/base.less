@@ -2596,6 +2596,28 @@ h4.ibox-content__indicator{
   }
 }
 
+.power-btn {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  background: #16987e;
+  border: 1px solid #16987e;
+  color: #fff !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 darken(#16987e, 10%) inset, 0 5px 0 0 darken(#16987e, 10%);
+  &:active,
+  &.active{
+    top: 3px;
+    background: #e97459;
+    border: 1px solid #e97459;
+    box-shadow: 0 0 0 darken(#e97459, 25%) inset, 0 2px 0 0 darken(#e97459, 25%);
+  }
+  &:hover{
+    opacity: 0.95;
+  }
+}
+
 .press-btn{
   position: relative;
   &:hover{
