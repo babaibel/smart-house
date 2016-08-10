@@ -18,15 +18,16 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+
     $('.js-power').click(function () {
 
         if( $(this).hasClass('active')){
-            $(this).removeClass('ibox-content__indicator--blue active');;
+            $(this).removeClass('active');;
             $(this).find('.power-btn').removeClass('active');
-            $(this).find('span').text('Откл');
+            $(this).find('span').text('Выкл');
             
         } else{
-            $(this).addClass('ibox-content__indicator--blue active');
+            $(this).addClass('active');
             $(this).find('.power-btn').addClass('active');
             $(this).find('span').text('Вкл');
         }
@@ -34,24 +35,30 @@ $(document).ready(function () {
 
     var $spySelect = $(".js-spy-select");
 
-        if(!$spySelect.length) return false;
+    if(!$spySelect.length) return false;
 
-        var $spySelectRele = $(".js-hidden-rele");
+    var $spySelectRele = $(".js-hidden-rele");
 
-        $spySelect.select2({
-            minimumResultsForSearch: Infinity
-        });
+    $spySelect.select2({
+        minimumResultsForSearch: Infinity
+    });
 
-        $spySelect.on('select2:select', function (e) {
-           var spyTime = e.params.data.element.id;
+    $spySelect.on('select2:select', function (e) {
+        var spyTime = e.params.data.element.id;
 
-           if( spyTime === 'spy-time'){
-            $spySelectRele.addClass('_visible');
-           } else{
-            $spySelectRele.removeClass('_visible');
-           }
+        if( spyTime === 'spy-time'){
+        $spySelectRele.addClass('_visible');
+        } else{
+        $spySelectRele.removeClass('_visible');
+    }
 
-        });
+    });
+
+    $(".select2_demo_3").select2({
+        placeholder: "",
+        allowClear: true,
+        minimumResultsForSearch: -1
+    });
 
     // Плюс минус
 
