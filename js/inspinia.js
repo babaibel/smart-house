@@ -20,9 +20,8 @@ $(document).ready(function () {
 
 
     $('.js-power').click(function () {
-
         if( $(this).hasClass('active')){
-            $(this).removeClass('active');;
+            $(this).removeClass('active');
             $(this).find('.power-btn').removeClass('active');
             $(this).find('span').text('Выкл');
             
