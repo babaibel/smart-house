@@ -11212,6 +11212,26 @@ body.md-skin {
     max-width: 290px;
     width: 290px;
   }
+  .spy-rele__block:first-child {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .form-inline .select2-container,
+  .form-inline .form-control {
+    width: 100%!important;
+    margin: 0 0 10px;
+  }
+  .sistem-name-box span {
+    margin: 0 0 5px;
+    display: block;
+  }
+  .sistem-name-box .form-control {
+    width: 100%!important;
+  }
+  .notification-desc {
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 350px) {
   .timeline-item .date {
