@@ -3906,6 +3906,11 @@ table.dataTable thead .sorting {
 .irs-slider {
   background: url("../img/sprite-skin-flat3.png") repeat-x 0 -90px !important;
 }
+.sk-spinner {
+  display: inline-block;
+  margin: 0 15px !important;
+  vertical-align: middle;
+}
 .sidebard-panel {
   width: 220px;
   background: #ebebed;
@@ -11131,6 +11136,9 @@ body.md-skin {
   .PAU-sensor-table .counter {
     display: inline-block;
     margin: 0;
+  }
+  .header-spinner-text {
+    display: none;
   }
 }
 @media (max-width: 500px) {
