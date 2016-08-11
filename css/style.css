@@ -5907,6 +5907,9 @@ h4.ibox-content__indicator {
 .sensor-box tr td {
   vertical-align: middle;
 }
+.sensor-box tr td:first-child {
+  text-align: center;
+}
 .sensor-box tr td:first-child .btn {
   margin-right: 5px;
 }
@@ -6904,6 +6907,17 @@ h4.ibox-content__indicator {
   top: 50%;
   margin-top: 2px;
   transform: translateY(-50%);
+}
+.timeline-item .row {
+  margin: 0;
+}
+.timeline-item .row .date {
+  padding-left: 0;
+  width: 25%;
+}
+.timeline-item .row .content {
+  padding-right: 0;
+  width: 75%;
 }
 /* SEARCH PAGE */
 .search-form {
