@@ -20,37 +20,17 @@ $(document).ready(function () {
 
 
     $('.js-power').click(function () {
+
         if( $(this).hasClass('active')){
-            $(this).removeClass('active');
+            $(this).removeClass('ibox-content__indicator--blue active');;
             $(this).find('.power-btn').removeClass('active');
             $(this).find('span').text('Выкл');
             
         } else{
-            $(this).addClass('active');
+            $(this).addClass('ibox-content__indicator--blue active');
             $(this).find('.power-btn').addClass('active');
             $(this).find('span').text('Вкл');
         }
-    });
-
-    var $spySelect = $(".js-spy-select");
-
-    if(!$spySelect.length) return false;
-
-    var $spySelectRele = $(".js-hidden-rele");
-
-    $spySelect.select2({
-        minimumResultsForSearch: Infinity
-    });
-
-    $spySelect.on('select2:select', function (e) {
-        var spyTime = e.params.data.element.id;
-
-        if( spyTime === 'spy-time'){
-        $spySelectRele.addClass('_visible');
-        } else{
-        $spySelectRele.removeClass('_visible');
-    }
-
     });
 
     $(".select2_demo_3").select2({
@@ -429,6 +409,30 @@ $(document).ready(function () {
             $(".footer").addClass('fixed');
         }
     }
+});
+
+$(document).ready(function () {
+    var $spySelect = $(".js-spy-select");
+
+    if(!$spySelect.length) return false;
+
+    var $spySelectRele = $(".js-hidden-rele");
+
+    $spySelect.select2({
+        minimumResultsForSearch: Infinity
+    });
+
+    $spySelect.on('select2:select', function (e) {
+        var spyTime = e.params.data.element.id;
+
+        if( spyTime === 'spy-time'){
+            $spySelectRele.addClass('_visible');
+            } else{
+            $spySelectRele.removeClass('_visible');
+        }
+
+    });
+
 });
 
 // check if browser support HTML5 local storage
