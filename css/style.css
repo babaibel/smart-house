@@ -6671,7 +6671,8 @@ h4.ibox-content__indicator {
 }
 .js-power + span {
   display: block;
-  margin: 8px 0 0;
+  position: relative;
+  top: 6px;
 }
 .press-btn {
   position: relative;
