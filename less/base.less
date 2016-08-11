@@ -2625,9 +2625,14 @@ h4.ibox-content__indicator{
   span{
     min-width: 135px;
     display: inline-block;
+    vertical-align: middle;
   }
   &.active{
     color: #0000ff !important;
+  }
+  & + span{
+    display: block;
+    margin: 8px 0 0;
   }
 }
 
@@ -2916,4 +2921,3 @@ h4.ibox-content__indicator{
   margin-top: 2px;
   transform: translateY(-50%);
 }
-

@@ -6661,9 +6661,14 @@ h4.ibox-content__indicator {
 .js-power span {
   min-width: 135px;
   display: inline-block;
+  vertical-align: middle;
 }
 .js-power.active {
   color: #0000ff !important;
+}
+.js-power + span {
+  display: block;
+  margin: 8px 0 0;
 }
 .press-btn {
   position: relative;
