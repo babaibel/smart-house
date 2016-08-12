@@ -6927,28 +6927,27 @@ h4.ibox-content__indicator {
 .dashboard-no-header {
   margin-top: 45px;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5 {
-  white-space: nowrap;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.main-2col .ibox-title h5 {
+.sensors-2col .col-xlg-6 .ibox-title h5,
+.main-2col .ibox-title h5,
+.sensors-3col .col-xlg-4 .ibox-title h5 {
   white-space: nowrap;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .sensors-2col .col-xlg-6 .ibox-title,
-.main-2col .ibox-title {
+.main-2col .ibox-title,
+.sensors-3col .col-xlg-4 .ibox-title {
   position: relative;
 }
 .sensors-2col .col-xlg-6 .ibox-title h5,
-.main-2col .ibox-title h5 {
+.main-2col .ibox-title h5,
+.sensors-3col .col-xlg-4 .ibox-title {
   padding-right: 30px;
 }
 .sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools,
-.main-2col .ibox-title h5 + .ibox-tools {
+.main-2col .ibox-title h5 + .ibox-tools,
+.sensors-3col .ibox-title h5 + .ibox-tools {
   position: absolute;
   float: none;
   right: 15px;
@@ -10886,11 +10885,19 @@ body.md-skin {
     display: none;
   }
   .sensors-2col .col-xlg-6 .PAU-sensor-table .iconbg,
-  .sensors-2col .col-xlg-6 .sensor-box .iconbg {
+  .sensors-2col .col-xlg-6 .sensor-box .iconbg,
+  .sensors-3col .col-xlg-4 .PAU-sensor-table .iconbg,
+  .sensors-3col .col-xlg-4 .sensor-box .iconbg {
     background-size: cover;
     height: 25px;
     margin: 0 0 0 5px;
     width: 25px;
+  }
+  .js-power span {
+    min-width: auto!important;
+  }
+  .sensor-box tr td:last-child {
+    padding-left: 7px;
   }
 }
 @media (max-width: 1200px) {
