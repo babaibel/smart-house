@@ -11221,6 +11221,10 @@ body.md-skin {
   .edit-account tbody tr td .form-control {
     width: 100%;
   }
+  .sensors-table--account {
+    width: 100%!important;
+    margin: 0;
+  }
 }
 @media (max-width: 500px) {
   .sensor-settings__box {
