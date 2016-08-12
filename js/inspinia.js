@@ -412,6 +412,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    
     var $spySelect = $(".js-spy-select");
 
     if(!$spySelect.length) return false;

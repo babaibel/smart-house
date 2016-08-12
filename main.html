@@ -24,6 +24,7 @@
 </head>
 
 <body>
+
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
@@ -34,7 +35,7 @@
                             <img class="logo__img--mob" src="img/logo-mob.png" alt="">
                         </a>
                     </li>
-                    <li class="nav-settings clearfix">
+                     <li class="nav-settings clearfix">
                         <div class="nav-settings__signal">
                             <i class="iconbg iconbg--signal iconbg--signal-101"></i>
                             <span>MEGAFON</span>
@@ -50,7 +51,6 @@
                                 <div class="profile-element__info-house">Дача в Барыбино</div>
                                 <div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
                                 <div class="profile-element__info-system">EctoControl v3</div>
-                                
                             </div>
 
                         </div>
@@ -85,14 +85,12 @@
                     <li>
                         <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Настройки</span></a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-info-circle"></i> <span class="nav-label">Информация</span></a>
-                    </li>
                     
                 </ul>
 
             </div>
         </nav>
+
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -100,6 +98,22 @@
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"><i class="fa fa-bars"></i></a>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <div class="sk-spinner sk-spinner-fading-circle">
+                                <div class="sk-circle1 sk-circle"></div>
+                                <div class="sk-circle2 sk-circle"></div>
+                                <div class="sk-circle3 sk-circle"></div>
+                                <div class="sk-circle4 sk-circle"></div>
+                                <div class="sk-circle5 sk-circle"></div>
+                                <div class="sk-circle6 sk-circle"></div>
+                                <div class="sk-circle7 sk-circle"></div>
+                                <div class="sk-circle8 sk-circle"></div>
+                                <div class="sk-circle9 sk-circle"></div>
+                                <div class="sk-circle10 sk-circle"></div>
+                                <div class="sk-circle11 sk-circle"></div>
+                                <div class="sk-circle12 sk-circle"></div>
+                            </div>
+                        </li>
                         <li>
                             <span class="m-r-sm text-muted welcome-message">28 мая 2016 г. (14:44)</span>
                         </li>
@@ -211,11 +225,9 @@
                             </a>
                         </li>
                     </ul>
-
                 </nav>
             </div>
             <div class="row border-bottom white-bg dashboard-header">
-
                 <div class="col-sm-12">
                     <div class="profile-element__info">
                         <div class="profile-element__info-house">Дача в Барыбино</div>
@@ -226,7 +238,6 @@
                     <h2>Иван, добро пожаловать в личный кабинет!</h2>
                 </div>
             </div>
-
             <div class="wrapper wrapper-content">
                 <div class="row main-2col">
                     <div class="col-xlg-8 col-lg-8 col-sm-6">
@@ -500,7 +511,6 @@
                                 </div>
                             </li>
                             <li class="col-lg-6 col-xlg-6">
-
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title">
                                         <div class="ibox-tools ibox-tools--left">
@@ -551,7 +561,6 @@
                                 </div>
                             </li>
                             <li class="col-lg-6 col-xlg-6">
-
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-title">
                                         <div class="ibox-tools ibox-tools--left">
@@ -894,10 +903,7 @@
                     Copyright Example Company &copy; 2014-2015
                 </div>
             </div>
-
-            
         </div>
-        
     </div>
 
     <!-- Mainly scripts -->
@@ -906,6 +912,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/select2/select2.full.min.js"></script>
 
     <!-- Peity -->
     <script src="js/plugins/peity/jquery.peity.min.js"></script>
@@ -914,14 +921,9 @@
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
-    <script src="js/Sortable.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            var panelList = $('.sortableList')[0];
-            this._list = Sortable.create(panelList, { 
-               
-            });
 
             // show timeline function
             $('.js-show-timeline').click(function () {
