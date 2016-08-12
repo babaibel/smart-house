@@ -6887,8 +6887,17 @@ h4.ibox-content__indicator {
 .edit-account tr td:first-child {
   text-align: right;
 }
-.sensors-table a {
+.sensors-table--account a {
   color: inherit;
+  font-weight: 700;
+}
+.sensors-table--account {
+  width: 40%;
+  margin: 0 auto;
+}
+.sensors-table--account tr th:first-child,
+.sensors-table--account tr td:first-child {
+  width: auto!important;
 }
 .user-status {
   display: inline-block;
