@@ -5854,6 +5854,9 @@ h4.ibox-content__indicator {
   text-align: left;
   margin-top: 20px!important;
 }
+.buttons-panel--bottom-left .btn {
+  margin-left: 30px;
+}
 .buttons-panel--mgb {
   margin-bottom: 25px;
 }
@@ -6884,8 +6887,8 @@ h4.ibox-content__indicator {
 .edit-account tr td:first-child {
   text-align: right;
 }
-.pointer {
-  cursor: pointer!important;
+.sensors-table a {
+  color: inherit;
 }
 .user-status {
   display: inline-block;

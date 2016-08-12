@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Умный дом - ЛК/Доступ</title>
+    <title>Умный дом - ЛК/Настройки</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -201,67 +201,52 @@
 
             <div class="ibox">
                 <div class="ibox-title">
-                    <h5>Настройка аккаунтов техподдержки</h5>
+                    <h5>Настройки аккаунтa</h5>
                     <div class="tooltip-container">
                         <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
                     </div>
                 </div>
                 <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table table-striped sensors-table">
-                            <thead>
+                    <form>
+                        <table class="edit-account">
                             <tr>
-                                <th>
-                                    Имя
-                                    <div class="tooltip-container">
-                                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                    </div>
-                                </th>
-                                <th>
-                                    Статус
-                                    <div class="tooltip-container">
-                                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                    </div>
-                                </th>
-                                <th>
-
-                                </th>
+                                <td>Логин</td>
+                                <td><input type="text" class="form-control"></td>
                             </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="#">Олег Медведович</a></td>
-                                    <td>Техподдержка</td>
-                                    <td>
-                                        <button type="button" class="del-line-btn"></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">Олег Медведович</a></td>
-                                    <td>Администратор</td>
-                                    <td>
-                                        <button type="button" class="del-line-btn"></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">Олег Медведович</a></td>
-                                    <td>Техподдержка</td>
-                                    <td>
-                                        <button type="button" class="del-line-btn"></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#">Олег Медведович</a></td>
-                                    <td>Администратор</td>
-                                    <td>
-                                        <button type="button" class="del-line-btn"></button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tr>
+                                <td>Пароль</td>
+                                <td><input type="password" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Пароль ещё раз</td>
+                                <td><input type="password" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>ФИО</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>e-mail</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Дата регистрации</td>
+                                <td>1.09.2016</td>
+                            </tr>
+                            <tr>
+                                <td>Статус</td>
+                                <td>
+                                    <select class="select2_demo_3 form-control" style="width: 100%;">
+                                        <option value="1">Администратор</option>
+                                        <option value="2">Техподдержка</option>
+                                    </select>
+                                </td>
+                            </tr>
                         </table>
-                    </div>
+                    </form>
                     <div class="buttons-panel buttons-panel--bottom-left clearfix">
-                        <a class="btn btn-sm btn-orange btn-right" href="javascript:void(0)">ДОБАВИТЬ</a>
+                        <button type="button" class="btn btn-orange btn-right">Сохранить</button>
+                        <button type="button" class="btn btn-orange btn-right">Отменить</button>
                     </div>
                 </div>
             </div>
