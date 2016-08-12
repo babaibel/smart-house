@@ -215,9 +215,6 @@
         </div>
 
         <div class="wrapper wrapper-content">
-            <div class="buttons-panel buttons-panel--bottom">
-                <a class="btn btn-orange btn-right" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить пользователя</a>
-            </div>
             <div class="ibox">
                 <div class="ibox-title">
                     <h5>Все пользователи</h5>
@@ -258,7 +255,7 @@
                                         </div>
                                     </th>
                                     <th>
-                                        Онлайн
+                                        Система на связи
                                         <div class="tooltip-container">
                                             <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
                                         </div>
@@ -276,7 +273,7 @@
                                         </div>
                                     </th>
                                     <th>
-                                        Выбрать
+                                        Очистить БД
                                         <div class="tooltip-container">
                                             <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
                                         </div>
@@ -293,7 +290,9 @@
                                     <td><span class="user-status user-status--online">online</span></td>
                                     <td><a href="#" class="user-question"></a></td>
                                     <td><a href="#" class="user-map"></a></td>
-                                    <td><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
+                                    <td>
+                                        <button type="button" class="del-line-btn"></button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Semen_iFon</td>
@@ -304,7 +303,9 @@
                                     <td><span class="user-status user-status--offline">offline</span></td>
                                     <td></td>
                                     <td><a href="#" class="user-map"></a></td>
-                                    <td><input type="checkbox" class="i-checks-zone" name="input[]"></td>
+                                    <td>
+                                        <button type="button" class="del-line-btn"></button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Poplavok</td>
@@ -315,13 +316,15 @@
                                     <td><span class="user-status user-status--offline">offline</span></td>
                                     <td></td>
                                     <td><a href="#" class="user-map"></a></td>
-                                    <td><input type="checkbox" class="i-checks-zone" name="input[]"></td>
+                                    <td>
+                                        <button type="button" class="del-line-btn"></button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="buttons-panel buttons-panel--bottom">
-                        <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить</a>
+                        <a class="btn btn-orange btn-right" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить пользователя</a>
                     </div>
                 </div>
             </div>
@@ -364,7 +367,8 @@
     <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
     <script src="js/plugins/dataTables/datatables.min.js"></script>
 
-   
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+
 
     <script>
         $(document).ready(function(){
