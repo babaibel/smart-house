@@ -6857,6 +6857,10 @@ h4.ibox-content__indicator {
 .table--user th {
   font-weight: 700;
 }
+.table--user td,
+.table--user th {
+  white-space: nowrap;
+}
 .table--user td:nth-last-child(-n+4),
 .table--user th:nth-last-child(-n+4) {
   text-align: center;
