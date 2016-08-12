@@ -1719,7 +1719,7 @@ h4.ibox-content__indicator{
   }
 
   &--center{
-    text-align: center;
+    text-align: center!important;
     .btn{
       margin: 0 10px;
     }
@@ -2943,15 +2943,25 @@ h4.ibox-content__indicator{
   text-overflow: ellipsis;
 }
 
-.sensors-2col .col-xlg-6 .ibox-title{
+.main-2col .ibox-title h5{
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sensors-2col .col-xlg-6 .ibox-title,
+.main-2col .ibox-title{
   position: relative;
 }
 
-.sensors-2col .col-xlg-6 .ibox-title h5{
+.sensors-2col .col-xlg-6 .ibox-title h5,
+.main-2col .ibox-title h5{
   padding-right: 30px;
 }
 
-.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools{
+.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools,
+.main-2col .ibox-title h5 + .ibox-tools{
   position: absolute;
   float: none;
   right: 15px;
@@ -2965,11 +2975,13 @@ h4.ibox-content__indicator{
     margin: 0;
     .date{
       padding-left: 0;
-      width: 25%;
+      padding-right: 5px;
+      width: 20%;
     }
     .content{
       padding-right: 0;
-      width: 75%;
+      padding-left: 5px;
+      width: 80%;
     }
   }
 }

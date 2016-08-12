@@ -2,17 +2,17 @@
   .col-xlg-4{
     width: 33.3333%!important;
   }
-  // .sensors-3col LI.col-xlg-4:nth-child(3n+1) {
-  //     clear: left;
-  // }
   .col-xlg-6{
     width: 50%!important;
   }
-  // .sensors-2col LI.col-xlg-4:nth-child(2n+1) {
-  //     clear: left;
-  // }
   .col-xlg-8{
     width: 66.6667%!important;
+  }
+  .col-xlg-9{
+    width: 75%!important;
+  }
+  .col-xlg-3{
+    width: 25%!important;
   }
   .calendar-container{
     width: 60%;
@@ -30,16 +30,6 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1559px) {
-  // .sensors-3col LI.col-xlg-4:nth-child(2n+1){
-  //   clear: left;
-  // }
-  // .main-2col{
-  //   > div{
-  //     width: 50%!important;
-  //   }
-  // }
-}
 
 @media (min-width: 768px) and (max-width: 1500px){
   .col-xlg-6 .ibox-content{
@@ -57,7 +47,6 @@
     line-height: 27px;
     text-transform: none;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -107,19 +96,20 @@
   .ibox--no-inner-title{
     margin-top: 0;
   }
-  
+  .main-2col .buttons-panel--center .btn{
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 1024px) {
   .main-2col .col-xlg-8,
   .main-2col .col-xlg-4 {
-
     width: 100%!important;
   }
 }
 
 @media (max-width: 1000px) {
-.sensor-settings__topline{
+  .sensor-settings__topline{
     &:after{
       content: "";
       display: table;
@@ -183,6 +173,23 @@
         width: 330px;
       }
     }
+  }
+}
+
+@media (max-width: 950px) {
+  .main-2col .col-xlg-9,
+  .main-2col .col-xlg-3 {
+
+    width: 100%!important;
+  }
+  .welcome-message {
+    display: none;
+  }
+  .navbar-top-links li a{
+    padding: 20px 7px;
+  }
+  .navbar-top-links li .sk-spinner {
+    margin: 0 7px 0 0!important;
   }
 }
 
@@ -420,51 +427,51 @@
     }
   }
 
-.PAU-sensor{
-  &__box{
-    margin-bottom: 15px;
+  .PAU-sensor{
+    &__box{
+      margin-bottom: 15px;
+    }
   }
-}
 
-.PAU-sensor-table{
-  display: block;
-  width: 100%;
-  &__row{
-    display: block;
-  width: 100%;
-  }
-  &__cell{
+  .PAU-sensor-table{
     display: block;
     width: 100%;
-    &:first-child{
-      width: 100%;
-      padding-right: 0;
-    }
-    &:last-child{
-      padding-left: 0;
-      width: 100%;
-    }
-  }
-  &__buttons{
-    display: block;
-    text-align: center;
-    margin: 0 -1% 15px;
-    .btn{
+    &__row{
       display: block;
-      float: left;
-      width: 48%;
-      margin: 0 1% 12px;
+    width: 100%;
+    }
+    &__cell{
+      display: block;
+      width: 100%;
+      &:first-child{
+        width: 100%;
+        padding-right: 0;
+      }
+      &:last-child{
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+    &__buttons{
+      display: block;
+      text-align: center;
+      margin: 0 -1% 15px;
+      .btn{
+        display: block;
+        float: left;
+        width: 48%;
+        margin: 0 1% 12px;
+      }
+    }
+    .ibox-content__indicator{
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .counter{
+      display: inline-block;
+      margin: 0;
     }
   }
-  .ibox-content__indicator{
-    font-size: 24px;
-    line-height: 28px;
-  }
-  .counter{
-    display: inline-block;
-    margin: 0;
-  }
-}
 
   .header-spinner-text{
     display: none;
@@ -499,7 +506,6 @@
     width: 100%!important;
     margin: 0;
   }
-
 }
 
 @media (max-width: 500px){
@@ -555,6 +561,10 @@
       float: left;
       text-align: center;
     }
+  }
+
+  .nav.navbar-top-links a .not-mob {
+    display: none;
   }
 }
 
@@ -651,7 +661,6 @@
   .notification-desc{
     margin-bottom: 5px;
   }
-
 }
 
 @media (max-width: 350px) {
@@ -690,6 +699,5 @@
     text-align: left;
     display: inline-block;
   }
-
 }
 

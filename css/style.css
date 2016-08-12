@@ -5861,7 +5861,7 @@ h4.ibox-content__indicator {
   margin-bottom: 25px;
 }
 .buttons-panel--center {
-  text-align: center;
+  text-align: center!important;
 }
 .buttons-panel--center .btn {
   margin: 0 10px;
@@ -6933,13 +6933,22 @@ h4.ibox-content__indicator {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sensors-2col .col-xlg-6 .ibox-title {
+.main-2col .ibox-title h5 {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sensors-2col .col-xlg-6 .ibox-title,
+.main-2col .ibox-title {
   position: relative;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5 {
+.sensors-2col .col-xlg-6 .ibox-title h5,
+.main-2col .ibox-title h5 {
   padding-right: 30px;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools {
+.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools,
+.main-2col .ibox-title h5 + .ibox-tools {
   position: absolute;
   float: none;
   right: 15px;
@@ -6952,11 +6961,13 @@ h4.ibox-content__indicator {
 }
 .timeline-item .row .date {
   padding-left: 0;
-  width: 25%;
+  padding-right: 5px;
+  width: 20%;
 }
 .timeline-item .row .content {
   padding-right: 0;
-  width: 75%;
+  padding-left: 5px;
+  width: 80%;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -10816,6 +10827,12 @@ body.md-skin {
   .col-xlg-8 {
     width: 66.6667%!important;
   }
+  .col-xlg-9 {
+    width: 75%!important;
+  }
+  .col-xlg-3 {
+    width: 25%!important;
+  }
   .calendar-container {
     width: 60%;
     margin: 0 auto;
@@ -10892,6 +10909,9 @@ body.md-skin {
   .ibox--no-inner-title {
     margin-top: 0;
   }
+  .main-2col .buttons-panel--center .btn {
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 1024px) {
   .main-2col .col-xlg-8,
@@ -10961,6 +10981,21 @@ body.md-skin {
   .spy-rele__block:first-child {
     max-width: 330px;
     width: 330px;
+  }
+}
+@media (max-width: 950px) {
+  .main-2col .col-xlg-9,
+  .main-2col .col-xlg-3 {
+    width: 100%!important;
+  }
+  .welcome-message {
+    display: none;
+  }
+  .navbar-top-links li a {
+    padding: 20px 7px;
+  }
+  .navbar-top-links li .sk-spinner {
+    margin: 0 7px 0 0!important;
   }
 }
 @media (max-width: 768px) {
@@ -11271,6 +11306,9 @@ body.md-skin {
     display: block;
     float: left;
     text-align: center;
+  }
+  .nav.navbar-top-links a .not-mob {
+    display: none;
   }
 }
 @media (max-width: 479px) {
