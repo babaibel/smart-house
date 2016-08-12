@@ -3627,6 +3627,9 @@ input:checked:hover + .checkbox__view {
 .select2-container--default .select2-selection--multiple {
   border-color: #cccccc;
 }
+.select2-container--open {
+  z-index: 2060!important;
+}
 .form-inline .select2-container,
 .form-inline .form-control {
   margin-right: 30px;
@@ -4557,7 +4560,7 @@ video {
   background: #f8fafb;
 }
 .inmodal .modal-header {
-  padding: 30px 15px;
+  padding: 20px 15px;
   text-align: center;
 }
 .animated.modal.fade .modal-dialog {
@@ -4567,7 +4570,7 @@ video {
   transform: none;
 }
 .inmodal .modal-title {
-  font-size: 26px;
+  font-size: 22px;
 }
 .inmodal .modal-icon {
   font-size: 84px;
@@ -6868,6 +6871,21 @@ h4.ibox-content__indicator {
 .table--user .del-line-btn {
   float: none;
   display: inline-block;
+}
+.edit-account {
+  margin: 0 auto;
+}
+.edit-account tr td {
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.edit-account tr td:first-child {
+  text-align: right;
+}
+.pointer {
+  cursor: pointer!important;
 }
 .user-status {
   display: inline-block;
@@ -11167,6 +11185,29 @@ body.md-skin {
   }
   .header-spinner-text {
     display: none;
+  }
+  .edit-account {
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  .edit-account tbody {
+    display: block;
+    width: 100%;
+  }
+  .edit-account tbody tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .edit-account tbody tr td {
+    display: block;
+    width: 100%;
+    text-align: left!important;
+    padding: 0 0 5px;
+  }
+  .edit-account tbody tr td .form-control {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {

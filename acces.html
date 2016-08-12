@@ -230,29 +230,29 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="edit-td">Олег Медведович</td>
-                                    <td class="edit-td">Техподдержка</td>
+                                    <td><span class="pointer" data-toggle="modal" data-target="#myModal4">Олег Медведович</span></td>
+                                    <td>Техподдержка</td>
                                     <td>
                                         <button type="button" class="del-line-btn"></button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="edit-td">Олег Медведович</td>
-                                    <td class="edit-td">Администратор</td>
+                                    <td>Олег Медведович</td>
+                                    <td>Администратор</td>
                                     <td>
                                         <button type="button" class="del-line-btn"></button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="edit-td">Олег Медведович</td>
-                                    <td class="edit-td">Техподдержка</td>
+                                    <td>Олег Медведович</td>
+                                    <td>Техподдержка</td>
                                     <td>
                                         <button type="button" class="del-line-btn"></button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="edit-td">Олег Медведович</td>
-                                    <td class="edit-td">Администратор</td>
+                                    <td>Олег Медведович</td>
+                                    <td>Администратор</td>
                                     <td>
                                         <button type="button" class="del-line-btn"></button>
                                     </td>
@@ -262,6 +262,60 @@
                     </div>
                     <div class="buttons-panel buttons-panel--bottom-left clearfix">
                         <a class="btn btn-sm btn-orange btn-right" href="javascript:void(0)">ДОБАВИТЬ</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal inmodal fade" id="myModal4" tabindex="-1" role="dialog"  aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Настройки аккаунтa</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <table class="edit-account">
+                                    <tr>
+                                        <td>Логин</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пароль</td>
+                                        <td><input type="password" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пароль ещё раз</td>
+                                        <td><input type="password" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ФИО</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>e-mail</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Дата регистрации</td>
+                                        <td>1.09.2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Статус</td>
+                                        <td>
+                                            <select class="select2_demo_3 form-control" style="width: 100%;">
+                                                <option value="1">Администратор</option>
+                                                <option value="2">Техподдержка</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Сохранить</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Отменить</button>
+                        </div>
                     </div>
                 </div>
             </div>
