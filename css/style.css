@@ -6361,6 +6361,17 @@ h4.ibox-content__indicator {
 .del-line-btn:hover {
   background-position: left bottom;
 }
+.clear-btn {
+  background: url(../img/icons/clear-btn.png) no-repeat left top;
+  display: inline-block;
+  border-radius: 3px;
+  border: 0;
+  width: 25px;
+  height: 24px;
+}
+.clear-btn:hover {
+  background-position: left bottom;
+}
 .notification-desc {
   float: left;
   line-height: 33px;
@@ -10946,7 +10957,8 @@ body.md-skin {
     width: 17px;
     background-size: contain;
   }
-  .table--user .del-line-btn {
+  .table--user .del-line-btn,
+  .table--user .clear-btn {
     height: 20px;
     width: 21px;
     background-size: cover;
