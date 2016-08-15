@@ -6968,6 +6968,38 @@ h4.ibox-content__indicator {
   padding-left: 5px;
   width: 80%;
 }
+div.dataTables_wrapper div.dataTables_length select {
+  width: 60px!important;
+}
+.pagination > li > a,
+.pagination > li > span {
+  padding: 0 12px!important;
+  line-height: 32px!important;
+}
+.dataTables_length {
+  margin: 0 0 15px;
+}
+.dataTables_length label {
+  margin-bottom: 0;
+}
+.dataTables_length .select2-container {
+  margin: 0 10px!important;
+}
+.user-table-wr {
+  position: relative;
+}
+.tpaginate-wr {
+  bottom: 16px;
+  left: 20px;
+  position: absolute;
+  z-index: 3;
+}
+.tpaginate-wr .pagination {
+  margin: 0!important;
+}
+.tpaginate-wr .pagination a {
+  color: #333!important;
+}
 /* SEARCH PAGE */
 .search-form {
   margin-top: 10px;

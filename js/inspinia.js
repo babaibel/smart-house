@@ -35,14 +35,14 @@ $(document).ready(function () {
 
     $(function() {
 
-        if(!$('.select2_demo_3').length) return;
+        if(!$('.select2_demo_3, select.form-control').length) return;
 
-        $(".select2_demo_3").select2({
+        $(".select2_demo_3, select.form-control").select2({
             placeholder: "",
             allowClear: true,
             minimumResultsForSearch: -1
         });
-        
+
     });
 
 
