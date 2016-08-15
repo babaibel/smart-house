@@ -33,11 +33,18 @@ $(document).ready(function () {
         }
     });
 
-    $(".select2_demo_3").select2({
-        placeholder: "",
-        allowClear: true,
-        minimumResultsForSearch: -1
+    $(function() {
+
+        if(!$('.select2_demo_3').length) return;
+
+        $(".select2_demo_3").select2({
+            placeholder: "",
+            allowClear: true,
+            minimumResultsForSearch: -1
+        });
+        
     });
+
 
     // Плюс минус
 
