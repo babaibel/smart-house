@@ -452,75 +452,20 @@
                                             <button type="button" class="del-line-btn"></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Poplavok</td>
-                                        <td>123456789012341</td>
-                                        <td>Дмитрий Поплавков</td>
-                                        <td>Poplavok@mail.ru</td>
-                                        <td>+7(929) 012-31-25</td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medved_Plush</td>
-                                        <td>123456789012345</td>
-                                        <td>Олег Медведович</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Poplavok</td>
-                                        <td>123456789012341</td>
-                                        <td>Дмитрий Поплавков</td>
-                                        <td>Poplavok@mail.ru</td>
-                                        <td>+7(929) 012-31-25</td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>
                         <div class="buttons-panel buttons-panel--bottom">
+                            <div class="dataTables_paginate">
+                                <ul class="pagination">
+                                <li class="paginate_button previous disabled" id="user-editable_previous"><a href="javascript:void(0)">«</a></li>
+                                <li class="paginate_button active"><a href="javascript:void(0)">1</a></li>
+                                <li class="paginate_button"><a href="javascript:void(0)">2</a></li>
+                                <li class="paginate_button next"><a href="javascript:void(0)">»</a></li>
+                                </ul>
+                            </div>
+
                             <a class="btn btn-orange btn-right" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить пользователя</a>
                         </div>
                     </div>
@@ -574,19 +519,12 @@
             /* Init DataTables */
             var oTable = $('#user-editable').DataTable({
                 ordering: true,
-                paging: true,
+                paging: false,
                 searching: false,
                 "info": false,
                 columnDefs: [
                     { targets: [7, 8], orderable: false}
-                ],
-                "sDom": '<"user-table-wr"t><"tpaginate-wr"p>',
-                "language": {
-                    "paginate": {
-                        "next": "»",
-                        "previous": "«"
-                    }
-                }
+                ]
             });
 
         });
