@@ -447,7 +447,7 @@
 
                         <div class="spy-rele">
                             <div class="spy-rele__block">
-                                <select class="js-spy-select spy-select" style="width:100%;">
+                                <select class="select2_demo_3 js-spy-select spy-select" style="width:100%;">
                                     <option value="1">*100# (Мегафон)</option>
                                     <option value="2">*102# (Билайн)</option>
                                     <option value="3">*105# (Теле2)</option>
@@ -500,7 +500,7 @@
                 <div class="ibox-content">
                     <form class="form-inline" role="form">
                         <div class="form-group">
-                           <select class="select2_demo_3 form-control" style="width:350px;">
+                           <select class="select2_demo_3 form-control">
                                 <option value="1">Согласно настройкам</option>
                                 <option value="2">Нет оповещений</option>
                             </select>
@@ -669,11 +669,7 @@
                 radioClass: 'iradio_square-green',
             });
 
-            $(".select2_demo_3").select2({
-                placeholder: "",
-                allowClear: true,
-                minimumResultsForSearch: -1
-            });
+            
 
             /* Init DataTables */
             var oTable = $('#editable').DataTable({
