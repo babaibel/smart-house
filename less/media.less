@@ -87,6 +87,61 @@
   .sensor-box tr td:last-child{
     padding-left: 7px;
   }
+  .table--user{
+    font-size: 12px;
+    font-weight: normal;
+    .hidden-title{
+      display: inline-block;
+    }
+    .th-text--lg{
+      display: none;
+    }
+  }
+  .table.table--user > thead > tr > th, .table.table--user > tbody > tr > th,
+  .table.table--user > tfoot > tr > th, .table.table--user > thead > tr > td,
+  .table.table--user > tbody > tr > td, .table.table--user > tfoot > tr > td{
+    padding: 4px;
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: 1300px) {
+  .table--user{
+    font-size: 10px;
+    font-weight: normal;
+    .user-map {
+      height: 17px;
+      width: 17px;
+      background-size: contain;
+    }
+    .del-line-btn{
+      height: 20px;
+      width: 21px;
+      background-size: cover;
+    }
+    .hidden-title{
+      display: inline-block;
+    }
+    .th-text--lg{
+      display: none;
+    }
+  }
+  table.dataTable.table--user thead > tr > th{
+    .tooltip-container{
+      display: none;
+    }
+  }
+  table.dataTable.table--user thead > tr > th.sorting_asc, table.dataTable.table--user thead > tr > th.sorting_desc,
+  table.dataTable.table--user thead > tr > th.sorting, table.dataTable.table--user thead > tr > td.sorting_asc,
+  table.dataTable.table--user thead > tr > td.sorting_desc, table.dataTable.table--user thead > tr > td.sorting{
+    padding-right: 18px!important;
+  }
+  .table.table--user > thead > tr > th, .table.table--user > tbody > tr > th,
+  .table.table--user > tfoot > tr > th, .table.table--user > thead > tr > td,
+  .table.table--user > tbody > tr > td, .table.table--user > tfoot > tr > td{
+    padding: 4px;
+    vertical-align: middle;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -106,6 +161,7 @@
   .main-2col .buttons-panel--center .btn{
     margin-bottom: 5px;
   }
+  
 }
 
 @media (max-width: 1024px) {

@@ -6867,13 +6867,16 @@ h4.ibox-content__indicator {
 .table--user th {
   white-space: nowrap;
 }
-.table--user td:nth-last-child(-n+4),
-.table--user th:nth-last-child(-n+4) {
+.table--user td:nth-last-child(-n+5),
+.table--user th:nth-last-child(-n+5) {
   text-align: center;
 }
 .table--user .del-line-btn {
   float: none;
   display: inline-block;
+}
+.table--user .hidden-title {
+  display: none;
 }
 .edit-account {
   margin: 0 auto;
@@ -10912,6 +10915,67 @@ body.md-skin {
   }
   .sensor-box tr td:last-child {
     padding-left: 7px;
+  }
+  .table--user {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .table--user .hidden-title {
+    display: inline-block;
+  }
+  .table--user .th-text--lg {
+    display: none;
+  }
+  .table.table--user > thead > tr > th,
+  .table.table--user > tbody > tr > th,
+  .table.table--user > tfoot > tr > th,
+  .table.table--user > thead > tr > td,
+  .table.table--user > tbody > tr > td,
+  .table.table--user > tfoot > tr > td {
+    padding: 4px;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 1300px) {
+  .table--user {
+    font-size: 10px;
+    font-weight: normal;
+  }
+  .table--user .user-map {
+    height: 17px;
+    width: 17px;
+    background-size: contain;
+  }
+  .table--user .del-line-btn {
+    height: 20px;
+    width: 21px;
+    background-size: cover;
+  }
+  .table--user .hidden-title {
+    display: inline-block;
+  }
+  .table--user .th-text--lg {
+    display: none;
+  }
+  table.dataTable.table--user thead > tr > th .tooltip-container {
+    display: none;
+  }
+  table.dataTable.table--user thead > tr > th.sorting_asc,
+  table.dataTable.table--user thead > tr > th.sorting_desc,
+  table.dataTable.table--user thead > tr > th.sorting,
+  table.dataTable.table--user thead > tr > td.sorting_asc,
+  table.dataTable.table--user thead > tr > td.sorting_desc,
+  table.dataTable.table--user thead > tr > td.sorting {
+    padding-right: 18px!important;
+  }
+  .table.table--user > thead > tr > th,
+  .table.table--user > tbody > tr > th,
+  .table.table--user > tfoot > tr > th,
+  .table.table--user > thead > tr > td,
+  .table.table--user > tbody > tr > td,
+  .table.table--user > tfoot > tr > td {
+    padding: 4px;
+    vertical-align: middle;
   }
 }
 @media (max-width: 1200px) {
