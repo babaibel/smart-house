@@ -6881,6 +6881,7 @@ h4.ibox-content__indicator {
 .table--user td:nth-last-child(-n+5),
 .table--user th:nth-last-child(-n+5) {
   text-align: center;
+  width: 5%;
 }
 .table--user .del-line-btn {
   float: none;
