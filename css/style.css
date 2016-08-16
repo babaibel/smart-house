@@ -7001,6 +7001,13 @@ h4.ibox-content__indicator {
 .dataTables_paginate .pagination a {
   color: #333!important;
 }
+.checkbox-line {
+  margin-bottom: 15px;
+}
+.checkbox-line__item {
+  display: inline-block;
+  margin: 0 30px 5px 0;
+}
 /* SEARCH PAGE */
 .search-form {
   margin-top: 10px;
