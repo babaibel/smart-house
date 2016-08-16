@@ -10990,6 +10990,10 @@ body.md-skin {
     padding: 4px;
     vertical-align: middle;
   }
+  .buttons-panel--system {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 @media (max-width: 1200px) {
   .track-panel--calendar {
