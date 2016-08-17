@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.js-power').click(function () {
 
         if( $(this).hasClass('active')){
-            $(this).removeClass('ibox-content__indicator--blue active');;
+            $(this).removeClass('ibox-content__indicator--blue active');
             $(this).find('.power-btn').removeClass('active');
             $(this).find('span').text('Выкл');
             
@@ -44,7 +44,6 @@ $(document).ready(function () {
         });
 
     });
-
 
     // Плюс минус
 
@@ -358,8 +357,6 @@ $(document).ready(function () {
     });
 });
 
-
-
 // Minimalize menu when screen is less than 768px
 $(window).bind("resize", function () {
     if ($(this).width() < 769) {
@@ -442,6 +439,96 @@ $(document).ready(function () {
     });
 
 });
+
+$('.js-confirm-btn').click(function () {
+    $(this).closest('.modal-footer').closest('.modal-content').find('.js-loading-text').css('display', 'block');
+});
+
+
+$(document).ready(function () {
+    
+    var $spySelect2 = $(".js-spy-select2");
+
+    if(!$spySelect2.length) return false;
+
+    var $spySelectRele1 = $(".js-hidden-rele1");
+    var $spySelectRele2 = $(".js-hidden-rele2");
+    var $spySelectRele3 = $(".js-hidden-rele3");
+
+    $('.js-add-rele').click(function () {
+        var spyTime2 = $spySelect2.children(":selected").attr("id");
+
+        if( spyTime2 === 'spy-rele1'){
+            $spySelectRele1.addClass('_visible');
+            $spySelectRele2.removeClass('_visible');
+            $spySelectRele3.removeClass('_visible');
+            } else{
+            $spySelectRele1.removeClass('_visible');
+            $spySelectRele2.addClass('_visible');
+            $spySelectRele3.removeClass('_visible');
+        }
+    });
+
+    $spySelect2.on('select2:select', function (e) {
+        var spyTime3 = e.params.data.element.id;
+
+        if( spyTime3 === 'spy-rele3'){
+            $spySelectRele3.addClass('_visible');
+            $spySelectRele1.removeClass('_visible');
+            $spySelectRele2.removeClass('_visible');
+            } else{
+            $spySelectRele3.removeClass('_visible');
+        }
+
+    });
+
+});
+
+
+$(document).ready(function () {
+    
+    var $spySelectPM = $(".js-spy-select-pm");
+
+    if(!$spySelectPM.length) return false;
+
+    var $spySelectPMRele1 = $(".js-hidden-rele-pm1");
+    var $spySelectPMRele2 = $(".js-hidden-rele-pm2");
+    var $spySelectPMRele3 = $(".js-hidden-rele-pm3");
+
+    $('.js-add-pm').click(function () {
+        var spyId3 = $spySelectPM.children(":selected").attr("id");
+
+        if( spyId3 === 'spy-rele-pm1'){
+            $spySelectPMRele1.addClass('_visible');
+            $spySelectPMRele2.removeClass('_visible');
+            $spySelectPMRele3.removeClass('_visible');
+            } else{
+                if( spyId3 === 'spy-rele-pm2'){
+                    $spySelectPMRele1.removeClass('_visible');
+                    $spySelectPMRele2.addClass('_visible');
+                    $spySelectPMRele3.removeClass('_visible');
+                } else {
+                    $spySelectPMRele1.removeClass('_visible');
+                    $spySelectPMRele2.removeClass('_visible');
+                }
+            }
+    });
+
+    $spySelectPM.on('select2:select', function (e) {
+        var spyId4 = e.params.data.element.id;
+
+        if( spyId4 === 'spy-rele-pm3'){
+            $spySelectPMRele3.addClass('_visible');
+            $spySelectPMRele1.removeClass('_visible');
+            $spySelectPMRele2.removeClass('_visible');
+            } else{
+                return
+            }
+
+    });
+
+});
+
 
 // check if browser support HTML5 local storage
 function localStorageSupport() {

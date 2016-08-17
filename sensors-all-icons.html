@@ -18,6 +18,8 @@
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
 
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -679,7 +681,7 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <h4 class="ibox-content__indicator">Есть</h4>
+                                                    <h4 class="ibox-content__indicator">Заряд <span>есть</span></h4>
                                                 </td>
                                                 <td>
                                                     <i class="iconbg iconbg--wifi"></i>
@@ -1234,7 +1236,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <h5>Устройство управления</h5>
+                                    <h5>Устройство управления (W34)</h5>
                                     <div class="ibox-tools">
                                         <a class="close-link">
                                             <i class="fa fa-times"></i>
@@ -1246,8 +1248,6 @@
                                         <table class="sensor-box">
                                             <tr>
                                                 <td>
-                                                    <!-- <h4 class="ibox-content__indicator ibox-content__indicator--black">Выкл</h4> -->
-                                                    
                                                     <div class="ibox-content__indicator js-power">
                                                         <span>Выкл</span>
                                                         <a class="btn power-btn" href="javascript:void(0)"><i class="fa fa-power-off"></i></a>
@@ -1270,7 +1270,9 @@
 
                    </ul>
                    <div class="buttons-panel buttons-panel--bottom buttons-panel--mgb">
-                        <a class="btn btn-orange" href="javascript:void(0)">Добавить</a>
+                        <a class="btn btn-orange" data-toggle="modal" data-target="#add-pau" href="javascript:void(0)">ДОБАВИТЬ ПРОГРАММУ УПРАВЛЕНИЯ</a>
+                        <a class="btn btn-orange" data-toggle="modal" data-target="#add-rele" href="javascript:void(0)">ДОБАВИТЬ РЕЛЕ</a>
+                        <a class="btn btn-orange" data-toggle="modal" data-target="#add-pm" href="javascript:void(0)">Добавить</a>
                     </div>
                 </div>
                 <div class="footer">
@@ -1288,6 +1290,281 @@
         
     </div>
 
+    <div class="modal inmodal fade" id="add-pau" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Выберите тип программы:</h4>
+                </div>
+                <div class="modal-body text-center">
+
+                    <select class="select2_demo_3" style="width:285px;">
+                        <option value="1">Поддержание температуры</option>
+                        <option value="2">Поддержание температуры</option>
+                        <option value="3">Поддержание температуры</option>
+                    </select>
+
+                    <div class="loading-text js-loading-text" style="display: none;">
+                        <span>Ожидайте добавление программы… </span>
+                        <div class="sk-spinner sk-spinner-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary js-confirm-btn">Добавить</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="add-rele" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Выберите способ подключения устройства:</h4>
+                </div>
+                <div class="modal-body text-center">
+
+                    <div class="spy-info-wr">
+                        <select class="select2_demo_3 js-spy-select2 spy-select" style="width:100%;">
+                            <option value="1" id="spy-rele1">Порт ДОП</option>
+                            <option value="2" id="spy-rele2">Порт РАДИО</option>
+                        </select>
+
+                        <div class="spy-info js-hidden-rele1">
+                            Отключите все устройства от порта ДОП, подключите только добавляемое устройство и нажмите кнопку «УСТ». Желтый индикатор загорится, а затем просигнализирует состояние добавляемого устройства: <br>
+                            1 вспышка – устройство успешно добавлено, <br>
+                            2 вспышки – устройство уже существует, <br>
+                            3 вспышки – ошибка подключения устройства.
+                        </div>
+                        <div class="spy-info js-hidden-rele2">
+                            Убедитесь, что устройство подключено к питанию, батарея вставлена правильно. <br>
+                            Нажмите кнопку «УСТ», дождитесь загорания желтого индикатора, а затем кратковременно приложите магнит к устройству согласно инструкции на него. <br>
+                            Убедитесь, что светодиод подключаемого устройства вспыхнул при поднесении магнита. <br>
+                            Если светодиод затем вспыхнул три раза, программирование удалось. Если 2 раза – ошибка подключения
+                        </div>
+                    </div>
+
+                    <div class="loading-text js-loading-text" style="display: none;">
+                        <span>Ожидайте добавление программы… </span>
+                        <div class="sk-spinner sk-spinner-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary js-add-rele js-confirm-btn">Добавить</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="add-pm" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Выберите тип подключения датчика:</h4>
+                </div>
+                <div class="modal-body text-center">
+
+                    <div class="spy-info-wr">
+                        <select class="select2_demo_3 js-spy-select-pm spy-select" style="width:100%;">
+                            <option value="1" id="spy-rele-pm1">Порт ДОП</option>
+                            <option value="2" id="spy-rele-pm2">Порт РАДИО</option>
+                            <option value="1" id="spy-rele-pm3">Встроенный датчик Д1…Д5</option>
+                        </select>
+
+                        
+                        <div class="spy-info js-hidden-rele-pm1">
+                            Убедитесь, что устройство подключено к питанию, батарея вставлена правильно. <br>
+                            Нажмите кнопку «УСТ», дождитесь загорания желтого индикатора, а затем кратковременно приложите магнит к устройству согласно инструкции на него. <br>
+                            Убедитесь, что светодиод подключаемого устройства вспыхнул при поднесении магнита. <br>
+                            Если светодиод затем вспыхнул три раза, программирование удалось. Если 2 раза – ошибка подключения
+                        </div>
+                        <div class="spy-info js-hidden-rele-pm2">
+                            Отключите все устройства от порта ДОП, подключите только добавляемое устройство и нажмите кнопку «УСТ». Желтый индикатор загорится, а затем просигнализирует состояние добавляемого устройства: <br>
+                            1 вспышка – устройство успешно добавлено, <br>
+                            2 вспышки – устройство уже существует, <br>
+                            3 вспышки – ошибка подключения устройства.
+                        </div>
+                        <div class="spy-info js-hidden-rele-pm3">
+                            <table class="modal-table">
+                                <tr>
+                                    <th>Порт датчика:</th>
+                                    <th>Тип датчика:</th>
+                                </tr>
+                                <tr>
+                                    <td>Д1</td>
+                                    <td>
+                                        <select class="select2_demo_3" style="width:100%;">
+                                            <option value="1">Датчик открытия двери</option>
+                                            <option value="2">Датчик дыма</option>
+                                            <option value="3">Датчик газа</option>
+                                            <option value="4">Датчик протечки воды</option>
+                                            <option value="5">Датчик движения</option>
+                                            <option value="6">Универсальный датчик</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Д2</td>
+                                    <td>
+                                        <select class="select2_demo_3" style="width:100%;">
+                                            <option value="1">Датчик открытия двери</option>
+                                            <option value="2">Датчик дыма</option>
+                                            <option value="3">Датчик газа</option>
+                                            <option value="4">Датчик протечки воды</option>
+                                            <option value="5">Датчик движения</option>
+                                            <option value="6">Универсальный датчик</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Д3</td>
+                                    <td>
+                                        <select class="select2_demo_3" style="width:100%;">
+                                            <option value="1">Датчик открытия двери</option>
+                                            <option value="2">Датчик дыма</option>
+                                            <option value="3">Датчик газа</option>
+                                            <option value="4">Датчик протечки воды</option>
+                                            <option value="5">Датчик движения</option>
+                                            <option value="6">Универсальный датчик</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Д4</td>
+                                    <td>
+                                        <select class="select2_demo_3" style="width:100%;">
+                                            <option value="1">Датчик открытия двери</option>
+                                            <option value="2">Датчик дыма</option>
+                                            <option value="3">Датчик газа</option>
+                                            <option value="4">Датчик протечки воды</option>
+                                            <option value="5">Датчик движения</option>
+                                            <option value="6">Универсальный датчик</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Д5</td>
+                                    <td>
+                                        <select class="select2_demo_3" style="width:100%;">
+                                            <option value="1">Датчик открытия двери</option>
+                                            <option value="2">Датчик дыма</option>
+                                            <option value="3">Датчик газа</option>
+                                            <option value="4">Датчик протечки воды</option>
+                                            <option value="5">Датчик движения</option>
+                                            <option value="6">Универсальный датчик</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="loading-text js-loading-text" style="display: none;">
+                        <span>Ожидайте добавление программы… </span>
+                        <div class="sk-spinner sk-spinner-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary js-add-pm js-confirm-btn">Добавить</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="success-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="swal2-icon swal2-success">
+                        <span class="line tip animate-success-tip"></span> 
+                        <span class="line long animate-success-long"></span>
+                        <div class="placeholder"></div> <div class="fix"></div>
+                    </div>
+                    <h2 class="swal2-modal">Программа добавлена!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="question-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="swal2-icon swal2-question">?</div>
+                    <h2 class="swal2-modal">question?</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">ОК</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="error-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="swal2-icon swal2-error animate-error-icon">
+                        <span class="x-mark animate-x-mark">
+                            <span class="line left"></span>
+                            <span class="line right"></span>
+                        </span>
+                    </div>
+                    <h2 class="swal2-modal">Не удалось добавить программу!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -1304,6 +1581,9 @@
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 
+    <!-- Select2 -->
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+
     <script>
         // Draggable panels
         jQuery(function($) {
@@ -1319,6 +1599,7 @@
                 }
             });
         });
+
     </script>
 
 </body>
