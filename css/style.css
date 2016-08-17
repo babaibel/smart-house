@@ -6115,7 +6115,7 @@ h4.ibox-content__indicator {
 .center-box {
   text-align: center!important;
 }
-.sortableList li .ibox {
+.sortableList li .ibox .ibox-title {
   cursor: move!important;
 }
 .sensor-settings__title {
