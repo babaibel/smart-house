@@ -1830,15 +1830,6 @@ table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
   background: transparent;
 }
-.dataTables_wrapper {
-  padding-bottom: 30px;
-}
-.dataTables_length {
-  float: left;
-}
-.dataTables_filter label {
-  margin-right: 5px;
-}
 .html5buttons {
   float: right;
 }
@@ -3742,6 +3733,7 @@ table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc {
   cursor: pointer;
+  padding-right: 30px;
 }
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
@@ -3766,9 +3758,6 @@ table.dataTable thead .sorting_desc_disabled {
 table.dataTable thead .sorting {
   background-image: url("../img/icons/sort_both.png");
 }
-.dataTables_wrapper {
-  padding-bottom: 0;
-}
 #editable input {
   border: 1px solid #cccccc;
   border-radius: 3px;
@@ -3778,6 +3767,8 @@ table.dataTable thead .sorting {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+  display: block;
+  max-width: 250px;
 }
 #editable tr td:nth-child(2) input,
 #editable tr td:first-child input {
@@ -4890,7 +4881,7 @@ body.body-small .footer.fixed {
   border-top: 1px solid #e7eaec;
   line-height: 1.42857;
   padding: 8px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 /* PANELS */
 .panel.blank-panel {
