@@ -4708,7 +4708,13 @@ video {
   outline: 0 none;
   position: relative;
 }
+.modal {
+  text-align: center;
+}
 .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
   z-index: 2200;
 }
 .modal-body {
@@ -7180,14 +7186,6 @@ h4.ibox-content__indicator {
   text-align: center;
   margin: 30px 0 0;
 }
-.modal {
-  text-align: center;
-}
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
 .modal-table {
   margin: 0 auto;
 }
@@ -7195,6 +7193,13 @@ h4.ibox-content__indicator {
 .modal-table td {
   padding: 4px;
   text-align: center;
+}
+.edit-td {
+  width: 272px;
+}
+.edit-td input[type="text"] {
+  display: block;
+  width: 100%!important;
 }
 /* SEARCH PAGE */
 .search-form {

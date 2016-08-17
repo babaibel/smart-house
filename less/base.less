@@ -131,7 +131,14 @@ video {
   position: relative;
 }
 
+.modal {
+  text-align: center;
+}
+
 .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
   z-index: 2200;
 }
 
@@ -3027,7 +3034,6 @@ h4.ibox-content__indicator{
       }
     }
 }
-
 .checkbox-line{
   margin-bottom: 15px;
   &__item{
@@ -3035,25 +3041,20 @@ h4.ibox-content__indicator{
     margin: 0 30px 5px 0;
   }
 }
-
 .loading-text{
    text-align: center; margin: 30px 0 0;
 }
-
-.modal {
-  text-align: center;
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
-
 .modal-table{
   margin: 0 auto;
   th,td{
     padding: 4px;
     text-align: center;
+  }
+}
+.edit-td {
+  width: 272px;
+  input[type="text"]{
+    display: block;
+    width: 100%!important;
   }
 }
