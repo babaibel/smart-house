@@ -7304,6 +7304,14 @@ h4.ibox-content__indicator {
 }
 .loginscreen.middle-box {
   width: 300px;
+  padding: 100px 0 0;
+}
+.loginscreen.middle-box .logo-name {
+  display: block;
+  margin: 0;
+}
+.loginscreen.middle-box h1 {
+  font-size: 14px;
 }
 .loginColumns {
   max-width: 800px;
@@ -7314,13 +7322,6 @@ h4.ibox-content__indicator {
   max-width: 460px;
   margin: 0 auto;
   padding: 100px 20px 20px 20px;
-}
-.logo-name {
-  color: #e6e6e6;
-  font-size: 180px;
-  font-weight: 800;
-  letter-spacing: -10px;
-  margin-bottom: 0;
 }
 .middle-box h1 {
   font-size: 170px;
@@ -11309,6 +11310,9 @@ body.md-skin {
   .spy-rele__block:first-child {
     max-width: 330px;
     width: 330px;
+  }
+  .loginscreen.middle-box {
+    padding: 30px 0;
   }
 }
 @media (max-width: 950px) {
