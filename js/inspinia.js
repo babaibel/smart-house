@@ -195,6 +195,10 @@ $(document).ready(function () {
     // Fix Bootstrap backdrop issu with animation.css
     $('.modal').appendTo("body");
 
+    $('.inmodal').on('hidden.bs.modal', function () {
+      $('body').css('padding-right', '0px');
+    });
+
     // Full height of sidebar
     function fix_height() {
         var heightWithoutNavbar = $("body > #wrapper").height() - 61;
