@@ -3572,6 +3572,8 @@ input:checked:hover + .checkbox__view {
   text-transform: uppercase;
   padding-top: 6px;
   padding-bottom: 6px;
+  margin-left: 0;
+  margin-right: 20px;
 }
 .btn-add .fa {
   margin-right: 5px;
