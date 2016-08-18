@@ -7206,6 +7206,16 @@ h4.ibox-content__indicator {
 }
 .site-loading-text {
   font-size: 18px;
+  display: block;
+}
+.site-loading-spinner {
+  height: 50px!important;
+  width: 50px!important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0!important;
+  transform: translate(-50%, -50%);
 }
 /* SEARCH PAGE */
 .search-form {
