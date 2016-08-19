@@ -2892,16 +2892,21 @@ h4.ibox-content__indicator{
 
 .table{
   &--user{
-    font-weight: 600;
+    font-weight: 400;
     th{
       font-weight: 700;
     }
     td,th{
       white-space: nowrap;
-      &:nth-last-child(-n+5){
+      padding: 4px 3px;
+      &:nth-last-child(-n+6){
         text-align: center;
         width: 5%;
       }
+    }
+    td{
+      padding: 4px 3px!important;
+      vertical-align: middle;
     }
     .del-line-btn{
       float: none;

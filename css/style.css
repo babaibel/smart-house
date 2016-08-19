@@ -3733,7 +3733,9 @@ label.font-noraml {
 }
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting_desc {
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
   cursor: pointer;
   padding-right: 30px;
 }
@@ -7050,7 +7052,7 @@ h4.ibox-content__indicator {
   min-width: 290px;
 }
 .table--user {
-  font-weight: 600;
+  font-weight: 400;
 }
 .table--user th {
   font-weight: 700;
@@ -7058,11 +7060,16 @@ h4.ibox-content__indicator {
 .table--user td,
 .table--user th {
   white-space: nowrap;
+  padding: 4px 3px;
 }
-.table--user td:nth-last-child(-n+5),
-.table--user th:nth-last-child(-n+5) {
+.table--user td:nth-last-child(-n+6),
+.table--user th:nth-last-child(-n+6) {
   text-align: center;
   width: 5%;
+}
+.table--user td {
+  padding: 4px 3px!important;
+  vertical-align: middle;
 }
 .table--user .del-line-btn {
   float: none;
@@ -11171,15 +11178,6 @@ body.md-skin {
   }
   .table--user .th-text--lg {
     display: none;
-  }
-  .table.table--user > thead > tr > th,
-  .table.table--user > tbody > tr > th,
-  .table.table--user > tfoot > tr > th,
-  .table.table--user > thead > tr > td,
-  .table.table--user > tbody > tr > td,
-  .table.table--user > tfoot > tr > td {
-    padding: 4px;
-    vertical-align: middle;
   }
 }
 @media (max-width: 1300px) {
