@@ -213,6 +213,7 @@ $(document).ready(function () {
 
         if (navbarHeigh < wrapperHeigh) {
             $('#page-wrapper').css("min-height", $(window).height() + "px");
+            $('.map').css("height", $(window).height() - 280 + "px");
         }
 
         if ($('body').hasClass('fixed-nav')) {

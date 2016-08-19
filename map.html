@@ -178,96 +178,15 @@
         </div>
 
         <div class="wrapper wrapper-content dashboard-no-header">
-
+            
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ibox float-e-margins">
+                    <div class="ibox float-e-margins ibox--auto-height">
                         <div class="ibox-title">
-                            <h5>Системы онлайн</h5>
+                            <h5>Место расположение системы: IMEI 013950007524342, test, 79507736951</h5>
                         </div>
                         <div class="ibox-content">
-                            <div class="checkbox-line">
-                                <div class="checkbox-line__item">
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Системы онлайн</span>
-                                </div>
-                                <div class="checkbox-line__item">
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Системы оффлайн</span>
-                                </div>
-                                <div class="checkbox-line__item">
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Незарегистрированные системы</span>
-                                </div>
-                            </div>
-                           <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30177932.822449956!2d46.43021585351864!3d49.241125370666715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1467652721715" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                            <div id="map_addresses" class="map"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="ibox ibox--auto-height">
-                <div class="ibox-content ibox-content--full">
-                    <table class="track-panel track-panel--text-panel">
-                        <tr>
-                            <td>
-                                <span class="iconbg iconbg--users"></span> Всего пользователей зарегистрировано: <b>1167</b>
-                            </td>
-                            <td>
-                                <span class="iconbg iconbg--devices"></span> Среднее количество устройств, подключенных к системе: <b>4,76</b>
-                            </td>
-                            <td>
-                                <span class="iconbg iconbg--questions"></span> Необработанных вопросов: <b>64</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="iconbg iconbg--users-online"></span> Всего пользователей онлайн: <b>675</b>
-                            </td>
-                            <td>
-                                <span class="iconbg iconbg--users-average"></span> Среднее количество пользователей в системе: <b>1,37</b>
-                            </td>
-                            <td>
-                                
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Системы онлайн</h5>
-                        </div>
-                        <div class="ibox-content">
-                            <div id="ct-chart5" class="ct-chart"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Количество пользователей в системе</h5>
-                        </div>
-                        <div class="ibox-content">
-
-                                <div id="ct-chart6" class="ct-chart"></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Количество систем</h5>
-                        </div>
-                        <div class="ibox-content">
-
-                                <div id="ct-chart7" class="ct-chart"></div>
-
                         </div>
                     </div>
                 </div>
@@ -316,129 +235,11 @@
     <script type="text/javascript" src="js/jquery.gmap.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $('.i-checks').iCheck({
-                checkboxClass: 'icheckbox_square-green'
-            });
-            $('.i-checks-zone').iCheck({
-                checkboxClass: 'icheckbox_square-green icheckbox_square-green2'
-            });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function(){
-
-            // pie chart 1
-
-            var data = {
-                series: [20, 80]
-            };
-
-            var sum = function(a, b) { return a + b };
-
-            new Chartist.Pie('#ct-chart5', data, {
-                labelInterpolationFnc: function(value) {
-                    return Math.round(value / data.series.reduce(sum) * 100) + '%';
-                }
-            });
-
-            // pie chart 2
-
-            var data2 = {
-              series: [{
-                value: 10,
-                name: 'Пользователь 1',
-                meta: 'Meta One'
-              }, {
-                value: 10,
-                name: 'Пользователь 2'
-              }, {
-                value: 10,
-                name: 'Пользователь 3'
-              }, {
-                value: 10,
-                name: 'Пользователь 4'
-              }, {
-                value: 10,
-                name: 'Пользователь 5'
-              }, {
-                value: 10,
-                name: 'Пользователь 6'
-              }, {
-                value: 10,
-                name: 'Пользователь 7'
-              }, {
-                value: 10,
-                name: 'Пользователь 8'
-              }, {
-                value: 10,
-                name: 'Пользователь 9'
-              }, {
-                value: 10,
-                name: 'Пользователь 10'
-              }]
-            };
-
-            new Chartist.Pie('#ct-chart6', data2, {
-                plugins: [
-                    Chartist.plugins.legend()
-                ],
-                labelInterpolationFnc: function(value) {
-                    return value + '%';
-                }
-            });
-
-            // pie chart 3
-
-            var data3 = {
-              series: [{
-                value: 30,
-                name: 'Онлайн',
-                meta: 'Meta One'
-              }, {
-                value: 10,
-                name: 'Оффлайн'
-              }, {
-                value: 20,
-                name: 'Не зарегистрировано'
-              }, {
-                value: 40,
-                name: 'Всего'
-              }]
-            };
-
-            new Chartist.Pie('#ct-chart7', data3, {
-                plugins: [
-                    Chartist.plugins.legend()
-                ],
-                labelInterpolationFnc: function(value) {
-                    return value + '%';
-                }
-            });
-
-        });
-    </script>
-
-    <script>
         $('#map_addresses').gMap({
             controls: false,
             scrollwheel: true,
             maptype: 'TERRAIN',
             markers: [
-                {
-                    latitude: 47.670553,
-                    longitude: 9.588479,
-                    icon: {
-                        image: "img/icons/map-point-red.png",
-                        iconsize: [26, 46],
-                        iconanchor: [12,46]
-                    },
-                    html: "<p><b>IMЕI:</b> 112233445566</p>" +
-                    "<p><b>Тел.:</b> 71122334455</p>" +
-                    "<p><b>Версия системы:</b> 1122334455</p>" +
-                    "<p><b>Версия ПО:</b>  1122334455</p>"
-                },
                 {
                     latitude: 47.65197522925437,
                     longitude: 9.47845458984375,
@@ -446,20 +247,6 @@
                     "<p><b>Тел.:</b> 71122334455</p>" +
                     "<p><b>Версия системы:</b> 1122334455</p>" +
                     "<p><b>Версия ПО:</b>  1122334455</p>"
-                },
-                {
-                    latitude: 47.594996,
-                    longitude: 9.600708,
-                    icon: {
-                        image: "img/icons/map-point-green.png",
-                        iconsize: [26, 46],
-                        iconanchor: [12,46]
-                    },
-                    html: "<p><b>IMЕI:</b> 112233445566</p>" +
-                    "<p><b>Тел.:</b> 71122334455</p>" +
-                    "<p><b>Версия системы:</b> 1122334455</p>" +
-                    "<p><b>Версия ПО:</b>  1122334455</p>"
-
                 }
             ],
             icon: {
