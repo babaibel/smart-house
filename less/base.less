@@ -3082,8 +3082,27 @@ h4.ibox-content__indicator{
 }
 .map{
   display: block;
-
   p{
     margin: 0;
+  }
+}
+.form-error{
+  background-color: #f2dede;
+  border-color: #f2dede;
+  color: #a94442;
+  margin: 10px 0 0;
+  padding: 5px 10px;
+  position: relative;
+  &:after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid; 
+    border-color: transparent transparent #f2dede transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
   }
 }
