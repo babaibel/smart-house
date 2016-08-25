@@ -78,14 +78,21 @@
 
 @media (max-width: 1500px) {
   
-  .sensors-2col  .PAU-sensor-table__cell:last-child{
+  .sensors-2col .PAU-sensor-table__cell:last-child{
     display: none;
+  }
+  .PAU-sensor-table .counter .counter-minus, .PAU-sensor-table .counter .counter-plus {
+    width: 32px;
+  }
+  .PAU-sensor-table__buttons .btn {
+    font-size: 10px;
+    padding: 6px 10px;
   }
   .sensors-2col .col-xlg-6 .PAU-sensor-table .iconbg, .sensors-2col .col-xlg-6 .sensor-box .iconbg,
   .sensors-3col .col-xlg-4 .PAU-sensor-table .iconbg, .sensors-3col .col-xlg-4 .sensor-box .iconbg {
     background-size: cover;
     height: 25px;
-    margin: 0 0 0 5px;
+    margin: 0;
     width: 25px;
   }
   .js-power span{
@@ -167,13 +174,68 @@
   .main-2col .buttons-panel--center .btn{
     margin-bottom: 5px;
   }
-  
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 0;
+    min-height: 1000px;
+  }
+
+  .body-small .navbar-static-side {
+    display: none;
+    z-index: 2001;
+    position: absolute;
+    width: 70px;
+  }
+
+  .body-small.mini-navbar .navbar-static-side {
+    display: block;
+  }
+
+  .lock-word {
+    display: none;
+  }
+
+  .navbar-form-custom {
+    display: none;
+  }
+
+  .navbar-header {
+    display: inline;
+    float: left;
+  }
+
+  .sidebard-panel {
+    z-index: 2;
+    position: relative;
+    width: auto;
+    min-height: 100% !important;
+  }
+
+  .sidebar-content .wrapper {
+    padding-right: 0;
+    z-index: 1;
+  }
+
+  .fixed-sidebar.body-small .navbar-static-side {
+    display: none;
+    z-index: 2001;
+    position: fixed;
+    width: @sidebar-width;
+  }
+
+  .fixed-sidebar.body-small.mini-navbar .navbar-static-side {
+    display: block;
+  }
 }
 
 @media (max-width: 1024px) {
   .main-2col .col-xlg-8,
   .main-2col .col-xlg-4 {
     width: 100%!important;
+  }
+  .main-2col li.col-xlg-6{
+    width: 50%!important;
+    float: left;
   }
 }
 
@@ -246,14 +308,16 @@
   .loginscreen.middle-box {
     padding: 30px 0;
   }
+  .main-2col li.col-xlg-6{
+    width: 100%!important;
+  }
 }
 
 @media (max-width: 950px) {
-  .main-2col .col-xlg-9,
-  .main-2col .col-xlg-3 {
-
-    width: 100%!important;
-  }
+  // .main-2col .col-xlg-9,
+  // .main-2col .col-xlg-3 {
+  //   width: 100%!important;
+  // }
   .welcome-message {
     display: none;
   }
@@ -287,58 +351,58 @@
     padding: 0;
   }
 
-  #page-wrapper {
-    position: inherit;
-    margin: 0 0 0 0;
-    min-height: 1000px;
-  }
+  // #page-wrapper {
+  //   position: inherit;
+  //   margin: 0 0 0 0;
+  //   min-height: 1000px;
+  // }
 
-  .body-small .navbar-static-side {
-    display: none;
-    z-index: 2001;
-    position: absolute;
-    width: 70px;
-  }
+  // .body-small .navbar-static-side {
+  //   display: none;
+  //   z-index: 2001;
+  //   position: absolute;
+  //   width: 70px;
+  // }
 
-  .body-small.mini-navbar .navbar-static-side {
-    display: block;
-  }
+  // .body-small.mini-navbar .navbar-static-side {
+  //   display: block;
+  // }
 
-  .lock-word {
-    display: none;
-  }
+  // .lock-word {
+  //   display: none;
+  // }
 
-  .navbar-form-custom {
-    display: none;
-  }
+  // .navbar-form-custom {
+  //   display: none;
+  // }
 
-  .navbar-header {
-    display: inline;
-    float: left;
-  }
+  // .navbar-header {
+  //   display: inline;
+  //   float: left;
+  // }
 
-  .sidebard-panel {
-    z-index: 2;
-    position: relative;
-    width: auto;
-    min-height: 100% !important;
-  }
+  // .sidebard-panel {
+  //   z-index: 2;
+  //   position: relative;
+  //   width: auto;
+  //   min-height: 100% !important;
+  // }
 
-  .sidebar-content .wrapper {
-    padding-right: 0;
-    z-index: 1;
-  }
+  // .sidebar-content .wrapper {
+  //   padding-right: 0;
+  //   z-index: 1;
+  // }
 
-  .fixed-sidebar.body-small .navbar-static-side {
-    display: none;
-    z-index: 2001;
-    position: fixed;
-    width: @sidebar-width;
-  }
+  // .fixed-sidebar.body-small .navbar-static-side {
+  //   display: none;
+  //   z-index: 2001;
+  //   position: fixed;
+  //   width: @sidebar-width;
+  // }
 
-  .fixed-sidebar.body-small.mini-navbar .navbar-static-side {
-    display: block;
-  }
+  // .fixed-sidebar.body-small.mini-navbar .navbar-static-side {
+  //   display: block;
+  // }
 
   .ibox-tools {
     float: right;

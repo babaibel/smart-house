@@ -85,10 +85,15 @@ $(document).ready(function () {
     // End - Плюс минус
 
     // Add body-small class if window less than 768px
-    if ($(this).width() < 769) {
-        $('body').addClass('body-small')
+    if ($(this).width() < 1200) {
+        $('body').addClass('body-small mini-navbar')
     } else {
-        $('body').removeClass('body-ssmall')
+        $('body').removeClass('body-small mini-navbar')
+    }
+
+    // Add body-small class if window less than 768px
+    if ($(this).width() < 769) {
+        $('body').removeClass('mini-navbar')
     }
 
     // MetsiMenu
@@ -364,10 +369,17 @@ $(document).ready(function () {
 
 // Minimalize menu when screen is less than 768px
 $(window).bind("resize", function () {
-    if ($(this).width() < 769) {
-        $('body').addClass('body-small')
+    if ($(this).width() < 1200) {
+        $('body').addClass('body-small mini-navbar')
     } else {
-        $('body').removeClass('body-small')
+        $('body').removeClass('body-small mini-navbar')
+    }
+});
+
+// Minimalize menu when screen is less than 768px
+$(window).bind("resize", function () {
+    if ($(this).width() < 769) {
+        $('body').removeClass('mini-navbar')
     }
 });
 
