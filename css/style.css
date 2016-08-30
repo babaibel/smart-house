@@ -4272,37 +4272,37 @@ table.dataTable thead .sorting {
 }
 .iconbg--signal-000,
 .iconbg--signal-r000 {
-  background: url(../img/mob-signal.png) no-repeat 0 -105px !important;
+  background: url(../img/mob-signal.png) no-repeat center -105px !important;
 }
 .iconbg--signal-001 {
-  background: url(../img/mob-signal.png) no-repeat 0 -84px;
+  background: url(../img/mob-signal.png) no-repeat center -84px;
 }
 .iconbg--signal-010 {
-  background: url(../img/mob-signal.png) no-repeat 0 -63px;
+  background: url(../img/mob-signal.png) no-repeat center -63px;
 }
 .iconbg--signal-011 {
-  background: url(../img/mob-signal.png) no-repeat 0 -42px;
+  background: url(../img/mob-signal.png) no-repeat center -42px;
 }
 .iconbg--signal-100 {
-  background: url(../img/mob-signal.png) no-repeat 0 -21px;
+  background: url(../img/mob-signal.png) no-repeat center -21px;
 }
 .iconbg--signal-101 {
-  background: url(../img/mob-signal.png) no-repeat 0 0;
+  background: url(../img/mob-signal.png) no-repeat center 0;
 }
 .iconbg--signal-r001 {
-  background: url(../img/r-mob-signal.png) no-repeat 0 -84px;
+  background: url(../img/r-mob-signal.png) no-repeat center -84px;
 }
 .iconbg--signal-r010 {
-  background: url(../img/r-mob-signal.png) no-repeat 0 -63px;
+  background: url(../img/r-mob-signal.png) no-repeat center -63px;
 }
 .iconbg--signal-r011 {
-  background: url(../img/r-mob-signal.png) no-repeat 0 -42px;
+  background: url(../img/r-mob-signal.png) no-repeat center -42px;
 }
 .iconbg--signal-r100 {
-  background: url(../img/r-mob-signal.png) no-repeat 0 -21px;
+  background: url(../img/r-mob-signal.png) no-repeat center -21px;
 }
 .iconbg--signal-r101 {
-  background: url(../img/r-mob-signal.png) no-repeat 0 0;
+  background: url(../img/r-mob-signal.png) no-repeat center 0;
 }
 .iconbg--temp {
   background: url(../img/icons/iconbg-termometr.png) no-repeat left top;
