@@ -4594,8 +4594,8 @@ table.dataTable thead .sorting {
   line-height: 8px!important;
   border-radius: 5px!important;
   margin: 0!important;
-  right: 15px;
-  top: 12px;
+  right: 12px;
+  top: 8px;
   position: absolute;
 }
 .navbar-top-links .fa.fa-gear {
@@ -7271,6 +7271,21 @@ h4.ibox-content__indicator {
   top: -10px;
   left: 50%;
   margin-left: -5px;
+}
+body.mini-navbar .navbar-static-side .nav-settings {
+  padding: 14px 15px;
+}
+body.mini-navbar .navbar-static-side .nav-settings .iconbg--signal {
+  display: block;
+  margin: 0 auto;
+}
+body.mini-navbar .navbar-static-side .nav-settings__signal {
+  float: none;
+}
+body.mini-navbar .navbar-static-side .nav > li > a i {
+  display: block;
+  margin-right: 0;
+  text-align: center;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -11219,7 +11234,7 @@ body.md-skin {
     padding-left: 7px;
   }
   .table--user {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: normal;
   }
   .table--user .hidden-title {
@@ -11268,7 +11283,7 @@ body.md-skin {
   .table.table--user > thead > tr > td,
   .table.table--user > tbody > tr > td,
   .table.table--user > tfoot > tr > td {
-    padding: 4px;
+    padding: 4px 3px!important;
     vertical-align: middle;
   }
   .buttons-panel--system {
