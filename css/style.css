@@ -6820,6 +6820,9 @@ h4.ibox-content__indicator {
   display: block;
   width: 94px;
 }
+.calendar-container .schedule-temp--red {
+  background: #b3e3f5 !important;
+}
 .schedule-temp {
   border: 1px solid #ffffff;
   background: #f3f3f4;
