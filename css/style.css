@@ -3558,10 +3558,6 @@ input:checked:hover + .checkbox__view {
 .checkbox-col {
   width: 100px;
 }
-.checkbox-col .del-line-btn {
-  float: none;
-  display: inline-block;
-}
 .btn-delete {
   float: right;
   font-size: 11px!important;
