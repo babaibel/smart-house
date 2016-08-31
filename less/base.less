@@ -557,6 +557,18 @@ code {
     }
     .iconbg{
       background-position: left bottom;
+      &--battery1{
+        background: url(../img/icons/iconbg-battery.png) no-repeat right -72px!important;
+      }
+      &--battery2{
+        background: url(../img/icons/iconbg-battery.png) no-repeat right -48px!important;
+      }
+      &--battery3{
+        background: url(../img/icons/iconbg-battery.png) no-repeat right -24px!important;
+      }
+      &--battery4{
+        background: url(../img/icons/iconbg-battery.png) no-repeat right 0!important;
+      }
     }
   }
   &--orange{
@@ -3123,4 +3135,11 @@ body.mini-navbar .navbar-static-side{
     margin-right: 0;
     text-align: center;
   }
+}
+
+.ibox-title .form-group{
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 20px;
 }
