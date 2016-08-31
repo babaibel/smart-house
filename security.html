@@ -234,6 +234,13 @@
             </div>
 
                     <div class="wrapper wrapper-content">
+						
+                        <div class="buttons-panel buttons-panel--bottom">
+                            <div class="form-group">
+	                            <input type="checkbox" checked class="i-checks" name="input[]">
+	                            <span class="i-checks__label">Отображать на главной</span>
+	                        </div>
+                        </div>
 
                         <ul class="row animated fadeIn sensors-3col" id="draggablePanelList">
                             <li class="col-xlg-4 col-lg-4">
@@ -359,10 +366,7 @@
                             <div class="ibox ibox--nobg">
                                 <div class="ibox-title clearfix">
                                     <h3 class="security-title">Датчики, участвующие в охране</h3>
-                                    <div class="form-group">
-                                        <input type="checkbox" checked class="i-checks" name="input[]">
-                                        <span class="i-checks__label">Отображать на главной</span>
-                                    </div>
+                                    <a class="btn btn-sm btn-orange btn-right" href="javascript:void(0)">СКРЫТЬ ЗОНЫ ОХРАНЫ</a>
                                 </div>
                                 <div class="ibox-content">
                                     <div class="table-responsive">
@@ -431,7 +435,9 @@
                                                     <td class="checkbox-col"><input type="checkbox"  class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox"  class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><button type="button" class="del-line-btn"></button></td>
+                                                    <td>
+					                                    <button type="button" class="del-line-btn"></button>
+					                                </td>
                                                 </tr>
                                                 <tr>
                                                     <td><span class="iconbg iconbg--temp iconbg--temp-sm"></span></td>
@@ -442,7 +448,9 @@
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><button type="button" class="del-line-btn"></button></td>
+                                                    <td>
+					                                    <button type="button" class="del-line-btn"></button>
+					                                </td>
                                                 </tr>
                                                 <tr>
                                                     <td><span class="iconbg iconbg--temp iconbg--temp-sm"></span></td>
@@ -452,8 +460,10 @@
                                                     <td><span class="sensors-table__data">78AFGTDZ</span></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><button type="button" class="del-line-btn"></button></td>
+                                                    <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
+                                                    <td>
+					                                    <button type="button" class="del-line-btn"></button>
+					                                </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -464,7 +474,7 @@
                                     </div>
                                     <div class="buttons-panel buttons-panel--bottom">
                                         <a class="btn btn-sm btn-white btn-add" data-toggle="modal" data-target="#myModal4" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить датчики</a>
-                                        <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить отмеченные</a>
+                                        <!-- <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить отмеченные</a> -->
                                     </div>
                                 </div>
                             </div>

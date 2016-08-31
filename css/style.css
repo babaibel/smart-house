@@ -7317,10 +7317,7 @@ body.mini-navbar .navbar-static-side .nav > li > a i {
   margin-right: 0;
   text-align: center;
 }
-.ibox-title .form-group {
-  float: right;
-  display: inline-block;
-  vertical-align: middle;
+.buttons-panel .form-group {
   margin: 0 0 0 20px;
 }
 /* SEARCH PAGE */
