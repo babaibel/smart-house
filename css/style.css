@@ -1238,6 +1238,13 @@ button.dim:active:before {
   background: #59c2e9;
   border: 1px solid #59c2e9;
 }
+.btn-light-blue {
+  color: #fff!important;
+  text-transform: uppercase;
+  font-weight: 400!important;
+  background: #86d3ef;
+  border: 1px solid #86d3ef;
+}
 .btn-light-orange {
   color: #fff!important;
   text-transform: uppercase;
@@ -6852,6 +6859,7 @@ h4.ibox-content__indicator {
 }
 .schedule-temp-wr {
   margin: 15px 0;
+  text-align: center;
 }
 .schedule-temp tr td:first-child {
   cursor: default;
@@ -6872,6 +6880,10 @@ h4.ibox-content__indicator {
 .schedule-temp .tbl-active--last {
   border-top: 0;
 }
+.schedule-temp--left {
+  display: inline-block;
+  vertical-align: middle;
+}
 .schedule-temp-panel {
   text-align: center;
   margin: 15px 0 0;
@@ -6890,6 +6902,23 @@ h4.ibox-content__indicator {
 .schedule-temp-panel__label {
   margin-top: 10px;
   font-size: 12px;
+}
+.schedule-temp-panel--right {
+  display: inline-block;
+  visibility: hidden;
+  margin: 0 0 0 30px;
+  vertical-align: middle;
+  transition: all 0.3s ease 0s;
+}
+.schedule-temp-panel--right > div {
+  display: block;
+  margin: 0 0 10px;
+}
+.schedule-temp-panel--right > div .btn {
+  width: 135px;
+}
+.schedule-temp-panel--right.active {
+  visibility: visible;
 }
 .power-btn {
   display: inline-block;
@@ -6944,6 +6973,13 @@ h4.ibox-content__indicator {
 .press-btn.btn-blue:active,
 .press-btn.btn-blue.active {
   box-shadow: 0 0 0 #1783ac inset, 0 2px 0 0 #1783ac;
+}
+.press-btn.btn-light-blue {
+  box-shadow: 0 0 0 #1a95c2 inset, 0 5px 0 0 #1a95c2;
+}
+.press-btn.btn-light-blue:active,
+.press-btn.btn-light-blue.active {
+  box-shadow: 0 0 0 #1a95c2 inset, 0 2px 0 0 #1a95c2;
 }
 .press-btn.btn-light-red {
   box-shadow: 0 0 0 #ac3317 inset, 0 5px 0 0 #ac3317;
@@ -7323,6 +7359,19 @@ body.mini-navbar .navbar-static-side .nav > li > a i {
 }
 .buttons-panel .form-group {
   margin: 0 0 0 20px;
+}
+.form-control--hysteresis {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 17px;
+  margin: 5px 10px;
+  padding: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
 }
 /* SEARCH PAGE */
 .search-form {
@@ -11245,7 +11294,10 @@ body.md-skin {
 }
 @media (max-width: 1500px) {
   .sensors-2col .PAU-sensor-table__cell:last-child {
-    display: none;
+    padding-left: 3px;
+  }
+  .PAU-sensor__box tr td {
+    padding: 15px 10px;
   }
   .PAU-sensor-table__buttons .btn {
     font-size: 10px;
@@ -11470,6 +11522,14 @@ body.md-skin {
     margin: 0 auto 5px!important;
     display: block;
     width: 90%;
+  }
+  .schedule-temp-panel--right {
+    margin: 15px 0 30px;
+    display: block;
+  }
+  .schedule-temp-panel--right > div {
+    display: inline-block;
+    margin: 0 10px 10px;
   }
 }
 @media (max-width: 950px) {

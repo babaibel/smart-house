@@ -79,7 +79,10 @@
 @media (max-width: 1500px) {
   
   .sensors-2col .PAU-sensor-table__cell:last-child{
-    display: none;
+    padding-left: 3px;
+  }
+  .PAU-sensor__box tr td{
+    padding: 15px 10px;
   }
   .PAU-sensor-table__buttons .btn {
     font-size: 10px;
@@ -313,7 +316,16 @@
     display: block;
     width: 90%;
   }
-
+  .schedule-temp-panel{
+    &--right{
+      margin: 15px 0 30px;
+      display: block;
+      > div {
+        display: inline-block;
+        margin: 0 10px 10px;
+      }
+    }
+  }
 }
 
 @media (max-width: 950px) {

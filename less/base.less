@@ -2610,6 +2610,7 @@ h4.ibox-content__indicator{
   }
   &-wr{
     margin: 15px 0;
+    text-align: center;
   }
   tr td:first-child{
     cursor: default;
@@ -2630,7 +2631,10 @@ h4.ibox-content__indicator{
       border-top: 0;
     }
   }
-
+  &--left{
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .schedule-temp-panel{
@@ -2642,7 +2646,6 @@ h4.ibox-content__indicator{
     margin-right: 20px;
     &:last-child{
       margin-right: 0;
-      
     }
   }
   .counter{
@@ -2651,6 +2654,23 @@ h4.ibox-content__indicator{
   &__label{
     margin-top: 10px;
     font-size: 12px;
+  }
+  &--right{
+    display: inline-block;
+    visibility: hidden;
+    margin: 0 0 0 30px;
+    vertical-align: middle;
+    transition: all 0.3s ease 0s;
+    > div {
+      display: block;
+      margin: 0 0 10px;
+      .btn {
+          width: 135px;
+      }
+    }
+    &.active{
+      visibility: visible;
+    }
   }
 }
 
@@ -2709,6 +2729,13 @@ h4.ibox-content__indicator{
       box-shadow: 0 0 0 darken(#59c2e9, 25%) inset, 0 2px 0 0 darken(#59c2e9, 25%);
     }
   }
+  &.btn-light-blue{
+    box-shadow: 0 0 0 darken(#59c2e9, 20%) inset, 0 5px 0 0 darken(#59c2e9, 20%);
+    &:active,
+    &.active{
+      box-shadow: 0 0 0 darken(#59c2e9, 20%) inset, 0 2px 0 0 darken(#59c2e9, 20%);
+    }
+  }
   &.btn-light-red{
     box-shadow: 0 0 0 darken(#e97459, 25%) inset, 0 5px 0 0 darken(#e97459, 25%);
     &:active,
@@ -2740,7 +2767,6 @@ h4.ibox-content__indicator{
     }
   }
 }
-
 
 .PAU-sensor{
   min-height: 320px;
@@ -3149,4 +3175,18 @@ body.mini-navbar .navbar-static-side{
 
 .buttons-panel .form-group{
   margin: 0 0 0 20px;
+}
+
+.form-control--hysteresis{
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  height: 24px;
+  line-height: 17px;
+  margin: 5px 10px;
+  padding: 0 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
 }

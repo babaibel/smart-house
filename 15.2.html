@@ -291,7 +291,10 @@
                     </div>
                     <div class="ibox-content">
                         <h4 class="sensor-settings__h4-title">Температура поддержания:</h4>
-                         <div class="schedule-temp-panel js-temp-panel">
+                        <div class="schedule-temp-panel js-temp-panel">
+                            <div>
+                                <a class="btn btn-light-blue press-btn" href="javascript:void(0)">Выключить</a>
+                            </div>
                             <div class="js-change-temp">
                                 <a class="btn btn-blue press-btn" href="javascript:void(0)">Эконом <span class="js-sensor-temp">12</span> <sup>&deg;C</sup></a>
                                 
@@ -340,14 +343,15 @@
                                 <div class="schedule-temp-panel__label">свое значение</div>
                             </div>
                             <div>
-                                <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                                <a class="btn btn-orange press-btn js-show-right-controls" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
                             </div>
                         </div>
                     </div>
                     <div class="ibox-content">
                         <h4 class="sensor-settings__h4-title">График поддержания температуры:</h4>
-                        <div class="schedule-temp-wr table-responsive">
-                            <table class="schedule-temp">
+                        <div class="schedule-temp-wr table-responsive clearfix">
+
+                            <table class="schedule-temp schedule-temp--left">
                                 <tr>
                                     <th>&nbsp;</th>
                                     <th>Пн</th>
@@ -619,6 +623,19 @@
                                     <td class="schedule-temp--red"></td>
                                 </tr>
                             </table>
+
+                            <div class="schedule-temp-panel schedule-temp-panel--right js-temp-panel js-schedule-controls active">
+	                            <div>
+	                                <a class="btn btn-blue press-btn" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
+	                            </div>
+	                            <div>
+	                                <a class="btn btn-light-orange press-btn" href="javascript:void(0)">Стандарт 20</span> <sup>&deg;C</a>
+	                            </div>
+	                            <div>
+	                                <a class="btn btn-light-red press-btn" href="javascript:void(0)">Комфорт 26 <sup>&deg;C</sup></a>
+	                            </div>
+	                        </div>
+
                         </div>
                     </div>
                 </div>
@@ -663,8 +680,10 @@
                                 </div>
                                 <div class="ibox-content min-padding">
                                     <div>
-                                        <div class="sensor-settings__sensor-title">Внимание!</div>
-                                            <div class="sensor-settings__indicator-title">Не меняйте эту настройку без необходимости!</div>
+                                        <span class="sensor-settings__sensor-title">Внимание!</span> <span class="sensor-settings__indicator-title">Не меняйте эту настройку без необходимости!</span>
+
+                                        <input type="text" class="form-control form-control--hysteresis js-from">
+                                            
                                         <div class="hysteresis_slider" id="hysteresis_slider"></div>
                                     </div>
                                 </div>
@@ -747,16 +766,24 @@
                                 <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другое</a>
                             </div>
                         </li>
-                        <li class="col-xlg-8 col-lg-8 col-sm-12">
+                        <li class="col-xlg-4 col-lg-6">
                             <div class="ibox float-e-margins ibox--no-inner-title">
                                 <div class="ibox-content">
                                     <div>
                                         <table class="track-panel track-panel--one-line-setting">
                                             <tr>
                                                 <td>
-                                                    <div>Отключать циркуляцию по истечении<input type="text" class="form-control">секунд после отключения прибора отопления</div>
+                                                    <div>Отключать насос спустя <input type="text" class="form-control">секунд после отопителя</div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                        		<td>
+                                        			<div class="form-group">
+				                                        <input type="checkbox" checked class="i-checks" name="input[]">
+				                                        <span class="i-checks__label">Не отключать насос никогда</span>
+				                                    </div>
+                                        		</td>
+                                        	</tr>
                                         </table>
                                     </div>
                                 </div>
@@ -978,16 +1005,46 @@
     </script>
 
     <script>
+
         $("#hysteresis_slider").ionRangeSlider({
             min: 0.5,
             max: 5,
             type: 'single',
             from: 0.5,
-            step: 0.5,
-            prettify: false,
-            hasGrid: true
-            
+            step: 0.1,
+           	grid: true,
+    		grid_num: 36,
+    		onChange: function (data) {
+		        $(".js-from").prop("value", data.from);
+		    },
         });
+
+        var slider = $("#hysteresis_slider").data("ionRangeSlider");
+
+		var from1;
+
+	    $(".js-from").on("change", function () {
+
+	       	from1 = +$(this).prop("value");
+	        if (from1 < 0.5) {
+	            from1 = 0.5;
+	        }
+	        if (from1 > 5) {
+	            from1 = 5;
+	        }
+
+	        slider.update({
+				from: from1
+			});
+	        
+	    });
+
+    </script>
+
+    <script>
+	    $('.js-show-right-controls').click(function() {
+	    	$('.js-schedule-controls').toggleClass('active');
+	    });
     </script>
 
 </body>
