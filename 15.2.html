@@ -1019,12 +1019,10 @@
 		    },
         });
 
-        var slider = $("#hysteresis_slider").data("ionRangeSlider");
-
-		var from1;
+        var slider = $("#hysteresis_slider").data("ionRangeSlider").
+        	from1;
 
 	    $(".js-from").on("change", function () {
-
 	       	from1 = +$(this).prop("value");
 	        if (from1 < 0.5) {
 	            from1 = 0.5;
@@ -1032,11 +1030,9 @@
 	        if (from1 > 5) {
 	            from1 = 5;
 	        }
-
 	        slider.update({
 				from: from1
 			});
-	        
 	    });
 
     </script>
