@@ -4544,6 +4544,18 @@ table.dataTable thead .sorting {
   height: 17px;
   margin: 0;
 }
+.iconbg--pressure {
+  background: url(../img/icons/iconbg-pressure.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.iconbg--level {
+  background: url(../img/icons/iconbg-level.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
 .nav-logo {
   height: 127px;
   line-height: 127px;
