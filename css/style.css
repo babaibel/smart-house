@@ -7141,8 +7141,8 @@ h4.ibox-content__indicator {
 }
 .PAU-sensor-table .ibox-content__indicator {
   text-transform: none;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 22px;
+  line-height: 24px;
 }
 .PAU-sensor-table .counter {
   display: block;
@@ -11311,7 +11311,7 @@ body.md-skin {
   .sensors-2col .PAU-sensor-table .ibox-content__indicator,
   .sensors-3col .PAU-sensor-table .ibox-content__indicator {
     font-size: 17px;
-    line-height: 27px;
+    line-height: 18px;
     text-transform: none;
   }
   .PAU-sensor-table__buttons .btn {
@@ -11340,7 +11340,7 @@ body.md-skin {
   }
   .sensors-3col .PAU-sensor-table .ibox-content__indicator {
     font-size: 17px;
-    line-height: 27px;
+    line-height: 18px;
     text-transform: none;
   }
 }
@@ -11454,7 +11454,7 @@ body.md-skin {
   }
   .sensors-2col .PAU-sensor-table .ibox-content__indicator {
     font-size: 17px;
-    line-height: 27px;
+    line-height: 18px;
     text-transform: none;
   }
 }
