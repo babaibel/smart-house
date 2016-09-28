@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Умный дом - 18</title>
+    <title>Умный дом - 18 (Статистика)</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -240,36 +240,30 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Системы онлайн</h5>
+                            <h5>Системы</h5>
                         </div>
                         <div class="ibox-content">
-                            <div id="ct-chart5" class="ct-chart"></div>
+
+                            <div id="ct-chart5" class="ct-chart">
+                                <ul id="ct-legend5" class="ct-legend ct-legend-inside"></ul>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>Количество пользователей в системе</h5>
                         </div>
                         <div class="ibox-content">
 
-                                <div id="ct-chart6" class="ct-chart"></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Количество систем</h5>
-                        </div>
-                        <div class="ibox-content">
-
-                                <div id="ct-chart7" class="ct-chart"></div>
+                                <div id="ct-chart6" class="ct-chart">
+                                    <ul id="ct-legend6" class="ct-legend ct-legend-inside"></ul>
+                                </div>
 
                         </div>
                     </div>
@@ -305,9 +299,6 @@
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
 
-    <!-- Peity -->
-    <script src="js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="js/demo/peity-demo.js"></script>
 
      <!-- Chartist -->
     <script src="js/plugins/chartist/chartist.min.js"></script>
@@ -332,92 +323,53 @@
     <script>
         $(document).ready(function(){
 
-            // pie chart 1
+            // pie chart 1 - Системы
 
-            var data = {
-                series: [20, 80]
-            };
+            var legend5 = $('#ct-legend5'),
+                dataLabels = {
+                    labels: ['Онлайн', 'Оффлайн', 'Не зарегистрировано']
+                };
+                dataSeries ={
+                    series: [666,222,222]
+                };
 
-            var sum = function(a, b) { return a + b };
-
-            new Chartist.Pie('#ct-chart5', data, {
+            new Chartist.Pie('#ct-chart5', dataSeries, {
                 labelInterpolationFnc: function(value) {
-                    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+                    function getSum(total, num) {return total + num;}
+                    return Math.round(value / dataSeries.series.reduce(getSum) * 100) + '%';
                 }
             });
 
-            // pie chart 2
+            $.each(dataLabels.labels, function(i, val) {
+                var listItem = $('<li />')
+                    .addClass('ct-series-' + i)
+                    .html(val)
+                    .appendTo(legend5);
+            });
 
-            var data2 = {
-              series: [{
-                value: 10,
-                name: 'Пользователь 1',
-                meta: 'Meta One'
-              }, {
-                value: 10,
-                name: 'Пользователь 2'
-              }, {
-                value: 10,
-                name: 'Пользователь 3'
-              }, {
-                value: 10,
-                name: 'Пользователь 4'
-              }, {
-                value: 10,
-                name: 'Пользователь 5'
-              }, {
-                value: 10,
-                name: 'Пользователь 6'
-              }, {
-                value: 10,
-                name: 'Пользователь 7'
-              }, {
-                value: 10,
-                name: 'Пользователь 8'
-              }, {
-                value: 10,
-                name: 'Пользователь 9'
-              }, {
-                value: 10,
-                name: 'Пользователь 10'
-              }]
-            };
 
-            new Chartist.Pie('#ct-chart6', data2, {
-                plugins: [
-                    Chartist.plugins.legend()
-                ],
+            // pie chart 2 - Пользователи
+
+            var legend6 = $('#ct-legend6'),
+                dataUsersLabels = {
+                    labels: ['1 пользователь', '2 пользователя', '3 пользователя', '4 пользователя', '5 пользователей', '6 пользователей', '7 пользователей', '8 пользователей', '9 пользователей', '10 пользователей']
+                };
+                dataUsersSeries ={
+                    series: [15,20,30,40,50,60,70,80,90,10]
+                };
+
+            new Chartist.Pie('#ct-chart6', dataUsersSeries, {
                 labelInterpolationFnc: function(value) {
-                    return value + '%';
+                    function getSum(total, num) {return total + num;}
+                    return Math.round(value / dataUsersSeries.series.reduce(getSum) * 100) + '%';
                 }
             });
 
-            // pie chart 3
-
-            var data3 = {
-              series: [{
-                value: 30,
-                name: 'Онлайн',
-                meta: 'Meta One'
-              }, {
-                value: 10,
-                name: 'Оффлайн'
-              }, {
-                value: 20,
-                name: 'Не зарегистрировано'
-              }, {
-                value: 40,
-                name: 'Всего'
-              }]
-            };
-
-            new Chartist.Pie('#ct-chart7', data3, {
-                plugins: [
-                    Chartist.plugins.legend()
-                ],
-                labelInterpolationFnc: function(value) {
-                    return value + '%';
-                }
+            $.each(dataUsersLabels.labels, function(i, val) {
+                var listItem = $('<li />')
+                    .addClass('ct-series-' + i)
+                    .html(val)
+                    .appendTo(legend6);
             });
 
         });
