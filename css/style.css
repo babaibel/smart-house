@@ -3842,7 +3842,6 @@ table.dataTable thead .sorting {
   position: relative;
   padding-left: 23px;
   margin-bottom: 3px;
-  cursor: pointer;
   font-size: 12px;
 }
 .ct-legend li:before {
