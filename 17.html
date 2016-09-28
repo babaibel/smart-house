@@ -3,618 +3,367 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Умный дом - 17</title>
+	<title>Умный дом - 17</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
-    <!-- <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet"> -->
-    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+	<!-- <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet"> -->
+	<link href="css/plugins/select2/select2.min.css" rel="stylesheet">
 
-    <!-- Toastr style -->
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+	<!-- Toastr style -->
+	<link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
 
-    <!-- Gritter -->
-    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+	<!-- Gritter -->
+	<link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <div id="wrapper">
+	<div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav metismenu" id="side-menu">
-                    <li class="nav-logo">
-                        <a href="#" class="logo">
-                            <img class="logo__img" src="img/logo.png" alt="">
-                            <img class="logo__img--mob" src="img/logo-mob.png" alt="">
-                        </a>
-                    </li>
-                     <li class="nav-settings clearfix">
-                        <div class="nav-settings__signal">
-                            <i class="iconbg iconbg--signal iconbg--signal-101"></i>
-                            <span>MEGAFON</span>
-                        </div>
-                        <span class="nav-settings__status nav-settings__status--online">на связи</span>
-                    </li>
-                    <li class="nav-header">
-                        <div class="profile-element nav nav-second-level"> 
-                            <div class="profile-element__image">
-                                <img src="img/icons/iconbg-home.png" alt="">
-                            </div>
-                            <div class="profile-element__info">
-                                <div class="profile-element__info-house">Дача в Барыбино</div>
-                                <div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
-                                <div class="profile-element__info-system">EctoControl v3</div>
-                            </div>
+		<nav class="navbar-default navbar-static-side" role="navigation">
+			<div class="sidebar-collapse">
+				<ul class="nav metismenu" id="side-menu">
+					<li class="nav-logo">
+						<a href="#" class="logo">
+							<img class="logo__img" src="img/logo.png" alt="">
+							<img class="logo__img--mob" src="img/logo-mob.png" alt="">
+						</a>
+					</li>
+					 <li class="nav-settings clearfix">
+						<div class="nav-settings__signal">
+							<i class="iconbg iconbg--signal iconbg--signal-101"></i>
+							<span>MEGAFON</span>
+						</div>
+						<span class="nav-settings__status nav-settings__status--online">на связи</span>
+					</li>
+					<li class="nav-header">
+						<div class="profile-element nav nav-second-level"> 
+							<div class="profile-element__image">
+								<img src="img/icons/iconbg-home.png" alt="">
+							</div>
+							<div class="profile-element__info">
+								<div class="profile-element__info-house">Дача в Барыбино</div>
+								<div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
+								<div class="profile-element__info-system">EctoControl v3</div>
+							</div>
 
-                        </div>
-                    </li>
-                    <li>
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Главная</span></a>
-                    </li>
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-dashboard"></i> <span class="nav-label">Датчики</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="active"><a href="index.html">Все</a></li>
-                            <li><a href="#">Встроенные</a></li>
-                            <li><a href="#">Проводные ДОП</a></li>
-                            <li><a href="#">Радио</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-power-off"></i> <span class="nav-label">Управление</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li class="active"><a href="index.html">Все</a></li>
-                            <li><a href="#">Встроенные</a></li>
-                            <li><a href="#">Проводные ДОП</a></li>
-                            <li><a href="#">Радио</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Охрана</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-instagram"></i> <span class="nav-label">Фото</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Настройки</span></a>
-                    </li>
-                    
-                </ul>
+						</div>
+					</li>
+					<li>
+						<a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Главная</span></a>
+					</li>
+					<li class="active">
+						<a href="index.html"><i class="fa fa-dashboard"></i> <span class="nav-label">Датчики</span> <span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level">
+							<li class="active"><a href="index.html">Все</a></li>
+							<li><a href="#">Встроенные</a></li>
+							<li><a href="#">Проводные ДОП</a></li>
+							<li><a href="#">Радио</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-power-off"></i> <span class="nav-label">Управление</span><span class="fa arrow"></span></a>
+						<ul class="nav nav-second-level collapse">
+							<li class="active"><a href="index.html">Все</a></li>
+							<li><a href="#">Встроенные</a></li>
+							<li><a href="#">Проводные ДОП</a></li>
+							<li><a href="#">Радио</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-shield"></i> <span class="nav-label">Охрана</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-instagram"></i> <span class="nav-label">Фото</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Настройки</span></a>
+					</li>
+					
+				</ul>
 
-            </div>
-        </nav>
+			</div>
+		</nav>
 
-        <div id="page-wrapper" class="gray-bg dashbard-1">
-            <div class="row border-bottom">
-                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header">
-                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    </div>
-                    <ul class="nav navbar-top-links navbar-right">
-                        <li>
-                            <span class="m-r-sm text-muted welcome-message">28 мая 2016 г. (14:44)</span>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-messages">
-                                <li>
-                                    <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a7.jpg">
-                                        </a>
-                                        <div class="media-body">
-                                            <small class="pull-right">46h ago</small>
-                                            <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/a4.jpg">
-                                        </a>
-                                        <div class="media-body ">
-                                            <small class="pull-right text-navy">5h ago</small>
-                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="dropdown-messages-box">
-                                        <a href="profile.html" class="pull-left">
-                                            <img alt="image" class="img-circle" src="img/profile.jpg">
-                                        </a>
-                                        <div class="media-body ">
-                                            <small class="pull-right">23h ago</small>
-                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="text-center link-block">
-                                        <a href="mailbox.html">
-                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                                <i class="fa fa-gear"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-alerts">
-                                <li>
-                                    <a href="mailbox.html">
-                                        <div>
-                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="profile.html">
-                                        <div>
-                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                            <span class="pull-right text-muted small">12 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="grid_options.html">
-                                        <div>
-                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                            <span class="pull-right text-muted small">4 minutes ago</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <div class="text-center link-block">
-                                        <a href="notifications.html">
-                                            <strong>See All Alerts</strong>
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+		<div id="page-wrapper" class="gray-bg dashbard-1">
+			<div class="row border-bottom">
+				<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+					<div class="navbar-header">
+						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<li>
+							<span class="m-r-sm text-muted welcome-message">28 мая 2016 г. (14:44)</span>
+						</li>
+						<li>
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-gear"></i>
+							</a>
+						</li>
+						<li>
+							<a href="login.html">
+								<i class="fa fa-user"></i> <span class="underline not-mob">Александр Александрович</span>
+							</a>
+						</li>
+						<li>
+							<a href="login.html">
+								<i class="fa fa-sign-out"></i> <span class="not-tab">выход</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 
-                        <li>
-                            <a href="login.html">
-                                <i class="fa fa-user"></i> <span class="underline not-mob">Александр Александрович</span>
-                            </a>
-                        </li>
+			<div class="wrapper wrapper-content">
+				<div class="ibox">
+					<div class="ibox-title">
+						<h5>Все пользователи</h5>
+					</div>
+					<div class="ibox-content">
+						<div class="row">
+							<div class="col-lg-4 col-sm-8">
+								<div class="input-group">
+									<input type="text" class="input form-control" placeholder="Введите значение">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button">Найти</button>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="table-responsive">
+							<table class="table table-striped table--user dataTable" id="user-editable">
+								<thead>
+									<tr>
+										<th class="sorting">
+											<span class="th-text">IMEI</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting_asc">
+											<span class="th-text">Логин</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting_asc_disabled">
+											<span class="th-text">E-mail</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting_desc_disabled">
+											<span class="th-text">Телефон</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">Оператор</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">ПО осн.</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">ПО радио.</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">Система</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">Онлайн</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th class="sorting">
+											<span class="th-text">Вопрос</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th>
+											<span class="th-text">Карта</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th>
+											<span class="th-text">Дата регистрации</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th>
+											<span class="th-text">Последний визит</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th>
+											<span class="th-text th-text--lg">Стереть</span>
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+										<th>
+											<span class="th-text">Удалить</span>
+											
+											<div class="tooltip-container">
+												<a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>123456789012345</td>
+										<td>Medved_Plush</td>
+										<td>Medved@mail.ru</td>
+										<td>+7(929) 012-31-29</td>
+										<td>МЕГАФОН</td>
+										<td>Aug 18 2016 14:06:49</td>
+										<td>14.3.2016</td>
+										<td>V3.0</td>
+										<td><span class="user-status user-status--online">online</span></td>
+										<td><a href="#" class="user-question"></a></td>
+										<td><a href="#" class="user-map"></a></td>
+										<td>Aug 18 2016 14:06:49</td>
+										<td>14.3.2016</td>
+										<td>
+											<button type="button" class="clear-btn"></button>
+										</td>
+										<td>
+											<button type="button" class="del-line-btn"></button>
+										</td>
+									</tr>
+									 <tr>
+										<td>123456789012345</td>
+										<td>Medved_Plush</td>
+										<td>Medved@mail.ru</td>
+										<td>+7(929) 012-31-29</td>
+										<td>МЕГАФОН</td>
+										<td>Aug 18 2016 14:06:49</td>
+										<td>14.3.2016</td>
+										<td>V3.0</td>
+										<td><span class="user-status user-status--online">online</span></td>
+										<td><a href="#" class="user-question"></a></td>
+										<td><a href="#" class="user-map"></a></td>
+										<td>Aug 18 2016 14:06:49</td>
+										<td>14.3.2016</td>
+										<td>
+											<button type="button" class="clear-btn"></button>
+										</td>
+										<td>
+											<button type="button" class="del-line-btn"></button>
+										</td>
+									</tr>
 
-                        <li>
-                            <a href="login.html">
-                                <i class="fa fa-sign-out"></i> <span class="not-tab">выход</span>
-                            </a>
-                        </li>
-                    </ul>
+								</tbody>
+							</table>
+						</div>
+						<div class="buttons-panel buttons-panel--bottom">
+							<div class="dataTables_paginate">
+								<ul class="pagination">
+								<li class="paginate_button previous disabled" id="user-editable_previous"><a href="javascript:void(0)">«</a></li>
+								<li class="paginate_button active"><a href="javascript:void(0)">1</a></li>
+								<li class="paginate_button"><a href="javascript:void(0)">2</a></li>
+								<li class="paginate_button next"><a href="javascript:void(0)">»</a></li>
+								</ul>
+							</div>
+							<a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--xls"></i> выгруЗить в xls</a>
 
-                </nav>
-            </div>
 
-            <div class="wrapper wrapper-content">
-                <div class="ibox">
-                    <div class="ibox-title">
-                        <h5>Все пользователи</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-8">
-                                <div class="input-group">
-                                    <input type="text" class="input form-control" placeholder="Введите значение">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-primary" type="button">Найти</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="table-responsive">
-                            <table class="table table-striped table--user dataTable" id="user-editable">
-                                <thead>
-                                    <tr>
-                                        <th class="sorting">
-                                            <span class="th-text">IMEI</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting_asc">
-                                            <span class="th-text">Логин</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting_asc_disabled">
-                                            <span class="th-text">E-mail</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting_desc_disabled">
-                                            <span class="th-text">Телефон</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Оператор</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">ПО осн.</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">ПО радио.</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Система</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Онлайн</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Вопрос</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Карта</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text th-text--lg">Очистить БД</span>
-                                            <span class="hidden-title">Очистить</span>
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                        <th class="sorting">
-                                            <span class="th-text">Удалить</span>
-                                            
-                                            <div class="tooltip-container">
-                                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>123456789012345</td>
-                                        <td>Medved_Plush</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td>МЕГАФОН</td>
-                                        <td>Aug 18 2016 14:06:49</td>
-                                        <td>14.3.2016</td>
-                                        <td>V3.0</td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                     <tr>
-                                        <td>123456789012345</td>
-                                        <td>Medved_Plush</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td>МЕГАФОН</td>
-                                        <td>Aug 18 2016 14:06:49</td>
-                                        <td>14.3.2016</td>
-                                        <td>V3.0</td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-<!--                                     <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Poplavok</td>
-                                        <td>123456789012341</td>
-                                        <td>Дмитрий Поплавков</td>
-                                        <td>Poplavok@mail.ru</td>
-                                        <td>+7(929) 012-31-25</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medved_Plush</td>
-                                        <td>123456789012345</td>
-                                        <td>Олег Медведович</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Poplavok</td>
-                                        <td>123456789012341</td>
-                                        <td>Дмитрий Поплавков</td>
-                                        <td>Poplavok@mail.ru</td>
-                                        <td>+7(929) 012-31-25</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medved_Plush</td>
-                                        <td>123456789012345</td>
-                                        <td>Олег Медведович</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Poplavok</td>
-                                        <td>123456789012341</td>
-                                        <td>Дмитрий Поплавков</td>
-                                        <td>Poplavok@mail.ru</td>
-                                        <td>+7(929) 012-31-25</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Medved_Plush</td>
-                                        <td>123456789012345</td>
-                                        <td>Олег Медведович</td>
-                                        <td>Medved@mail.ru</td>
-                                        <td>+7(929) 012-31-29</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--online">online</span></td>
-                                        <td><a href="#" class="user-question"></a></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Semen_iFon</td>
-                                        <td>123456789012346</td>
-                                        <td>Семен Айфонин</td>
-                                        <td>iFon@mail.ru</td>
-                                        <td>+7(929) 012-31-21</td>
-                                        <td>МЕГАФОН</td>
-                                        <td></td>
-                                        <td><span class="user-status user-status--offline">offline</span></td>
-                                        <td></td>
-                                        <td><a href="#" class="user-map"></a></td>
-                                        <td>
-                                            <button type="button" class="clear-btn"></button>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="del-line-btn"></button>
-                                        </td>
-                                    </tr> -->
+							<a class="btn btn-orange btn-right" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить пользователя</a>
+						</div>
+					</div>
+				</div>
 
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="buttons-panel buttons-panel--bottom">
-                            <div class="dataTables_paginate">
-                                <ul class="pagination">
-                                <li class="paginate_button previous disabled" id="user-editable_previous"><a href="javascript:void(0)">«</a></li>
-                                <li class="paginate_button active"><a href="javascript:void(0)">1</a></li>
-                                <li class="paginate_button"><a href="javascript:void(0)">2</a></li>
-                                <li class="paginate_button next"><a href="javascript:void(0)">»</a></li>
-                                </ul>
-                            </div>
+				<div class="footer">
+					<div class="pull-right">
+						<strong>8 (800) 200-00-00</strong>
+					</div>
+					<div>
+						Copyright Example Company &copy; 2014-2015
+					</div>
+				</div>
 
-                            <a class="btn btn-orange btn-right" href="javascript:void(0)"><i class="fa fa-plus"></i> Добавить пользователя</a>
-                        </div>
-                    </div>
-                </div>
+			</div>
 
-                <div class="footer">
-                    <div class="pull-right">
-                        <strong>8 (800) 200-00-00</strong>
-                    </div>
-                    <div>
-                        Copyright Example Company &copy; 2014-2015
-                    </div>
-                </div>
+		</div>
+		
+	</div>
 
-            </div>
+	<!-- Mainly scripts -->
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
-        </div>
-        
-    </div>
+	<script src="js/plugins/select2/select2.full.min.js"></script>
 
-    <!-- Mainly scripts -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
-    <script src="js/plugins/select2/select2.full.min.js"></script>
+	<!-- Custom and plugin javascript -->
+	<script src="js/inspinia.js"></script>
+	<script src="js/plugins/pace/pace.min.js"></script>
 
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<!-- Peity -->
+	<script src="js/plugins/peity/jquery.peity.min.js"></script>
+	<script src="js/demo/peity-demo.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+	<!-- iCheck -->
+	<script src="js/plugins/iCheck/icheck.min.js"></script>
 
-    <!-- Peity -->
-    <script src="js/plugins/peity/jquery.peity.min.js"></script>
-    <script src="js/demo/peity-demo.js"></script>
+	<!--<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+	<script src="js/plugins/dataTables/datatables.min.js"></script> -->
 
-    <!-- iCheck -->
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.i-checks-zone').iCheck({
+				checkboxClass: 'icheckbox_square-green icheckbox_square-green2'
+			});
 
-    <!--<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
-    <script src="js/plugins/dataTables/datatables.min.js"></script> -->
+			/* Init DataTables */
+			// var oTable = $('#user-editable').DataTable({
+			//     ordering: true,
+			//     paging: false,
+			//     searching: false,
+			//     "info": false,
+			//     columnDefs: [
+			//         { targets: [7, 8, 9], orderable: false}
+			//     ]
+			// });
 
-    <script>
-        $(document).ready(function(){
-            $('.i-checks-zone').iCheck({
-                checkboxClass: 'icheckbox_square-green icheckbox_square-green2'
-            });
-
-            /* Init DataTables */
-            // var oTable = $('#user-editable').DataTable({
-            //     ordering: true,
-            //     paging: false,
-            //     searching: false,
-            //     "info": false,
-            //     columnDefs: [
-            //         { targets: [7, 8, 9], orderable: false}
-            //     ]
-            // });
-
-        });
-    </script>
+		});
+	</script>
 
 </body>
 </html>

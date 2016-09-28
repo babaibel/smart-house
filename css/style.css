@@ -1092,8 +1092,9 @@ fieldset[disabled] .btn-orange.active {
   text-transform: uppercase;
   font-weight: 400!important;
   font-size: 11px!important;
-  line-height: 25px;
+  line-height: 34px;
   margin-right: 35px;
+  color: #676a6c;
 }
 .btn-doc:hover {
   opacity: .8;
@@ -7204,8 +7205,8 @@ h4.ibox-content__indicator {
   white-space: nowrap;
   padding: 4px 3px;
 }
-.table--user td:nth-last-child(-n+6),
-.table--user th:nth-last-child(-n+6) {
+.table--user td:nth-last-child(-n+8),
+.table--user th:nth-last-child(-n+8) {
   text-align: center;
   width: 5%;
 }
@@ -11924,6 +11925,10 @@ body.md-skin {
     display: block;
     padding-left: 0;
     padding-right: 0;
+  }
+  .btn-doc.btn-right {
+    float: none;
+    margin-top: 10px;
   }
 }
 @media (max-width: 500px) {
