@@ -6209,7 +6209,7 @@ h4.ibox-content__indicator {
 }
 .sensor-settings__box {
   width: auto;
-  margin: 0 auto 35px;
+  margin: 0 auto 15px;
   background: #f3f3f4;
   padding: 15px;
   border-radius: 5px;
@@ -6309,6 +6309,13 @@ h4.ibox-content__indicator {
 .sensor-settings__topline .device-address {
   font-size: 20px;
   line-height: 32px;
+}
+.sensor-settings__textline {
+  text-align: center;
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
 }
 .change-name {
   margin: 7px 0 0;
