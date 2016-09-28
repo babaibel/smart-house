@@ -5959,10 +5959,10 @@ body.mini-navbar.fixed-sidebar .logo-element {
   position: relative;
 }
 .ibox-content__temp-info .ibox-content__indicator sup {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 30px;
   position: absolute;
-  right: -17px;
+  right: -15px;
 }
 .ibox-content__boiler-indicator {
   float: right;
@@ -7241,25 +7241,25 @@ h4.ibox-content__indicator {
 .dashboard-no-header {
   margin-top: 45px;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5,
+.sensors-2col .ibox-title h5,
 .main-2col .ibox-title h5,
-.sensors-3col .col-xlg-4 .ibox-title h5 {
+.sensors-3col .ibox-title h5 {
   white-space: nowrap;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sensors-2col .col-xlg-6 .ibox-title,
+.sensors-2col .ibox-title,
 .main-2col .ibox-title,
-.sensors-3col .col-xlg-4 .ibox-title {
+.sensors-3col .ibox-title {
   position: relative;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5,
+.sensors-2col .ibox-title h5,
 .main-2col .ibox-title h5,
-.sensors-3col .col-xlg-4 .ibox-title {
+.sensors-3col .ibox-title {
   padding-right: 30px;
 }
-.sensors-2col .col-xlg-6 .ibox-title h5 + .ibox-tools,
+.sensors-2col .ibox-title h5 + .ibox-tools,
 .main-2col .ibox-title h5 + .ibox-tools,
 .sensors-3col .ibox-title h5 + .ibox-tools {
   position: absolute;
@@ -11269,23 +11269,45 @@ body.md-skin {
     margin: 0 auto;
   }
 }
+@media (min-width: 1550px) {
+  .sensors-2col .col-xlg-4 .PAU-sensor-table .iconbg,
+  .sensors-2col .col-xlg-4 .sensor-box .iconbg {
+    background-size: cover;
+    height: 25px;
+    margin: 0;
+    width: 25px;
+  }
+  .sensors-2col .PAU-sensor-table .ibox-content__indicator,
+  .sensors-3col .PAU-sensor-table .ibox-content__indicator {
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: none;
+  }
+  .PAU-sensor-table__buttons .btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}
 @media (min-width: 1280px) {
   .sistem-name-box .form-control {
     width: 30%!important;
   }
 }
 @media (min-width: 768px) and (max-width: 1500px) {
-  .col-xlg-6 .ibox-content {
+  .col-xlg-6 .ibox-content,
+  .col-xlg-4 .ibox-content {
     padding: 20px 10px;
   }
-  .col-xlg-6 .sensor-box .ibox-content__temp-info .ibox-content__indicator {
+  .col-xlg-6 .sensor-box .ibox-content__temp-info .ibox-content__indicator,
+  .col-xlg-4 .sensor-box .ibox-content__temp-info .ibox-content__indicator {
     margin-top: -20px;
   }
-  .col-xlg-6 .sensor-box .ibox-content__temp-box {
+  .col-xlg-6 .sensor-box .ibox-content__temp-box,
+  .col-xlg-4 .sensor-box .ibox-content__temp-box {
     margin-bottom: 0;
     bottom: -100%;
   }
-  .sensors-2col .PAU-sensor-table .ibox-content__indicator {
+  .sensors-3col .PAU-sensor-table .ibox-content__indicator {
     font-size: 17px;
     line-height: 27px;
     text-transform: none;
@@ -11327,6 +11349,8 @@ body.md-skin {
   }
   .sensors-2col .col-xlg-6 .PAU-sensor-table .iconbg,
   .sensors-2col .col-xlg-6 .sensor-box .iconbg,
+  .sensors-2col .col-xlg-4 .PAU-sensor-table .iconbg,
+  .sensors-2col .col-xlg-4 .sensor-box .iconbg,
   .sensors-3col .col-xlg-4 .PAU-sensor-table .iconbg,
   .sensors-3col .col-xlg-4 .sensor-box .iconbg {
     background-size: cover;
@@ -11397,6 +11421,11 @@ body.md-skin {
     padding-left: 0;
     text-align: center;
   }
+  .sensors-2col .PAU-sensor-table .ibox-content__indicator {
+    font-size: 17px;
+    line-height: 27px;
+    text-transform: none;
+  }
 }
 @media (max-width: 1200px) {
   .track-panel--calendar {
@@ -11463,15 +11492,76 @@ body.md-skin {
 }
 @media (max-width: 1024px) {
   .main-2col .col-xlg-8,
-  .main-2col .col-xlg-4 {
+  .main-2col > .col-xlg-4 {
     width: 100%!important;
   }
   .main-2col li.col-xlg-6 {
     width: 50%!important;
     float: left;
   }
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .col-lg-1,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-md-1,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #page-wrapper {
+    padding: 0 10px;
+  }
 }
 @media (max-width: 1000px) {
+  .main-2col li.col-xlg-4 {
+    width: 100%!important;
+  }
   .sensor-settings__topline:after {
     content: "";
     display: table;
@@ -11794,6 +11884,7 @@ body.md-skin {
     margin: 0 auto 5px!important;
     display: block;
     width: 80%;
+    white-space: normal;
   }
   .sistem-name-box .btn {
     float: none;
