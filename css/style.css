@@ -6655,6 +6655,9 @@ h4.ibox-content__indicator {
   width: auto!important;
   border-radius: 3px;
 }
+.sistem-name-box .btn {
+  float: right;
+}
 .mgb {
   margin-bottom: 30px;
 }
@@ -11784,6 +11787,14 @@ body.md-skin {
     margin: 0 auto 5px!important;
     display: block;
     width: 80%;
+  }
+  .sistem-name-box .btn {
+    float: none;
+    margin: 0 auto 15px;
+    width: 80%;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (max-width: 500px) {
