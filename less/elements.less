@@ -2915,6 +2915,11 @@ table.dataTable thead .sorting {
   } 
 }
 
+.chart-item{
+  width: 90%;
+  float: left;
+}
+
 .ct-chart {
   position: relative;
   margin: 0 auto;
@@ -2926,6 +2931,7 @@ table.dataTable thead .sorting {
     position: relative;
     z-index: 10;
     list-style: none;
+    padding-left: 0;
 }
 .ct-legend li {
     position: relative;
@@ -2951,8 +2957,10 @@ table.dataTable thead .sorting {
 .ct-legend.ct-legend-inside {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 15px;
     transform: translateY(-50%);
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.5);
 }
 .ct-legend .ct-series-0:before {
     background-color: #10b410;
