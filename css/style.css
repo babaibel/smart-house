@@ -6974,6 +6974,11 @@ h4.ibox-content__indicator {
 .schedule-temp-panel--right.active {
   visibility: visible;
 }
+.schedule-temp-panel__text {
+  width: 135px;
+  text-align: left;
+  line-height: 15px;
+}
 .power-btn {
   display: inline-block;
   border-radius: 50%;
