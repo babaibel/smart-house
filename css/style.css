@@ -11691,6 +11691,9 @@ body.md-skin {
     display: inline-block;
     margin: 0 10px 10px;
   }
+  .chart-item {
+    width: 90%;
+  }
 }
 @media (max-width: 950px) {
   .welcome-message {
