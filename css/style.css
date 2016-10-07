@@ -11691,6 +11691,10 @@ body.md-skin {
     display: inline-block;
     margin: 0 10px 10px;
   }
+  .schedule-temp-panel__text {
+    text-align: center;
+    width: 100%;
+  }
   .chart-item {
     width: 90%;
   }
