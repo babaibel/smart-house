@@ -447,10 +447,6 @@ body.fixed-sidebar.mini-navbar #page-wrapper {
 }
 body.body-small.fixed-sidebar.mini-navbar #page-wrapper {
   -webkit-transform: translateX(220px);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateX(220px);
->>>>>>> origin/Telegram
   transform: translateX(220px);
 }
 body.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
@@ -3842,8 +3838,6 @@ table.dataTable thead .sorting {
   border-radius: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
   -ms-transform: translateY(-50%);
 >>>>>>> origin/Telegram
   transform: translateY(-50%);
@@ -3857,10 +3851,6 @@ table.dataTable thead .sorting {
   top: 50%;
   right: 15px;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
   padding: 5px;
   background: rgba(255, 255, 255, 0.5);
@@ -4839,10 +4829,6 @@ video {
 }
 .animated.modal.fade .modal-dialog {
   -webkit-transform: none;
-<<<<<<< HEAD
-=======
-  -ms-transform: none;
->>>>>>> origin/Telegram
   transform: none;
 }
 .inmodal .modal-title {
@@ -6336,10 +6322,6 @@ h4.ibox-content__indicator {
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
 }
 .sensor-settings__topline--right {
@@ -6347,10 +6329,6 @@ h4.ibox-content__indicator {
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
 }
 .sensor-settings__topline--right > div {
@@ -6412,10 +6390,6 @@ h4.ibox-content__indicator {
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateX(-50%);
->>>>>>> origin/Telegram
   transform: translateX(-50%);
   display: inline-block;
 }
@@ -6426,20 +6400,12 @@ h4.ibox-content__indicator {
 }
 .change-name--right .js-change-name__btn {
   -webkit-transform: none;
-<<<<<<< HEAD
-=======
-  -ms-transform: none;
->>>>>>> origin/Telegram
   transform: none;
   position: absolute;
   left: auto;
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
 }
 .change-name--right .change-name__form {
@@ -6477,10 +6443,6 @@ h4.ibox-content__indicator {
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateX(-50%);
->>>>>>> origin/Telegram
   transform: translateX(-50%);
   display: inline-block;
 }
@@ -6658,10 +6620,6 @@ h4.ibox-content__indicator {
   top: -11px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateX(-50%);
->>>>>>> origin/Telegram
   transform: translateX(-50%);
   background-color: #fff;
   z-index: 2;
@@ -7363,10 +7321,6 @@ h4.ibox-content__indicator {
   top: 50%;
   margin-top: 2px;
   -webkit-transform: translateY(-50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
 }
 .timeline-item .row {
@@ -7428,10 +7382,6 @@ h4.ibox-content__indicator {
   top: 50%;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
-<<<<<<< HEAD
-=======
-  -ms-transform: translate(-50%, -50%);
->>>>>>> origin/Telegram
   transform: translate(-50%, -50%);
 }
 .site-loading-text {
@@ -10090,10 +10040,6 @@ body.landing-page {
 }
 .landing-page .pricing-plan.selected {
   -webkit-transform: scale(1.1);
-<<<<<<< HEAD
-=======
-  -ms-transform: scale(1.1);
->>>>>>> origin/Telegram
   transform: scale(1.1);
   background: #f4f4f4;
 }
@@ -11327,6 +11273,9 @@ body.md-skin {
 
 /* Profile modal */
 
+.profile-modal {
+  width: 1240px;
+}
 .profile-modal td,
 .profile-modal th {
   text-align: left;
@@ -11696,10 +11645,6 @@ body.md-skin {
     position: relative;
     top: auto;
     -webkit-transform: none;
-<<<<<<< HEAD
-=======
-    -ms-transform: none;
->>>>>>> origin/Telegram
     transform: none;
     left: auto;
     right: auto;
@@ -11846,10 +11791,6 @@ body.md-skin {
     position: relative;
     top: auto;
     -webkit-transform: none;
-<<<<<<< HEAD
-=======
-    -ms-transform: none;
->>>>>>> origin/Telegram
     transform: none;
     left: auto;
     right: auto;
@@ -12508,6 +12449,28 @@ body.md-skin {
   padding: 11px 19px;
   font-size: 15px;
   font-weight: 600;
+}
+
+@media (max-width: 1300px) {
+  .profile-modal {
+    width: 656px;
+    box-sizing: border-box;
+  }
+  .profile-modal thead,
+  .profile-modal tbody,
+  .profile-modal tbody span {
+    font-size: 14px;
+  }
+  .profile-modal .modal-body {
+    padding: 20px 20px 60px;
+  }
+  .profile-modal .modal-header {
+    border-bottom: 0;
+    padding: 30px 20px 0;
+  }
+  .profile-modal tr td:first-child {
+    width: auto;
+  }
 }
 
 @media (max-width: 991px) {
