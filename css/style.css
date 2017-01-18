@@ -11704,6 +11704,8 @@ body.md-skin {
     margin: 0 auto 5px!important;
     display: block;
     width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .schedule-temp-panel--right {
     margin: 15px 0 30px;
