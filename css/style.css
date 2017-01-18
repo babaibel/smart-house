@@ -3994,13 +3994,11 @@ table.dataTable thead .sorting {
 }
 .swal2-icon.swal2-error .line.left {
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   left: 17px;
 }
 .swal2-icon.swal2-error .line.right {
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   right: 16px;
 }
@@ -4040,7 +4038,6 @@ table.dataTable thead .sorting {
   height: 120px;
   background: #fff;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .swal2-icon.swal2-success::before {
@@ -4048,10 +4045,8 @@ table.dataTable thead .sorting {
   top: -7px;
   left: -33px;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transform-origin: 60px 60px;
-  -ms-transform-origin: 60px 60px;
   transform-origin: 60px 60px;
 }
 .swal2-icon.swal2-success::after {
@@ -4059,10 +4054,8 @@ table.dataTable thead .sorting {
   top: -11px;
   left: 30px;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transform-origin: 0 60px;
-  -ms-transform-origin: 0 60px;
   transform-origin: 0 60px;
 }
 .swal2-icon.swal2-success .placeholder {
@@ -4085,7 +4078,6 @@ table.dataTable thead .sorting {
   top: 8px;
   z-index: 1;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .swal2-icon.swal2-success .line {
@@ -4101,7 +4093,6 @@ table.dataTable thead .sorting {
   left: 14px;
   top: 46px;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .swal2-icon.swal2-success .line.long {
@@ -4109,7 +4100,6 @@ table.dataTable thead .sorting {
   right: 8px;
   top: 38px;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 .swal2-icon.swal2-success.animate::after {
@@ -11337,9 +11327,6 @@ body.md-skin {
 
 /* Profile modal */
 
-.profile-modal{
-  display: none;
-}
 .profile-modal td,
 .profile-modal th {
   text-align: left;
