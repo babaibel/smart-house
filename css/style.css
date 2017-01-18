@@ -11272,7 +11272,7 @@ body.md-skin {
 /* Profile modal */
 
 .profile-modal{
-  
+  display: none;
 }
 .profile-modal td,
 .profile-modal th {
