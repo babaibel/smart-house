@@ -912,57 +912,59 @@
     
     <!--  Modal  -->
     
-    <div class="modal-dialog profile-modal">
-    	<div class="modal-content">
-            <div class="modal-header">
-                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Выберите систему для отображения</h4>
-            </div>
-            <!--template bindings={}--><div class="modal-body text-center">
-                <div class="text">
-                    <table class="table table-striped sensors-table dataTable">
-                        <thead>
-                        <tr>
-                            <th>Имя
-                            <div class="tooltip-container">
-                                <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
-                            </div>
-                            </th>
-                            <th>Тип</th>
-                            <th>Телефонный номер</th>
-                            <th>IMEI</th>
-                            <th>Состояние</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <!--template bindings={}--><tr style="cursor: pointer">
-                            <td>nevvod</td>
-                            <td>EctoControl v3.1</td>
-                            <td>+7 937 165-02-22</td>
-                            <td>123456789012345</td>
-                            <td>
-                                <!--template bindings={}-->
-                                <!--template bindings={}--><span class="sensors-table__data sensors-table__data--green">
-                                   на связи
-                                </span>
-                            </td>
-                        </tr><tr style="cursor: pointer">
-                            <td>Березовая роща</td>
-                            <td>EctoControl v3.1</td>
-                            <td>+7 937 165-02-22</td>
-                            <td>866104023146395</td>
-                            <td>
-                                <!--template bindings={}-->
-                                <!--template bindings={}--><span class="sensors-table__data sensors-table__data--red">
-                                   нет связи
-                                </span>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+    <div class="modal inmodal">
+        <div class="modal-dialog modal-lg profile-modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Выберите систему для отображения</h4>
+              </div>
+              <!--template bindings={}--><div class="modal-body text-center">
+                  <div class="text">
+                      <table class="table table-striped sensors-table dataTable">
+                          <thead>
+                          <tr>
+                              <th>Имя
+                              <div class="tooltip-container">
+                                  <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                              </div>
+                              </th>
+                              <th>Тип</th>
+                              <th>Телефонный номер</th>
+                              <th>IMEI</th>
+                              <th>Состояние</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <!--template bindings={}--><tr style="cursor: pointer">
+                              <td>nevvod</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>123456789012345</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--green">
+                                     на связи
+                                  </span>
+                              </td>
+                          </tr><tr style="cursor: pointer">
+                              <td>Березовая роща</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>866104023146395</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--red">
+                                     нет связи
+                                  </span>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 
     <!-- Mainly scripts -->
