@@ -4248,6 +4248,23 @@ table.dataTable thead .sorting {
   padding: 15px 20px;
   border-bottom: 1px solid #e7eaec;
 }
+.profile-element {
+  position: relative;
+}
+.profile-element__arrow {
+	position: absolute;
+	right: 2px;
+	top: 22px;
+	text-align: center;
+	cursor: pointer;
+}
+.profile-element__arrow i {
+	color: #fff;
+	width: 13px;
+	height: 13px;
+	background: #5b5f62;
+	border-radius: 2px;
+}
 .profile-element:after {
   clear: both;
   content: "";
@@ -11251,6 +11268,44 @@ body.md-skin {
   position: fixed;
   display: none;
 }
+
+/* Profile modal */
+
+.profile-modal{
+  
+}
+.profile-modal td,
+.profile-modal th {
+  text-align: left;
+}
+.profile-modal .modal-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+.profile-modal .modal-header {
+  border-bottom: 0;
+  padding: 30px 35px 0;
+}
+.profile-modal .modal-body {
+  padding: 20px 35px 60px;
+}
+.profile-modal thead {
+  font-size: 16px;
+  font-weight: bold;
+}
+.profile-modal tr td:first-child {
+  width: 20%;
+}
+.profile-modal tbody,
+.profile-modal tbody span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.profile-modal .tooltip-label {
+  margin-top: -1px;
+}
+
 @media (min-width: 1560px) {
   .col-xlg-4 {
     width: 33.3333%!important;
