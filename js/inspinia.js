@@ -7,8 +7,19 @@
 
 
 $(document).ready(function () {
+  
+    // Show/hide menu on click, 1024px and more
+    $('.minimalize-styl-2').on( 'click', function(e) {
+      e.preventDefault();
+
+      if( $(window).width() > 1023 ) {
+        $('body').toggleClass('body-small mini-navbar');
+      }
+
+    });
+  
     // Add body-small class if window less than 768px
-    if ($(this).width() < 1200) {
+    if ($(this).width() < 1024) {
         $('body').addClass('body-small mini-navbar')
     } else {
         $('body').removeClass('body-small mini-navbar')
@@ -99,7 +110,7 @@ $(document).ready(function () {
 
 // Minimalize menu when screen is less than 768px
 $(window).bind("resize", function () {
-    if ($(this).width() < 1200) {
+    if ($(this).width() < 1024) {
         $('body').addClass('body-small mini-navbar')
     } else {
         $('body').removeClass('body-small mini-navbar')
@@ -132,5 +143,7 @@ function animationHover(element, animation) {
             }, 2000);
         });
 } 
+
+  
 
 
