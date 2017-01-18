@@ -12206,8 +12206,20 @@ body.md-skin {
   display: inline-block;
 }
 
-.icon-clock {
+.icon-clock,
+.icon-lock {
   position: relative;
+}
+
+.icon-lock:after {
+  content: '';
+  display: block;
+  width: 17px;
+  height: 22px;
+  background: #fff url(../img/lock.png) no-repeat center;
+  position: absolute;
+  left: -9px;
+  top: -12px;
 }
 
 .icon-clock:after {
