@@ -372,7 +372,7 @@
   
   <!--  Modal  -->
     
-  <div class="modal inmodal">
+  <div class="modal inmodal" id="modal-history">
   <div class="modal-dialog history-modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -456,7 +456,16 @@
   <script src="js/inspinia.js"></script>
   <script src="js/plugins/pace/pace.min.js"></script>
 
-
+  <script>
+        $(document).ready(function () {
+            
+          $('.history-select__btn').on( 'click', function(e) {
+            e.preventDefault();
+            $('#modal-history').modal('show');
+          });
+          
+        });
+    </script>
   
 
 </body>
