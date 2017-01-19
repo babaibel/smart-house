@@ -324,6 +324,37 @@
                   </div>
                 </form>
               </div>
+              <div class="history-search">
+                <form action="">
+                  <label for="history-search__input-id">Поиск по журналу:</label>
+                  <input type="text" id="history-search__input-id" class="form-control history-search__input">
+                  <button class="btn btn-orange history-search__btn">ИСКАТЬ</button>
+                </form>
+              </div>
+              <div class="history-table">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Дата и время</th>
+                      <th>Событие</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2016-05-01 16:44:46 </td>
+                      <td>Текстовое описание события Текстовое описание события Текстовое описание события Текстовое описание события </td>
+                    </tr>
+                    <tr>
+                      <td>2016-05-01 16:44:46 </td>
+                      <td>Текстовое описание события Текстовое описание события Текстовое описание события Текстовое описание события </td>
+                    </tr>
+                    <tr>
+                      <td>2016-05-01 16:44:46 </td>
+                      <td>Текстовое описание события Текстовое описание события Текстовое описание события Текстовое описание события </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -338,6 +369,75 @@
       </div>
     </div>
   </div>
+  
+  <!--  Modal  -->
+    
+  <div class="modal inmodal">
+  <div class="modal-dialog history-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">Отображать датчики</h4> </div>
+      <!--template bindings={}-->
+      <div class="modal-body text-center">
+        <div class="text">
+          <table class="table table-striped sensors-table dataTable">
+            <thead>
+              <tr>
+                <th>Тип
+                  <div class="tooltip-container">
+                    <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                  </div>
+                </th>
+                <th>Имя
+                  <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                </th>
+                <th>ID</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--template bindings={}-->
+              <tr style="cursor: pointer">
+                <td><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i></td>
+                <td>Движение коридор</td>
+                <td><b>2B8286</b></td>
+                <td>
+                  <div class="history-checks__checkbox">
+                    <input type="checkbox" checked>
+                    <span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr style="cursor: pointer">
+                <td><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i></td>
+                <td>Движение спальня</td>
+                <td><b>2B8286</b></td>
+                <td>
+                  <div class="history-checks__checkbox">
+                    <input type="checkbox" checked>
+                    <span></span>
+                  </div>
+                </td>
+              </tr>
+              <tr style="cursor: pointer">
+                <td><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i></td>
+                <td>Движение гостинная</td>
+                <td><b>2B8286</b></td>
+                <td>
+                  <div class="history-checks__checkbox">
+                    <input type="checkbox">
+                    <span></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Mainly scripts -->
   <script src="js/jquery-2.1.1.js"></script>

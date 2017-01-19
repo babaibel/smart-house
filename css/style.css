@@ -12674,6 +12674,92 @@ body.md-skin {
   border: none;
   border-radius: 0;
   text-align: center;
+  font-size: 12px;
+}
+
+.history-search {
+  background: #fff;
+  padding: 11px 30px;
+  border-top: 1px solid #e7eaec;
+  margin-top: 10px;
+}
+
+.history-search label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3e3e3e;
+  margin-right: 15px;
+  vertical-align: middle;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.history-search__input {
+  width: 330px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.history-search__btn {
+  border-radius: 0!important;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 34px;
+  padding: 0 16px;
+  border: 0;
+}
+
+.history-table {
+  margin-top: 20px;
+}
+
+.history-table tr td:first-child {
+  width: 25%;
+}
+
+.history-table td {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.history-table th {
+  font-size: 12px;
+}
+
+.history-modal .modal-title {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.history-modal .modal-header {
+  padding: 24px 25px 38px;
+  border-bottom: 0;
+}
+
+.history-modal .modal-body {
+  padding: 0 25px 65px;
+}
+
+.history-modal td,
+.history-modal th {
+  font-size: 12px;
+  text-align: left;
+}
+
+.history-modal b {
+  font-weight: bold;
+  color: #000;
+}
+
+.history-modal i {
+  font-size: 20px;
+  color: #000;
+}
+
+.history-modal tr td:last-child {
+  text-align: right;
 }
 
 @media (max-width: 1300px) {
@@ -12702,6 +12788,21 @@ body.md-skin {
   .telegram-header__search .form-control {
     width: 284px;
   }
+  .history-time {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .history-date {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-search label {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 682px) {
@@ -12729,6 +12830,14 @@ body.md-skin {
   }
   .telegram-msg__item--right .telegram-msg__content{
     padding-left: 20px;
+  }
+  .history-select label {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .history-search__input {
+    width: 73%;
   }
 }
 
@@ -12766,5 +12875,22 @@ body.md-skin {
   }
   .telegram-msg__content-text p{
     font-size: 14px;
+  }
+  .history-select select {
+    margin-bottom: 10px;
+  }
+  .history-select__btn {
+    margin-bottom: 10px;
+  }
+  .history-search__input{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .history-search {
+    padding: 20px;
+  }
+  .history-table tr td:first-child {
+    width: 28%;
   }
 }
