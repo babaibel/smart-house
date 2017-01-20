@@ -11,6 +11,8 @@
 
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  
+  <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -260,43 +262,37 @@
                     <div class="history-checks">
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox1">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox1">
                         </div>
                         <label for="history-checks__checkbox1">Входящие СМС</label>
                       </div>
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox2">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox2">
                         </div>
                         <label for="history-checks__checkbox2">Входящие звонки</label>
                       </div>
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox3">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox3">
                         </div>
                         <label for="history-checks__checkbox3">Системные события</label>
                       </div>
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox4">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox4">
                         </div>
                         <label for="history-checks__checkbox4">Исходящие СМС</label>
                       </div>
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox5">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox5">
                         </div>
                         <label for="history-checks__checkbox5">Исходящие звонки</label>
                       </div>
                       <div class="history-checks__item">
                         <div class="history-checks__checkbox">
-                          <input type="checkbox" id="history-checks__checkbox6">
-                          <span></span>
+                          <input type="checkbox" name="input[]" class="i-checks" id="history-checks__checkbox6">
                         </div>
                         <label for="history-checks__checkbox6">Охрана</label>
                       </div>
@@ -304,7 +300,7 @@
                     <div class="history-selects">
                       <div class="history-select">
                         <label for="history-select__1">Датчики</label>
-                        <select id="history-select__1">
+                        <select class="form-control" id="history-select__1">
                           <option value="">Все датчики температуры</option>
                           <option value="">Все датчики температуры</option>
                           <option value="">Все датчики температуры</option>
@@ -313,7 +309,7 @@
                       </div>
                       <div class="history-select">
                         <label for="history-select__2">Устройства управления</label>
-                        <select id="history-select__2">
+                        <select class="form-control" id="history-select__2">
                           <option value="">Все датчики температуры</option>
                           <option value="">Все датчики температуры</option>
                           <option value="">Все датчики температуры</option>
@@ -321,6 +317,9 @@
                         <a href="#" class="btn btn-orange history-select__btn">ВЫБРАТЬ</a>
                       </div>
                     </div>
+                  </div>
+                  <div class="history__refresh">
+                    <a href="#" class="btn btn-orange">Обновить</a>
                   </div>
                 </form>
               </div>
@@ -354,6 +353,18 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <div class="buttons-panel buttons-panel--bottom">
+                  <div class="dataTables_paginate">
+                      <ul class="pagination">
+                      <li class="paginate_button previous disabled" id="user-editable_previous"><a href="javascript:void(0)">«</a></li>
+                      <li class="paginate_button active"><a href="javascript:void(0)">1</a></li>
+                      <li class="paginate_button"><a href="javascript:void(0)">2</a></li>
+                      <li class="paginate_button next"><a href="javascript:void(0)">»</a></li>
+                      </ul>
+                  </div>
+                  <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--xls"></i> выгруЗить в xls</a>
+                  <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--pdf"></i> выгруЗить в PDF</a>
               </div>
             </div>
           </div>
@@ -404,8 +415,7 @@
                 <td><b>2B8286</b></td>
                 <td>
                   <div class="history-checks__checkbox">
-                    <input type="checkbox" checked>
-                    <span></span>
+                    <input type="checkbox" name="input[]" class="i-checks" checked>
                   </div>
                 </td>
               </tr>
@@ -415,8 +425,7 @@
                 <td><b>2B8286</b></td>
                 <td>
                   <div class="history-checks__checkbox">
-                    <input type="checkbox" checked>
-                    <span></span>
+                    <input type="checkbox" name="input[]" class="i-checks" checked>
                   </div>
                 </td>
               </tr>
@@ -426,8 +435,7 @@
                 <td><b>2B8286</b></td>
                 <td>
                   <div class="history-checks__checkbox">
-                    <input type="checkbox">
-                    <span></span>
+                    <input type="checkbox" name="input[]" class="i-checks">
                   </div>
                 </td>
               </tr>
@@ -455,18 +463,25 @@
   <!-- Custom and plugin javascript -->
   <script src="js/inspinia.js"></script>
   <script src="js/plugins/pace/pace.min.js"></script>
+  
+  <!-- iCheck -->
+  <script src="js/plugins/iCheck/icheck.min.js"></script>
 
   <script>
-        $(document).ready(function () {
-            
-          $('.history-select__btn').on( 'click', function(e) {
-            e.preventDefault();
-            $('#modal-history').modal('show');
-          });
-          
+      $(document).ready(function () {
+
+        $('.history-select__btn').on( 'click', function(e) {
+          e.preventDefault();
+          $('#modal-history').modal('show');
         });
-    </script>
-  
+
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+
+      });
+  </script>
 
 </body>
 
