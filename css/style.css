@@ -12484,6 +12484,10 @@ body.md-skin {
   transform: rotate(180deg);
 }
 
+.ibox-content_select {
+  padding: 4px 10px 8px!important;
+}
+
 .ibox-content__select {
   margin-top: 10px;
   text-align: center;
@@ -12499,9 +12503,9 @@ body.md-skin {
 .ibox-content__select select {
   color: #313131;
   font-size: 16px;
-  width: 138px;
-  height: 40px;
-  padding-left: 17px;
+  width: 120px;
+  height: 30px;
+  padding-left: 10px;
   border: 1px solid #e5e6e7;
 }
 
@@ -12736,7 +12740,7 @@ body.md-skin {
   .profile-modal thead,
   .profile-modal tbody,
   .profile-modal tbody span {
-    font-size: 14px;
+    font-size: 13px;
   }
   .profile-modal .modal-body {
     padding: 20px 20px 60px;
@@ -12747,6 +12751,10 @@ body.md-skin {
   }
   .profile-modal tr td:first-child {
     width: auto;
+  }
+  .profile-modal th {
+    text-align: center!important;
+    vertical-align: middle!important;
   }
 }
 
