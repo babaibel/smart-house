@@ -6222,6 +6222,8 @@ h4.ibox-content__indicator {
 }
 .sensor-box .ibox-content__indicator {
   font: 600 20px/32px "open sans", sans-serif;
+  display: inline-block;
+  vertical-align: middle;
 }
 .center-box {
   text-align: center!important;
@@ -12484,29 +12486,22 @@ body.md-skin {
   transform: rotate(180deg);
 }
 
-.ibox-content_select {
-  padding: 4px 10px 8px!important;
-}
-
 .ibox-content__select {
   margin-top: 10px;
   text-align: center;
   margin-bottom: 10px;
-}
-
-.ibox-content__select span {
-  color: #313131;
-  font-size: 16px;
-  margin-right: 7px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .ibox-content__select select {
   color: #313131;
   font-size: 16px;
-  width: 120px;
+  width: 115px;
   height: 30px;
-  padding-left: 10px;
+  padding-left: 5px;
   border: 1px solid #e5e6e7;
+  margin-left: 5px;
 }
 
 .ibox-content__select select:focus {
