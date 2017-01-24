@@ -19,6 +19,8 @@
 
     <!-- Gritter -->
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -523,6 +525,142 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-primary">Добавить</button>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ibox ibox--nobg ibox--signaling">
+                                <div class="ibox-title clearfix">
+                                    <h3 class="security-title">Управление сиреной</h3>
+                                </div>
+                                <div class="ibox-content clearfix">
+                                    <div class="signaling-toggle">
+                                      <div class="ibox float-e-margins">
+										  <div class="ibox-title">
+                                                <div class="ibox-tools ibox-tools--left">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <h5>Реле ABC</h5>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div>
+                                                    <table class="sensor-box">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <div class="ibox-content__indicator js-power">
+                                                                    <span>Выкл</span>
+                                                                    <a class="btn power-btn" href="javascript:void(0)"><i class="fa fa-power-off"></i></a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <!-- <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i> -->
+                                                                <i class="iconbg iconbg--onoff"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttons-panel">
+                                            <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другой</a>
+                                        </div>
+                                    </div>
+                                    <div class="signaling-content">
+                                      <form action="">
+                                        <div class="signaling-content-select">
+                                          <label for="signaling--select">Включать</label>
+                                          <select class="form-control" id="signaling--select">
+                                            <option value="">до снятия с охраны</option>
+                                            <option value="">на 5 сек</option>
+                                            <option value="">на 10 сек</option>
+                                            <option value="">на 1 мин</option>
+                                            <option value="">на 10 мин</option>
+                                          </select>
+                                        </div>
+                                        <div class="signaling-content-checkbox">
+                                          <label for="signaling--checkbox">Подтверждать постановку и снятие</label>
+                                          <input type="checkbox" id="signaling--checkbox" class="i-checks">
+                                        </div>
+                                      </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ibox ibox--nobg ibox--signaling">
+                                <div class="ibox-title clearfix">
+                                    <h3 class="security-title">Управление светом</h3>
+                                </div>
+                                <div class="ibox-content clearfix">
+                                    <div class="signaling-toggle">
+                                      <div class="ibox float-e-margins">
+										  <div class="ibox-title">
+                                                <div class="ibox-tools ibox-tools--left">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                        <i class="fa fa-wrench"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-user">
+                                                        <li><a href="#">Config option 1</a>
+                                                        </li>
+                                                        <li><a href="#">Config option 2</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <h5>Реле ABC</h5>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div>
+                                                    <table class="sensor-box">
+                                                        <tbody><tr>
+                                                            <td>
+                                                                <div class="ibox-content__indicator js-power">
+                                                                    <span>Выкл</span>
+                                                                    <a class="btn power-btn" href="javascript:void(0)"><i class="fa fa-power-off"></i></a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <!-- <i class="iconbg iconbg--wifi"></i>
+                                                                <i class="iconbg iconbg--battery"></i> -->
+                                                                <i class="iconbg iconbg--onoff"></i>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+
+                                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttons-panel">
+                                            <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-refresh"></i> выбрать другой</a>
+                                        </div>
+                                    </div>
+                                    <div class="signaling-content">
+                                      <form action="">
+                                        <div class="signaling-content-select">
+                                          <label for="signaling--select2">Режим работы</label>
+                                          <select class="form-control" id="signaling--select2">
+                                            <option value="">включать при охране</option>
+                                            <option value="">гореть при охране</option>
+                                            <option value="">мигать при охране</option>
+                                          </select>
+                                        </div>
+                                        <div class="signaling-content-checkbox">
+                                          <label for="signaling--checkbox2">Подтверждать постановку и снятие</label>
+                                          <input type="checkbox" id="signaling--checkbox2" class="i-checks">
+                                        </div>
+                                      </form>
                                     </div>
                                 </div>
                             </div>

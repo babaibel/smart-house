@@ -6152,7 +6152,7 @@ h4.ibox-content__indicator {
 }
 .buttons-panel--center .btn {
   margin: 0 10px 5px;
-  width: 252px;
+  width: 255px;
 }
 .buttons-panel--system {
   text-align: left;
@@ -6530,6 +6530,11 @@ h4.ibox-content__indicator {
 }
 .track-panel--text-panel td {
   padding: 12px;
+}
+
+.track-panel--text-panel span {
+  width: 20px!important;
+  background-position: center top;
 }
 .sensor-settings .track-panel--one-line-setting {
   height: auto;
@@ -12229,6 +12234,11 @@ body.md-skin {
   top: -12px;
 }
 
+.icon-lock.icon-telegram:after {
+  left: -4px;
+  top: -8px;
+}
+
 .icon-clock:after {
   content: '';
   display: block;
@@ -12242,6 +12252,49 @@ body.md-skin {
 
 .icon-telegram.icon-clock:after {
   left: 8px;
+}
+
+.ibox-time .form-group {
+  margin-right: 46px;
+}
+
+.ibox-btn .btn {
+  margin-bottom: 4px;
+}
+
+.signaling-toggle {
+  float: left;
+  width: 35%;
+}
+
+.signaling-toggle .ibox {
+  border: 2px solid #F2F2F3;
+  padding-top: 10px;
+}
+
+.signaling-content {
+  float: left;
+  width: 35%;
+  padding-left: 30px;
+}
+
+.signaling-content label {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+.signaling-content-checkbox label {
+  cursor: pointer;
+}
+
+.signaling-content-select {
+  margin-bottom: 30px;
+}
+
+.signaling-content-select select {
+  width: 186px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Telegam.html */
@@ -12518,6 +12571,10 @@ body.md-skin {
   white-space: normal;
 }
 
+.black-text {
+  color: #000;
+}
+
 /* History */
 
 
@@ -12764,6 +12821,10 @@ body.md-skin {
   .history-date {
     width: 100%;
   }
+  .signaling-toggle,
+  .signaling-content {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -12771,6 +12832,17 @@ body.md-skin {
     width: 100%;
     display: block;
     margin-bottom: 8px;
+  }
+  .buttons-panel--bottom-left .btn {
+    margin: 7px;
+  }
+  .signaling-toggle,
+  .signaling-content {
+    width: 100%;
+    padding-left: 0;
+  } 
+  .signaling-content label {
+    margin: 5px 5px 5px 0;
   }
 }
 
