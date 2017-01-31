@@ -11576,8 +11576,16 @@ body.md-skin {
   .main-2col li.col-xlg-4 {
     width: 100%!important;
   }
+  .sensors-3col li.col-xlg-4 {
+    width: 50%!important;
+    float: left;
+  }
 }
 @media (max-width: 1024px) {
+  .sensors-3col li.col-xlg-4 {
+    width: auto!important;
+    float: none;
+  }
   .main-2col .col-xlg-8,
   .main-2col > .col-xlg-4 {
     width: 100%!important;
