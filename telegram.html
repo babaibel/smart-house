@@ -42,9 +42,7 @@
                 <img src="img/icons/iconbg-home.png" alt="">
               </div>
               <div class="profile-element__info">
-                <div class="profile-element__info-house">Дача в Барыбино</div>
-                <div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
-                <div class="profile-element__info-system">EctoControl v3</div>
+                <a class="profile-element__info-add" href="#">+ Добавить систему</a>
               </div>
 
             </div>
@@ -499,6 +497,76 @@
       </div>
     </div>
   </div>
+  
+  <!--  Modal  -->
+    
+    <div class="modal inmodal">
+        <div class="modal-dialog profile-modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Выберите систему для отображения</h4>
+              </div>
+              <!--template bindings={}--><div class="modal-body text-center">
+                  <div class="text">
+                      <table class="table table-striped sensors-table dataTable">
+                          <thead>
+                          <tr>
+                              <th>Имя
+                              <div class="tooltip-container">
+                                  <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                              </div>
+                              </th>
+                              <th>Тип</th>
+                              <th>Телефонный номер</th>
+                              <th>IMEI</th>
+                              <th>Состояние</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <!--template bindings={}--><tr style="cursor: pointer">
+                              <td>nevvod</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>123456789012345</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--green">
+                                     на связи
+                                  </span>
+                              </td>
+                          </tr><tr style="cursor: pointer">
+                              <td>Березовая роща</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>866104023146395</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--red">
+                                     нет связи
+                                  </span>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+                      <div class="add-system">
+                        <form action="" class="add-sytem-form">
+                          <input type="text" class="form-control" placeholder="IMEI устройства">
+                          <button class="btn btn-orange">Добавить систему</button>
+                        </form>
+                        <div class="imei-info">
+                          <img src="img/imei.jpg" alt="">
+                          <div class="imei-info__content">
+                            <p>IMEI вашей системы находится на этикетке с нижней стороны</p>
+                            <p>Если система далеко от вас, отправьте ей SMS с текстом "V" и получите IMEI</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
 
   <!-- Mainly scripts -->
   <script src="js/jquery-2.1.1.js"></script>

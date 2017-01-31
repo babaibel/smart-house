@@ -3838,8 +3838,6 @@ table.dataTable thead .sorting {
   border-radius: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
->>>>>>> origin/Telegram
   transform: translateY(-50%);
   overflow: hidden;
 }
@@ -4287,6 +4285,11 @@ table.dataTable thead .sorting {
   line-height: 14px;
   font-weight: bold;
   margin-bottom: 3px;
+}
+.profile-element__info-add {
+  color: #ffae00!important;
+  margin-top: 12px;
+  display: block;
 }
 .profile-element__info-phone {
   color: #dfe4ed;
@@ -12536,6 +12539,35 @@ body.md-skin {
   font-weight: 600;
 }
 
+.add-system {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.add-sytem-form {
+  margin-bottom: 20px;
+}
+
+.add-sytem-form input {
+  display: inline-block;
+  width: 299px;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.imei-info img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.imei-info__content {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 500px;
+  font-size: 16px;
+}
+
 .ibox-content__arrow {
   display: inline-block;
   vertical-align: middle;
@@ -12820,6 +12852,14 @@ body.md-skin {
   .profile-modal th {
     text-align: center!important;
     vertical-align: middle!important;
+  }
+  .imei-info img {
+    width: 200px;
+  }
+
+  .imei-info__content {
+    max-width: 380px;
+    font-size: 14px;
   }
 }
 
