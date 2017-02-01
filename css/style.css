@@ -12741,7 +12741,7 @@ body.md-skin {
 }
 
 .history__refresh a {
-  margin-top: 15px;
+  margin: 15px 3px 0 3px;
   border-radius: 0!important;
 }
 
