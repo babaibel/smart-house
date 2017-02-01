@@ -11289,9 +11289,6 @@ body.md-skin {
 
 /* Profile modal */
 
-.profile-modal {
-  width: 1240px;
-}
 .profile-modal td,
 .profile-modal th {
   text-align: left;
@@ -11301,15 +11298,7 @@ body.md-skin {
   font-size: 24px;
   font-weight: bold;
 }
-.profile-modal .modal-header {
-  border-bottom: 0;
-  padding: 30px 35px 0;
-}
-.profile-modal .modal-body {
-  padding: 20px 35px 60px;
-}
 .profile-modal thead {
-  font-size: 16px;
   font-weight: bold;
 }
 .profile-modal tr td:first-child {
@@ -11317,11 +11306,33 @@ body.md-skin {
 }
 .profile-modal tbody,
 .profile-modal tbody span {
-  font-size: 16px;
   font-weight: 600;
 }
 .profile-modal .tooltip-label {
   margin-top: -1px;
+}
+.profile-modal {
+  width: 656px;
+  box-sizing: border-box;
+}
+.profile-modal thead,
+.profile-modal tbody,
+.profile-modal tbody span {
+  font-size: 13px;
+}
+.profile-modal .modal-body {
+  padding: 20px 20px 60px;
+}
+.profile-modal .modal-header {
+  border-bottom: 0;
+  padding: 30px 20px 0;
+}
+.profile-modal tr td:first-child {
+  width: auto;
+}
+.profile-modal th {
+  text-align: center!important;
+  vertical-align: middle!important;
 }
 
 @media (min-width: 1560px) {
@@ -12830,29 +12841,6 @@ body.md-skin {
 }
 
 @media (max-width: 1300px) {
-  .profile-modal {
-    width: 656px;
-    box-sizing: border-box;
-  }
-  .profile-modal thead,
-  .profile-modal tbody,
-  .profile-modal tbody span {
-    font-size: 13px;
-  }
-  .profile-modal .modal-body {
-    padding: 20px 20px 60px;
-  }
-  .profile-modal .modal-header {
-    border-bottom: 0;
-    padding: 30px 20px 0;
-  }
-  .profile-modal tr td:first-child {
-    width: auto;
-  }
-  .profile-modal th {
-    text-align: center!important;
-    vertical-align: middle!important;
-  }
   .imei-info img {
     width: 200px;
   }
