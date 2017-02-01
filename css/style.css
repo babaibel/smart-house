@@ -11740,13 +11740,6 @@ body.md-skin {
   .main-2col li.col-xlg-6 {
     width: 100%!important;
   }
-  .main-2col .buttons-panel--center .btn {
-    margin: 0 auto 5px!important;
-    display: block;
-    width: 90%;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
   .schedule-temp-panel--right {
     margin: 15px 0 30px;
     display: block;
