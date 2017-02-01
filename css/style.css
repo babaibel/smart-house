@@ -12634,6 +12634,19 @@ body.md-skin {
   color: #000;
 }
 
+.balance-refresh i {
+  margin-right: 0;
+  font-size: 16px;
+}
+
+.ibox-balance .ibox-content {
+  padding-top: 10px;
+}
+
+.ibox-balance .ibox-content__text {
+  margin-bottom: 0;
+}
+
 /* History */
 
 
