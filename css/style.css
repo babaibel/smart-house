@@ -11312,7 +11312,7 @@ body.md-skin {
   margin-top: -1px;
 }
 .profile-modal {
-  width: 656px;
+  width: 750px;
   box-sizing: border-box;
 }
 .profile-modal thead,
@@ -12571,7 +12571,7 @@ body.md-skin {
 .imei-info__content {
   display: inline-block;
   vertical-align: top;
-  max-width: 500px;
+  max-width: 364px;
   font-size: 16px;
 }
 
