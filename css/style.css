@@ -7628,7 +7628,7 @@ body.mini-navbar .navbar-static-side .nav > li > a i {
   margin-top: 10px;
   font-size: 24px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .dashboard-header h2 {
     font-size: 18px;
   }
