@@ -7612,6 +7612,14 @@ body.mini-navbar .navbar-static-side .nav > li > a i {
   display: inline-block;
   margin-right: 10px;
 }
+
+.dashboard-header .profile-element__info .profile-element__info-add {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: bold;
+}
 .dashboard-header .profile-element__info-phone,
 .dashboard-header .profile-element__info-system {
   color: #676a6c;
