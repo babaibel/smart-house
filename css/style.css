@@ -11411,6 +11411,9 @@ body.md-skin {
     line-height: 18px;
     text-transform: none;
   }
+  .ibox-content__arrow {
+    margin-top: -12px!important;
+  } 
 }
 @media (min-width: 768px) {
   #page-wrapper {
@@ -12591,12 +12594,16 @@ body.md-skin {
   border-style: solid;
   border-width: 0 7.5px 10px 7.5px;
   border-color: transparent transparent #10b410 transparent;
-  margin: -12px 0 0 0px;
+  margin: 9px 0 0 0px;
 }
 
 .ibox-content__arrow_bottom {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.ibox-content__arrow_red {
+  border-color: transparent transparent #ca3434 transparent;
 }
 
 .ibox-content__select {
