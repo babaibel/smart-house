@@ -4697,6 +4697,57 @@ ul.row li {
 .navbar-default .nav > li.active .iconbg {
   background-position: left bottom;
 }
+.nav-settings__status-link {
+  float: right;
+  margin-bottom: -8px;
+}
+.nav-settings__status-link a {
+  color: #5aabc0;
+  border-bottom: 1px solid #5aabc0;
+  font-size: 11px;
+  margin: 0 4px 0 0;
+}
+.nav-settings__status-link a:hover {
+  border-color: transparent;
+}
+.mini-navbar .nav-settings__status-link a {
+  margin-right: -2px;
+}
+.history .history-checks {
+  max-width: 560px;
+}
+.sensor-settings__topline--right input[type="text"].form-control {
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 24px;
+  text-align: center;
+  margin: 0 10px;
+}
+.form-group-text {
+  display: inline-block;
+}
+.device-app {
+  font-size: 0;
+  margin: 30px 0 0;
+}
+.device-app a {
+  display: inline-block;
+  margin: 0 3px;
+}
+.device-app a:hover {
+  opacity: 0.9;
+}
+.device-app span {
+  display: inline-block;
+  margin: 0 3px;
+  opacity: 0.5;
+}
 body {
   font-family: "open_sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #1e2022;
