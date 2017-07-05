@@ -4746,7 +4746,7 @@ ul.row li {
 .device-app span {
   display: inline-block;
   margin: 0 3px;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 body {
   font-family: "open_sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
