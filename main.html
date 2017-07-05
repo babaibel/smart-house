@@ -11,7 +11,6 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
     <!-- Toastr style -->
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
 
@@ -53,7 +52,7 @@
                                 <div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
                                 <div class="profile-element__info-system">EctoControl v3</div>
                             </div>
-
+                        	<div class="profile-element__arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                         </div>
                     </li>
                     <li>
@@ -86,7 +85,12 @@
                     <li>
                         <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Настройки</span></a>
                     </li>
-                    
+                    <li>
+                        <a href="#"><i class="fa fa-telegram"></i> <span class="nav-label">Telegram</span></a>
+                    </li>
+                    <li>
+                        <a href="history.html"><i class="fa fa-list-ul"></i> <span class="nav-label">История</span></a>
+                    </li>
                 </ul>
 
             </div>
@@ -240,455 +244,94 @@
                 </div>
             </div>
             <div class="wrapper wrapper-content">
-                <div class="row main-2col">
-                    <div class="col-xlg-9 col-lg-9 col-sm-8">
-                        <ul class="row sensors-2col sortableList">
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox PAU-sensor">
-                                    <div class="ibox-title">
-                                        <!-- <div class="buttons-panel"> -->
-                                            <div class="ibox-tools ibox-tools--left">
-                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                    <i class="fa fa-wrench"></i>
-                                                </a>
-                                                <ul class="dropdown-menu dropdown-user">
-                                                    <li><a href="#">Config option 1</a>
-                                                    </li>
-                                                    <li><a href="#">Config option 2</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <h5>Отопление спальня</h5>
-                                            <div class="ibox-tools">
-                                                <a class="close-link">
-                                                    <i class="fa fa-times"></i>
-                                                </a>
-                                            </div>
-                                        <!-- </div> -->
+                <ul class="row sensors-3col sortableList">
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox PAU-sensor">
+                            <div class="ibox-title">
+                                <!-- <div class="buttons-panel"> -->
+                                    <div class="ibox-tools ibox-tools--left">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#">Config option 1</a>
+                                            </li>
+                                            <li><a href="#">Config option 2</a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="ibox-content">
-                                        <div class="js-temp-panel">
-                                            <div class="PAU-sensor-table">
-                                                <div class="PAU-sensor-table__row">
-                                                    <div class="PAU-sensor-table__cell">
-                                                        <div class="PAU-sensor-table__buttons">
-                                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
-                                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
-                                                            <a class="btn btn-orange press-btn" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
+                                    <h5>Отопление спальня</h5>
+                                    <div class="ibox-tools">
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="ibox-content">
+                                <div class="js-temp-panel">
+                                    <div class="PAU-sensor-table">
+                                        <div class="PAU-sensor-table__row">
+                                            <div class="PAU-sensor-table__cell">
+                                                <div class="PAU-sensor-table__buttons">
+                                                    <a class="btn btn-orange press-btn" href="javascript:void(0)">Эконом 12 <sup>&deg;C</sup></a>
+                                                    <a class="btn btn-orange press-btn" href="javascript:void(0)">Стандарт 22 <sup>&deg;C</sup></a>
+                                                    <a class="btn btn-orange press-btn" href="javascript:void(0)">Комфорт 24 <sup>&deg;C</sup></a>
 
-                                                            <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
-                                                            <div>
-                                                                <div class="counter__title">свое значение</div>
-                                                                <div class="counter press-btn">
-                                                                    <input type="button" field="temp" class="counter-minus js-qtyminus" value="-">
-                                                                    <input type="text" class="counter-field" value="0" name="temp">
-                                                                    <input type="button" field="temp" class="counter-plus js-qtyplus" value="+">
-                                                                </div>
+                                                    <a class="btn btn-orange press-btn" href="javascript:void(0)"><i class="fa fa-calendar"></i> Расписание</a>
+                                                    <div>
+                                                        <div class="counter__title">свое значение</div>
+                                                        <div class="counter press-btn">
+                                                            <input type="button" field="temp" class="counter-minus js-qtyminus" value="-">
+                                                            <input type="text" class="counter-field" value="0" name="temp">
+                                                            <input type="button" field="temp" class="counter-plus js-qtyplus" value="+">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="PAU-sensor-table__cell">
+                                                <table class="PAU-sensor__box PAU-sensor__box-center">
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ibox-content__indicator green-text">
+                                                                 29,5
+                                                                <sup>&deg;C</sup>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="PAU-sensor-table__cell">
-                                                        <table class="PAU-sensor__box PAU-sensor__box-center">
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="ibox-content__indicator green-text">
-                                                                         29,5
-                                                                        <sup>&deg;C</sup>
-                                                                    </div>
-                                                                    <div class="PAU-sensor__indicator-title">текущая температура</div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="ibox-content__indicator ibox-content__indicator--blue">
-                                                                        Включено
-                                                                    </div>
-                                                                    <div class="PAU-sensor__indicator-title">состояние</div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="ibox-content__indicator orange-text">
-                                                                        <!--  29,5
-                                                                        <sup>&deg;C</sup> -->
-                                                                        аварийный режим
-                                                                    </div>
-                                                                    <div class="PAU-sensor__indicator-title">поддерживается</div>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                    <div class="PAU-sensor-table__cell">
-                                                        <div class="PAU-sensor-table__right-col">
-                                                            <i class="iconbg iconbg--boiler"></i>
-                                                        </div>
-                                                    </div>
+                                                            <div class="PAU-sensor__indicator-title">текущая температура</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ibox-content__indicator ibox-content__indicator--blue">
+                                                                Включено
+                                                            </div>
+                                                            <div class="PAU-sensor__indicator-title">состояние</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="ibox-content__indicator orange-text">
+                                                                <!--  29,5
+                                                                <sup>&deg;C</sup> -->
+                                                                аварийный режим
+                                                            </div>
+                                                            <div class="PAU-sensor__indicator-title">поддерживается</div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="PAU-sensor-table__cell">
+                                                <div class="PAU-sensor-table__right-col">
+                                                    <i class="iconbg iconbg--boiler"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Гостиная</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <div class="ibox-content__temp-info">
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                            <div class="ibox-content__indicator">
-                                                                29,5
-                                                                <sup>&deg;C</sup>
-                                                            </div>
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery2"></i>
-                                                        <i class="iconbg iconbg--temp"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Движение коридор</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <h4 class="ibox-content__indicator">Норма</h4>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery1"></i>
-                                                        <i class="iconbg iconbg--move"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins ibox--red">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Протечка сауна</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <h4 class="ibox-content__indicator">ТРЕВОГА</h4>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery4"></i>
-                                                        <i class="iconbg iconbg--drib"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Подвал</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <div class="ibox-content__temp-info">
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                            <div class="ibox-content__indicator">
-                                                                29,5
-                                                                <sup>&deg;C</sup>
-                                                            </div>
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery3"></i>
-                                                        <i class="iconbg iconbg--temp"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Детская</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <div class="ibox-content__temp-info">
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                            <div class="ibox-content__indicator">
-                                                                29,5
-                                                                <sup>&deg;C</sup>
-                                                            </div>
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery1"></i>
-                                                        <i class="iconbg iconbg--temp"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5>Отопление спальня</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <div class="ibox-content__temp-info">
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
-                                                            <div class="ibox-content__indicator">
-                                                                29,5
-                                                                <sup>&deg;C</sup>
-                                                            </div>
-                                                            <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--wifi"></i>
-                                                        <i class="iconbg iconbg--battery2"></i>
-                                                        <i class="iconbg iconbg--counter"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                            <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-sm-6 col-lg-6 col-xlg-4">
-                                <div class="ibox float-e-margins ibox--green">
-                                    <div class="ibox-title">
-                                        <div class="ibox-tools ibox-tools--left">
-                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                                <i class="fa fa-wrench"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dropdown-user">
-                                                <li><a href="#">Config option 1</a>
-                                                </li>
-                                                <li><a href="#">Config option 2</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h5 class="dashed-title">Движение коридор (Зона 1)</h5>
-                                        <div class="ibox-tools">
-                                            <a class="close-link">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div>
-                                            <table class="sensor-box">
-                                                <tr>
-                                                    <td>
-                                                        <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить на охрану</button>
-                                                    </td>
-                                                    <td>
-                                                        <i class="iconbg iconbg--security"></i>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="buttons-panel buttons-panel--bottom buttons-panel--center">
-                            <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-plus"></i> ДОБАВИТЬ ДАТЧИКИ НА ГЛАВНУЮ</a>
-                            <a class="btn btn-sm btn-orange" href="javascript:void(0)">купить ДАТЧИКИ</a>
-                        </div>
-                    </div>
-                    <div class="col-xlg-3 col-lg-3 col-sm-4">
-                        <div class="ibox float-e-margins ibox--orange">
-                            <div class="ibox-title">
-                                <div class="ibox-tools ibox-tools--left">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                        <i class="fa fa-wrench"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="#">Config option 1</a>
-                                        </li>
-                                        <li><a href="#">Config option 2</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h5><strong>Баланс</strong> (12 мая 2016, 14:56)</h5>
-                                <div class="ibox-tools">
-                                    <a class="close-link">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="ibox-content">
-                                <div>
-                                    <h4 class="ibox-content__text">На Вашем счету 218.15 руб.
-                                        <br/>
-                                        <span class="ibox-content__small-text">Закажите экспертные оценки c потолка бесплатно! *105*00#</span>
-                                    </h4>
-                                </div>
-                                <div class="center-box">
-                                    <button class="btn btn-full-w"><i class="fa fa-refresh"></i> обновить баланс</button>
-                                </div>
                             </div>
                         </div>
-
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
                         <div class="ibox float-e-margins">
                             <div class="ibox-title">
                                 <div class="ibox-tools ibox-tools--left">
@@ -702,199 +345,345 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h5>История событий</h5>
+                                <h5>Гостиная</h5>
                                 <div class="ibox-tools">
                                     <a class="close-link">
                                         <i class="fa fa-times"></i>
                                     </a>
                                 </div>
                             </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <div class="ibox-content__temp-info">
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                    <div class="ibox-content__indicator">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery2"></i>
+                                                <i class="iconbg iconbg--temp"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                            <div class="ibox-content ">
-                                
-                                <div class="inspinia-timeline">
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content no-top-border">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
 
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
-
-                                <div class="inspinia-timeline hidden-timeline js-hidden-timeline">
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content no-top-border">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="row">
-                                            <div class="col-xs-3 date">
-                                                <i class="fa fa-bell-o"></i>
-                                                18:32
-                                                <br/>
-                                                <small class="text-navy">2 час назад</small>
-                                            </div>
-                                            <div class="col-xs-7 content">
-                                                <p class="m-b-xs"><strong>Отопление склад: вкл</strong></p>
-
-                                                <p>Подробное описание события, которое произошло</p>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button class="btn btn-primary btn-block m-t js-show-timeline"><i class="fa fa-arrow-down"></i> Показать еще</button>
-
-                                <button class="btn btn-primary btn-block m-t btn-primary--gray"><i class="fa fa-times"></i> Очистить историю</button>
-
                             </div>
                         </div>
-                    </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5>Движение коридор</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <h4 class="ibox-content__indicator">Норма</h4>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery1"></i>
+                                                <i class="iconbg iconbg--move"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins ibox--red">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5>Протечка сауна</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <h4 class="ibox-content__indicator">ТРЕВОГА</h4>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery4"></i>
+                                                <i class="iconbg iconbg--drib"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5>Подвал</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <div class="ibox-content__temp-info">
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                    <div class="ibox-content__indicator">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery3"></i>
+                                                <i class="iconbg iconbg--temp"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5>Детская</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <div class="ibox-content__temp-info">
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                    <div class="ibox-content__indicator">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery1"></i>
+                                                <i class="iconbg iconbg--temp"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5>Отопление спальня</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <div class="ibox-content__temp-info">
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--left">+10</span>
+                                                    <div class="ibox-content__indicator">
+                                                        29,5
+                                                        <sup>&deg;C</sup>
+                                                    </div>
+                                                    <span class="ibox-content__temp-box ibox-content__temp-box--right">+32</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--wifi"></i>
+                                                <i class="iconbg iconbg--battery2"></i>
+                                                <i class="iconbg iconbg--counter"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <small class="ibox-content__right-small">Порт: РАДИО 7F471A</small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins ibox--green">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5 class="dashed-title">Движение коридор (Зона 1)</h5>
+                                <div class="ibox-tools">
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <table class="sensor-box">
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-full-w"><i class="fa fa-lock"></i> поставить на охрану</button>
+                                            </td>
+                                            <td>
+                                                <i class="iconbg iconbg--security"></i>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-sm-6 col-lg-4 col-xlg-4">
+                        <div class="ibox float-e-margins ibox--orange ibox-balance">
+                            <div class="ibox-title">
+                                <div class="ibox-tools ibox-tools--left">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="#">Config option 1</a>
+                                        </li>
+                                        <li><a href="#">Config option 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h5><strong>Баланс</strong></h5>
+                                <div class="ibox-tools">
+                                    <a href="#" class="balance-refresh"><i class="fa fa-refresh"></i></a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <h4 class="ibox-content__text">На Вашем счету 218.15 руб.
+                                        <br/>
+                                        <span class="ibox-content__small-text">Закажите экспертные оценки c потолка бесплатно! *105*00#. Доп строка</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons-panel buttons-panel--bottom buttons-panel--center">
+                    <a class="btn btn-sm btn-orange" href="javascript:void(0)"><i class="fa fa-plus"></i>ДОБАВИТЬ НА ГЛАВНУЮ</a>
+                    <a class="btn btn-sm btn-orange" href="javascript:void(0)">купить ДАТЧИКИ</a>
                 </div>
             </div>
             <div class="footer">
@@ -906,6 +695,63 @@
                 </div>
             </div>
         </div>
+    </div>
+    
+    <!--  Modal  -->
+    
+    <div class="modal inmodal">
+        <div class="modal-dialog profile-modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title">Выберите систему для отображения</h4>
+              </div>
+              <!--template bindings={}--><div class="modal-body text-center">
+                  <div class="text">
+                      <table class="table table-striped sensors-table dataTable">
+                          <thead>
+                          <tr>
+                              <th>Имя
+                              <div class="tooltip-container">
+                                  <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                              </div>
+                              </th>
+                              <th>Тип</th>
+                              <th>Телефонный номер</th>
+                              <th>IMEI</th>
+                              <th>Состояние</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <!--template bindings={}--><tr style="cursor: pointer">
+                              <td>nevvod</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>123456789012345</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--green">
+                                     на связи
+                                  </span>
+                              </td>
+                          </tr><tr style="cursor: pointer">
+                              <td>Березовая роща</td>
+                              <td>EctoControl v3.1</td>
+                              <td>+7 937 165-02-22</td>
+                              <td>866104023146395</td>
+                              <td>
+                                  <!--template bindings={}-->
+                                  <!--template bindings={}--><span class="sensors-table__data sensors-table__data--red">
+                                     нет связи
+                                  </span>
+                              </td>
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 
     <!-- Mainly scripts -->
