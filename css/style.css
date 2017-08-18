@@ -4359,6 +4359,24 @@ table.dataTable thead .sorting {
   height: 50px;
   margin: 0;
 }
+.iconbg--reaction {
+  background: url(../img/icons/iconbg-reaction.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.iconbg--sirena {
+  background: url(../img/icons/iconbg-sirena.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.iconbg--sound {
+  background: url(../img/icons/iconbg-sound.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
 .iconbg--counter {
   background: url(../img/icons/iconbg-counter.png) no-repeat left top;
   width: 50px;
