@@ -4644,6 +4644,9 @@ table.dataTable thead .sorting {
   text-transform: uppercase;
   line-height: 15px;
   vertical-align: middle;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .mini-navbar .nav-settings__signal span {
   display: none;
