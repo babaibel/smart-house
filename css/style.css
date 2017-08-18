@@ -4509,6 +4509,18 @@ table.dataTable thead .sorting {
   height: 50px;
   margin: 0;
 }
+.iconbg--onoff10 {
+  background: url(../img/icons/iconbg-onoff10.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.iconbg--valve {
+  background: url(../img/icons/iconbg-valve.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
 .iconbg--open {
   background: url(../img/icons/iconbg-open.png) no-repeat left top;
   width: 50px;
@@ -5308,6 +5320,9 @@ code {
   background-color: transparent;
   padding: 0 0 10px;
   min-height: auto;
+}
+.ibox--nobg .ibox-title .ibox .ibox-title{
+  padding: 0 15px 10px;
 }
 .ibox--green {
   background: #eafdeb;
