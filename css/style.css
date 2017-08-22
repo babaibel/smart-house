@@ -6780,6 +6780,23 @@ h4.ibox-content__indicator {
 .clear-btn:hover {
   background-position: left bottom;
 }
+.block-line-btn {
+  background: url(../img/icons/block-line-btn-open.png) no-repeat left top;
+  display: inline-block;
+  border-radius: 3px;
+  border: 0;
+  width: 25px;
+  height: 24px;
+}
+.block-line-btn:hover {
+  background-position: left bottom!important;
+}
+.block-row .block-line-btn{
+  background: url(../img/icons/block-line-btn-close.png) no-repeat left top;
+}
+.block-row{
+  background: rgba(255, 0, 0, 0.25);
+}
 .notification-desc {
   float: left;
   line-height: 33px;
