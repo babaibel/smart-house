@@ -403,7 +403,7 @@
                                                     <td><span class="sensors-table__data">78AFGTDZ</span></td>
                                                     <td class="checkbox-col"><input type="checkbox"  class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox"  class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
+                                                    <td class="checkbox-col"><input type="radio" checked class="i-checks-zone" name="input[]"></td>
                                                     <td>
 					                                    <button type="button" class="del-line-btn"></button>
 					                                </td>
@@ -416,7 +416,7 @@
                                                     <td><span class="sensors-table__data">78AFGTDZ</span></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
-                                                    <td class="checkbox-col"><input type="checkbox" checked class="i-checks-zone" name="input[]"></td>
+                                                    <td class="checkbox-col"><input type="radio" class="i-checks-zone" name="input[]"></td>
                                                     <td>
 					                                    <button type="button" class="del-line-btn"></button>
 					                                </td>
@@ -431,7 +431,7 @@
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td class="checkbox-col"><input type="checkbox" class="i-checks-zone" name="input[]"></td>
                                                     <td>
-					                                    <button type="button" class="del-line-btn"></button>
+					                                    <button type="button" class="settings-btn"></button>
 					                                </td>
                                                 </tr>
                                             </tbody>
@@ -874,7 +874,8 @@
                 checkboxClass: 'icheckbox_square-green'
             });
             $('.i-checks-zone').iCheck({
-                checkboxClass: 'icheckbox_square-green icheckbox_square-green2'
+                checkboxClass: 'icheckbox_square-green icheckbox_square-green2',
+                radioClass: 'iradio_square-green iradio_square-green2'
             });
         });
     </script>

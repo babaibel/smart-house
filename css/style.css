@@ -6780,6 +6780,19 @@ h4.ibox-content__indicator {
 .clear-btn:hover {
   background-position: left bottom;
 }
+.settings-btn{
+  background: url(../img/icons/settings-btn.png) no-repeat left top;
+  display: block;
+  float: right;
+  border-radius: 3px;
+  border: 0;
+  width: 25px;
+  height: 24px;
+}
+.settings-btn:hover {
+  background-position: left bottom;
+}
+
 .block-line-btn {
   background: url(../img/icons/block-line-btn-open.png) no-repeat left top;
   display: inline-block;
@@ -6795,7 +6808,7 @@ h4.ibox-content__indicator {
   background: url(../img/icons/block-line-btn-close.png) no-repeat left top;
 }
 .block-row{
-  background: rgba(255, 0, 0, 0.25);
+  background: rgba(255, 0, 0, 0.25)!important;
 }
 .notification-desc {
   float: left;
@@ -12318,8 +12331,11 @@ body.md-skin {
 .iradio_square-green {
   background: url("plugins/iCheck/orange.png") no-repeat 0 0;
 }
-.icheckbox_square-green2 {
+.icheckbox_square-green2{
   background: url("../img/icons/orange2.png") no-repeat 0 0;
+}
+.iradio_square-green{
+  background-position: -120px 0;
 }
 @media print {
   nav.navbar-static-side {
