@@ -12421,6 +12421,11 @@ body.md-skin {
   width: 35%;
 }
 
+.signaling-toggle .ibox-title{
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
 .signaling-toggle .ibox {
   border: 2px solid #F2F2F3;
   padding-top: 10px;
@@ -12428,7 +12433,7 @@ body.md-skin {
 
 .signaling-content {
   float: left;
-  width: 35%;
+  width: 65%;
   padding-left: 30px;
 }
 
