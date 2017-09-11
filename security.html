@@ -580,14 +580,19 @@
                                     <div class="signaling-content">
                                       <form action="">
                                         <div class="signaling-content-select">
-                                          <label for="signaling--select">Включать</label>
-                                          <select class="form-control" id="signaling--select">
-                                            <option value="">до снятия с охраны</option>
-                                            <option value="">на 5 сек</option>
-                                            <option value="">на 10 сек</option>
-                                            <option value="">на 1 мин</option>
-                                            <option value="">на 10 мин</option>
-                                          </select>
+                                          <div class="signaling-content-select__left">
+                                            <label for="signaling--select">Включать</label>
+                                          </div>
+                                          <div class="signaling-content-select__right">
+                                            <select class="form-control" id="signaling--select">
+                                              <option value="">до снятия с охраны</option>
+                                              <option value="">на 5 сек</option>
+                                              <option value="">на 10 сек</option>
+                                              <option value="">на 1 мин</option>
+                                              <option value="">на 10 мин</option>
+                                            </select>
+                                            <input type="text" class="signaling-content-selec-edit">
+                                          </div>
                                         </div>
                                         <div class="signaling-content-checkbox">
                                           <label for="signaling--checkbox">Подтверждать постановку и снятие</label>

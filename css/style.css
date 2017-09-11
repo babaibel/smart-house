@@ -12448,12 +12448,46 @@ body.md-skin {
 
 .signaling-content-select {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
+.signaling-content-select label{
+  margin-top: 7px;
+}
+
+.signaling-content-select__left{
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.signaling-content-select__right{
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
 .signaling-content-select select {
   width: 186px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  margin: 0 8px 8px 0;
+}
+
+.signaling-content-selec-edit{
+  width: 186px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #FFFFFF;
+  border: 1px solid #e5e6e7;
+  border-radius: 1px;
+  color: inherit;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  font-size: 14px;
 }
 
 /* Telegam.html */
