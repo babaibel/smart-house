@@ -273,7 +273,24 @@
                     <div class="flot-chart">
                         <div class="flot-chart-content" id="flot-bar-chart"></div>
                     </div>
-                    
+                </div>
+            </div>
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Сигнал сети WiFi</h5>
+                    <div class="tooltip-container">
+                        <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="ibox-content__title mgb">
+                        95% – отличный
+                        <span class="pull-right"><b>D-Link DIR-620</b></span>
+                    </div>
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-bar-chart2"></div>
+                    </div>
                 </div>
             </div>
 
@@ -444,6 +461,7 @@
                 data: data_signal
             };
             $.plot($("#flot-bar-chart"), [barData], barOptions);
+            $.plot($("#flot-bar-chart2"), [barData], barOptions);
 
         });
     </script>

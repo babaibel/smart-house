@@ -13204,3 +13204,21 @@ body.md-skin {
   white-space: nowrap;
   margin: 0.1em 0
 }
+
+.btn-reload{
+  background-image: url("../img/icons/reload.png");
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  padding-left: 40px!important;
+}
+
+.btn-reload:active{
+  background-image: url("../img/icons/reload.png");
+}
+
+@media (min-width: 768px){
+  .form-inline .form-group {
+    margin-bottom: 15px;
+  }
+}
