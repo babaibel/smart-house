@@ -4353,6 +4353,21 @@ table.dataTable thead .sorting {
 .iconbg--signal-r101 {
   background: url(../img/r-mob-signal.png) no-repeat center 0;
 }
+.iconbg--signalwifi-000 {
+  background: url(../img/wifi-signal.png) no-repeat center -84px !important;
+}
+.iconbg--signalwifi-001 {
+  background: url(../img/wifi-signal.png) no-repeat center -63px;
+}
+.iconbg--signalwifi-010 {
+  background: url(../img/wifi-signal.png) no-repeat center -42px;
+}
+.iconbg--signalwifi-011 {
+  background: url(../img/wifi-signal.png) no-repeat center -21px;
+}
+.iconbg--signalwifi-100 {
+  background: url(../img/wifi-signal.png) no-repeat center top;
+}
 .iconbg--temp {
   background: url(../img/icons/iconbg-termometr.png) no-repeat left top;
   width: 50px;
@@ -4660,8 +4675,11 @@ table.dataTable thead .sorting {
 .mini-navbar .logo__img--mob {
   display: block;
 }
-.nav-settings {
-  padding: 18px 25px 15px 15px;
+.nav-settings{
+  padding: 18px 20px 15px 10px;
+}
+.nav-settings + .nav-settings{
+  padding-top: 10px;
 }
 .nav-settings__signal {
   float: left;
@@ -4674,7 +4692,8 @@ table.dataTable thead .sorting {
   text-transform: uppercase;
   line-height: 15px;
   vertical-align: middle;
-  width: 70px;
+  width: 80px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
