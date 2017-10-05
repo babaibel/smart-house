@@ -7179,6 +7179,12 @@ h4.ibox-content__indicator {
 .js-power.active {
   color: #0000ff !important;
 }
+.js-power.error {
+  color: #fd3026!important;
+}
+.js-power.ok {
+  color: #10b410!important;
+}
 .js-power + span {
   display: block;
   position: relative;
@@ -13221,4 +13227,40 @@ body.md-skin {
   .form-inline .form-group {
     margin-bottom: 15px;
   }
+}
+
+.other-sensors .buttons-panel.buttons-panel--mgt{
+  margin-top: 30px!important;
+}
+
+.photo-text-center{
+  margin: 25px auto;
+  max-width: 300px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 767px){
+  .gallery__title .btn-right{
+    float: none;
+    margin-top: 10px;
+  }
+  .gallery__title span{
+    display: block;
+  }
+  .nav-slider{
+    margin-top: 10px;
+  }
+  .nav-slider__item{
+    margin-right: 10px;
+  }
+  .sensor-settings .buttons-panel--center .btn{
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+.buttons-panel--mgb15{
+  margin-bottom: 15px!important;
 }
