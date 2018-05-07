@@ -6645,6 +6645,15 @@ h4.ibox-content__indicator {
   padding: 12px;
 }
 
+
+.track-panel--sensor{
+  margin-top: 10px;
+}
+
+.track-panel--sensor .form-control {
+  margin: 0 30px!important;
+}
+
 .track-panel--text-panel span {
   width: 20px!important;
   background-position: center top;
@@ -6653,6 +6662,45 @@ h4.ibox-content__indicator {
   height: auto;
   margin: 35px 0;
 }
+.sensor-settings .track-panel-many-rows {
+  height: auto;
+  width: auto;
+  margin: 35px auto;
+  text-align: center;
+  color: #414141;
+}
+
+.sensor-settings__topline--limits .track-panel-many-rows{
+  margin: 15px auto 35px;
+}
+
+.track-panel-many-rows input[type="text"].form-control {
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 5px;
+  height: 24px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.counter.press-btn .counter-field{
+  padding: 0;
+  font-size: 14px;
+}
+
+.sensor-settings .track-panel-many-rows td{
+  padding: 5px 10px;
+}
+
+.sensor-settings .track-panel-many-rows td:first-child{
+  text-align: left;
+}
+
 .pie-box {
   height: 145px;
   border-top: 3px solid #e7eaec;
@@ -6811,7 +6859,18 @@ h4.ibox-content__indicator {
 .settings-btn:hover {
   background-position: left bottom;
 }
-
+.camcorders-btn{
+  background: url(../img/icons/camcorders-btn.png) no-repeat left top;
+  display: block;
+  float: right;
+  border-radius: 3px;
+  border: 0;
+  width: 25px;
+  height: 24px;
+}
+.camcorders-btn:hover {
+  background-position: left bottom;
+}
 .block-line-btn {
   background: url(../img/icons/block-line-btn-open.png) no-repeat left top;
   display: inline-block;
@@ -7167,6 +7226,25 @@ h4.ibox-content__indicator {
 }
 .power-btn:hover {
   opacity: 0.95;
+}
+.power-btn-alert {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 0 0 5px;
+  position: relative;
+  border: none;
+  color: #fff !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  background: #c10300;
+  box-shadow: 0 0 0 #a90300 inset, 0 5px 0 0 #980300;
+}
+
+.power-btn-alert:active,
+.power-btn-alert.active {
+  top: 3px;
+  background: #ff0d1c;
+  box-shadow: 0 0 0 #cc0300 inset, 0 2px 0 0 #c10300;
 }
 .js-power {
   color: #000;
@@ -13223,6 +13301,11 @@ body.md-skin {
   background-image: url("../img/icons/reload.png");
 }
 
+.form-inline--clear b{
+  font-size: 14px;
+  margin-right: 5px;
+}
+
 @media (min-width: 768px){
   .form-inline .form-group {
     margin-bottom: 15px;
@@ -13263,4 +13346,299 @@ body.md-skin {
 
 .buttons-panel--mgb15{
   margin-bottom: 15px!important;
+}
+
+/*!
+ * ClockPicker v0.0.7 for Bootstrap (http://weareoutman.github.io/clockpicker/)
+ * Copyright 2014 Wang Shenwei.
+ * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
+ */
+
+.clockpicker .input-group-addon {
+	cursor: pointer;
+}
+.clockpicker-moving {
+	cursor: move;
+}
+.clockpicker-align-left.popover > .arrow {
+	left: 25px;
+}
+.clockpicker-align-top.popover > .arrow {
+	top: 17px;
+}
+.clockpicker-align-right.popover > .arrow {
+	left: auto;
+	right: 25px;
+}
+.clockpicker-align-bottom.popover > .arrow {
+	top: auto;
+	bottom: 6px;
+}
+.clockpicker-popover .popover-title {
+	background-color: #fff;
+	color: #999;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	text-align: center;
+}
+.clockpicker-popover .popover-title span {
+	cursor: pointer;
+}
+.clockpicker-popover .popover-content {
+	background-color: #f8f8f8;
+	padding: 12px;
+}
+.popover-content:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.clockpicker-plate {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	overflow: visible;
+	position: relative;
+	/* Disable text selection highlighting. Thanks to Hermanya */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.clockpicker-canvas,
+.clockpicker-dial {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: -1px;
+	top: -1px;
+}
+.clockpicker-minutes {
+	visibility: hidden;
+}
+.clockpicker-tick {
+	border-radius: 50%;
+	color: #666;
+	line-height: 26px;
+	text-align: center;
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	cursor: pointer;
+}
+.clockpicker-tick.active,
+.clockpicker-tick:hover {
+	background-color: rgb(192, 229, 247);
+	background-color: rgba(0, 149, 221, .25);
+}
+.clockpicker-button {
+	background-image: none;
+	background-color: #fff;
+	border-width: 1px 0 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin: 0;
+	padding: 10px 0;
+}
+.clockpicker-button:hover {
+	background-image: none;
+	background-color: #ebebeb;
+}
+.clockpicker-button:focus {
+	outline: none!important;
+}
+.clockpicker-dial {
+	-webkit-transition: -webkit-transform 350ms, opacity 350ms;
+	-moz-transition: -moz-transform 350ms, opacity 350ms;
+	-ms-transition: -ms-transform 350ms, opacity 350ms;
+	-o-transition: -o-transform 350ms, opacity 350ms;
+	transition: transform 350ms, opacity 350ms;
+}
+.clockpicker-dial-out {
+	opacity: 0;
+}
+.clockpicker-hours.clockpicker-dial-out {
+	-webkit-transform: scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+.clockpicker-minutes.clockpicker-dial-out {
+	-webkit-transform: scale(.8, .8);
+	-moz-transform: scale(.8, .8);
+	-ms-transform: scale(.8, .8);
+	-o-transform: scale(.8, .8);
+	transform: scale(.8, .8);
+}
+.clockpicker-canvas {
+	-webkit-transition: opacity 175ms;
+	-moz-transition: opacity 175ms;
+	-ms-transition: opacity 175ms;
+	-o-transition: opacity 175ms;
+	transition: opacity 175ms;
+}
+.clockpicker-canvas-out {
+	opacity: 0.25;
+}
+.clockpicker-canvas-bearing,
+.clockpicker-canvas-fg {
+	stroke: none;
+	fill: rgb(0, 149, 221);
+}
+.clockpicker-canvas-bg {
+	stroke: none;
+	fill: rgb(192, 229, 247);
+}
+.clockpicker-canvas-bg-trans {
+	fill: rgba(0, 149, 221, .25);
+}
+.clockpicker-canvas line {
+	stroke: rgb(0, 149, 221);
+	stroke-width: 1;
+	stroke-linecap: round;
+	/*shape-rendering: crispEdges;*/
+}
+.clockpicker-button.am-button {
+	margin: 1px;
+	padding: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 4px;
+	
+}
+.clockpicker-button.pm-button {
+	margin: 1px 1px 1px 136px;
+	padding: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	border-radius: 4px;
+}
+
+.buttons-panel .btn.btn-sm--long{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.camcoders-img img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.test-page-title{
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.camcorder-video{
+  margin-bottom: 10px;
+}
+
+.camcorder-video img{
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.camcorder-settings{
+  margin: 30px 0;
+}
+
+.camcorder-settings:after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.camcorder-settings__col{
+  width: 45%;
+  float: left;
+}
+
+.camcorder-settings__col:first-child{
+  width: 55%;
+}
+
+.camcorder-settings__col:first-child .camcorder-settings__col-inner{
+  max-width: 350px;
+}
+
+.camcorder-settings__col:first-child .camcorder-settings__row{
+  padding: 0;
+}
+
+.camcorder-settings__col-inner{
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.camcorder-settings__row{
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.camcorder-settings__row--flex{
+  display: flex;
+  align-items: center;
+}
+
+.camcorder-settings__row--flex label{
+  flex-grow: 1;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.camcorder-settings__row--flex select{
+  width: 250px;
+}
+
+.camcorder-settings__row--flex .form-group{
+  padding-left: 10px;
+}
+
+.camcorder-settings__row--flex .form-group label{
+  margin: 10px 0 5px;
+}
+
+.camcorder-settings__row--flex .form-group:first-child{
+  padding-left: 0;
+}
+
+.camcorder .buttons-panel .btn{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px){
+  .camcorder-settings__col{
+    width: 100%!important;
+    float: none;
+  }
+}
+
+@media (max-width: 410px){
+  .camcorder-settings__row--flex{
+    display: block;
+  }
+  .camcorder-settings__row--flex .form-group{
+    padding-left: 0;
+  }
+  .camcorder-settings__row--flex .form-group label{
+    margin-top: 0;
+  }
+  .camcorder-settings__row--flex label{
+    margin-bottom: 5px;
+  }
+  .camcorder-settings__row--flex select{
+    width: 100%!important;
+  }
+  .camcorder-settings__col-inner{
+    margin: 0;
+  }
+  .camcorder-settings{
+    margin: 20px 0;
+  }
 }

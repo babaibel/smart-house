@@ -64,9 +64,9 @@
                     <li>
                         <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Главная</span></a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="index.html"><i class="fa fa-dashboard"></i> <span class="nav-label">Датчики</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
+                        <ul class="nav nav-second-level collapse">
                             <li class="active"><a href="index.html">Все</a></li>
                             <li><a href="#">Встроенные</a></li>
                             <li><a href="#">Проводные ДОП</a></li>
@@ -90,6 +90,9 @@
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-gear"></i> <span class="nav-label">Настройки</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="#"><i class="fa fa-video-camera"></i> <span class="nav-label">Видеокамеры</span></a>
                     </li>
                     
                 </ul>
@@ -225,14 +228,14 @@
                         <div class="profile-element__info-phone"><i class="iconbg iconbg--sim"></i><span>+79267667688</span></div>
                         <div class="profile-element__info-system">EctoControl v3</div>
                     </div>
-                    <h2>Иван, добро пожаловать в личный кабинет!</h2>
+                    <h2>Видеокамеры</h2>
 
                     <ol class="breadcrumb">
                         <li>
-                            <a href="index.html">Управление</a>
+                            <a href="index.html">Видеокамеры</a>
                         </li>
                         <li class="active">
-                            <strong>Поддержание температуры</strong>
+                            <strong>Демо-камера</strong>
                         </li>
                     </ol>
                 </div>
@@ -243,7 +246,7 @@
                 <div class="ibox sensor-settings">
                     <div class="ibox-title">
                         <div class="buttons-panel">
-                            <span class="sensor-settings__title">Настройки датчика</span>
+                            <span class="sensor-settings__title">Настройки камеры</span>
                             <div class="tooltip-container">
                                 <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
                             </div>
@@ -253,7 +256,7 @@
                         
                         <div class="sensor-settings__topline">
                             <div class="sensor-settings__topline-center js-change-sensor-name">
-                                <input class="sensor-name-field js-change-sensor-name__field" type="text" value="Температура коридор">
+                                <input class="sensor-name-field js-change-sensor-name__field" type="text" value="Демо-камера">
                                 
                                 <div class="change-name">
                                     <a class="btn btn-sm btn-white btn-white--nobrd js-change-sensor-name__btn" href="javascript:void(0)">
@@ -261,139 +264,100 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="sensor-settings__topline--left">
-                                <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить ДАТЧИК</a>
-                            </div>
-                            <div class="sensor-settings__topline--right">
-                                <div>
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Оповещать</span>
-                                </div>
-                                <div>
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Выводить в журнал</span>
-                                </div>
-                                <div>
-                                    <input type="checkbox" checked class="i-checks" name="input[]">
-                                    <span class="i-checks__label">Отображать на главной</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <table class="sensor-settings__box">
-                            <tr>
-                                <td>
-                                    <div class="ibox-content__indicator">
-                                         29,5
-                                        <sup>&deg;C</sup>
-                                    </div>
-                                    <div class="sensor-settings__indicator-title">текущее значение</div>
-                                </td>
-                                <td>
-                                    <div class="sensor-settings__controls-info">
-                                        <div class="sensor-settings__sensor-title">Датчик температуры</div>
-                                        <span class="sensor-settings__port">Порт: РАДИО 7F471A</span>
-                                    </div>
-                                    <i class="iconbg iconbg--temp"></i>
-                                    
-                                </td>
-                            </tr>
-                        </table>
-
-                        <div class="sensor-settings__topline sensor-settings__topline--limits">
-                            <div class="sensor-settings__topline-center js-change-sensor-name">
-                                <div class="sensor-settings__topline__center-wraper">
-                                    <div class="sensor-settings__unit-title">Подключение: 
-                                    <input class="sensor-name-field sensor-name-field--unit-title js-change-sensor-name__field" type="text" value="Т1">
-                                    </div>
-                                    
-                                    <table class="track-panel-many-rows">
-                                        <tr>
-                                            <td>
-                                                Оповещать с задержкой
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control">
-                                            </td>
-                                            <td>
-                                                секунд
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td>
-                                                Поправка
-                                            </td>
-                                            <td>
-                                                <input type="text" class="form-control">
-                                            </td>
-                                            <td>
-                                                °C
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
+                        <div class="camcorder">
+                            <div class="camcorder-video">
+                                <img src="https://test.ectostroy.ru/?uid=98J6VRK22JWE5U42111A&password=admin1&quality=3" alt="">
                             </div>
-                            <div class="sensor-settings__topline--left mob-left">
-                                <div class="sensor-limit">
-                                   <div class="sensor-limit__indicator">
-                                       <input type="text" id="valueMin" class="sensor-limit__indicator-value">
-                                       <sup>&deg;C</sup>
-                                   </div>
-                                   MIN. предел
-                                   <div class="ibox-tools ibox-tools--left">
-                                        <i class="fa fa-wrench sensor-limit__label"></i>
+                            <div class="buttons-panel buttons-panel--bottom buttons-panel--center">
+                                <a class="btn btn-sm btn-orange" href="javascript:void(0)">Сделать снимок</a>
+                                <a class="btn btn-sm btn-orange" href="javascript:void(0)">Записать видео</a>
+                            </div>
+                            <div class="camcorder-settings">
+                                <div class="camcorder-settings__col">
+                                    <div class="camcorder-settings__col-inner">
+                                        <div class="camcorder-settings__row camcorder-settings__row--flex">
+                                            <label>Качество</label>
+                                           <select class="select2_demo_3 form-control">
+                                                <option value="1">Пункт 1</option>
+                                                <option value="2">Пункт 2</option>
+                                                <option value="3">Пункт 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="camcorder-settings__row camcorder-settings__row--flex">
+                                            <label>Освещение</label>
+                                           <select class="select2_demo_3 form-control">
+                                                <option value="1">Пункт 1</option>
+                                                <option value="2">Пункт 2</option>
+                                                <option value="3">Пункт 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="camcorder-settings__row camcorder-settings__row--flex">
+                                            <label>Обнаружение движения</label>
+                                           <select class="select2_demo_3 form-control">
+                                                <option value="1">Пункт 1</option>
+                                                <option value="2">Пункт 2</option>
+                                                <option value="3">Пункт 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="camcorder-settings__row camcorder-settings__row--flex">
+                                            <label>ИК-подсветка</label>
+                                           <select class="select2_demo_3 form-control">
+                                                <option value="1">Пункт 1</option>
+                                                <option value="2">Пункт 2</option>
+                                                <option value="3">Пункт 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="camcorder-settings__row camcorder-settings__row--flex">
+                                            <div class="form-group">
+                                                <label>Дата</label>
+                                                <input type="text" class="form-control" placeholder="11.01.2016">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Время</label>
+                                                <input type="text" class="form-control" placeholder="16:21">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Часовой пояс</label>
+                                                <select class="select2_demo_3 form-control" style="width:110px;">
+                                                    <option value="Bahamas">UTC+4</option>
+                                                    <option value="Bahamas">UTC+3</option>
+                                                    <option value="Bahamas">UTC+2</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="sensor-settings__topline--right mob-right">
-                                <div class="sensor-limit">
-                                   <div class="sensor-limit__indicator">
-                                       <input type="text" id="valueМах" class="sensor-limit__indicator-value">
-                                       <sup>&deg;C</sup>
-                                   </div>
-                                   MAX. предел
-                                   <div class="ibox-tools">
-                                        <i class="fa fa-wrench sensor-limit__label"></i>
+                                <div class="camcorder-settings__col">
+                                    <div class="camcorder-settings__col-inner">
+                                        <div class="camcorder-settings__row">
+                                            <input type="checkbox" checked class="i-checks" name="input[]">
+                                            <span class="i-checks__label">Отразить по горизонтали</span>
+                                        </div>
+                                        <div class="camcorder-settings__row">
+                                            <input type="checkbox" checked class="i-checks" name="input[]">
+                                            <span class="i-checks__label">Отразить по вертикали</span>
+                                        </div>
+                                        <div class="camcorder-settings__row">
+                                            <input type="checkbox" checked class="i-checks" name="input[]">
+                                            <span class="i-checks__label">Включить микрофон камеры</span>
+                                        </div>
+                                        <div class="camcorder-settings__row">
+                                            <input type="checkbox" checked class="i-checks" name="input[]">
+                                            <span class="i-checks__label">Включить динамик камеры</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                         <div id="range_slider" class="range_slider"></div>
-                         <h4 class="sensor-settings__h4-title">Задайте пределы для оповещений</h4>
 
                         <div class="buttons-panel buttons-panel--bottom buttons-panel--mgb">
-                            <a class="btn btn-sm btn-orange" href="javascript:void(0)">СОХРАНИТЬ ИЗМЕНЕНИЯ</a>
+                            <a class="btn btn-sm btn-orange" href="javascript:void(0)">СОХРАНИТЬ НАСТРОЙКИ</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="ibox">
-                    <div class="ibox-title">
-                        <h5>Статистика показаний для «Температура коридор»</h5>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="buttons-panel">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-white btn-primary">за сегодня</button>
-                                <button type="button" class="btn btn-white">за 2 дня</button>
-                                <button type="button" class="btn btn-white">за неделю</button>
-                                <button type="button" class="btn btn-white">за месяц</button>
-                                <button type="button" class="btn btn-white" id="reportrange">выбрать</button>
-                            </div>
-                        </div>
-
-                        <input class="form-control" type="hidden" name="daterange" value="01/01/2015 - 01/31/2015" /><span></span>
-
-                        <div id="statistic-one-line"></div>
-                        
-                        
-                        <div class="buttons-panel buttons-panel--bottom-left">
-                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--xls"></i> выгруЗить в xls</a>
-                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--pdf"></i> выгруЗить в PDF</a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="footer">
                 <div class="pull-right">
@@ -448,131 +412,15 @@
 
     
 
-
-    <script>
-        $(function() {
-
-            new Morris.Line({
-                element: 'statistic-one-line',
-                    data: [
-                        { year: '2008', value: 5 },
-                        { year: '2009', value: 10 },
-                        { year: '2010', value: 8 },
-                        { year: '2011', value: 22 },
-                        { year: '2012', value: 8 },
-                        { year: '2014', value: 10 },
-                        { year: '2015', value: 5 }
-                    ],
-                xkey: 'year',
-                ykeys: ['value'],
-                resize: true,
-                lineWidth:4,
-                labels: ['Value'],
-                lineColors: ['#1fb31a'],
-                pointSize:5,
-            });
-
-        });
-    </script>
-
     <script>
         $(document).ready(function(){
 
             $('input[name="daterange"]').daterangepicker();
 
-            $('#reportrange + span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-
-            $('#reportrange').daterangepicker({
-                format: 'MM/DD/YYYY',
-                startDate: moment().subtract(29, 'days'),
-                endDate: moment(),
-                minDate: '01/01/2012',
-                maxDate: moment(),
-                dateLimit: { days: 60 },
-                showDropdowns: true,
-                showWeekNumbers: true,
-                timePicker: false,
-                timePickerIncrement: 1,
-                timePicker12Hour: true,
-                opens: 'right',
-                drops: 'down',
-                buttonClasses: ['btn', 'btn-sm'],
-                applyClass: 'btn-primary',
-                cancelClass: 'btn-default',
-                separator: ' to ',
-                locale: {
-                    applyLabel: 'Выбрать',
-                    cancelLabel: 'Отмена',
-                    fromLabel: 'с',
-                    toLabel: 'по',
-                    daysOfWeek: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-                    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-                    firstDay: 1
-                }
-            }, function(start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
             });
-                
-        });
-    </script>
-
-
-    <script>
-        var rangeSlider = document.getElementById('range_slider');
-
-        noUiSlider.create(rangeSlider, {
-            start: [ 0, 30],
-            connect: true,
-            step: 1,
-            range: {
-                'min': [ -40 ],
-
-                'max': [ 99 ]
-            },
-            pips: {
-                mode: 'values',
-                values: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 99],
-                density: 10
-            },
-            format: wNumb({
-                decimals: 0
-            })
-        });
-
-        var valueInputMin = document.getElementById('valueMin'),
-            valueInputMax = document.getElementById('valueМах');
-
-        // When the slider value changes, update the input and span
-        rangeSlider.noUiSlider.on('update', function( values, handle ) {
-            if ( handle ) {
-                valueInputMax.value = values[handle];
-            } else {
-                
-                valueInputMin.value = values[handle];
-            }
-
-
-        });
-
-        // When the input changes, set the slider value
-        valueInputMax.addEventListener('change', function(){
-            rangeSlider.noUiSlider.set([null, this.value]);
-        });
-        valueInputMin.addEventListener('change', function(){
-            rangeSlider.noUiSlider.set([null, this.value]);
-        });
-
-
-        // $( "#valueМах" ).change(function() {
-        //     $( "#range_slider" ).slider( "value", $(this).val() );
-        // });
-
-
-
-        $('.i-checks').iCheck({
-            checkboxClass: 'icheckbox_square-green',
-            radioClass: 'iradio_square-green',
         });
 
     </script>
