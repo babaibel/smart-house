@@ -13921,3 +13921,11 @@ body.md-skin {
   }
 }
 
+.range_slider + .opentherm-line{
+  margin-top: 50px;
+}
+
+.sensor-settings__h4-title .red-text{
+  color: red;
+  margin-left: 10px;
+}
