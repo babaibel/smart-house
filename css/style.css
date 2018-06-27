@@ -4642,6 +4642,12 @@ table.dataTable thead .sorting {
   height: 50px;
   margin: 0;
 }
+.iconbg--opentherm {
+  background: url(../img/icons/iconbg-opentherm.png) no-repeat left top;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
 .nav-logo {
   height: 127px;
   line-height: 127px;
@@ -13689,5 +13695,84 @@ body.md-skin {
   }
   .camcorder-settings{
     margin: 20px 0;
+  }
+}
+
+.range_slider--steps.range_slider.noUi-background{
+  background: #999!important;
+}
+
+.sensor-settings__box--opentherm .ibox-content__indicator{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.opentherm-line{
+  margin: 25px 0;
+}
+
+.opentherm-line + .range_slider{
+  margin-top: 50px;
+}
+
+.opentherm-line:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.opentherm-line .sensor-limit__indicator{
+  margin-bottom: 0;
+}
+
+.opentherm-line__left{
+  float: left;
+  padding-right: 10px;
+}
+
+.opentherm-line__right{
+  float: right;
+}
+
+.opentherm-line__left .sensor-settings__h4-title{
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+.opentherm-line__left .icheckbox_square-green.checked{
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
+
+.opentherm-line__left .select2-container{
+  margin-left: 10px;
+  top: -1px;
+}
+
+.buttons-panel .form-control{
+  display: inline-block;
+  width: 60px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px){
+  .opentherm-line__left .sensor-settings__h4-title{
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 15px;
+  }
+  .opentherm-line__left .icheckbox_square-green.checked{
+    top: -2px;
+  }
+  .opentherm-line__left,
+  .opentherm-line__right{
+    float: none;
+  }
+  .opentherm-line__right{
+    text-align: center;
+    margin-top: 10px;
   }
 }
