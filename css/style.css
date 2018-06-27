@@ -4559,6 +4559,11 @@ table.dataTable thead .sorting {
   width: 20px;
   height: 23px;
 }
+.iconbg--csv {
+  background: url(../img/icons/iconbg-csv.png) no-repeat left top;
+  width: 23px;
+  height: 23px;
+}
 .iconbg--pdf {
   background: url(../img/icons/iconbg-pdf.png) no-repeat left top;
   width: 21px;
@@ -6157,6 +6162,24 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .ibox-content__indicator--black {
   color: #000!important;
+}
+.ibox-content__indicator--gray {
+  color: #666!important;
+}
+.ibox-content__indicator--alert{
+  position: relative;
+}
+.ibox-content__indicator--alert:before{
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 33px;
+  height: 29px;
+  background: url(../img/icons/icon-alert.png) no-repeat 50% 50%;
+  margin-top: -7px;
+  margin-left: 6px;
+  background-size: contain;
 }
 .ibox-content__temp-box {
   display: inline-block;
@@ -13776,3 +13799,125 @@ body.md-skin {
     margin-top: 10px;
   }
 }
+
+.sensor-settings .PAU-sensor-table__cell{
+  display: inline-block!important;
+  width: auto!important;
+  padding: 0!important;
+}
+
+
+.graph-btns{
+  
+}
+
+.graph-btns:after{
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.graph-btns__graph{
+ padding-right: 150px;
+ float: left;
+ width: 100%;
+}
+.graph-btns__btns{
+  width: 150px;
+  margin-left: -150px;
+  float: left;
+  padding-top: 25px;
+}
+
+.graph-btns__btns > div{
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px){
+  .graph-btns__graph,
+  .graph-btns__btns{
+    float: none;
+    padding: 0;
+    width: auto;
+    margin: 0;
+  }
+  .graph-btns__btns{
+    padding: 15px 10px 0 25px;
+  }
+  .graph-btns__btns > div{
+    float: left;
+    width: 33%;
+    padding-right: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 600px){
+  .graph-btns__btns > div{
+    width: 50%;
+  }
+}
+
+@media (max-width: 410px){
+  .graph-btns__btns > div{
+    width: 100%;
+    float: none;
+  }
+  .graph-btns__btns{
+    padding-top: 0;
+  }
+}
+
+.btn-doc .iconbg{
+  margin-top: -4px;
+}
+
+.PAU-sensor-table__error{
+  width: 180px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.PAU-sensor-table__cell-wr{
+  text-align: center;
+}
+
+.PAU-sensor-table__cell-wr .PAU-sensor__box tr td{
+  padding: 15px 25px; 
+}
+
+@media (min-width: 600px){
+  .PAU-sensor-table__cell-wr .ibox-content__indicator--alert:before{
+    margin-left: 70px;
+    transform: scale(1.5);
+  }
+}
+
+@media (max-width: 600px){
+  .PAU-sensor-table__cell-wr .PAU-sensor__box tr td{
+    padding: 15px 35px; 
+  }
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell > table > tbody> tr > td:last-child{
+    display: none;
+  }
+  .PAU-sensor-table__error{
+    width: 160px;
+  }
+}
+
+@media (max-width: 410px){
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell > table,
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell > table > tbody,
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell > table > tbody> tr,
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell > table > tbody> tr > td{
+    display: block;
+  }
+  .PAU-sensor-table__error{
+    width: auto;
+  }
+  .PAU-sensor-table__cell-wr .PAU-sensor-table__cell{
+    display: block;
+    width: auto;
+  }
+}
+

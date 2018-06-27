@@ -13,6 +13,7 @@
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
 
     <link href="css/plugins/nouslider/nouislider.min.css" rel="stylesheet">
     <link href="css/plugins/nouslider/nouislider.pips.css" rel="stylesheet">
@@ -256,38 +257,77 @@
                         
                         <div class="sensor-settings__topline">
                             <div class="sensor-settings__topline-center">
-                                <h3 class="sensor-settings__h3-title js-sensor-name">Отопление в спальне</h3>
+                                <h3 class="sensor-settings__h3-title js-sensor-name">Отопление 1</h3>
 
                             </div>
                             <div class="sensor-settings__topline--left">
                                 <a class="btn btn-sm btn-white btn-delete" href="javascript:void(0)"><i class="fa fa-trash-o"></i> Удалить ПРОГРАММУ</a>
                             </div>
                             <div class="sensor-settings__topline--right">
-                                <input type="checkbox" checked class="i-checks" name="input[]">
-                                <span class="i-checks__label">Ручной режим</span>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Ручной режим</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Отображать на главной</span>
+                                </div>
                             </div>
                         </div>
 
-                        <table class="sensor-settings__box sensor-settings__box-center">
-                            <tr>
-                                <td>
-                                    <div class="ibox-content__indicator green-text">
-                                         29,5
-                                        <sup>&deg;C</sup>
-                                    </div>
-                                    <div class="sensor-settings__indicator-title">текущее значение</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="ibox-content__indicator orange-text">
-                                         29,5
-                                        <sup>&deg;C</sup>
-                                    </div>
-                                    <div class="sensor-settings__indicator-title">поддерживается</div>
-                                </td>
-                            </tr>
-                        </table>
+                        <div class="PAU-sensor-table__cell-wr">
+                            <div class="PAU-sensor-table__cell">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="PAU-sensor-table__error">
+                                                    <p><b>ОШИБКА Е65</b></p>
+                                                    <p>Слишком часто включается функция проверки засорения дымохода/воздухо-вода</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <table class="PAU-sensor__box PAU-sensor__box-center">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__indicator ibox-content__indicator--green">
+                                                                    34,5
+                                                                    <sup>°C</sup>
+                                                                </div>
+                                                                <div class="PAU-sensor__indicator-title">текущая температура</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__indicator ibox-content__indicator--gray ibox-content__indicator--alert">
+                                                                    Нагрев
+                                                                </div>
+                                                                <div class="PAU-sensor__indicator-title">состояние</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="ibox-content__indicator orange-text">
+                                                                     29,5
+                                                                    <sup>°C</sup>
+                                                                </div>
+                                                                <div class="PAU-sensor__indicator-title">поддерживается в контуре</div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <div class="PAU-sensor-table__error">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="ibox-content">
                         <h4 class="sensor-settings__h4-title">Температура поддержания:</h4>
@@ -800,7 +840,29 @@
 
                 <div class="ibox">
                     <div class="ibox-title">
-                        <h5>Статистика показаний</h5>
+                        <h5>Режим работы котла:</h5>
+                        <div class="tooltip-container">
+                            <a href="javascript:void(0)" class="tooltip-label" data-toggle="tooltip" data-placement="top" title="Всплывающая подсказка"></a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-inline" role="form">
+                            <div class="form-group">
+                               <select class="select2_demo_3 form-control" style="width:150px;">
+                                    <option value="1">Релейный</option>
+                                    <option value="2">тест2</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="buttons-panel buttons-panel--center buttons-panel--mgb">
+                            <a class="btn btn-sm btn-orange" href="javascript:void(0)">СБРОСИТЬ ОШИБКУ</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>Статистика работы отопителя</h5>
                     </div>
                     <div class="ibox-content">
                         <div class="buttons-panel">
@@ -812,26 +874,55 @@
                                 <button type="button" class="btn btn-white" id="reportrange">выбрать</button>
                             </div>
                         </div>
+                        <div class="graph-btns">
+                            <div class="graph-btns__graph">
 
-                        <input class="form-control" type="hidden" name="daterange" value="01/01/2015 - 01/31/2015" /><span></span>
+                                <input class="form-control" type="hidden" name="daterange" value="01/01/2015 - 01/31/2015" /><span></span>
 
-                        <div id="statistic-two-lines"></div>
-                        
-                        
-                        <div class="buttons-panel buttons-panel--bottom-left">
-                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--csv"></i> выгрузить в CSV</a>
-                            <a class="btn btn-doc" href="javascript:void(0)"><i class="iconbg iconbg--pdf"></i> выгруЗить в PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ibox float-e-margins ibox--auto-height">
-                    <div class="ibox-content">
-                        <div>
-                            <div class="doughnutChart-wr">
-                                <canvas id="doughnutChart" height="50"></canvas>
+                                <div id="statistic-two-lines"></div>
                             </div>
-                            <div class="track-panel__title text-center mgt">Включен: 67% времени</div>
+                            <div class="graph-btns__btns">
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Т поддержания</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">T теплоносителя</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">T улицы</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">T помещения</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">T ГВС</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Горелка</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Ошибки</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Давление</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Расход ГВС</span>
+                                </div>
+                                <div>
+                                    <input type="checkbox" checked class="i-checks" name="input[]">
+                                    <span class="i-checks__label">Ручной режим</span>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
@@ -873,6 +964,9 @@
     <!-- iCheck -->
     <script src="js/plugins/iCheck/icheck.min.js"></script>
 
+    <!-- Select2 -->
+    <script src="js/plugins/select2/select2.full.min.js"></script>
+
     <!-- Morris -->
     <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
     <script src="js/plugins/morris/morris.js"></script>
@@ -885,6 +979,7 @@
 
     <!-- IonRangeSlider -->
     <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
 
     <script>
         $(function() {
@@ -920,44 +1015,10 @@
     <script>
         $(document).ready(function(){
 
-            $(function() {
-
-                var doughnutData = [
-                    {
-                        value: 300,
-                        color: "#91dc6e",
-                        highlight: "#1ab394",
-                        label: "1"
-                    },
-                    {
-                        value: 50,
-                        color: "#a3e186",
-                        highlight: "#1ab394",
-                        label: "2"
-                    },
-                    {
-                        value: 100,
-                        color: "#62cb31",
-                        highlight: "#1ab394",
-                        label: "3"
-                    }
-                ];
-
-                var doughnutOptions = {
-                    segmentShowStroke: true,
-                    segmentStrokeColor: "#fff",
-                    segmentStrokeWidth: 2,
-                    percentageInnerCutout: 45, // This is 0 for Pie charts
-                    animationSteps: 100,
-                    animationEasing: "easeOutBounce",
-                    animateRotate: true,
-                    animateScale: false,
-                    responsive: true,
-                };
-
-                var ctx = document.getElementById("doughnutChart").getContext("2d");
-                var myNewChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
-
+             $(".select2_demo_3").select2({
+                placeholder: "",
+                allowClear: true,
+                minimumResultsForSearch: -1
             });
 
             $('input[name="daterange"]').daterangepicker();
