@@ -13764,15 +13764,15 @@ body.md-skin {
   display: inline-block;
 }
 
-.opentherm-line__left .icheckbox_square-green.checked{
+.opentherm-line__left .icheckbox_square-green{
   position: relative;
   top: -1px;
   margin-right: 10px;
 }
 
-.opentherm-line__left .select2-container{
+.opentherm-line__left .select2_demo_3{
   margin-left: 10px;
-  top: -1px;
+  display: inline-block;
 }
 
 .buttons-panel .form-control{
@@ -13787,7 +13787,7 @@ body.md-skin {
     line-height: 20px;
     padding-top: 15px;
   }
-  .opentherm-line__left .icheckbox_square-green.checked{
+  .opentherm-line__left .icheckbox_square-green{
     top: -2px;
   }
   .opentherm-line__left,
@@ -13928,4 +13928,21 @@ body.md-skin {
 .sensor-settings__h4-title .red-text{
   color: red;
   margin-left: 10px;
+}
+
+.sensor-settings__topline--opentherm{
+  padding-top: 60px;
+}
+
+.sensor-settings__topline--opentherm + .range_slider.noUi-background,
+.sensor-settings__topline--opentherm + .range_slider .noUi-background{
+  background: #999!important;
+}
+
+.sensor-settings__h4-title + .sensor-settings__topline--opentherm{
+  margin-top: 40px;
+}
+
+.PAU-sensor-table__error .error-text{
+  color: red;
 }

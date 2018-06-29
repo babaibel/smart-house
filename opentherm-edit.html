@@ -315,7 +315,7 @@
                                 <div class="sensor-limit">
                                    <div class="sensor-limit__indicator">
                                        <input type="text" id="valueOne" class="sensor-limit__indicator-value">
-                                       <sup>&deg;C</sup>
+                                       <sup>%</sup>
                                    </div>
                                    <div class="ibox-tools">
                                         <i class="fa fa-wrench sensor-limit__label"></i>
@@ -325,8 +325,6 @@
                         </div>
 
                         <div id="steps_slider" class="range_slider range_slider--steps"></div>
-                        <h4 class="sensor-settings__h4-title"><span class="red-text">От 0 до 100%</span></h4>
-
                         <div class="opentherm-line">
                             <div class="opentherm-line__left">
                                 <h4 class="sensor-settings__h4-title">
@@ -336,10 +334,24 @@
                                     Включить отопление
                                 </h4>
                             </div>
-                            <div class="opentherm-line__right">
+                        </div>
+
+                        <div class="sensor-settings__topline sensor-settings__topline--limits sensor-settings__topline--opentherm">
+                            <div class="sensor-settings__topline--left mob-left">
                                 <div class="sensor-limit">
                                    <div class="sensor-limit__indicator">
-                                       <input type="text" id="valueOne2" class="sensor-limit__indicator-value">
+                                       <input type="text" id="valueMin" class="sensor-limit__indicator-value">
+                                       <sup>&deg;C</sup>
+                                   </div>
+                                   <div class="ibox-tools ibox-tools--left">
+                                        <i class="fa fa-wrench sensor-limit__label"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sensor-settings__topline--right mob-right">
+                                <div class="sensor-limit">
+                                   <div class="sensor-limit__indicator">
+                                       <input type="text" id="valueМах" class="sensor-limit__indicator-value">
                                        <sup>&deg;C</sup>
                                    </div>
                                    <div class="ibox-tools">
@@ -348,16 +360,26 @@
                                 </div>
                             </div>
                         </div>
+                         <div id="range_slider" class="range_slider"></div>
+                         <h4 class="sensor-settings__h4-title">Допустимая температура теплоносителя</h4>
 
-                        <div id="steps_slider2" class="range_slider range_slider--steps"></div>
-                         <h4 class="sensor-settings__h4-title">Допустимая температура теплоносителя <span class="red-text">От 0 до 100%</span></h4>
-
-                         <div class="opentherm-line">
-                            <div class="opentherm-line__right">
+                         <div class="sensor-settings__topline sensor-settings__topline--limits sensor-settings__topline--opentherm">
+                            <div class="sensor-settings__topline--left mob-left">
                                 <div class="sensor-limit">
                                    <div class="sensor-limit__indicator">
-                                       <input type="text" id="valueOne3" class="sensor-limit__indicator-value">
-                                       <sup>&deg;C</sup>
+                                       <input type="text" id="valueMin2" class="sensor-limit__indicator-value">
+                                       <sup>Бар</sup>
+                                   </div>
+                                   <div class="ibox-tools ibox-tools--left">
+                                        <i class="fa fa-wrench sensor-limit__label"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sensor-settings__topline--right mob-right">
+                                <div class="sensor-limit">
+                                   <div class="sensor-limit__indicator">
+                                       <input type="text" id="valueМах2" class="sensor-limit__indicator-value">
+                                       <sup>Бар</sup>
                                    </div>
                                    <div class="ibox-tools">
                                         <i class="fa fa-wrench sensor-limit__label"></i>
@@ -365,9 +387,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div id="steps_slider3" class="range_slider range_slider--steps"></div>
-                         <h4 class="sensor-settings__h4-title">Допустимое давление теплоносителя<span class="red-text">От 0 до 5 бар</span></h4>
+                         <div id="range_slider2" class="range_slider"></div>
+                         <h4 class="sensor-settings__h4-title">Допустимое давление теплоносителя</h4>
 
                         <div class="opentherm-line">
                             <div class="opentherm-line__left">
@@ -393,6 +414,8 @@
 
                         <div id="steps_slider4" class="range_slider range_slider--steps"></div>
                          <h4 class="sensor-settings__h4-title">Допустимая температура теплоносителя</h4>
+
+
 
                         <div class="opentherm-line">
                             <div class="opentherm-line__left">
@@ -559,18 +582,108 @@
 
 
     <script>
-        var stepsSlider = document.getElementById('steps_slider');
+        var rangeSlider = document.getElementById('range_slider');
 
-        noUiSlider.create(stepsSlider, {
-            start: [ 0],
+        noUiSlider.create(rangeSlider, {
+            start: [ 20, 50],
+            connect: true,
             step: 1,
             range: {
-                'min': [ -40 ],
-                'max': [ 99 ]
+                'min': [ 0],
+
+                'max': [ 80 ]
             },
             pips: {
                 mode: 'values',
-                values: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 99],
+                values: [0, 10, 20, 30, 40, 50, 60, 70, 80],
+                density: 10
+            },
+            format: wNumb({
+                decimals: 0
+            })
+        });
+
+        var valueInputMin = document.getElementById('valueMin'),
+            valueInputMax = document.getElementById('valueМах');
+
+        // When the slider value changes, update the input and span
+        rangeSlider.noUiSlider.on('update', function( values, handle ) {
+            if ( handle ) {
+                valueInputMax.value = values[handle];
+            } else {
+                
+                valueInputMin.value = values[handle];
+            }
+
+
+        });
+
+        // When the input changes, set the slider value
+        valueInputMax.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+        valueInputMin.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+
+
+        var rangeSlider2 = document.getElementById('range_slider2');
+
+        noUiSlider.create(rangeSlider2, {
+            start: [ 2,3],
+            connect: true,
+            step: 0.1,
+            range: {
+                'min': [ 1.0],
+                'max': [ 5.0 ]
+            },
+            pips: {
+                mode: 'values',
+                values: [1.0, 1.1, 1.2, 1.3,2.0,3.0,4.0, 4.9,5.0],
+                density: 10,
+                format: wNumb({ decimals: 1 })
+            },
+            format: wNumb({
+                decimals: 1
+            })
+        });
+
+        var valueInputMin2 = document.getElementById('valueMin2'),
+            valueInputMax2 = document.getElementById('valueМах2');
+
+        // When the slider value changes, update the input and span
+        rangeSlider2.noUiSlider.on('update', function( values, handle ) {
+            if ( handle ) {
+                valueInputMax2.value = values[handle];
+            } else {
+                
+                valueInputMin2.value = values[handle];
+            }
+
+
+        });
+
+        // When the input changes, set the slider value
+        valueInputMax2.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+        valueInputMin2.addEventListener('change', function(){
+            rangeSlider.noUiSlider.set([null, this.value]);
+        });
+
+
+        var stepsSlider = document.getElementById('steps_slider');
+
+        noUiSlider.create(stepsSlider, {
+            start: [ 10],
+            step: 1,
+            range: {
+                'min': [ 0],
+                'max': [ 100 ]
+            },
+            pips: {
+                mode: 'values',
+                values: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
                 density: 10
             },
             format: wNumb({
@@ -590,67 +703,8 @@
             rangeSlider.noUiSlider.set([null, this.value]);
         });
 
-        var stepsSlider2 = document.getElementById('steps_slider2');
 
-        noUiSlider.create(stepsSlider2, {
-            start: [ 0],
-            step: 1,
-            range: {
-                'min': [ -40 ],
-                'max': [ 99 ]
-            },
-            pips: {
-                mode: 'values',
-                values: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 99],
-                density: 10
-            },
-            format: wNumb({
-                decimals: 0
-            })
-        });
-
-        var valueInputOne2 = document.getElementById('valueOne2');
-
-        // When the slider value changes, update the input and span
-        stepsSlider2.noUiSlider.on('update', function( values, handle ) {
-            valueInputOne2.value = values[handle];
-        });
-
-        // When the input changes, set the slider value
-        stepsSlider2.addEventListener('change', function(){
-            stepsSlider2.noUiSlider.set([null, this.value]);
-        });
-
-        var stepsSlider3 = document.getElementById('steps_slider3');
-
-        noUiSlider.create(stepsSlider3, {
-            start: [ 0],
-            step: 1,
-            range: {
-                'min': [ -40 ],
-                'max': [ 99 ]
-            },
-            pips: {
-                mode: 'values',
-                values: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 99],
-                density: 10
-            },
-            format: wNumb({
-                decimals: 0
-            })
-        });
-
-        var valueInputOne3 = document.getElementById('valueOne3');
-
-        // When the slider value changes, update the input and span
-        stepsSlider3.noUiSlider.on('update', function( values, handle ) {
-            valueInputOne3.value = values[handle];
-        });
-
-        // When the input changes, set the slider value
-        stepsSlider3.addEventListener('change', function(){
-            stepsSlider3.noUiSlider.set([null, this.value]);
-        });
+    
 
         var stepsSlider4 = document.getElementById('steps_slider4');
 
@@ -693,12 +747,6 @@
         $('.i-checks').iCheck({
             checkboxClass: 'icheckbox_square-green',
             radioClass: 'iradio_square-green',
-        });
-
-        $(".select2_demo_3").select2({
-            placeholder: "",
-            allowClear: true,
-            minimumResultsForSearch: -1
         });
 
     </script>
